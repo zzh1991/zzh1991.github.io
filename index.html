@@ -97,7 +97,7 @@
 <div class="intrude-less">
     <header id="header" class="inner">
         <a href="/" class="profilepic">
-            <img src="/img/github_qr.jpgs" class="animated zoomIn">
+            <img src="/img/github_qr.jpg" class="animated zoomIn">
         </a>
         <hgroup>
           <h1 class="header-author"><a href="/">Zhihao Zhang</a></h1>
@@ -222,7 +222,7 @@
     <div class="intrude-less">
         <header id="header" class="inner">
             <a href="/" class="profilepic">
-                <img src="/img/github_qr.jpgs" class="animated zoomIn">
+                <img src="/img/github_qr.jpg" class="animated zoomIn">
             </a>
             <hgroup>
               <h1 class="header-author"><a href="/" title="回到主页">Zhihao Zhang</a></h1>
@@ -258,83 +258,6 @@
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap">
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/03/04/hello-world/" class="article-date">
-      <time datetime="2017-03-04T07:33:34.000Z" itemprop="datePublished">2017-03-04</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/04/hello-world/">如何搭建 Hexo 博客</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <!-- Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues). -->
-<h2 id="先决条件"><a href="#先决条件" class="headerlink" title="先决条件"></a>先决条件</h2><ul>
-<li>安装 git 和 node.js</li>
-<li>新建 hexo 文件夹</li>
-</ul>
-<h2 id="搭建-hexo-环境"><a href="#搭建-hexo-环境" class="headerlink" title="搭建 hexo 环境"></a>搭建 hexo 环境</h2><ul>
-<li>git bash: npm install hexo –no-optional </li>
-<li>配置 git 环境下的 github</li>
-<li>修改 _yaml 中的 deployment</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">hexo init</div><div class="line">npm install</div><div class="line">npm install hexo-deployer-git --save</div><div class="line">ssh-keygen -t rsa -C <span class="string">"邮箱地址"</span></div><div class="line">ssh-agent <span class="_">-s</span></div><div class="line"><span class="built_in">eval</span> `ssh-agent <span class="_">-s</span>`</div><div class="line">ssh-add</div><div class="line">&lt;!-- clip &lt; ~/.ssh/id_rsa.pub --&gt;</div><div class="line">ssh -T git@github.com</div><div class="line">git config --global user.name <span class="string">"用户名"</span>  </div><div class="line">git config --global user.email “邮箱” </div><div class="line"></div><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repo: &lt;repository github url&gt;</div><div class="line">  branch: [master]</div><div class="line">  message: [commit message]</div><div class="line"></div><div class="line">hexo generate -&gt; hexo g</div><div class="line">hexo deploy   -&gt; hexo d</div></pre></td></tr></table></figure>
-<h2 id="新建博客文章"><a href="#新建博客文章" class="headerlink" title="新建博客文章"></a>新建博客文章</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new <span class="string">"paper name"</span></div></pre></td></tr></table></figure>
-<h2 id="新建草稿"><a href="#新建草稿" class="headerlink" title="新建草稿"></a>新建草稿</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new draft <span class="string">"paper name"</span></div></pre></td></tr></table></figure>
-<h2 id="增加头像"><a href="#增加头像" class="headerlink" title="增加头像"></a>增加头像</h2><p>/theme/_config.yml<br>avaster: “image source”<br>&lt;!– ## Quick Start</p>
-<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a> –&gt;</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
   
     <article id="post-Ubuntu-macOs-Skills" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -473,6 +396,83 @@
 </ul>
 </li>
 </ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/01/26/hello-world/" class="article-date">
+      <time datetime="2017-01-26T15:59:59.000Z" itemprop="datePublished">2017-01-26</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/01/26/hello-world/">如何搭建 Hexo 博客</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <!-- Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues). -->
+<h2 id="先决条件"><a href="#先决条件" class="headerlink" title="先决条件"></a>先决条件</h2><ul>
+<li>安装 git 和 node.js</li>
+<li>新建 hexo 文件夹</li>
+</ul>
+<h2 id="搭建-hexo-环境"><a href="#搭建-hexo-环境" class="headerlink" title="搭建 hexo 环境"></a>搭建 hexo 环境</h2><ul>
+<li>git bash: npm install hexo –no-optional </li>
+<li>配置 git 环境下的 github</li>
+<li>修改 _yaml 中的 deployment</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">hexo init</div><div class="line">npm install</div><div class="line">npm install hexo-deployer-git --save</div><div class="line">ssh-keygen -t rsa -C <span class="string">"邮箱地址"</span></div><div class="line">ssh-agent <span class="_">-s</span></div><div class="line"><span class="built_in">eval</span> `ssh-agent <span class="_">-s</span>`</div><div class="line">ssh-add</div><div class="line">&lt;!-- clip &lt; ~/.ssh/id_rsa.pub --&gt;</div><div class="line">ssh -T git@github.com</div><div class="line">git config --global user.name <span class="string">"用户名"</span>  </div><div class="line">git config --global user.email “邮箱” </div><div class="line"></div><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repo: &lt;repository github url&gt;</div><div class="line">  branch: [master]</div><div class="line">  message: [commit message]</div><div class="line"></div><div class="line">hexo generate -&gt; hexo g</div><div class="line">hexo deploy   -&gt; hexo d</div></pre></td></tr></table></figure>
+<h2 id="新建博客文章"><a href="#新建博客文章" class="headerlink" title="新建博客文章"></a>新建博客文章</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new <span class="string">"paper name"</span></div></pre></td></tr></table></figure>
+<h2 id="新建草稿"><a href="#新建草稿" class="headerlink" title="新建草稿"></a>新建草稿</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new draft <span class="string">"paper name"</span></div></pre></td></tr></table></figure>
+<h2 id="增加头像"><a href="#增加头像" class="headerlink" title="增加头像"></a>增加头像</h2><p>/theme/_config.yml<br>avaster: “image source”<br>&lt;!– ## Quick Start</p>
+<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a> –&gt;</p>
 
       
     </div>
