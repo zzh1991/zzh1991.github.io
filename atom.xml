@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="https://zzh1991.github.io/"/>
-  <updated>2017-03-04T11:11:32.000Z</updated>
+  <updated>2017-03-04T11:18:42.000Z</updated>
   <id>https://zzh1991.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="https://zzh1991.github.io/2017/03/03/Ubuntu-macOs-Skills/"/>
     <id>https://zzh1991.github.io/2017/03/03/Ubuntu-macOs-Skills/</id>
     <published>2017-03-03T12:47:54.000Z</published>
-    <updated>2017-03-04T11:11:32.000Z</updated>
+    <updated>2017-03-04T11:18:42.000Z</updated>
     <content type="html"><![CDATA[<h1 id="Skill-amp-Experience"><a href="#Skill-amp-Experience" class="headerlink" title="Skill &amp; Experience"></a>Skill &amp; Experience</h1><h2 id="Common"><a href="#Common" class="headerlink" title="Common"></a>Common</h2><h3 id="Sublime-Text3-plug-in"><a href="#Sublime-Text3-plug-in" class="headerlink" title="Sublime Text3 plug-in"></a>Sublime Text3 plug-in</h3><ul>
 <li>ConvertToUTF8: support chinese</li>
 <li>insertDate: Ctrl + F5</li>
@@ -43,6 +43,10 @@
     <![CDATA[Mainly introduce Ubuntu and macOS skills]]>
     
     </summary>
+    
+      <category term="Ubuntu" scheme="https://zzh1991.github.io/tags/Ubuntu/"/>
+    
+      <category term="macOS" scheme="https://zzh1991.github.io/tags/macOS/"/>
     
   </entry>
   
@@ -103,7 +107,7 @@
     <link href="https://zzh1991.github.io/2017/01/26/hello-world/"/>
     <id>https://zzh1991.github.io/2017/01/26/hello-world/</id>
     <published>2017-01-26T15:59:59.000Z</published>
-    <updated>2017-03-04T10:47:10.000Z</updated>
+    <updated>2017-03-04T11:20:37.000Z</updated>
     <content type="html"><![CDATA[<h2 id="先决条件"><a href="#先决条件" class="headerlink" title="先决条件"></a>先决条件</h2><ul>
 <li>安装 git 和 node.js</li>
 <li>新建 hexo 文件夹</li>
@@ -114,12 +118,12 @@
 <li>修改 _yaml 中的 deployment</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">hexo init</div><div class="line">npm install</div><div class="line">npm install hexo-deployer-git --save</div><div class="line">ssh-keygen -t rsa -C <span class="string">"邮箱地址"</span></div><div class="line">ssh-agent <span class="_">-s</span></div><div class="line"><span class="built_in">eval</span> `ssh-agent <span class="_">-s</span>`</div><div class="line">ssh-add</div><div class="line">&lt;!-- clip &lt; ~/.ssh/id_rsa.pub --&gt;</div><div class="line">ssh -T git@github.com</div><div class="line">git config --global user.name <span class="string">"用户名"</span>  </div><div class="line">git config --global user.email “邮箱” </div><div class="line"></div><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repo: &lt;repository github url&gt;</div><div class="line">  branch: [master]</div><div class="line">  message: [commit message]</div><div class="line"></div><div class="line">hexo generate -&gt; hexo g</div><div class="line">hexo deploy   -&gt; hexo d</div></pre></td></tr></table></figure>
-<h2 id="新建博客文章"><a href="#新建博客文章" class="headerlink" title="新建博客文章"></a>新建博客文章</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new <span class="string">"paper name"</span></div></pre></td></tr></table></figure>
-<h2 id="新建草稿"><a href="#新建草稿" class="headerlink" title="新建草稿"></a>新建草稿</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new draft <span class="string">"paper name"</span></div></pre></td></tr></table></figure>
-<h2 id="增加头像"><a href="#增加头像" class="headerlink" title="增加头像"></a>增加头像</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/theme/_config.yml</div><div class="line">avaster: <span class="string">"image source"</span></div></pre></td></tr></table></figure>
-<h2 id="更改主题"><a href="#更改主题" class="headerlink" title="更改主题"></a>更改主题</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> https://github.com/MOxFIVE/hexo-theme-yelee.git themes/yelee</div><div class="line">theme: yelee</div></pre></td></tr></table></figure>
+<h2 id="使用技巧"><a href="#使用技巧" class="headerlink" title="使用技巧"></a>使用技巧</h2><h3 id="新建博客文章"><a href="#新建博客文章" class="headerlink" title="新建博客文章"></a>新建博客文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new <span class="string">"paper name"</span></div></pre></td></tr></table></figure>
+<h3 id="新建草稿"><a href="#新建草稿" class="headerlink" title="新建草稿"></a>新建草稿</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new draft <span class="string">"paper name"</span></div></pre></td></tr></table></figure>
+<h3 id="增加头像"><a href="#增加头像" class="headerlink" title="增加头像"></a>增加头像</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/theme/_config.yml</div><div class="line">avaster: <span class="string">"image source"</span></div></pre></td></tr></table></figure>
+<h3 id="更改主题"><a href="#更改主题" class="headerlink" title="更改主题"></a>更改主题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> https://github.com/MOxFIVE/hexo-theme-yelee.git themes/yelee</div><div class="line">theme: yelee</div></pre></td></tr></table></figure>
 <h2 id="Mac-安装-Hexo"><a href="#Mac-安装-Hexo" class="headerlink" title="Mac 安装 Hexo"></a>Mac 安装 Hexo</h2><h3 id="配置-git"><a href="#配置-git" class="headerlink" title="配置 git"></a>配置 git</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C <span class="string">"邮箱地址"</span></div><div class="line">pbcopy &lt; ~/.ssh/id_rsa.pub</div><div class="line"><span class="comment"># add to GitHub SSH Key</span></div><div class="line"></div><div class="line">ssh -T git@github.com</div><div class="line">git config --global user.name <span class="string">"用户名"</span>  </div><div class="line">git config --global user.email “邮箱”</div></pre></td></tr></table></figure>
-<h3 id="安装-hexo"><a href="#安装-hexo" class="headerlink" title="安装 hexo"></a>安装 hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo-cli --no-optional</div><div class="line"></div><div class="line"><span class="built_in">cd</span> ~/Document/hexo</div><div class="line">hexo init</div><div class="line">npm install</div><div class="line">npm install hexo-deployer-git --save</div><div class="line"></div><div class="line"><span class="comment"># every time</span></div><div class="line">hexo clean</div><div class="line">hexo generate</div><div class="line">hexo deploy</div></pre></td></tr></table></figure>]]></content>
+<h3 id="安装-hexo"><a href="#安装-hexo" class="headerlink" title="安装 hexo"></a>安装 hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo-cli --no-optional</div><div class="line"></div><div class="line"><span class="built_in">cd</span> ~/Document/hexo</div><div class="line">hexo init</div><div class="line">npm install</div><div class="line">npm install hexo-deployer-git --save</div><div class="line"></div><div class="line"><span class="comment"># modify the top _config.yaml</span></div><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repository: https://github.com/*/*.github.io.git</div><div class="line">  branch: master</div><div class="line"></div><div class="line"><span class="comment"># every time</span></div><div class="line">hexo clean</div><div class="line">hexo generate</div><div class="line">hexo deploy</div></pre></td></tr></table></figure>]]></content>
     <summary type="html">
     <![CDATA[主要介绍 Windows 和 macOS 平台下的静态博客 Hexo 的安装，以及更改主题头像等操作]]>
     
