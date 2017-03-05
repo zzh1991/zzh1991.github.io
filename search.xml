@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+    
+    <entry>
+      <title><![CDATA[Ubuntu & macOS Skills]]></title>
+      <url>https://zzh1991.github.io/2017/03/03/Ubuntu-macOs-Skills/</url>
+      <content type="html"><![CDATA[<h1 id="Skill-amp-Experience"><a href="#Skill-amp-Experience" class="headerlink" title="Skill &amp; Experience"></a>Skill &amp; Experience</h1><h2 id="Common"><a href="#Common" class="headerlink" title="Common"></a>Common</h2><h3 id="Sublime-Text3-plug-in"><a href="#Sublime-Text3-plug-in" class="headerlink" title="Sublime Text3 plug-in"></a>Sublime Text3 plug-in</h3><ul>
+<li>ConvertToUTF8: support chinese</li>
+<li>insertDate: Ctrl + F5</li>
+<li>FileDiffs: compare two files’ difference</li>
+<li>SublimeCodeIntel: code hintinhg and auto-complete</li>
+</ul>
+<h3 id="Atom-plug-in"><a href="#Atom-plug-in" class="headerlink" title="Atom plug-in"></a>Atom plug-in</h3><ul>
+<li>download very slowly</li>
+<li>already have lots of plug-in</li>
+</ul>
+<h2 id="macOS"><a href="#macOS" class="headerlink" title="macOS"></a>macOS</h2><h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><ul>
+<li>Netease music: earpod can not switch among songs</li>
+<li>fixed：should download the software from the Netease not the Mac App Store</li>
+</ul>
+<h2 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu</h2><h3 id="Install-Node-js"><a href="#Install-Node-js" class="headerlink" title="Install Node.js"></a>Install Node.js</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">curl <span class="_">-s</span>L https://deb.nodesource.com/setup_7.x | sudo -E bash -</div><div class="line">sudo apt-get install nodejs</div></pre></td></tr></table></figure>
+<h3 id="Terminal-proxy"><a href="#Terminal-proxy" class="headerlink" title="Terminal proxy"></a>Terminal proxy</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># install polipo</span></div><div class="line">sudo apt-get install polipo</div><div class="line"></div><div class="line"><span class="comment"># modify config</span></div><div class="line">sudo vim /etc/polipo/config</div><div class="line">socksParentProxy = <span class="string">"localhost:1080"</span></div><div class="line">socksProxyType = socks5</div><div class="line"><span class="built_in">log</span>File=/var/<span class="built_in">log</span>/polipo</div><div class="line"><span class="built_in">log</span>Level=4</div><div class="line"></div><div class="line"><span class="comment"># start the service</span></div><div class="line">sudo service polipo stop</div><div class="line">sudo service polipo start</div><div class="line"></div><div class="line"><span class="comment"># vim ~/.bashrc</span></div><div class="line"><span class="built_in">alias</span> hp=<span class="string">"http_proxy=http://localhost:8123"</span></div><div class="line">gp=<span class="string">" --config http.proxy=localhost:8123"</span></div><div class="line"></div><div class="line"><span class="built_in">source</span> ~/.bashrc</div><div class="line"><span class="comment"># gh command</span></div><div class="line"><span class="comment"># git command $gp</span></div></pre></td></tr></table></figure>
+<h3 id="change-software-origin"><a href="#change-software-origin" class="headerlink" title="change software origin"></a>change software origin</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">su root</div><div class="line">cp /etc/apt/sources.list /etc/apt/sources.list.backup</div><div class="line"></div><div class="line">vi /etc/apt/sources.list</div><div class="line"><span class="comment"># deb cdrom:[Ubuntu 16.04 LTS _Xenial Xerus_ - Release amd64 (20160420.1)]/ xenial main restricted</span></div><div class="line">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main restricted</div><div class="line">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates main restricted</div><div class="line">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial universe</div><div class="line">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates universe</div><div class="line">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial multiverse</div><div class="line">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates multiverse</div><div class="line">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse</div><div class="line">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted</div><div class="line">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security universe</div><div class="line">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security multiverse</div><div class="line"></div><div class="line">sudo apt-get update</div><div class="line"><span class="comment"># Or Softwate &amp; Update to choose software origin</span></div></pre></td></tr></table></figure>
+<h2 id="Interesting"><a href="#Interesting" class="headerlink" title="Interesting"></a>Interesting</h2><h3 id="QR-code"><a href="#QR-code" class="headerlink" title="QR code"></a>QR code</h3><p><img src="https://ww1.sinaimg.cn/large/006tKfTcgy1fd9wklfuhuj30a90a9wf2.jpg" alt="My GitHub"><br><img src="https://ww4.sinaimg.cn/large/006tKfTcgy1fd9wpm1jc1j30e90e9mys.jpg" alt="Luo Xiaohei"></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> Ubuntu </tag>
+            
+            <tag> macOS </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Windows Skills]]></title>
+      <url>https://zzh1991.github.io/2017/02/13/Windows-Skills/</url>
+      <content type="html"><![CDATA[<h1 id="Windows-Skills"><a href="#Windows-Skills" class="headerlink" title="Windows Skills"></a>Windows Skills</h1><h2 id="windows-下解压-Linux、macOs-压缩格式"><a href="#windows-下解压-Linux、macOs-压缩格式" class="headerlink" title="windows 下解压 Linux、macOs 压缩格式"></a>windows 下解压 Linux、macOs 压缩格式</h2><ul>
+<li><p><a href="https://cloudconvert.com/" target="_blank" rel="external">在线的转换格式网站</a></p>
+</li>
+<li><p>减小切换系统，方便直接转换</p>
+</li>
+</ul>
+<h2 id="各编程语言的开发文档及-API"><a href="#各编程语言的开发文档及-API" class="headerlink" title="各编程语言的开发文档及 API"></a>各编程语言的开发文档及 API</h2><ul>
+<li><a href="https://kapeli.com/docset_links" target="_blank" rel="external">dash 整合的文档下载地址</a></li>
+<li>其下载下来的格式均为 tgz，解压需使用上面的转换工具</li>
+</ul>
+<h2 id="PDF-与-MS-Office-以及图片格式的互相转换"><a href="#PDF-与-MS-Office-以及图片格式的互相转换" class="headerlink" title="PDF 与 MS Office 以及图片格式的互相转换"></a>PDF 与 MS Office 以及图片格式的互相转换</h2><ul>
+<li><a href="https://pdfcandy.com/" target="_blank" rel="external">PDF<em>Candy</em></a></li>
+<li><a href="https://smallpdf.com/" target="_blank" rel="external">SmallPDF</a></li>
+</ul>
+<h2 id="使用软件服务"><a href="#使用软件服务" class="headerlink" title="使用软件服务"></a>使用软件服务</h2><ul>
+<li>笔记类<ul>
+<li>为知笔记（VIP）</li>
+<li>印象笔记（记录生活方面）</li>
+</ul>
+</li>
+<li>阅读类<ul>
+<li>知乎</li>
+<li>少数派</li>
+<li>网页版今日头条</li>
+<li>稀土掘金</li>
+<li>即刻（App）</li>
+<li>简书</li>
+</ul>
+</li>
+<li>网盘<ul>
+<li>坚果云</li>
+<li>dropbox</li>
+<li>百度云（娱乐专用）</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> Windows </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[如何搭建 Hexo 博客]]></title>
+      <url>https://zzh1991.github.io/2017/01/26/hello-world/</url>
+      <content type="html"><![CDATA[<h2 id="先决条件"><a href="#先决条件" class="headerlink" title="先决条件"></a>先决条件</h2><ul>
+<li>安装 git 和 node.js</li>
+<li>新建 hexo 文件夹</li>
+</ul>
+<h2 id="搭建-hexo-环境"><a href="#搭建-hexo-环境" class="headerlink" title="搭建 hexo 环境"></a>搭建 hexo 环境</h2><ul>
+<li>git bash: npm install hexo –no-optional </li>
+<li>配置 git 环境下的 github</li>
+<li>修改 _yaml 中的 deployment</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">hexo init</div><div class="line">npm install</div><div class="line">npm install hexo-deployer-git --save</div><div class="line">ssh-keygen -t rsa -C <span class="string">"邮箱地址"</span></div><div class="line">ssh-agent <span class="_">-s</span></div><div class="line"><span class="built_in">eval</span> `ssh-agent <span class="_">-s</span>`</div><div class="line">ssh-add</div><div class="line">&lt;!-- clip &lt; ~/.ssh/id_rsa.pub --&gt;</div><div class="line">ssh -T git@github.com</div><div class="line">git config --global user.name <span class="string">"用户名"</span>  </div><div class="line">git config --global user.email “邮箱” </div><div class="line"></div><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repo: &lt;repository github url&gt;</div><div class="line">  branch: [master]</div><div class="line">  message: [commit message]</div><div class="line"></div><div class="line">hexo generate -&gt; hexo g</div><div class="line">hexo deploy   -&gt; hexo d</div></pre></td></tr></table></figure>
+<h2 id="使用技巧"><a href="#使用技巧" class="headerlink" title="使用技巧"></a>使用技巧</h2><h3 id="新建博客文章"><a href="#新建博客文章" class="headerlink" title="新建博客文章"></a>新建博客文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new <span class="string">"paper name"</span></div></pre></td></tr></table></figure>
+<h3 id="新建草稿"><a href="#新建草稿" class="headerlink" title="新建草稿"></a>新建草稿</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new draft <span class="string">"paper name"</span></div></pre></td></tr></table></figure>
+<h3 id="增加头像"><a href="#增加头像" class="headerlink" title="增加头像"></a>增加头像</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/theme/_config.yml</div><div class="line">avaster: <span class="string">"image source"</span></div></pre></td></tr></table></figure>
+<h3 id="更改主题"><a href="#更改主题" class="headerlink" title="更改主题"></a>更改主题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> https://github.com/MOxFIVE/hexo-theme-yelee.git themes/yelee</div><div class="line">theme: yelee</div></pre></td></tr></table></figure>
+<h2 id="Mac-安装-Hexo"><a href="#Mac-安装-Hexo" class="headerlink" title="Mac 安装 Hexo"></a>Mac 安装 Hexo</h2><h3 id="配置-git"><a href="#配置-git" class="headerlink" title="配置 git"></a>配置 git</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C <span class="string">"邮箱地址"</span></div><div class="line">pbcopy &lt; ~/.ssh/id_rsa.pub</div><div class="line"><span class="comment"># add to GitHub SSH Key</span></div><div class="line"></div><div class="line">ssh -T git@github.com</div><div class="line">git config --global user.name <span class="string">"用户名"</span>  </div><div class="line">git config --global user.email “邮箱”</div></pre></td></tr></table></figure>
+<h3 id="安装-hexo"><a href="#安装-hexo" class="headerlink" title="安装 hexo"></a>安装 hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo-cli --no-optional</div><div class="line"></div><div class="line"><span class="built_in">cd</span> ~/Document/hexo</div><div class="line">hexo init</div><div class="line">npm install</div><div class="line">npm install hexo-deployer-git --save</div><div class="line"></div><div class="line"><span class="comment"># modify the top _config.yaml</span></div><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repository: https://github.com/*/*.github.io.git</div><div class="line">  branch: master</div><div class="line"></div><div class="line"><span class="comment"># every time</span></div><div class="line">hexo clean</div><div class="line">hexo generate</div><div class="line">hexo deploy</div></pre></td></tr></table></figure>]]></content>
+      
+        
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
+        
+    </entry>
+    
+  
+  
+</search>
