@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="https://zzh1991.github.io/"/>
-  <updated>2017-03-16T15:48:36.000Z</updated>
+  <updated>2017-08-09T15:57:28.000Z</updated>
   <id>https://zzh1991.github.io/</id>
   
   <author>
@@ -13,6 +13,87 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Windows Skills]]></title>
+    <link href="https://zzh1991.github.io/2017/08/09/Windows-Skills/"/>
+    <id>https://zzh1991.github.io/2017/08/09/Windows-Skills/</id>
+    <published>2017-08-09T13:02:53.000Z</published>
+    <updated>2017-08-09T15:57:28.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="Windows-Skills"><a href="#Windows-Skills" class="headerlink" title="Windows Skills"></a>Windows Skills</h1><h2 id="windows-下解压-Linux、macOs-压缩格式"><a href="#windows-下解压-Linux、macOs-压缩格式" class="headerlink" title="windows 下解压 Linux、macOs 压缩格式"></a>windows 下解压 Linux、macOs 压缩格式</h2><ul>
+<li><a href="https://cloudconvert.com/" target="_blank" rel="external">在线的转换格式网站</a></li>
+<li>7zip manager 工具选项里勾选 tgz 等格式</li>
+<li>减小切换系统，方便直接转换</li>
+</ul>
+<h2 id="各编程语言的开发文档及-API"><a href="#各编程语言的开发文档及-API" class="headerlink" title="各编程语言的开发文档及 API"></a>各编程语言的开发文档及 API</h2><ul>
+<li><a href="https://kapeli.com/docset_links" target="_blank" rel="external">dash 整合的文档下载地址</a></li>
+<li>Zeal</li>
+<li>其下载下来的格式均为 tgz，解压需使用上面的转换工具</li>
+</ul>
+<h2 id="PDF-与-MS-Office-以及图片格式的互相转换"><a href="#PDF-与-MS-Office-以及图片格式的互相转换" class="headerlink" title="PDF 与 MS Office 以及图片格式的互相转换"></a>PDF 与 MS Office 以及图片格式的互相转换</h2><ul>
+<li><a href="https://pdfcandy.com/" target="_blank" rel="external">PDF<em>Candy</em></a></li>
+<li><a href="https://smallpdf.com/" target="_blank" rel="external">SmallPDF</a></li>
+<li><a href="http://www.ilovepdf.com" target="_blank" rel="external">I love PDF</a></li>
+</ul>
+<h2 id="终端软件"><a href="#终端软件" class="headerlink" title="终端软件"></a>终端软件</h2><ul>
+<li>cmder</li>
+<li>oh-my-zsh</li>
+</ul>
+<h2 id="虚拟机"><a href="#虚拟机" class="headerlink" title="虚拟机"></a>虚拟机</h2><ul>
+<li>无图形界面<ul>
+<li>VirtualBOX 4 版本（版本太高，不适用 Vagrant）</li>
+<li>Vagrant</li>
+<li>Ansible</li>
+</ul>
+</li>
+</ul>
+<h2 id="渲染软件"><a href="#渲染软件" class="headerlink" title="渲染软件"></a>渲染软件</h2><ul>
+<li>MacType（目前又再更新了）</li>
+</ul>
+<h2 id="Word-无格式粘贴快捷键设置"><a href="#Word-无格式粘贴快捷键设置" class="headerlink" title="Word 无格式粘贴快捷键设置"></a>Word 无格式粘贴快捷键设置</h2><ol>
+<li>随便复制一段文字</li>
+<li>试图-宏-录制宏</li>
+<li>选择快捷键，并分配</li>
+<li>复制文档，并使用无格式标签</li>
+<li>结束录制宏</li>
+</ol>
+<h2 id="使用软件服务"><a href="#使用软件服务" class="headerlink" title="使用软件服务"></a>使用软件服务</h2><ul>
+<li>笔记类<ul>
+<li>为知笔记（VIP）</li>
+<li>印象笔记（记录生活方面）</li>
+</ul>
+</li>
+<li>阅读类<ul>
+<li>知乎</li>
+<li>少数派（改版后质量有些下降）</li>
+<li>网页版今日头条</li>
+<li>稀土掘金</li>
+<li>即刻（App）</li>
+<li>简书</li>
+</ul>
+</li>
+<li>体育类<ul>
+<li>虎扑体育</li>
+<li>腾讯体育</li>
+</ul>
+</li>
+<li>网盘<ul>
+<li>坚果云</li>
+<li>dropbox</li>
+<li>Google Driver</li>
+<li>百度云（娱乐专用）</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[主要介绍 Windows 下的使用技巧]]>
+    
+    </summary>
+    
+      <category term="Windows" scheme="https://zzh1991.github.io/tags/Windows/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Ubuntu & macOS Skills]]></title>
@@ -52,65 +133,6 @@
       <category term="Ubuntu" scheme="https://zzh1991.github.io/tags/Ubuntu/"/>
     
       <category term="macOS" scheme="https://zzh1991.github.io/tags/macOS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Windows Skills]]></title>
-    <link href="https://zzh1991.github.io/2017/02/13/Windows-Skills/"/>
-    <id>https://zzh1991.github.io/2017/02/13/Windows-Skills/</id>
-    <published>2017-02-13T13:02:53.000Z</published>
-    <updated>2017-03-15T14:21:22.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="Windows-Skills"><a href="#Windows-Skills" class="headerlink" title="Windows Skills"></a>Windows Skills</h1><h2 id="windows-下解压-Linux、macOs-压缩格式"><a href="#windows-下解压-Linux、macOs-压缩格式" class="headerlink" title="windows 下解压 Linux、macOs 压缩格式"></a>windows 下解压 Linux、macOs 压缩格式</h2><ul>
-<li><a href="https://cloudconvert.com/" target="_blank" rel="external">在线的转换格式网站</a></li>
-<li>7zip manager 工具选项里勾选 tgz 等格式</li>
-<li>减小切换系统，方便直接转换</li>
-</ul>
-<h2 id="各编程语言的开发文档及-API"><a href="#各编程语言的开发文档及-API" class="headerlink" title="各编程语言的开发文档及 API"></a>各编程语言的开发文档及 API</h2><ul>
-<li><a href="https://kapeli.com/docset_links" target="_blank" rel="external">dash 整合的文档下载地址</a></li>
-<li>其下载下来的格式均为 tgz，解压需使用上面的转换工具</li>
-</ul>
-<h2 id="PDF-与-MS-Office-以及图片格式的互相转换"><a href="#PDF-与-MS-Office-以及图片格式的互相转换" class="headerlink" title="PDF 与 MS Office 以及图片格式的互相转换"></a>PDF 与 MS Office 以及图片格式的互相转换</h2><ul>
-<li><a href="https://pdfcandy.com/" target="_blank" rel="external">PDF<em>Candy</em></a></li>
-<li><a href="https://smallpdf.com/" target="_blank" rel="external">SmallPDF</a></li>
-<li><a href="http://www.ilovepdf.com" target="_blank" rel="external">I love PDF</a></li>
-</ul>
-<h2 id="Word-无格式粘贴快捷键设置"><a href="#Word-无格式粘贴快捷键设置" class="headerlink" title="Word 无格式粘贴快捷键设置"></a>Word 无格式粘贴快捷键设置</h2><ol>
-<li>随便复制一段文字</li>
-<li>试图-宏-录制宏</li>
-<li>选择快捷键，并分配</li>
-<li>复制文档，并使用无格式标签</li>
-<li>结束录制宏</li>
-</ol>
-<h2 id="使用软件服务"><a href="#使用软件服务" class="headerlink" title="使用软件服务"></a>使用软件服务</h2><ul>
-<li>笔记类<ul>
-<li>为知笔记（VIP）</li>
-<li>印象笔记（记录生活方面）</li>
-</ul>
-</li>
-<li>阅读类<ul>
-<li>知乎</li>
-<li>少数派（改版后质量有些下降）</li>
-<li>网页版今日头条</li>
-<li>稀土掘金</li>
-<li>即刻（App）</li>
-<li>简书</li>
-</ul>
-</li>
-<li>网盘<ul>
-<li>坚果云</li>
-<li>dropbox</li>
-<li>百度云（娱乐专用）</li>
-</ul>
-</li>
-</ul>
-]]></content>
-    <summary type="html">
-    <![CDATA[主要介绍 Windows 下的使用技巧]]>
-    
-    </summary>
-    
-      <category term="Windows" scheme="https://zzh1991.github.io/tags/Windows/"/>
     
   </entry>
   
