@@ -7,13 +7,11 @@
       <title><![CDATA[React Skills]]></title>
       <url>https://zzh1991.github.io/2017/08/23/react-skill-md/</url>
       <content type="html"><![CDATA[<h1 id="React"><a href="#React" class="headerlink" title="React"></a>React</h1><h2 id="配置-ES6-环境"><a href="#配置-ES6-环境" class="headerlink" title="配置 ES6 环境"></a>配置 ES6 环境</h2><ul>
-<li><p>生成 package.json 文件</p>
-<ul>
+<li>生成 package.json 文件<ul>
 <li><code>npm init -y</code></li>
 </ul>
 </li>
-<li><p>全局安装 babel-cli</p>
-<ul>
+<li>全局安装 babel-cli<ul>
 <li><code>npm install -g babel-cli</code></li>
 </ul>
 </li>
@@ -22,10 +20,8 @@
 </li>
 <li><p>新建.babelrc</p>
 </li>
-<li><p>npm live server</p>
-</li>
-<li><p>webpack</p>
-</li>
+<li>npm live server</li>
+<li>webpack</li>
 </ul>
 ]]></content>
       
@@ -54,7 +50,7 @@
 <h2 id="PDF-与-MS-Office-以及图片格式的互相转换"><a href="#PDF-与-MS-Office-以及图片格式的互相转换" class="headerlink" title="PDF 与 MS Office 以及图片格式的互相转换"></a>PDF 与 MS Office 以及图片格式的互相转换</h2><ul>
 <li><a href="https://pdfcandy.com/" target="_blank" rel="external">PDF<em>Candy</em></a></li>
 <li><a href="https://smallpdf.com/" target="_blank" rel="external">SmallPDF</a></li>
-<li><a href="http://www.ilovepdf.com" target="_blank" rel="external">I love PDF</a></li>
+<li><a href="http://www.ilovepdf.com" target="_blank" rel="external">IlovePDF</a></li>
 </ul>
 <h2 id="终端软件"><a href="#终端软件" class="headerlink" title="终端软件"></a>终端软件</h2><ul>
 <li>cmder</li>
