@@ -21,7 +21,7 @@
 <meta property="og:url" content="https://zzh1991.github.io/2017/08/23/react-skill-md/index.html">
 <meta property="og:site_name" content="Welcome Code">
 <meta property="og:description" content="主要介绍 React">
-<meta property="og:updated_time" content="2017-08-24T15:01:02.000Z">
+<meta property="og:updated_time" content="2017-08-24T15:57:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React Skills">
 <meta name="twitter:description" content="主要介绍 React">
@@ -308,9 +308,15 @@
         <h2 id="配置-ES6-环境"><a href="#配置-ES6-环境" class="headerlink" title="配置 ES6 环境"></a>配置 ES6 环境</h2><h3 id="生成-package-json-文件"><a href="#生成-package-json-文件" class="headerlink" title="生成 package.json 文件"></a>生成 package.json 文件</h3><p><code>npm init -y</code></p>
 <h3 id="全局安装-babel-cli"><a href="#全局安装-babel-cli" class="headerlink" title="全局安装 babel-cli"></a>全局安装 babel-cli</h3><p><code>npm install -g babel-cli</code></p>
 <h3 id="安装转换环境"><a href="#安装转换环境" class="headerlink" title="安装转换环境"></a>安装转换环境</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save-dev babel-preset-es2015 babel-cli</div></pre></td></tr></table></figure>
+<h3 id="新建配置文件"><a href="#新建配置文件" class="headerlink" title="新建配置文件"></a>新建配置文件</h3><ul>
+<li>新建.babelrc</li>
+<li>npm live server</li>
+<li>webpack</li>
+</ul>
 <h3 id="前端-chrome-插件"><a href="#前端-chrome-插件" class="headerlink" title="前端 chrome 插件"></a>前端 chrome 插件</h3><ul>
 <li>React facebook 出品</li>
 <li>JSON viewer</li>
+<li>Redux Devtool</li>
 </ul>
 <h3 id="Atom-frontend-plugins"><a href="#Atom-frontend-plugins" class="headerlink" title="Atom frontend plugins"></a>Atom frontend plugins</h3><ul>
 <li>language-babel</li>
@@ -318,18 +324,46 @@
 </ul>
 <h3 id="解决-npm-install-慢问题"><a href="#解决-npm-install-慢问题" class="headerlink" title="解决 npm install 慢问题"></a>解决 npm install 慢问题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install -gd express --registry=http://registry.npm.taobao.org</div><div class="line">npm config <span class="built_in">set</span> registry http://registry.npm.taobao.org</div></pre></td></tr></table></figure>
 <h2 id="React"><a href="#React" class="headerlink" title="React"></a>React</h2><h3 id="新建-react-项目"><a href="#新建-react-项目" class="headerlink" title="新建 react 项目"></a>新建 react 项目</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">npm install -g create-react-app</div><div class="line">create-react-app my-app</div><div class="line"><span class="built_in">cd</span> my-app</div><div class="line">npm start</div></pre></td></tr></table></figure>
+<h3 id="React-组件数据"><a href="#React-组件数据" class="headerlink" title="React 组件数据"></a>React 组件数据</h3><ul>
+<li>prop：对外接口<ul>
+<li>Component 构造函数</li>
+<li>通过 this.props 访问到父组件传递过来的 props 值</li>
+<li>propTypes：接口规范</li>
+</ul>
+</li>
+<li>state：内部状态<ul>
+<li>defaultProps：属性默认值</li>
+</ul>
+</li>
+</ul>
 <h2 id="React-Redux"><a href="#React-Redux" class="headerlink" title="React-Redux"></a>React-Redux</h2><h3 id="安装-react-redux"><a href="#安装-react-redux" class="headerlink" title="安装 react-redux"></a>安装 react-redux</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">npm install --save redux</div><div class="line">npm install --save react-redux</div><div class="line">npm install --save-dev redux-devtools</div><div class="line">npm install --save redux-thunk</div><div class="line">npm install --save react-router</div></pre></td></tr></table></figure>
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><ul>
+<li>状态设计：Store</li>
+<li>action 构造函数<ul>
+<li>actionTypes</li>
+<li>export action</li>
+</ul>
+</li>
+<li>组合 Reducer</li>
+<li>view<ul>
+<li>mapStateToProps：Store =&gt; props<ul>
+<li>dispatch：this.props.dispatch</li>
+</ul>
+</li>
+<li>mapDispatchToProps<ul>
+<li>定义方法</li>
+</ul>
+</li>
+<li>对于动态数量的子组件，每个子组件必需带上一个 key 属性</li>
+</ul>
+</li>
+</ul>
 <h2 id="Redux-sage"><a href="#Redux-sage" class="headerlink" title="Redux-sage"></a>Redux-sage</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save redux-saga</div></pre></td></tr></table></figure>
 <h2 id="Material-UI"><a href="#Material-UI" class="headerlink" title="Material UI"></a>Material UI</h2><h3 id="SVG-ICON"><a href="#SVG-ICON" class="headerlink" title="SVG ICON"></a><a href="https://material.io/icons/" target="_blank" rel="external">SVG ICON</a></h3><h3 id="安装-material-UI"><a href="#安装-material-UI" class="headerlink" title="安装 material UI"></a>安装 material UI</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install material-ui</div><div class="line">npm i --save react-tap-event-plugin</div></pre></td></tr></table></figure>
 <h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 导入使点击事件有效</span></div><div class="line"><span class="keyword">import</span> injectTapEventPlugin <span class="keyword">from</span> <span class="string">'react-tap-event-plugin'</span>;</div><div class="line"><span class="comment">// 组件外面需要包装一层 MuiThemeProvider</span></div><div class="line"><span class="keyword">import</span> MuiThemeProvider <span class="keyword">from</span> <span class="string">'material-ui/styles/MuiThemeProvider'</span></div></pre></td></tr></table></figure>
 <h2 id="fetch"><a href="#fetch" class="headerlink" title="fetch"></a>fetch</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install --save isomorphic-fetch es6-promise</div><div class="line">import fetch from <span class="string">'isomorphic-fetch'</span></div></pre></td></tr></table></figure>
 <h2 id="前后端分离"><a href="#前后端分离" class="headerlink" title="前后端分离"></a>前后端分离</h2><ul>
 <li>JSON 传递数据： jackson</li>
-</ul>
-<h3 id="新建配置文件"><a href="#新建配置文件" class="headerlink" title="新建配置文件"></a>新建配置文件</h3><ul>
-<li>新建.babelrc</li>
-<li>npm live server</li>
-<li>webpack</li>
 </ul>
 <h2 id="git-冷门但有用命令"><a href="#git-冷门但有用命令" class="headerlink" title="git 冷门但有用命令"></a>git 冷门但有用命令</h2><h3 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h3><p><code>git branch -d branch_name</code></p>
 <h3 id="删除远端分支"><a href="#删除远端分支" class="headerlink" title="删除远端分支"></a>删除远端分支</h3><p><code>git push origin --delete branch_name</code></p>
@@ -345,7 +379,7 @@
         <p><span>本文标题:</span><a href="/2017/08/23/react-skill-md/">React Skills</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Zhihao Zhang</a></p>
         <p><span>发布时间:</span>2017-08-23, 00:07:53</p>
-        <p><span>最后更新:</span>2017-08-24, 23:01:02</p>
+        <p><span>最后更新:</span>2017-08-24, 23:57:21</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/08/23/react-skill-md/" title="React Skills">https://zzh1991.github.io/2017/08/23/react-skill-md/</a>
             <span class="copy-path" data-clipboard-text="原文: https://zzh1991.github.io/2017/08/23/react-skill-md/　　作者: Zhihao Zhang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -375,7 +409,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#配置-ES6-环境"><span class="toc-number">1.</span> <span class="toc-text">配置 ES6 环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#生成-package-json-文件"><span class="toc-number">1.1.</span> <span class="toc-text">生成 package.json 文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#全局安装-babel-cli"><span class="toc-number">1.2.</span> <span class="toc-text">全局安装 babel-cli</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装转换环境"><span class="toc-number">1.3.</span> <span class="toc-text">安装转换环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#前端-chrome-插件"><span class="toc-number">1.4.</span> <span class="toc-text">前端 chrome 插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Atom-frontend-plugins"><span class="toc-number">1.5.</span> <span class="toc-text">Atom frontend plugins</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解决-npm-install-慢问题"><span class="toc-number">1.6.</span> <span class="toc-text">解决 npm install 慢问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#React"><span class="toc-number">2.</span> <span class="toc-text">React</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#新建-react-项目"><span class="toc-number">2.1.</span> <span class="toc-text">新建 react 项目</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#React-Redux"><span class="toc-number">3.</span> <span class="toc-text">React-Redux</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装-react-redux"><span class="toc-number">3.1.</span> <span class="toc-text">安装 react-redux</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redux-sage"><span class="toc-number">4.</span> <span class="toc-text">Redux-sage</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装"><span class="toc-number">4.1.</span> <span class="toc-text">安装</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Material-UI"><span class="toc-number">5.</span> <span class="toc-text">Material UI</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SVG-ICON"><span class="toc-number">5.1.</span> <span class="toc-text">SVG ICON</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装-material-UI"><span class="toc-number">5.2.</span> <span class="toc-text">安装 material UI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注意事项"><span class="toc-number">5.3.</span> <span class="toc-text">注意事项</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fetch"><span class="toc-number">6.</span> <span class="toc-text">fetch</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前后端分离"><span class="toc-number">7.</span> <span class="toc-text">前后端分离</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#新建配置文件"><span class="toc-number">7.1.</span> <span class="toc-text">新建配置文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-冷门但有用命令"><span class="toc-number">8.</span> <span class="toc-text">git 冷门但有用命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#删除分支"><span class="toc-number">8.1.</span> <span class="toc-text">删除分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除远端分支"><span class="toc-number">8.2.</span> <span class="toc-text">删除远端分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#撤销修改和-commit"><span class="toc-number">8.3.</span> <span class="toc-text">撤销修改和 commit</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#配置-ES6-环境"><span class="toc-number">1.</span> <span class="toc-text">配置 ES6 环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#生成-package-json-文件"><span class="toc-number">1.1.</span> <span class="toc-text">生成 package.json 文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#全局安装-babel-cli"><span class="toc-number">1.2.</span> <span class="toc-text">全局安装 babel-cli</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装转换环境"><span class="toc-number">1.3.</span> <span class="toc-text">安装转换环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#新建配置文件"><span class="toc-number">1.4.</span> <span class="toc-text">新建配置文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#前端-chrome-插件"><span class="toc-number">1.5.</span> <span class="toc-text">前端 chrome 插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Atom-frontend-plugins"><span class="toc-number">1.6.</span> <span class="toc-text">Atom frontend plugins</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解决-npm-install-慢问题"><span class="toc-number">1.7.</span> <span class="toc-text">解决 npm install 慢问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#React"><span class="toc-number">2.</span> <span class="toc-text">React</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#新建-react-项目"><span class="toc-number">2.1.</span> <span class="toc-text">新建 react 项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#React-组件数据"><span class="toc-number">2.2.</span> <span class="toc-text">React 组件数据</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#React-Redux"><span class="toc-number">3.</span> <span class="toc-text">React-Redux</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装-react-redux"><span class="toc-number">3.1.</span> <span class="toc-text">安装 react-redux</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实现"><span class="toc-number">3.2.</span> <span class="toc-text">实现</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redux-sage"><span class="toc-number">4.</span> <span class="toc-text">Redux-sage</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装"><span class="toc-number">4.1.</span> <span class="toc-text">安装</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Material-UI"><span class="toc-number">5.</span> <span class="toc-text">Material UI</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SVG-ICON"><span class="toc-number">5.1.</span> <span class="toc-text">SVG ICON</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装-material-UI"><span class="toc-number">5.2.</span> <span class="toc-text">安装 material UI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注意事项"><span class="toc-number">5.3.</span> <span class="toc-text">注意事项</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fetch"><span class="toc-number">6.</span> <span class="toc-text">fetch</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前后端分离"><span class="toc-number">7.</span> <span class="toc-text">前后端分离</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-冷门但有用命令"><span class="toc-number">8.</span> <span class="toc-text">git 冷门但有用命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#删除分支"><span class="toc-number">8.1.</span> <span class="toc-text">删除分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除远端分支"><span class="toc-number">8.2.</span> <span class="toc-text">删除远端分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#撤销修改和-commit"><span class="toc-number">8.3.</span> <span class="toc-text">撤销修改和 commit</span></a></li></ol></li></ol>
         
     </div>
     <style>
