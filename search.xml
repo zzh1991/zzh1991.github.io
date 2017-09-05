@@ -13,7 +13,11 @@
 <li>sonarLint</li>
 </ul>
 </li>
-<li>善用快捷键</li>
+<li>善用快捷键<ul>
+<li>重新指定快捷键</li>
+<li>组合序列</li>
+</ul>
+</li>
 </ul>
 <h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><h3 id="代码组织结构"><a href="#代码组织结构" class="headerlink" title="代码组织结构"></a>代码组织结构</h3><ul>
 <li><p>数据库的表与 Entity 一一对应</p>
@@ -57,7 +61,7 @@
 <li>Apache Common IO</li>
 </ul>
 <h3 id="任务调度"><a href="#任务调度" class="headerlink" title="任务调度"></a>任务调度</h3><ul>
-<li>Qrtz Scheduler </li>
+<li>Qrtz Scheduler</li>
 </ul>
 <h2 id="提高"><a href="#提高" class="headerlink" title="提高"></a>提高</h2><ol>
 <li>多看成熟框架的源码</li>
