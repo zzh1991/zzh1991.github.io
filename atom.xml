@@ -103,7 +103,7 @@
     <link href="https://zzh1991.github.io/2017/08/23/react-skill-md/"/>
     <id>https://zzh1991.github.io/2017/08/23/react-skill-md/</id>
     <published>2017-08-22T16:07:53.000Z</published>
-    <updated>2017-11-04T07:54:56.000Z</updated>
+    <updated>2017-11-07T14:07:30.000Z</updated>
     <content type="html"><![CDATA[<h2 id="配置-ES6-环境"><a href="#配置-ES6-环境" class="headerlink" title="配置 ES6 环境"></a>配置 ES6 环境</h2><h3 id="生成-package-json-文件"><a href="#生成-package-json-文件" class="headerlink" title="生成 package.json 文件"></a>生成 package.json 文件</h3><ul>
 <li><code>npm init -y</code></li>
 <li>通过 <code>npm --save</code> 或者 <code>npm --save-dev</code> 安装依赖包，其版本号，会包含在文件中</li>
@@ -146,8 +146,19 @@
 <li>Vim</li>
 <li>ESLint</li>
 <li>React/React-Redux/React-Router</li>
-<li>ES6/ES7</li>
+<li>ES6 snippets</li>
 <li>Terminal</li>
+<li>auto file name</li>
+<li>auto close tag</li>
+<li>auto rename tag</li>
+<li>npm intell</li>
+<li>quokka</li>
+<li>css peek</li>
+<li>regex previewer</li>
+</ul>
+<h4 id="setting"><a href="#setting" class="headerlink" title="setting"></a>setting</h4><ul>
+<li>font size to larger</li>
+<li>auto save</li>
 </ul>
 <h3 id="解决-npm-install-慢问题"><a href="#解决-npm-install-慢问题" class="headerlink" title="解决 npm install 慢问题"></a>解决 npm install 慢问题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install -gd express --registry=http://registry.npm.taobao.org</div><div class="line">npm config <span class="built_in">set</span> registry http://registry.npm.taobao.org</div></pre></td></tr></table></figure>
 <h2 id="React"><a href="#React" class="headerlink" title="React"></a>React</h2><h3 id="新建-react-项目"><a href="#新建-react-项目" class="headerlink" title="新建 react 项目"></a>新建 react 项目</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">npm install -g create-react-app</div><div class="line">create-react-app my-app</div><div class="line"><span class="built_in">cd</span> my-app</div><div class="line">npm start</div></pre></td></tr></table></figure>
