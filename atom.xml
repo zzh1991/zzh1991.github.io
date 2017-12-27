@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="https://zzh1991.github.io/"/>
-  <updated>2017-12-17T14:18:27.000Z</updated>
+  <updated>2017-12-27T16:41:27.000Z</updated>
   <id>https://zzh1991.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="https://zzh1991.github.io/2017/12/17/kotlin-skills/"/>
     <id>https://zzh1991.github.io/2017/12/17/kotlin-skills/</id>
     <published>2017-12-17T12:36:37.000Z</published>
-    <updated>2017-12-17T14:18:27.000Z</updated>
+    <updated>2017-12-27T16:41:27.000Z</updated>
     <content type="html"><![CDATA[<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><p>静态类型的编程语言</p>
 <ul>
 <li>关键字 fun 用来声明一个函数</li>
@@ -83,13 +83,57 @@
 <li>string.toRegex()：生成表达式</li>
 </ul>
 <p>正则表达式写在三重引号的字符串中，不需要对任何字符进行转义</p>
+<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><ul>
+<li>使用 interface 关键字而不是 class 来声明一个 Kotlin 的接口</li>
+<li>在 Kotlin 中使用 override 修饰符是强制要求的</li>
+<li>接口可以有默认实现</li>
+<li>使用父类实现：<code>super&lt;SuperClass&gt;.fun</code></li>
+<li>在接口中，不能使用 final、open、abstract</li>
+<li>接口中的成员始终是 open 的，不能将其声明为 final</li>
+<li>实现接口属性 （override val props：Type）</li>
+</ul>
+<h3 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h3><ul>
+<li>Kotlin 中类和方法默认都是 final 的</li>
+<li>如果你想允许创建一个类的子类，需要使用 open 修饰符来表示这个类。此外，需要给每一个可以被重写的属性和方法添加 open 修饰符。</li>
+</ul>
+<h3 id="可见性修饰符"><a href="#可见性修饰符" class="headerlink" title="可见性修饰符"></a>可见性修饰符</h3><p>在 Kotlin 中，protected 成员只在类和它的子类中可见，类的扩展函数不能访问它的 private 和 protected 成员</p>
+<ul>
+<li>默认：public</li>
+<li>模块：internal</li>
+<li>protected</li>
+<li>private</li>
+</ul>
+<h3 id="内部类和嵌套类"><a href="#内部类和嵌套类" class="headerlink" title="内部类和嵌套类"></a>内部类和嵌套类</h3><ul>
+<li>Kotlin 的嵌套类不能访问外部类的实例</li>
+<li>变成内部类来持有一个外部类的引用需要使用 inner 修饰符</li>
+<li>密封类：sealed，子类直接嵌套在父类中</li>
+</ul>
+<h3 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h3><ul>
+<li>主构造方法<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">class User constructor(name: String) &#123;</div><div class="line">	val name: String</div><div class="line"></div><div class="line">	init &#123;</div><div class="line">		this.name = name</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><code>class User (val name: String)</code></p>
+<pre><code>- 构造方法参数可以提供默认值
+- 要创建一个类的实例，只需要直接调用构造方法，不需要 new 关键字
+</code></pre><ul>
+<li><p>从构造方法<br><code>constuctor(value: type)</code></p>
+</li>
+<li><p>在 setter 的函数体中，使用 field 来访问支持字段的值</p>
+</li>
+<li>在 Kotlin 中，== 运算符是比较是否相等，=== 运算符比较引用是否相等</li>
+<li>数据类：data</li>
+<li>类委托：by</li>
+</ul>
+<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><ul>
+<li>对象声明：object</li>
+<li>Kotlin 的类不能拥有 static 成员</li>
+<li>顶层函数不能访问类的 private 成员</li>
+<li>伴生对象：companion object</li>
+</ul>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><p>静态类型的编程语言</p>
-<ul>
-<li>关键字 fun 用来声明一个函数</li>
-</ul>
-<h3 id="函数"><a href]]>
+    <![CDATA[主要介绍 Kotlin 下的使用技巧]]>
+    
     </summary>
     
       <category term="Kotlin" scheme="https://zzh1991.github.io/tags/Kotlin/"/>
