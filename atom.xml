@@ -322,7 +322,7 @@
     <link href="https://zzh1991.github.io/2017/09/05/java%20skill/"/>
     <id>https://zzh1991.github.io/2017/09/05/java skill/</id>
     <published>2017-09-05T14:52:10.000Z</published>
-    <updated>2017-12-07T14:01:40.000Z</updated>
+    <updated>2017-12-30T08:40:09.000Z</updated>
     <content type="html"><![CDATA[<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><h3 id="Intellij-IDEA"><a href="#Intellij-IDEA" class="headerlink" title="Intellij IDEA"></a>Intellij IDEA</h3><ul>
 <li>插件<ul>
 <li>Vim<ul>
@@ -394,26 +394,32 @@
 <li>如果其他类型更适合，则尽量避免使用字符串</li>
 <li>用接口作为类型，程序将会更加灵活</li>
 </ul>
-<h2 id="工具（类库）"><a href="#工具（类库）" class="headerlink" title="工具（类库）"></a>工具（类库）</h2><p>原则：尽量使用类库去实现功能，不要重复造轮子</p>
+<h2 id="Hibernate-Validator"><a href="#Hibernate-Validator" class="headerlink" title="Hibernate Validator"></a>Hibernate Validator</h2><h2 id="类库"><a href="#类库" class="headerlink" title="类库"></a>类库</h2><p>原则：尽量使用类库去实现功能，不要重复造轮子</p>
 <h3 id="命令执行"><a href="#命令执行" class="headerlink" title="命令执行"></a>命令执行</h3><ul>
-<li>Apache Commons Exec</li>
+<li>Apache Commons Exec<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">String command = <span class="string">"scp --help"</span>;</div><div class="line">ByteArrayOutputStream stdout = <span class="keyword">new</span> ByteArrayOutputStream();</div><div class="line">PumpStreamHandler pumpStreamHandler = <span class="keyword">new</span> PumpStreamHandler(stdout);</div><div class="line">CommandLine cmdLine = CommandLine.parse(command);</div><div class="line">DefaultExecutor executor = <span class="keyword">new</span> DefaultExecutor();</div><div class="line">executor.setStreamHandler(pumpStreamHandler);</div><div class="line"><span class="keyword">int</span> exitValue = executor.execute(cmdLine);</div><div class="line">System.out.println(stdout.toString());</div></pre></td></tr></table></figure>
+</li>
 </ul>
 <h3 id="StringUtils"><a href="#StringUtils" class="headerlink" title="StringUtils"></a>StringUtils</h3><ul>
 <li>Amazon<ul>
 <li>isNullOrEmpty</li>
 </ul>
 </li>
-<li>lang3</li>
+<li>lang3<ul>
+<li>isEmpty</li>
+<li>isBlank</li>
+</ul>
+</li>
 </ul>
 <h3 id="IO-操作"><a href="#IO-操作" class="headerlink" title="IO 操作"></a>IO 操作</h3><ul>
 <li>Apache Common IO</li>
 <li>FilenameUtils</li>
 <li>Files</li>
-<li>Paths</li>
+<li>Paths: <code>Paths.get(folder, fileName)</code></li>
 </ul>
 <h3 id="任务调度"><a href="#任务调度" class="headerlink" title="任务调度"></a>任务调度</h3><ul>
 <li>Qrtz Scheduler</li>
 </ul>
+<h2 id="Database"><a href="#Database" class="headerlink" title="Database"></a>Database</h2><h3 id="Database-Projection"><a href="#Database-Projection" class="headerlink" title="Database Projection"></a>Database Projection</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Projection</span> </span>&#123;</div><div class="line">  <span class="meta">@Value</span>(<span class="string">"#&#123;target.firstName&#125; #&#123;target.lastName&#125;"</span>) </div><div class="line">  <span class="function">String <span class="title">getFullName</span><span class="params">()</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="提高"><a href="#提高" class="headerlink" title="提高"></a>提高</h2><ol>
 <li>多看成熟框架的源码</li>
 <li>多回头看自己的代码</li>
@@ -434,7 +440,7 @@
     <link href="https://zzh1991.github.io/2017/08/23/react-skill-md/"/>
     <id>https://zzh1991.github.io/2017/08/23/react-skill-md/</id>
     <published>2017-08-22T16:07:53.000Z</published>
-    <updated>2017-11-11T02:03:52.000Z</updated>
+    <updated>2017-12-30T08:56:17.000Z</updated>
     <content type="html"><![CDATA[<h2 id="配置-ES6-环境"><a href="#配置-ES6-环境" class="headerlink" title="配置 ES6 环境"></a>配置 ES6 环境</h2><h3 id="生成-package-json-文件"><a href="#生成-package-json-文件" class="headerlink" title="生成 package.json 文件"></a>生成 package.json 文件</h3><ul>
 <li><code>npm init -y</code></li>
 <li>通过 <code>npm --save</code> 或者 <code>npm --save-dev</code> 安装依赖包，其版本号，会包含在文件中<ul>
@@ -530,11 +536,14 @@
 <h2 id="Ant-Design"><a href="#Ant-Design" class="headerlink" title="Ant Design"></a>Ant Design</h2><h3 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install antd --save</div><div class="line">npm install babel-plugin-<span class="keyword">import</span> --save-dev</div></pre></td></tr></table></figure>
 <h3 id="按需加载"><a href="#按需加载" class="headerlink" title="按需加载"></a>按需加载</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// .babelrc or babel-loader option</span></div><div class="line">&#123;</div><div class="line">  <span class="string">"plugins"</span>: [</div><div class="line">    [<span class="string">"import"</span>, &#123; <span class="string">"libraryName"</span>: <span class="string">"antd"</span>, <span class="string">"style"</span>: <span class="literal">true</span> &#125;]</div><div class="line">  ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="国际化"><a href="#国际化" class="headerlink" title="国际化"></a>国际化</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> enUS <span class="keyword">from</span> <span class="string">'antd/lib/locale-provider/en_US'</span>;</div><div class="line"></div><div class="line"><span class="keyword">return</span> (</div><div class="line">  &lt;LocaleProvider locale=&#123;enUS&#125;&gt;</div><div class="line">    &lt;App /&gt;</div><div class="line">  &lt;/LocaleProvider&gt;</div><div class="line">);</div></pre></td></tr></table></figure>
+<ul>
+<li>Ant Design 3.0 默认支持英文</li>
+</ul>
 <h2 id="fetch"><a href="#fetch" class="headerlink" title="fetch"></a>fetch</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm install --save isomorphic-fetch es6-promise</div><div class="line"></div><div class="line">import fetch from <span class="string">'isomorphic-fetch'</span></div></pre></td></tr></table></figure>
 <h2 id="React-Router-4"><a href="#React-Router-4" class="headerlink" title="React-Router 4"></a>React-Router 4</h2><h2 id="前后端分离"><a href="#前后端分离" class="headerlink" title="前后端分离"></a>前后端分离</h2><ul>
 <li>JSON 传递数据： jackson</li>
 </ul>
-<h2 id="git-冷门但有用命令"><a href="#git-冷门但有用命令" class="headerlink" title="git 冷门但有用命令"></a>git 冷门但有用命令</h2><h3 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h3><p><code>git branch -d branch_name</code></p>
+<h2 id="Icon"><a href="#Icon" class="headerlink" title="Icon"></a>Icon</h2><h3 id="iconfont"><a href="#iconfont" class="headerlink" title="iconfont"></a><a href="iconfont.cn">iconfont</a></h3><h2 id="git-冷门但有用命令"><a href="#git-冷门但有用命令" class="headerlink" title="git 冷门但有用命令"></a>git 冷门但有用命令</h2><h3 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h3><p><code>git branch -d branch_name</code></p>
 <h3 id="删除远端分支"><a href="#删除远端分支" class="headerlink" title="删除远端分支"></a>删除远端分支</h3><p><code>git push origin --delete branch_name</code></p>
 <h3 id="撤销修改和-commit"><a href="#撤销修改和-commit" class="headerlink" title="撤销修改和 commit"></a>撤销修改和 commit</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git reset file</div><div class="line">git reset --hard HEAD~1</div></pre></td></tr></table></figure>
 ]]></content>
