@@ -440,7 +440,7 @@
     <link href="https://zzh1991.github.io/2017/08/23/react-skill-md/"/>
     <id>https://zzh1991.github.io/2017/08/23/react-skill-md/</id>
     <published>2017-08-22T16:07:53.000Z</published>
-    <updated>2017-12-30T08:56:17.000Z</updated>
+    <updated>2017-12-30T13:54:28.000Z</updated>
     <content type="html"><![CDATA[<h2 id="配置-ES6-环境"><a href="#配置-ES6-环境" class="headerlink" title="配置 ES6 环境"></a>配置 ES6 环境</h2><h3 id="生成-package-json-文件"><a href="#生成-package-json-文件" class="headerlink" title="生成 package.json 文件"></a>生成 package.json 文件</h3><ul>
 <li><code>npm init -y</code></li>
 <li>通过 <code>npm --save</code> 或者 <code>npm --save-dev</code> 安装依赖包，其版本号，会包含在文件中<ul>
@@ -488,11 +488,18 @@
 <li>css peek</li>
 <li>regex previewer</li>
 </ul>
+<h4 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h4><ul>
+<li>Fira Code</li>
+</ul>
 <h4 id="setting"><a href="#setting" class="headerlink" title="setting"></a>setting</h4><ul>
 <li>font size to larger</li>
 <li>auto save</li>
 </ul>
 <h3 id="解决-npm-install-慢问题"><a href="#解决-npm-install-慢问题" class="headerlink" title="解决 npm install 慢问题"></a>解决 npm install 慢问题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install -gd express --registry=http://registry.npm.taobao.org</div><div class="line">npm config <span class="built_in">set</span> registry http://registry.npm.taobao.org</div></pre></td></tr></table></figure>
+<ul>
+<li>修改 <code>.npmrc</code><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">registry=https://registry.npm.taobao.org</div><div class="line">sass_binary_site=https://npm.taobao.org/mirrors/node-sass/</div><div class="line">phantomjs_cdnurl=http://npm.taobao.org/mirrors/phantomjs</div><div class="line">ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron/</div></pre></td></tr></table></figure>
+</li>
+</ul>
 <h2 id="React"><a href="#React" class="headerlink" title="React"></a>React</h2><h3 id="新建-react-项目-creact-react-app"><a href="#新建-react-项目-creact-react-app" class="headerlink" title="新建 react 项目 (creact-react-app)"></a>新建 react 项目 (creact-react-app)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">npm install -g create-react-app</div><div class="line">create-react-app my-app</div><div class="line"><span class="built_in">cd</span> my-app</div><div class="line">npm start</div></pre></td></tr></table></figure>
 <h3 id="React-组件数据"><a href="#React-组件数据" class="headerlink" title="React 组件数据"></a>React 组件数据</h3><ul>
 <li>prop：对外接口<ul>
@@ -540,7 +547,14 @@
 <li>Ant Design 3.0 默认支持英文</li>
 </ul>
 <h2 id="fetch"><a href="#fetch" class="headerlink" title="fetch"></a>fetch</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm install --save isomorphic-fetch es6-promise</div><div class="line"></div><div class="line">import fetch from <span class="string">'isomorphic-fetch'</span></div></pre></td></tr></table></figure>
-<h2 id="React-Router-4"><a href="#React-Router-4" class="headerlink" title="React-Router 4"></a>React-Router 4</h2><h2 id="前后端分离"><a href="#前后端分离" class="headerlink" title="前后端分离"></a>前后端分离</h2><ul>
+<h2 id="React-Router-4"><a href="#React-Router-4" class="headerlink" title="React-Router 4"></a>React-Router 4</h2><h2 id="JS-librays"><a href="#JS-librays" class="headerlink" title="JS librays"></a>JS librays</h2><ul>
+<li>lodash</li>
+<li>ImmutableJS</li>
+<li>moment</li>
+<li>react-ace</li>
+<li>styled-components</li>
+</ul>
+<h2 id="前后端分离"><a href="#前后端分离" class="headerlink" title="前后端分离"></a>前后端分离</h2><ul>
 <li>JSON 传递数据： jackson</li>
 </ul>
 <h2 id="Icon"><a href="#Icon" class="headerlink" title="Icon"></a>Icon</h2><h3 id="iconfont"><a href="#iconfont" class="headerlink" title="iconfont"></a><a href="iconfont.cn">iconfont</a></h3><h2 id="git-冷门但有用命令"><a href="#git-冷门但有用命令" class="headerlink" title="git 冷门但有用命令"></a>git 冷门但有用命令</h2><h3 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h3><p><code>git branch -d branch_name</code></p>
@@ -561,7 +575,7 @@
     <link href="https://zzh1991.github.io/2017/08/09/Windows-Skills/"/>
     <id>https://zzh1991.github.io/2017/08/09/Windows-Skills/</id>
     <published>2017-08-09T13:02:53.000Z</published>
-    <updated>2017-11-27T14:35:14.000Z</updated>
+    <updated>2017-12-30T13:25:10.000Z</updated>
     <content type="html"><![CDATA[<h1 id="Windows-Skills"><a href="#Windows-Skills" class="headerlink" title="Windows Skills"></a>Windows Skills</h1><h2 id="windows-下解压-Linux、macOs-压缩格式"><a href="#windows-下解压-Linux、macOs-压缩格式" class="headerlink" title="windows 下解压 Linux、macOs 压缩格式"></a>windows 下解压 Linux、macOs 压缩格式</h2><ul>
 <li><a href="https://cloudconvert.com/" target="_blank" rel="external">在线的转换格式网站</a></li>
 <li>7zip manager 工具选项里勾选 tgz 等格式</li>
@@ -609,7 +623,7 @@
 <h2 id="使用软件服务"><a href="#使用软件服务" class="headerlink" title="使用软件服务"></a>使用软件服务</h2><ul>
 <li>笔记类<ul>
 <li>为知笔记（VIP）</li>
-<li>印象笔记（记录生活方面）</li>
+<li>印象笔记国际版（记录生活方面）</li>
 </ul>
 </li>
 <li>阅读类<ul>
@@ -651,15 +665,38 @@
     <link href="https://zzh1991.github.io/2017/03/03/Ubuntu-macOs-Skills/"/>
     <id>https://zzh1991.github.io/2017/03/03/Ubuntu-macOs-Skills/</id>
     <published>2017-03-03T12:47:54.000Z</published>
-    <updated>2017-12-30T12:08:38.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="Skill-amp-Experience"><a href="#Skill-amp-Experience" class="headerlink" title="Skill &amp; Experience"></a>Skill &amp; Experience</h1><h2 id="Common"><a href="#Common" class="headerlink" title="Common"></a>Common</h2><h3 id="Sublime-Text3-plug-in"><a href="#Sublime-Text3-plug-in" class="headerlink" title="Sublime Text3 plug-in"></a>Sublime Text3 plug-in</h3><ul>
+    <updated>2017-12-30T14:00:12.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="Skill-amp-Experience"><a href="#Skill-amp-Experience" class="headerlink" title="Skill &amp; Experience"></a>Skill &amp; Experience</h1><h2 id="Common"><a href="#Common" class="headerlink" title="Common"></a>Common</h2><h3 id="Sublime-Text3-plugins-now-rarely-use"><a href="#Sublime-Text3-plugins-now-rarely-use" class="headerlink" title="Sublime Text3 plugins (now rarely use)"></a>Sublime Text3 plugins (now rarely use)</h3><ul>
 <li>ConvertToUTF8: support chinese</li>
 <li>insertDate: Ctrl + F5</li>
 <li>FileDiffs: compare two files’ difference</li>
 <li>SublimeCodeIntel: code hintinhg and auto-complete</li>
 </ul>
-<h3 id="Tmux"><a href="#Tmux" class="headerlink" title="Tmux"></a>Tmux</h3><h2 id="macOS"><a href="#macOS" class="headerlink" title="macOS"></a>macOS</h2><h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><h4 id="Netease-music-earpod-can-not-switch-among-songs"><a href="#Netease-music-earpod-can-not-switch-among-songs" class="headerlink" title="Netease music: earpod can not switch among songs"></a>Netease music: earpod can not switch among songs</h4><p><code>fixed：should download the software from the Netease not the Mac App Store</code></p>
+<h3 id="Tmux"><a href="#Tmux" class="headerlink" title="Tmux"></a>Tmux</h3><h3 id="Common-Services"><a href="#Common-Services" class="headerlink" title="Common Services"></a>Common Services</h3><ul>
+<li>Public ip and private ip</li>
+</ul>
+<h3 id="Chrome"><a href="#Chrome" class="headerlink" title="Chrome"></a>Chrome</h3><ul>
+<li>使用控制台截图</li>
+<li>插件<ul>
+<li>stylus：新的样式</li>
+<li>Infinity pro：新的主页</li>
+<li>去广告（目前没有找到非常好的）</li>
+<li>Postman</li>
+<li>Vimium</li>
+<li>Save to packet</li>
+<li>Proxy switchyOmega</li>
+<li>油猴</li>
+<li>Github 插件</li>
+<li>Steward（浏览器中的Alfred，默认关闭）</li>
+</ul>
+</li>
+<li>自带的 API</li>
+</ul>
+<h2 id="macOS"><a href="#macOS" class="headerlink" title="macOS"></a>macOS</h2><h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><h4 id="Netease-music-earpod-can-not-switch-among-songs"><a href="#Netease-music-earpod-can-not-switch-among-songs" class="headerlink" title="Netease music: earpod can not switch among songs"></a>Netease music: earpod can not switch among songs</h4><p><code>fixed：should download the software from the Netease not the Mac App Store</code></p>
 <h4 id="App-file-broken-solution"><a href="#App-file-broken-solution" class="headerlink" title="App file broken solution"></a>App file broken solution</h4><p><code>sudo spctl --master-disable</code></p>
+<h4 id="Time-Machine-Backup"><a href="#Time-Machine-Backup" class="headerlink" title="Time Machine Backup"></a>Time Machine Backup</h4><ul>
+<li>create EFI firstly in the external disk</li>
+</ul>
 <h3 id="Free-Services"><a href="#Free-Services" class="headerlink" title="Free Services"></a>Free Services</h3><ul>
 <li>Spark (Email client)</li>
 <li>iPic (For Markdown Pic)</li>
@@ -672,7 +709,15 @@
 </ul>
 <h3 id="mac-终端代理"><a href="#mac-终端代理" class="headerlink" title="mac 终端代理"></a>mac 终端代理</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 推荐在当前终端下修改代理配置，只作用于当前终端，关闭后失效</span></div><div class="line"><span class="built_in">export</span> http_proxy=<span class="string">"http://127.0.0.1:1080"</span></div><div class="line"><span class="built_in">export</span> https_proxy=<span class="string">"http://127.0.0.1:1080"</span></div></pre></td></tr></table></figure>
 <h2 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu</h2><h3 id="Install-Node-js"><a href="#Install-Node-js" class="headerlink" title="Install Node.js"></a>Install Node.js</h3><p>可以直接官网下载安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">curl <span class="_">-s</span>L https://deb.nodesource.com/setup_7.x | sudo -E bash -</div><div class="line">sudo apt-get install nodejs</div></pre></td></tr></table></figure></p>
-<h3 id="offline-documentation-browser"><a href="#offline-documentation-browser" class="headerlink" title="offline documentation browser"></a>offline documentation browser</h3><ul>
+<ul>
+<li>Node version management</li>
+</ul>
+<h3 id="Office"><a href="#Office" class="headerlink" title="Office"></a>Office</h3><ul>
+<li><a href="https://www.onlyoffice.com/" target="_blank" rel="external">Only Office</a></li>
+<li>Google Web Office</li>
+<li>Microsoft Web Office</li>
+</ul>
+<h3 id="API-Document"><a href="#API-Document" class="headerlink" title="API Document"></a>API Document</h3><ul>
 <li><a href="https://zealdocs.org" target="_blank" rel="external">Zeal</a></li>
 </ul>
 <h3 id="docker-安装"><a href="#docker-安装" class="headerlink" title="docker 安装"></a>docker 安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">sudo apt-get -y install \</div><div class="line">  apt-transport-https \</div><div class="line">  ca-certificates \</div><div class="line">  curl</div><div class="line"></div><div class="line">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</div><div class="line"></div><div class="line">sudo add-apt-repository \</div><div class="line">       <span class="string">"deb [arch=amd64] https://download.docker.com/linux/ubuntu \</span></div><div class="line">       <span class="variable">$(lsb_release -cs)</span> \</div><div class="line">       stable"</div><div class="line"></div><div class="line">sudo apt-get update</div><div class="line"></div><div class="line">sudo apt-get -y install docker-ce</div></pre></td></tr></table></figure>
