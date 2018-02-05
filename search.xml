@@ -116,6 +116,15 @@
 <li>顶层函数不能访问类的 private 成员</li>
 <li>伴生对象：companion object</li>
 </ul>
+<h2 id="可空性"><a href="#可空性" class="headerlink" title="可空性"></a>可空性</h2><p><code>为了避免 NullPointerExceptiom 错误</code><br>在类型后面加上 <code>?</code> 来表示可空</p>
+<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><ul>
+<li>安全调用运算符：<code>?.</code> 来调用函数或者属性，空则返回 <code>null</code></li>
+<li>Elvis 运算符：<code>?:</code> 经常与安全调用运算符一起使用，用一个值代替对 null 对象调用方法时返回的 null</li>
+<li>安全转换：<code>as?</code> 尝试把值转换成指定的类型，常见与 Elvis 运算符一起使用</li>
+<li>非空断言：<code>!!</code> 可以把任何值转换成非空类型，如果对 null 值做非空断言，则会抛出异常，另外避免在同一行中使用多个非空断言</li>
+<li>let 函数：结合安全调用运算符，能有效地调用 let 函数的可空对象，转变为非空类型</li>
+<li>延迟初始化器的属性：使用 <code>lateint</code> 修饰符修饰属性，该属性必须为 var，常用于依赖注入</li>
+</ul>
 ]]></content>
       
         
@@ -565,8 +574,10 @@
 <li>减小切换系统，方便直接转换</li>
 </ul>
 <h2 id="各编程语言的开发文档及-API"><a href="#各编程语言的开发文档及-API" class="headerlink" title="各编程语言的开发文档及 API"></a>各编程语言的开发文档及 API</h2><ul>
-<li><a href="https://kapeli.com/docset_links" target="_blank" rel="external">dash 整合的文档下载地址</a></li>
+<li><a href="https://kapeli.com/docset_links" target="_blank" rel="external">dash 整合的文档下载地址</a><ul>
 <li>其下载下来的格式均为 tgz，解压需使用上面的转换工具</li>
+</ul>
+</li>
 <li>Zeal (可以整合 IDE 一起使用，其自带一些文档)</li>
 <li><a href="http://devdocs.io/" target="_blank" rel="external">DevDocs</a>: 在线 API 网站，唯一不好的就是没有 JAVA 的文档</li>
 </ul>
@@ -623,7 +634,8 @@
 <li>简书</li>
 </ul>
 </li>
-<li>体育类<ul>
+<li><p>体育类</p>
+<ul>
 <li>虎扑体育</li>
 <li>腾讯体育 (NBA 直播，英超直播)</li>
 <li>PPTV 体育 (大部份的足球赛事)</li>
