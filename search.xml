@@ -125,6 +125,21 @@
 <li>let 函数：结合安全调用运算符，能有效地调用 let 函数的可空对象，转变为非空类型</li>
 <li>延迟初始化器的属性：使用 <code>lateint</code> 修饰符修饰属性，该属性必须为 var，常用于依赖注入</li>
 </ul>
+<h2 id="Lambda-编程"><a href="#Lambda-编程" class="headerlink" title="Lambda 编程"></a>Lambda 编程</h2><blockquote>
+<p><strong>Lambda</strong> 表达式，本质上就是可以传递给其他函数的一小段代码，把函数当作值看待</p>
+</blockquote>
+<ul>
+<li>如果 lambda 刚好是函数或者属性的委托，可以用成员引用替换</li>
+<li>Kotlin 的 lambda 表达式始终用花括号包围，实参并没有使用括号括起来，箭头把实参列表和 lambda 的函数体隔开</li>
+<li><p>需要把一小段代码封闭到一个代码块中，可以使用库函数 <code>run</code> 来执行传给它的 lambda</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">run &#123; lambda expression &#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>如果 lambda 表达式是函数调用的最后一个实参，它可以被放到括号的外面</p>
+</li>
+<li>当 lambda 是函数唯一的实参时，还可以去掉调用代码的空括号</li>
+<li>lambda 默认参数名称 it 代替命名参数</li>
+<li>lambda 表达式可以有多条语句</li>
+</ul>
 ]]></content>
       
         
