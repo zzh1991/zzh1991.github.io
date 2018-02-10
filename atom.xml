@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="https://zzh1991.github.io/"/>
-  <updated>2018-02-10T12:26:35.000Z</updated>
+  <updated>2018-02-10T12:30:43.000Z</updated>
   <id>https://zzh1991.github.io/</id>
   
   <author>
@@ -15,12 +15,14 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[workflow]]></title>
+    <title></title>
     <link href="https://zzh1991.github.io/2018/02/10/workflow/"/>
     <id>https://zzh1991.github.io/2018/02/10/workflow/</id>
     <published>2018-02-10T12:25:51.000Z</published>
-    <updated>2018-02-10T12:26:35.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="Workflow-for-iPhone"><a href="#Workflow-for-iPhone" class="headerlink" title="Workflow for iPhone"></a>Workflow for iPhone</h2><h3 id="Workflow-软件"><a href="#Workflow-软件" class="headerlink" title="Workflow 软件"></a>Workflow 软件</h3><h4 id="Workflow-著名的软件，已被-Apple-收购"><a href="#Workflow-著名的软件，已被-Apple-收购" class="headerlink" title="Workflow: 著名的软件，已被 Apple 收购"></a><code>Workflow</code>: 著名的软件，已被 Apple 收购</h4><ul>
+    <updated>2018-02-10T12:30:43.000Z</updated>
+    <content type="html"><![CDATA[<hr>
+<p>title: Workflow for iPhone<br>date: 2018-02-10 20:25:51<br>tags: Workflow</p>
+<h2 id="description-“主要介绍-iPhone-上的-workflow-软件”"><a href="#description-“主要介绍-iPhone-上的-workflow-软件”" class="headerlink" title="description: “主要介绍 iPhone 上的 workflow 软件”"></a>description: “主要介绍 iPhone 上的 workflow 软件”</h2><h2 id="Workflow-软件"><a href="#Workflow-软件" class="headerlink" title="Workflow 软件"></a>Workflow 软件</h2><h4 id="Workflow-著名的软件，已被-Apple-收购"><a href="#Workflow-著名的软件，已被-Apple-收购" class="headerlink" title="Workflow: 著名的软件，已被 Apple 收购"></a><code>Workflow</code>: 著名的软件，已被 Apple 收购</h4><ul>
 <li>Workflow 自带的 gallery: 里面有很多的自动化流程，需要自己甄别</li>
 <li><a href="http://workflow.sspai.com/#/main/workflow" target="_blank" rel="external">少数派收集的 workflow</a>: 有一些很有意思的自动化流程</li>
 </ul>
@@ -46,10 +48,10 @@
 <p><code>Knowledge Collision 激发思维碰撞，IDEA 丛生</code></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="Workflow-for-iPhone"><a href="#Workflow-for-iPhone" class="headerlink" title="Workflow for iPhone"></a>Workflow for iPhone</h2><h3 i]]>
+    <![CDATA[<hr>
+<p>title: Workflow for iPhone<br>date: 2018-02-10 20:25:51<br>tags: Workflow</p>
+<h2 id="description-“主要介绍-iPhone-上的-workflow-软件”"><a h]]>
     </summary>
-    
-      <category term="Workflow" scheme="https://zzh1991.github.io/tags/Workflow/"/>
     
   </entry>
   
