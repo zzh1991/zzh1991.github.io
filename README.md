@@ -6,3 +6,6 @@
 - [React Skills](https://zzh1991.github.io/2017/08/23/react-skill-md/)
 - [Kotlin Skills](https://zzh1991.github.io/2017/12/17/kotlin-skills/)
 - [Shell Skills](https://zzh1991.github.io/2017/12/06/shell-skills/)
+
+## Snapshot
+![Blog](blog.png)
