@@ -4,11 +4,9 @@
   
     
     <entry>
-      <title></title>
+      <title><![CDATA[Workflow for iPhone]]></title>
       <url>https://zzh1991.github.io/2018/02/10/workflow/</url>
-      <content type="html"><![CDATA[<hr>
-<p>title: Workflow for iPhone<br>date: 2018-02-10 20:25:51<br>tags: Workflow</p>
-<h2 id="description-“主要介绍-Workflow-的使用”"><a href="#description-“主要介绍-Workflow-的使用”" class="headerlink" title="description: “主要介绍 Workflow 的使用”"></a>description: “主要介绍 Workflow 的使用”</h2><h2 id="Workflow-软件"><a href="#Workflow-软件" class="headerlink" title="Workflow 软件"></a>Workflow 软件</h2><h3 id="Workflow-著名的软件，已被-Apple-收购"><a href="#Workflow-著名的软件，已被-Apple-收购" class="headerlink" title="Workflow: 著名的软件，已被 Apple 收购"></a><code>Workflow</code>: 著名的软件，已被 Apple 收购</h3><ul>
+      <content type="html"><![CDATA[<h2 id="Workflow-软件"><a href="#Workflow-软件" class="headerlink" title="Workflow 软件"></a>Workflow 软件</h2><h3 id="Workflow-著名的软件，已被-Apple-收购"><a href="#Workflow-著名的软件，已被-Apple-收购" class="headerlink" title="Workflow: 著名的软件，已被 Apple 收购"></a><code>Workflow</code>: 著名的软件，已被 Apple 收购</h3><ul>
 <li>Workflow 自带的 gallery: 里面有很多的自动化流程，需要自己甄别</li>
 <li><a href="http://workflow.sspai.com/#/main/workflow" target="_blank" rel="external">少数派收集的 workflow</a>: 有一些很有意思的自动化流程</li>
 </ul>
@@ -34,6 +32,12 @@
 <p><code>Knowledge Collision 激发思维碰撞，IDEA 丛生</code></p>
 ]]></content>
       
+        
+        <tags>
+            
+            <tag> Workflow </tag>
+            
+        </tags>
         
     </entry>
     
