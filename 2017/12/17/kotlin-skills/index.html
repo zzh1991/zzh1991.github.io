@@ -56,6 +56,8 @@
 
 
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script> 
 
 
 <title>Kotlin skills | Welcome Code</title>
@@ -86,7 +88,6 @@
 
 
     <script> yiliaConfig.rootUrl = "\/";</script>
-
 
 
 
@@ -542,25 +543,6 @@
 
 
     
-      <div class="duoshuo" id="comments">
-    <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2017/12/17/kotlin-skills/" data-title="Kotlin skills" data-url="https://zzh1991.github.io/2017/12/17/kotlin-skills/"></div>
-    <script>
-        var duoshuoQuery = {short_name:"zzh1991"};
-        var loadComment = function(){
-            var d = document, s = d.createElement('script');
-            s.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-            s.async = true; s.charset = 'UTF-8';
-            (d.head || d.body).appendChild(s);
-        }
-
-        
-    </script>
-    
-    <script> loadComment(); </script>
-
-</div>
-    
 
 
 
@@ -589,6 +571,24 @@
     <script>
         
     </script>
+
+<div id="gitment"></div>
+
+<!-- 主页不要加载gitment -->
+
+
+<script>
+var gitment = new Gitment({
+  owner: 'zzh1991',
+  repo: 'blog-comment',
+  oauth: {
+    client_id: '3c555ac6b77ab906dd3f',
+    client_secret: 'e12890324b51650dad0a32709bb35314b560ba2f',
+  },
+})
+gitment.render('gitment')
+</script>
+
 </div>
       <footer id="footer">
     <div class="outer">

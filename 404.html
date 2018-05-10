@@ -55,6 +55,8 @@
 
 
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script> 
 
 
 <title>404 Not Found：该页无法显示 | Welcome Code</title>
@@ -85,7 +87,6 @@
 
 
     <script> yiliaConfig.rootUrl = "\/";</script>
-
 
 
 
@@ -429,6 +430,24 @@
     <script>
         
     </script>
+
+<div id="gitment"></div>
+
+<!-- 主页不要加载gitment -->
+
+
+<script>
+var gitment = new Gitment({
+  owner: 'zzh1991',
+  repo: 'blog-comment',
+  oauth: {
+    client_id: '3c555ac6b77ab906dd3f',
+    client_secret: 'e12890324b51650dad0a32709bb35314b560ba2f',
+  },
+})
+gitment.render('gitment')
+</script>
+
 </div>
       <footer id="footer">
     <div class="outer">
