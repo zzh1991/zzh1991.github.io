@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="https://zzh1991.github.io/"/>
-  <updated>2018-02-10T12:39:29.000Z</updated>
+  <updated>2018-07-24T15:37:13.000Z</updated>
   <id>https://zzh1991.github.io/</id>
   
   <author>
@@ -13,6 +13,63 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[skills]]></title>
+    <link href="https://zzh1991.github.io/2018/07/24/go-skills/"/>
+    <id>https://zzh1991.github.io/2018/07/24/go-skills/</id>
+    <published>2018-07-24T13:55:17.000Z</published>
+    <updated>2018-07-24T15:37:13.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><ul>
+<li>Go 是编译型语言</li>
+<li>Go 原生支持 UTF-8，可以处理各国语言</li>
+<li>main 包用来定义一个独立运行的程序</li>
+<li>空标识符：<code>_（下划线）</code></li>
+</ul>
+<h3 id="命令行参数"><a href="#命令行参数" class="headerlink" title="命令行参数"></a>命令行参数</h3><ul>
+<li>os.Args 是一个字符串 slice</li>
+</ul>
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><ul>
+<li>接口和引用类型（slice、指针、map、通道、函数）的零值为 nil</li>
+<li>new(T) 返回地址，即指针</li>
+<li>所有的变量都有地址，即指针</li>
+</ul>
+<h3 id="基本数据"><a href="#基本数据" class="headerlink" title="基本数据"></a>基本数据</h3><ul>
+<li>rune 类型是 int32 类型的同义词，代表一个 Unicode</li>
+<li>byte 类型是 int8 类型的同义词</li>
+<li>就 Go 而言，取模余数的正负号总是与被除数一致</li>
+<li>Go 的 range 循环也适用于字符串，按 UTF-8 隐式解码</li>
+<li>整数转换成字符串<ul>
+<li>fmt.Sprintf(“%d”, x)</li>
+<li>strconv.Itoa(x)</li>
+<li>strconv.FormatInt(int64(x), 2)</li>
+</ul>
+</li>
+<li>字符串转化成整数<ul>
+<li><code>x, err := strconv.Atoi(&quot;123&quot;)</code></li>
+<li><code>y, err := strconv.ParseInt(&quot;123&quot;, 10, 64)</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="复合数据类型"><a href="#复合数据类型" class="headerlink" title="复合数据类型"></a>复合数据类型</h3><ul>
+<li>slice 无法做比较，必须自己写函数进行比较</li>
+<li><code>slice = append(slice, element)</code></li>
+<li>copy 函数用来为两个拥有相同类型元素的 slice 复制元素</li>
+</ul>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><ul>
+<li>Go 语言没有默认参数值的概念也不能指定实参值</li>
+<li>defer 语句经常使用于成对的操作，比如打开和关闭，连接和断开，加锁和解锁</li>
+<li>Go 语言封装的单元是包而不是类型</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[主要介绍 Go 语言的使用技巧]]>
+    
+    </summary>
+    
+      <category term="go" scheme="https://zzh1991.github.io/tags/go/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Workflow for iPhone]]></title>
