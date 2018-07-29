@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="https://zzh1991.github.io/"/>
-  <updated>2018-07-29T09:43:11.000Z</updated>
+  <updated>2018-07-29T09:45:10.000Z</updated>
   <id>https://zzh1991.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="https://zzh1991.github.io/2018/07/29/note-skills/"/>
     <id>https://zzh1991.github.io/2018/07/29/note-skills/</id>
     <published>2018-07-29T08:31:13.000Z</published>
-    <updated>2018-07-29T09:43:11.000Z</updated>
+    <updated>2018-07-29T09:45:10.000Z</updated>
     <content type="html"><![CDATA[<h2 id="知识管理"><a href="#知识管理" class="headerlink" title="知识管理"></a>知识管理</h2><p>我们每天都在接触各种各样的信息，并从中提取出自己所需的知识，那下面就来聊聊如何利用工具来管理知识。</p>
 <h3 id="笔记类工具"><a href="#笔记类工具" class="headerlink" title="笔记类工具"></a>笔记类工具</h3><h4 id="为知笔记-跟-Evernote-和有道云笔记是很类似的"><a href="#为知笔记-跟-Evernote-和有道云笔记是很类似的" class="headerlink" title="为知笔记: 跟 Evernote 和有道云笔记是很类似的"></a><a href="http://wiz.cn/" target="_blank" rel="external">为知笔记</a>: 跟 Evernote 和有道云笔记是很类似的</h4><ul>
 <li>本人已经付费两年，从免费版用到订阅版，一年 60 元，并不是非常贵</li>
@@ -63,7 +63,7 @@
 <li>Airtable 免费版不能使用一些 Block 可视化插件</li>
 <li>Airtable 与 Trello 的互动比较少</li>
 </ul>
-<h4 id="日历工具-Sunsuma"><a href="#日历工具-Sunsuma" class="headerlink" title="日历工具 Sunsuma"></a>日历工具 <a href="https://sunsama.com/" target="_blank" rel="external">Sunsuma</a></h4><ul>
+<h4 id="日历工具-Sunsama"><a href="#日历工具-Sunsama" class="headerlink" title="日历工具 Sunsama"></a>日历工具 <a href="https://sunsama.com/" target="_blank" rel="external">Sunsama</a></h4><ul>
 <li>对接 Google 日历</li>
 <li>集成 Slack、Trello</li>
 <li>一个 channel 跟踪一个 GitHub 仓库的变更</li>
