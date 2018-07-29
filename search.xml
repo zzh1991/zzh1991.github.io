@@ -4,6 +4,82 @@
   
     
     <entry>
+      <title><![CDATA[知识管理]]></title>
+      <url>https://zzh1991.github.io/2018/07/29/note-skills/</url>
+      <content type="html"><![CDATA[<h2 id="知识管理"><a href="#知识管理" class="headerlink" title="知识管理"></a>知识管理</h2><p>我们每天都在接触各种各样的信息，并从中提取出自己所需的知识，那下面就来聊聊如何利用工具来管理知识。</p>
+<h3 id="笔记类工具"><a href="#笔记类工具" class="headerlink" title="笔记类工具"></a>笔记类工具</h3><h4 id="为知笔记-跟-Evernote-和有道云笔记是很类似的"><a href="#为知笔记-跟-Evernote-和有道云笔记是很类似的" class="headerlink" title="为知笔记: 跟 Evernote 和有道云笔记是很类似的"></a><a href="http://wiz.cn/" target="_blank" rel="external">为知笔记</a>: 跟 Evernote 和有道云笔记是很类似的</h4><ul>
+<li>本人已经付费两年，从免费版用到订阅版，一年 60 元，并不是非常贵</li>
+<li>支持 Markdown 模式，版本控制，跨平台同步，体验就好</li>
+<li>目前用来记录一些比较琐细的 idea 和知识点，后期再作统一处理</li>
+</ul>
+<h5 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h5><ul>
+<li>Markdown 的阅读模式体验还是很不错的，但是编辑的时候不是非常有效率</li>
+<li>富文本的排版比较麻烦，所以一般都采用 Markdown 书写</li>
+</ul>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1fqn16p0b8wj30c8085wee.jpg" alt="为知笔记"></p>
+<h4 id="语雀-阿里旗下出品的知识管理分享产品"><a href="#语雀-阿里旗下出品的知识管理分享产品" class="headerlink" title="语雀: 阿里旗下出品的知识管理分享产品"></a><a href="https://www.yuque.com/" target="_blank" rel="external">语雀</a>: 阿里旗下出品的知识管理分享产品</h4><ul>
+<li>网址：<code>www.yuque.com</code></li>
+<li>从内测开始使用，现在已经开放注册了</li>
+<li>自动排版：富文本排版，样式好看</li>
+<li>知识库管理：类似笔记库</li>
+<li>目录索引：与为知笔记一样具有协作分享功能</li>
+<li>目前主要用其记录比较详细，内容比较多的笔记</li>
+</ul>
+<h5 id="缺点-1"><a href="#缺点-1" class="headerlink" title="缺点"></a>缺点</h5><ul>
+<li>目前没有移动端，只有网页端，手机只能打开浏览器进行查看</li>
+</ul>
+<h4 id="Notion-颠覆式笔记应用"><a href="#Notion-颠覆式笔记应用" class="headerlink" title="Notion: 颠覆式笔记应用"></a><a href="https://www.notion.so" target="_blank" rel="external">Notion</a>: 颠覆式笔记应用</h4><ul>
+<li>拖拽式组合网页：随意插入想要的组件</li>
+<li>笔记之间可以相互链接，类似网页</li>
+<li>谷歌账号可以直接登入，不需要注册账号</li>
+<li>支持嵌入网页内容、媒体，功能十分强大</li>
+<li>iPhone，Andriod，Windows，Mac，网页端</li>
+<li>目前我主要用其记录一些网页的链接和图片</li>
+</ul>
+<h5 id="缺点-2"><a href="#缺点-2" class="headerlink" title="缺点"></a>缺点</h5><ul>
+<li>高级功能需要付费，而且价格不菲，4 美元 / 月</li>
+<li>手机 APP 和网页端只能进行 1000 次的操作，超出就需要付费才能进行修改，现在支持删除已有的条目，然后继续使用</li>
+<li>手机上的操作并不会影响数目，所以尽量在手机上操作（目前已经修改规则了）</li>
+</ul>
+<h4 id="Airtable-amp-Trello"><a href="#Airtable-amp-Trello" class="headerlink" title="Airtable &amp; Trello"></a><a href="https://airtable.com/" target="_blank" rel="external">Airtable</a> &amp; <a href="https://trello.com/" target="_blank" rel="external">Trello</a></h4><ul>
+<li>主要用于一些任务的记录与跟踪</li>
+<li>Airtable 可以集成 Slack 和 Trello（借助 Zapier）</li>
+</ul>
+<h5 id="缺点-3"><a href="#缺点-3" class="headerlink" title="缺点"></a>缺点</h5><ul>
+<li>Airtable 免费版不能使用一些 Block 可视化插件</li>
+<li>Airtable 与 Trello 的互动比较少</li>
+</ul>
+<h4 id="日历工具-Sunsuma"><a href="#日历工具-Sunsuma" class="headerlink" title="日历工具 Sunsuma"></a>日历工具 <a href="https://sunsama.com/" target="_blank" rel="external">Sunsuma</a></h4><ul>
+<li>对接 Google 日历</li>
+<li>集成 Slack、Trello</li>
+<li>一个 channel 跟踪一个 GitHub 仓库的变更</li>
+</ul>
+<h5 id="缺点-4"><a href="#缺点-4" class="headerlink" title="缺点"></a>缺点</h5><ul>
+<li>只有网页版和 Mac 端应用，没有手机应用</li>
+<li>一个 channel 只能设置一个 GitHub 仓库，不能设置成多个</li>
+<li>免费版也有操作的次数限制</li>
+</ul>
+<h3 id="todo-自己实现的-todo-管理工具"><a href="#todo-自己实现的-todo-管理工具" class="headerlink" title="todo: 自己实现的 todo 管理工具"></a><a href="http://todo.zzhpro.com" target="_blank" rel="external">todo</a>: 自己实现的 todo 管理工具</h3><h4 id="功能（目前还是比较基础的）"><a href="#功能（目前还是比较基础的）" class="headerlink" title="功能（目前还是比较基础的）"></a>功能（目前还是比较基础的）</h4><ol>
+<li>提供编辑器记录详细信息，支持 Markdown 语法</li>
+<li>比较适合网页版操作，目前并没有适配移动端</li>
+<li>详细的时间记录</li>
+<li>支持排序功能，后续会加入搜索、过滤功能</li>
+</ol>
+<p>更多精彩内容请<ruby>关注<rt>扫码</rt></ruby>：</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1fo32397l2gj30760760t8.jpg" alt="图注：KnowledgeCollision 微信公众号"></p>
+<p><code>Knowledge Collision 激发思维碰撞，IDEA 丛生</code></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> note </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Go Skills]]></title>
       <url>https://zzh1991.github.io/2018/07/24/go-skills/</url>
       <content type="html"><![CDATA[<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><ul>
