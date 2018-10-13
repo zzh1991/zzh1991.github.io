@@ -866,16 +866,15 @@
     <entry>
       <title><![CDATA[Ubuntu & macOS Skills]]></title>
       <url>https://zzh1991.github.io/2017/03/03/Ubuntu-macOS/</url>
-      <content type="html"><![CDATA[<h1 id="Skill-amp-Experience"><a href="#Skill-amp-Experience" class="headerlink" title="Skill &amp; Experience"></a>Skill &amp; Experience</h1><h2 id="Common"><a href="#Common" class="headerlink" title="Common"></a>Common</h2><h3 id="Sublime-Text3-plugins-now-rarely-use"><a href="#Sublime-Text3-plugins-now-rarely-use" class="headerlink" title="Sublime Text3 plugins (now rarely use)"></a>Sublime Text3 plugins (now rarely use)</h3><ul>
-<li>ConvertToUTF8: support chinese</li>
-<li>insertDate: Ctrl + F5</li>
-<li>FileDiffs: compare two files’ difference</li>
-<li>SublimeCodeIntel: code hintinhg and auto-complete</li>
-</ul>
+      <content type="html"><![CDATA[<h1 id="Skill-amp-Experience"><a href="#Skill-amp-Experience" class="headerlink" title="Skill &amp; Experience"></a>Skill &amp; Experience</h1><h2 id="Common"><a href="#Common" class="headerlink" title="Common"></a>Common</h2><!-- ### Sublime Text3 plugins (now rarely use)
+- ConvertToUTF8: support chinese
+- insertDate: Ctrl + F5
+- FileDiffs: compare two files' difference
+- SublimeCodeIntel: code hintinhg and auto-complete -->
 <h3 id="Tmux"><a href="#Tmux" class="headerlink" title="Tmux"></a>Tmux</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># install</span></div><div class="line">brew install tmux</div><div class="line"></div><div class="line"><span class="comment"># new session</span></div><div class="line">tmux new <span class="_">-s</span> session_name</div><div class="line"></div><div class="line"><span class="comment"># command prefix</span></div><div class="line">CTRL + b</div><div class="line"></div><div class="line"><span class="comment"># list all sessions</span></div><div class="line">tmux list-sessions</div><div class="line"></div><div class="line"><span class="comment"># detach session</span></div><div class="line">tmux detach (prefix + d)</div><div class="line"></div><div class="line"><span class="comment"># attach session</span></div><div class="line">tmux attach -t session_name</div><div class="line"></div><div class="line"><span class="comment"># new window</span></div><div class="line">prefix + c</div><div class="line"></div><div class="line"><span class="comment"># switch window</span></div><div class="line">prefix + 0-9</div><div class="line"></div><div class="line"><span class="comment"># close window</span></div><div class="line"><span class="built_in">exit</span></div><div class="line"></div><div class="line"><span class="comment"># split panel</span></div><div class="line">prefix + <span class="string">" (horizonal)</span></div><div class="line">prefix + % (vertical)</div><div class="line"></div><div class="line"># switch panel</div><div class="line">prifix + &#123;</div><div class="line">prefix + &#125;</div><div class="line"></div><div class="line"># scroll</div><div class="line">prefix + [</div><div class="line"></div><div class="line"># exit scroll</div><div class="line">q</div></pre></td></tr></table></figure>
-<h4 id="中文教程"><a href="#中文教程" class="headerlink" title="中文教程"></a><a href="https://blog.csdn.net/jyfu2_12/article/details/78650685" target="_blank" rel="external">中文教程</a></h4><h3 id="Common-Services"><a href="#Common-Services" class="headerlink" title="Common Services"></a>Common Services</h3><ul>
-<li>Public ip and private ip</li>
-</ul>
+<!-- #### [中文教程](https://blog.csdn.net/jyfu2_12/article/details/78650685) -->
+<!-- ### Common Services
+- Public ip and private ip -->
 <h3 id="Chrome"><a href="#Chrome" class="headerlink" title="Chrome"></a>Chrome</h3><ul>
 <li>使用控制台截图</li>
 <li>插件<ul>
@@ -906,6 +905,7 @@
 <h2 id="macOS"><a href="#macOS" class="headerlink" title="macOS"></a>macOS</h2><h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><h4 id="Netease-music-earpod-can-not-switch-among-songs"><a href="#Netease-music-earpod-can-not-switch-among-songs" class="headerlink" title="Netease music: earpod can not switch among songs"></a>Netease music: earpod can not switch among songs</h4><p><code>fixed：should download the software from the Netease not the Mac App Store</code></p>
 <h4 id="App-file-broken-solution"><a href="#App-file-broken-solution" class="headerlink" title="App file broken solution"></a>App file broken solution</h4><p><code>sudo spctl --master-disable</code></p>
 <h4 id="Time-Machine-Backup"><a href="#Time-Machine-Backup" class="headerlink" title="Time Machine Backup"></a>Time Machine Backup</h4><p><code>create EFI firstly in the external disk</code></p>
+<h4 id="Mac-Terminal-missing-git"><a href="#Mac-Terminal-missing-git" class="headerlink" title="Mac Terminal missing git"></a>Mac Terminal missing git</h4><p><code>xcode-select --install</code> to install git</p>
 <h3 id="Free-Services"><a href="#Free-Services" class="headerlink" title="Free Services"></a>Free Services</h3><ul>
 <li>Spark (Email client)</li>
 <li>iPic (For Markdown Pic)</li>
