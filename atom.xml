@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="https://zzh1991.github.io/"/>
-  <updated>2018-10-14T15:12:55.843Z</updated>
+  <updated>2019-01-01T12:34:33.735Z</updated>
   <id>https://zzh1991.github.io/</id>
   
   <author>
@@ -13,6 +13,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[java-util]]></title>
+    <link href="https://zzh1991.github.io/2019/01/01/java-util/"/>
+    <id>https://zzh1991.github.io/2019/01/01/java-util/</id>
+    <published>2019-01-01T08:40:59.000Z</published>
+    <updated>2019-01-01T12:34:33.735Z</updated>
+    <content type="html"><![CDATA[<h2 id="所需工具库"><a href="#所需工具库" class="headerlink" title="所需工具库"></a>所需工具库</h2><ol>
+<li>Guava</li>
+<li>commons-lang</li>
+</ol>
+<h3 id="测试所需工具库"><a href="#测试所需工具库" class="headerlink" title="测试所需工具库"></a>测试所需工具库</h3><ol>
+<li>junit-jupiter-api</li>
+<li>junit-platform-commons</li>
+<li>junit-platform-launcher</li>
+<li>junit-platform-engine</li>
+</ol>
+<h2 id="常用代码片段"><a href="#常用代码片段" class="headerlink" title="常用代码片段"></a>常用代码片段</h2><h3 id="分割大的列表变成小的列表"><a href="#分割大的列表变成小的列表" class="headerlink" title="分割大的列表变成小的列表"></a>分割大的列表变成小的列表</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Lists.partition(bigList, splitSize);</div></pre></td></tr></table></figure>
+<h3 id="将-String-变成-List"><a href="#将-String-变成-List" class="headerlink" title="将 String 变成 List"></a>将 String 变成 List</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> List&lt;String&gt; <span class="title">splitStringToList</span><span class="params">(String text, String separator)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (Strings.isNullOrEmpty(text)) &#123;</div><div class="line">        <span class="keyword">return</span> Lists.newArrayList();</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> Lists.newArrayList(text.split(separator));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="判断是否开启了-Debug-模式"><a href="#判断是否开启了-Debug-模式" class="headerlink" title="判断是否开启了 Debug 模式"></a>判断是否开启了 Debug 模式</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String AGENTLIB_JDWP = <span class="string">"-agentlib:jdwp"</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isDebugMode</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">final</span> RuntimeMXBean runtimeMXBean = ManagementFactory.getRuntimeMXBean();</div><div class="line">    <span class="keyword">return</span> runtimeMXBean.getInputArguments()</div><div class="line">            .stream()</div><div class="line">            .anyMatch(arg -&gt; arg.contains(AGENTLIB_JDWP));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="快乐-Guava"><a href="#快乐-Guava" class="headerlink" title="快乐 Guava"></a>快乐 Guava</h2><blockquote>
+<p>未完待续</p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[主要介绍 Java 常用的代码片段]]>
+    
+    </summary>
+    
+      <category term="Java" scheme="https://zzh1991.github.io/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[优化程序性能]]></title>
@@ -168,15 +200,20 @@
     <link href="https://zzh1991.github.io/2018/07/24/go-skills/"/>
     <id>https://zzh1991.github.io/2018/07/24/go-skills/</id>
     <published>2018-07-24T13:55:17.000Z</published>
-    <updated>2018-07-24T15:39:15.000Z</updated>
+    <updated>2018-11-08T13:58:29.222Z</updated>
     <content type="html"><![CDATA[<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><ul>
 <li>Go 是编译型语言</li>
 <li>Go 原生支持 UTF-8，可以处理各国语言</li>
 <li>main 包用来定义一个独立运行的程序</li>
 <li>空标识符：<code>_（下划线）</code></li>
+<li>格式化代码工具<ul>
+<li>gofmt</li>
+<li>goimports</li>
+</ul>
+</li>
 </ul>
 <h3 id="命令行参数"><a href="#命令行参数" class="headerlink" title="命令行参数"></a>命令行参数</h3><ul>
-<li>os.Args 是一个字符串 slice</li>
+<li>os.Args 是一个字符串 slice, slice 索引是半开区间的</li>
 </ul>
 <h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><ul>
 <li>接口和引用类型（slice、指针、map、通道、函数）的零值为 nil</li>
@@ -209,7 +246,24 @@
 <li>Go 语言没有默认参数值的概念也不能指定实参值</li>
 <li>defer 语句经常使用于成对的操作，比如打开和关闭，连接和断开，加锁和解锁</li>
 <li>Go 语言封装的单元是包而不是类型</li>
+<li><strong>Go 语言函数可以返回多个值，用逗号进行分隔</strong></li>
+<li><strong>与许多其他语言不太， Go 语言通过使用普通的值而非异常来报告错误</strong><ul>
+<li><code>fmt.Errorf(&quot;%v&quot;, errorMessage)</code></li>
 </ul>
+</li>
+<li>延迟函数：<strong>defer</strong> 语句经常使用于成对的操作，比如打开和关闭，连接和断开，加锁和解锁</li>
+</ul>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><ul>
+<li>与函数类似，在函数名前多了一个类型参数，且圆括号是必须的</li>
+</ul>
+<h3 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h3><ul>
+<li>Go 的接口是隐事实现的</li>
+<li>空接口类型：<code>interface{}</code></li>
+</ul>
+<h3 id="语句"><a href="#语句" class="headerlink" title="语句"></a>语句</h3><ol>
+<li>递增语句 <code>i++</code> 是语句，不是表达式，且只支持后缀，不支持 <code>--i</code></li>
+<li>for 是 Go 里面的唯一循环语句 </li>
+</ol>
 ]]></content>
     <summary type="html">
     <![CDATA[主要介绍 Go 语言的使用技巧]]>
@@ -967,7 +1021,7 @@
     <link href="https://zzh1991.github.io/2017/03/03/Ubuntu-macOS/"/>
     <id>https://zzh1991.github.io/2017/03/03/Ubuntu-macOS/</id>
     <published>2017-03-03T12:47:54.000Z</published>
-    <updated>2018-10-14T03:39:19.864Z</updated>
+    <updated>2018-10-15T15:59:10.613Z</updated>
     <content type="html"><![CDATA[<h1 id="Skill-amp-Experience"><a href="#Skill-amp-Experience" class="headerlink" title="Skill &amp; Experience"></a>Skill &amp; Experience</h1><h2 id="Common"><a href="#Common" class="headerlink" title="Common"></a>Common</h2><!-- ### Sublime Text3 plugins (now rarely use)
 - ConvertToUTF8: support chinese
 - insertDate: Ctrl + F5
@@ -1008,7 +1062,21 @@
 <h4 id="App-file-broken-solution"><a href="#App-file-broken-solution" class="headerlink" title="App file broken solution"></a>App file broken solution</h4><p><code>sudo spctl --master-disable</code></p>
 <h4 id="Time-Machine-Backup"><a href="#Time-Machine-Backup" class="headerlink" title="Time Machine Backup"></a>Time Machine Backup</h4><p><code>create EFI firstly in the external disk</code></p>
 <h4 id="Mac-Terminal-missing-git"><a href="#Mac-Terminal-missing-git" class="headerlink" title="Mac Terminal missing git"></a>Mac Terminal missing git</h4><p><code>xcode-select --install</code> to install git</p>
-<h4 id="增加-macOs-的待机续航时间"><a href="#增加-macOs-的待机续航时间" class="headerlink" title="增加 macOs 的待机续航时间"></a>增加 macOs 的待机续航时间</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">pmset -g: 查看配置项</div><div class="line">sudo pmset <span class="_">-a</span> hibernatemode 25</div><div class="line">``</div><div class="line"></div><div class="line"><span class="comment">### Free Services</span></div><div class="line">- Spark (Email client)</div><div class="line">- iPic (For Markdown Pic)</div><div class="line">- Hammerspoon (Screen split)</div><div class="line">- TouchSwitcher (Touchbar switch apps)</div><div class="line">- Go2Shell (open shell <span class="keyword">in</span> any folders)</div><div class="line">- Docker CE</div><div class="line"></div><div class="line"><span class="comment">### screen shot</span></div><div class="line">- Command + Shift + 4: 截取所选屏幕到桌面</div><div class="line">- Command + Shift + 3: 截取整个屏幕到桌面</div><div class="line"></div><div class="line"><span class="comment">### mac 终端代理</span></div><div class="line">``` bash</div><div class="line"><span class="comment"># 推荐在当前终端下修改代理配置，只作用于当前终端，关闭后失效</span></div><div class="line"><span class="built_in">export</span> http_proxy=<span class="string">"sock5://127.0.0.1:1080"</span></div><div class="line"><span class="built_in">export</span> https_proxy=<span class="string">"sock5://127.0.0.1:1080"</span></div></pre></td></tr></table></figure>
+<h4 id="增加-macOs-的待机续航时间"><a href="#增加-macOs-的待机续航时间" class="headerlink" title="增加 macOs 的待机续航时间"></a>增加 macOs 的待机续航时间</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">pmset -g: 查看配置项</div><div class="line">sudo pmset <span class="_">-a</span> hibernatemode 25</div><div class="line">pmset -b tcpkeepalive 0</div></pre></td></tr></table></figure>
+<h4 id="Disable-Spotlight"><a href="#Disable-Spotlight" class="headerlink" title="Disable Spotlight"></a>Disable Spotlight</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># enable</span></div><div class="line">sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist</div><div class="line"></div><div class="line"><span class="comment"># disable</span></div><div class="line">sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist</div></pre></td></tr></table></figure>
+<h3 id="Free-Services"><a href="#Free-Services" class="headerlink" title="Free Services"></a>Free Services</h3><ul>
+<li>Spark (Email client)</li>
+<li>iPic (For Markdown Pic)</li>
+<li>Hammerspoon (Screen split)</li>
+<li>TouchSwitcher (Touchbar switch apps)</li>
+<li>Go2Shell (open shell in any folders)</li>
+<li>Docker CE</li>
+</ul>
+<h3 id="screen-shot"><a href="#screen-shot" class="headerlink" title="screen shot"></a>screen shot</h3><ul>
+<li>Command + Shift + 4: 截取所选屏幕到桌面</li>
+<li>Command + Shift + 3: 截取整个屏幕到桌面</li>
+</ul>
+<h3 id="mac-终端代理"><a href="#mac-终端代理" class="headerlink" title="mac 终端代理"></a>mac 终端代理</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 推荐在当前终端下修改代理配置，只作用于当前终端，关闭后失效</span></div><div class="line"><span class="built_in">export</span> http_proxy=<span class="string">"sock5://127.0.0.1:1080"</span></div><div class="line"><span class="built_in">export</span> https_proxy=<span class="string">"sock5://127.0.0.1:1080"</span></div></pre></td></tr></table></figure>
 <h3 id="macOS-upgrade-PostgreSQL"><a href="#macOS-upgrade-PostgreSQL" class="headerlink" title="macOS upgrade PostgreSQL"></a>macOS upgrade PostgreSQL</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">brew upgrade postgres</div><div class="line">brew postgresql-upgrade-database</div></pre></td></tr></table></figure>
 <h3 id="mac-ping-proxy"><a href="#mac-ping-proxy" class="headerlink" title="mac ping proxy"></a>mac ping proxy</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">httping -x 127.0.0.1:1080 -g github.com -5</div></pre></td></tr></table></figure>
 <h2 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu</h2><h3 id="Install-Node-js"><a href="#Install-Node-js" class="headerlink" title="Install Node.js"></a>Install Node.js</h3><p>可以直接官网下载安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">curl <span class="_">-s</span>L https://deb.nodesource.com/setup_7.x | sudo -E bash -</div><div class="line">sudo apt-get install nodejs</div></pre></td></tr></table></figure></p>
