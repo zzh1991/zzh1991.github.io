@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="https://zzh1991.github.io/"/>
-  <updated>2019-02-17T07:27:21.632Z</updated>
+  <updated>2019-02-17T07:28:29.663Z</updated>
   <id>https://zzh1991.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="https://zzh1991.github.io/2019/02/17/java-2018/"/>
     <id>https://zzh1991.github.io/2019/02/17/java-2018/</id>
     <published>2019-02-17T07:22:59.000Z</published>
-    <updated>2019-02-17T07:27:21.632Z</updated>
+    <updated>2019-02-17T07:28:29.663Z</updated>
     <content type="html"><![CDATA[<h3 id="最常用的-JDK"><a href="#最常用的-JDK" class="headerlink" title="最常用的 JDK"></a>最常用的 JDK</h3><ol>
 <li>Oracle JDK(70%)</li>
 <li>OpenJDK(21%)</li>
@@ -79,7 +79,7 @@
     
     </summary>
     
-      <category term="java" scheme="https://zzh1991.github.io/tags/java/"/>
+      <category term="Java" scheme="https://zzh1991.github.io/tags/Java/"/>
     
   </entry>
   
