@@ -4,6 +4,114 @@
   
     
     <entry>
+      <title><![CDATA[Python 2018 使用状况]]></title>
+      <url>https://zzh1991.github.io/2019/02/23/python-2018/</url>
+      <content type="html"><![CDATA[<h3 id="最常用的-Python-版本"><a href="#最常用的-Python-版本" class="headerlink" title="最常用的 Python 版本"></a>最常用的 Python 版本</h3><blockquote>
+<p>推荐使用 Python3 进行开发</p>
+</blockquote>
+<ol>
+<li>Python3(84%)</li>
+<li>Python2(16%)</li>
+</ol>
+<h3 id="安装-Python-来源"><a href="#安装-Python-来源" class="headerlink" title="安装 Python 来源"></a>安装 Python 来源</h3><blockquote>
+<p>注意 Python3 和 Python2 安装可能存在差异，系统自带包管理可能默认安装 Python2</p>
+</blockquote>
+<ol>
+<li>系统自带或者包管理安装(38%)</li>
+<li>Python 官网(33%)</li>
+<li>Anaconda(22%)</li>
+</ol>
+<h3 id="Python-版本控制"><a href="#Python-版本控制" class="headerlink" title="Python 版本控制"></a>Python 版本控制</h3><blockquote>
+<p>推荐使用 Virtualenv 来进行 Python 版本号的管理和切换</p>
+</blockquote>
+<ol>
+<li>Virtualenv / pipenv(64%)</li>
+<li>Docker(31%)</li>
+<li>Conda(22%)</li>
+</ol>
+<h3 id="IDE"><a href="#IDE" class="headerlink" title="IDE"></a>IDE</h3><ol>
+<li>PyCharm(35%)</li>
+<li>VS Code(16%)</li>
+</ol>
+<h3 id="应用领域"><a href="#应用领域" class="headerlink" title="应用领域"></a>应用领域</h3><blockquote>
+<p>目前数据分析领域使用 Python 最为火热，而 DevOps 方向的增速十分快捷</p>
+</blockquote>
+<ol>
+<li>数据分析(58%)</li>
+<li>Web 开发(52%)</li>
+<li>DevOps(43%)</li>
+<li>机器学习(38%)</li>
+</ol>
+<h3 id="非-Python-语言使用"><a href="#非-Python-语言使用" class="headerlink" title="非 Python 语言使用"></a>非 Python 语言使用</h3><ol>
+<li>JavaScript(50%)</li>
+<li>HTML/CSS(47%)</li>
+<li>Bash / Shell(45%)</li>
+<li>SQL(56%)</li>
+</ol>
+<h3 id="Web-框架"><a href="#Web-框架" class="headerlink" title="Web 框架"></a>Web 框架</h3><ol>
+<li>Flask(47%)</li>
+<li>Django(45%)</li>
+</ol>
+<h3 id="ORM-框架"><a href="#ORM-框架" class="headerlink" title="ORM 框架"></a>ORM 框架</h3><ol>
+<li>SQLAIchemy(34%)：用于 Flask Web 框架</li>
+<li>Django ORM(33%)</li>
+</ol>
+<h3 id="Database"><a href="#Database" class="headerlink" title="Database"></a>Database</h3><ol>
+<li>PostgreSQL(44%)</li>
+<li>MySQL(41%)</li>
+<li>MongoDB(20%)</li>
+<li>Redis(19%)</li>
+</ol>
+<h3 id="通用库"><a href="#通用库" class="headerlink" title="通用库"></a>通用库</h3><ol>
+<li>Requests(53%)</li>
+<li>Pillow(29%)</li>
+</ol>
+<h3 id="数据分析框架"><a href="#数据分析框架" class="headerlink" title="数据分析框架"></a>数据分析框架</h3><ol>
+<li>Numpy(62%)</li>
+<li>Pandas(51%)</li>
+<li>Matplotlib(46%)</li>
+<li>Scipy(38%)</li>
+<li>SciKit-Learn(31%)</li>
+</ol>
+<h3 id="大数据工具"><a href="#大数据工具" class="headerlink" title="大数据工具"></a>大数据工具</h3><ol>
+<li>Apache Spark(12%)</li>
+<li>Apache Hadoop/MapReduce(8%)</li>
+<li>Apache Kafka(8%)</li>
+</ol>
+<h3 id="Test"><a href="#Test" class="headerlink" title="Test"></a>Test</h3><blockquote>
+<p>推荐引入测试框架，进行自动化测试</p>
+</blockquote>
+<ol>
+<li>pytest(46%)</li>
+<li>unittest(32%)</li>
+</ol>
+<h3 id="CI-Tool"><a href="#CI-Tool" class="headerlink" title="CI Tool"></a>CI Tool</h3><ol>
+<li>Jenkins / Hudson(25%)</li>
+<li>Travis CI(18%)</li>
+</ol>
+<h3 id="配置管理"><a href="#配置管理" class="headerlink" title="配置管理"></a>配置管理</h3><ol>
+<li>Ansible(20%)</li>
+</ol>
+<p>[^note]</p>
+<blockquote>
+<p>Python Developers Survey 2018 Results</p>
+<p><a href="https://www.jetbrains.com/research/python-developers-survey-2018" target="_blank" rel="external">https://www.jetbrains.com/research/python-developers-survey-2018</a></p>
+</blockquote>
+<p>更多精彩内容请<ruby>关注<rt>扫码</rt></ruby>：</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1fo32397l2gj30760760t8.jpg" alt="图注：KnowledgeCollision 微信公众号"></p>
+<p><code>Knowledge Collision 激发思维碰撞，IDEA 丛生</code></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Java 2018 使用状况]]></title>
       <url>https://zzh1991.github.io/2019/02/17/java-2018/</url>
       <content type="html"><![CDATA[<h3 id="最常用的-JDK"><a href="#最常用的-JDK" class="headerlink" title="最常用的 JDK"></a>最常用的 JDK</h3><ol>
