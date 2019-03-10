@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="https://zzh1991.github.io/"/>
-  <updated>2019-02-23T03:49:05.574Z</updated>
+  <updated>2019-03-10T03:38:49.673Z</updated>
   <id>https://zzh1991.github.io/</id>
   
   <author>
@@ -13,6 +13,72 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[拍照指南--相机参数]]></title>
+    <link href="https://zzh1991.github.io/2019/03/10/photograph/"/>
+    <id>https://zzh1991.github.io/2019/03/10/photograph/</id>
+    <published>2019-03-10T01:55:47.000Z</published>
+    <updated>2019-03-10T03:38:49.673Z</updated>
+    <content type="html"><![CDATA[<h3 id="参数讲解"><a href="#参数讲解" class="headerlink" title="参数讲解"></a>参数讲解</h3><ul>
+<li><p>ISO：感光度</p>
+<ul>
+<li>提高 ISO（对光线更敏感） 会使快门时间变快，缺点是会增加相片噪点</li>
+<li>高 ISO 值可以弥补光线的不足</li>
+<li>ISO 值越高，相片的亮度就越高</li>
+</ul>
+</li>
+<li><p>EV：曝光补偿，俗称补光</p>
+<ul>
+<li>改变相片的亮度</li>
+<li>EV 值每增加 1.0，相当于摄入的光线量增加一倍</li>
+<li>EV 值每减小 1.0，相当于摄入的光线量减小一倍</li>
+</ul>
+</li>
+<li><p>快门速度（S）：曝光时间</p>
+<ul>
+<li>一般情况下 1/30 比较适合</li>
+<li>光线较差时，可以适当提高快门时间</li>
+</ul>
+</li>
+<li><p>对焦模式</p>
+<ul>
+<li>单次自动对焦（AF-S）</li>
+<li>连续自动对焦（AF-C）</li>
+<li>手动对焦（MF）</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>一般情况使用单词自动对焦；手动对焦模式极为实用，可以根据自己想要拍摄的效果，选择对应的焦距</p>
+</blockquote>
+<ul>
+<li>测光模式：告诉相机哪里才是相片的重点<ul>
+<li>矩阵</li>
+<li>中央重点</li>
+<li>点测光</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>舞台摄影，个人艺术照，新闻特写照片等一般采用点测光，拍摄局部某块区域时选用点测光</p>
+</blockquote>
+<ul>
+<li>WB：白平衡，控制色彩还原<ul>
+<li>可以单独调节色温</li>
+<li>针对具体的拍摄场景，选择合适的白平稳</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[简单介绍相机的基本参数]]>
+    
+    </summary>
+    
+      <category term="拍照" scheme="https://zzh1991.github.io/tags/%E6%8B%8D%E7%85%A7/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Python 2018 使用状况]]></title>
