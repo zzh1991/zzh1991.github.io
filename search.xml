@@ -1215,12 +1215,7 @@
     <entry>
       <title><![CDATA[Ubuntu & macOS Skills]]></title>
       <url>https://zzh1991.github.io/2017/03/03/Ubuntu-macOS/</url>
-      <content type="html"><![CDATA[<h2 id="Common"><a href="#Common" class="headerlink" title="Common"></a>Common</h2><!-- ### Sublime Text3 plugins (now rarely use)
-- ConvertToUTF8: support chinese
-- insertDate: Ctrl + F5
-- FileDiffs: compare two files' difference
-- SublimeCodeIntel: code hintinhg and auto-complete -->
-<h3 id="Tmux"><a href="#Tmux" class="headerlink" title="Tmux"></a>Tmux</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># install</span></div><div class="line">brew install tmux</div><div class="line"></div><div class="line"><span class="comment"># new session</span></div><div class="line">tmux new <span class="_">-s</span> session_name</div><div class="line"></div><div class="line"><span class="comment"># command prefix</span></div><div class="line">CTRL + b</div><div class="line"></div><div class="line"><span class="comment"># list all sessions</span></div><div class="line">tmux list-sessions</div><div class="line"></div><div class="line"><span class="comment"># detach session</span></div><div class="line">tmux detach (prefix + d)</div><div class="line"></div><div class="line"><span class="comment"># attach session</span></div><div class="line">tmux attach -t session_name</div><div class="line"></div><div class="line"><span class="comment"># new window</span></div><div class="line">prefix + c</div><div class="line"></div><div class="line"><span class="comment"># switch window</span></div><div class="line">prefix + 0-9</div><div class="line"></div><div class="line"><span class="comment"># close window</span></div><div class="line"><span class="built_in">exit</span></div><div class="line"></div><div class="line"><span class="comment"># split panel</span></div><div class="line">prefix + <span class="string">" (horizonal)</span></div><div class="line">prefix + % (vertical)</div><div class="line"></div><div class="line"># switch panel</div><div class="line">prifix + &#123;</div><div class="line">prefix + &#125;</div><div class="line"></div><div class="line"># scroll</div><div class="line">prefix + [</div><div class="line"></div><div class="line"># exit scroll</div><div class="line">q</div></pre></td></tr></table></figure>
+      <content type="html"><![CDATA[<h2 id="Common"><a href="#Common" class="headerlink" title="Common"></a>Common</h2><h3 id="Tmux"><a href="#Tmux" class="headerlink" title="Tmux"></a>Tmux</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># install</span></div><div class="line">brew install tmux</div><div class="line"></div><div class="line"><span class="comment"># new session</span></div><div class="line">tmux new <span class="_">-s</span> session_name</div><div class="line"></div><div class="line"><span class="comment"># command prefix</span></div><div class="line">CTRL + b</div><div class="line"></div><div class="line"><span class="comment"># list all sessions</span></div><div class="line">tmux list-sessions</div><div class="line"></div><div class="line"><span class="comment"># detach session</span></div><div class="line">tmux detach (prefix + d)</div><div class="line"></div><div class="line"><span class="comment"># attach session</span></div><div class="line">tmux attach -t session_name</div><div class="line"></div><div class="line"><span class="comment"># new window</span></div><div class="line">prefix + c</div><div class="line"></div><div class="line"><span class="comment"># switch window</span></div><div class="line">prefix + 0-9</div><div class="line"></div><div class="line"><span class="comment"># close window</span></div><div class="line"><span class="built_in">exit</span></div><div class="line"></div><div class="line"><span class="comment"># split panel</span></div><div class="line">prefix + <span class="string">" (horizonal)</span></div><div class="line">prefix + % (vertical)</div><div class="line"></div><div class="line"># switch panel</div><div class="line">prifix + &#123;</div><div class="line">prefix + &#125;</div><div class="line"></div><div class="line"># scroll</div><div class="line">prefix + [</div><div class="line"></div><div class="line"># exit scroll</div><div class="line">q</div></pre></td></tr></table></figure>
 <!-- #### [中文教程](https://blog.csdn.net/jyfu2_12/article/details/78650685) -->
 <!-- ### Common Services
 - Public ip and private ip -->
@@ -1230,9 +1225,10 @@
 <li>stylus：新的样式</li>
 <li>Infinity pro：新的主页</li>
 <li>去广告（AdBlock, 目前没有找到非常好的）</li>
-<li>Postman</li>
+<li>Postman（Chrome Web Store 现在好像下架了）</li>
+<li>Postman Interceptor</li>
 <li>Vimium</li>
-<li>Save to packet</li>
+<li>Save to packet（目前基本不怎么用了）</li>
 <li>Proxy switchyOmega</li>
 <li>油猴</li>
 <li>GitHub 插件<ul>
@@ -1247,6 +1243,8 @@
 <li>截图工具：FireShot</li>
 <li>WorldBrain’s Memex</li>
 <li>惠惠购物助手</li>
+<li>邮件排版：Markdown Here</li>
+<li>Restlet Client（Postman 替代品）</li>
 </ul>
 </li>
 <li>自带的 API</li>
@@ -1261,11 +1259,18 @@
 <li>Hammerspoon (Screen split)</li>
 <li>TouchSwitcher (Touchbar switch apps)</li>
 <li>Go2Shell (open shell in any folders)</li>
-<li>Docker CE</li>
+<li>Docker</li>
 <li>Kitematic</li>
 <li>Iterm2</li>
+<li>IINA</li>
+<li>Slack</li>
+<li>Sunsama</li>
+<li>Trello</li>
+<li>Snipaste</li>
+<li>MarkRemap</li>
 </ul>
 <h3 id="screen-shot"><a href="#screen-shot" class="headerlink" title="screen shot"></a>screen shot</h3><ul>
+<li>Command + Shift + 5: 自定义截图</li>
 <li>Command + Shift + 4: 截取所选屏幕到桌面</li>
 <li>Command + Shift + 3: 截取整个屏幕到桌面</li>
 </ul>
