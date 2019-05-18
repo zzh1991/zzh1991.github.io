@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="https://zzh1991.github.io/"/>
-  <updated>2019-03-10T03:38:49.673Z</updated>
+  <updated>2019-05-18T01:23:39.219Z</updated>
   <id>https://zzh1991.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="https://zzh1991.github.io/2019/03/10/photograph/"/>
     <id>https://zzh1991.github.io/2019/03/10/photograph/</id>
     <published>2019-03-10T01:55:47.000Z</published>
-    <updated>2019-03-10T03:38:49.673Z</updated>
+    <updated>2019-05-18T01:23:39.219Z</updated>
     <content type="html"><![CDATA[<h3 id="参数讲解"><a href="#参数讲解" class="headerlink" title="参数讲解"></a>参数讲解</h3><ul>
 <li><p>ISO：感光度</p>
 <ul>
@@ -85,7 +85,7 @@
     <link href="https://zzh1991.github.io/2019/02/23/python-2018/"/>
     <id>https://zzh1991.github.io/2019/02/23/python-2018/</id>
     <published>2019-02-23T03:47:18.000Z</published>
-    <updated>2019-02-23T03:49:05.574Z</updated>
+    <updated>2019-05-18T01:55:43.174Z</updated>
     <content type="html"><![CDATA[<h3 id="最常用的-Python-版本"><a href="#最常用的-Python-版本" class="headerlink" title="最常用的 Python 版本"></a>最常用的 Python 版本</h3><blockquote>
 <p>推荐使用 Python3 进行开发</p>
 </blockquote>
@@ -178,7 +178,7 @@
 <p><a href="https://www.jetbrains.com/research/python-developers-survey-2018" target="_blank" rel="external">https://www.jetbrains.com/research/python-developers-survey-2018</a></p>
 </blockquote>
 <p>更多精彩内容请<ruby>关注<rt>扫码</rt></ruby>：</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1fo32397l2gj30760760t8.jpg" alt="图注：KnowledgeCollision 微信公众号"></p>
+<p><img src="https://github.com/zzh1991/pictures/blob/master/markdown/gongzhonghao.jpg" alt="图注：KnowledgeCollision 微信公众号"></p>
 <p><code>Knowledge Collision 激发思维碰撞，IDEA 丛生</code></p>
 ]]></content>
     <summary type="html">
@@ -195,7 +195,7 @@
     <link href="https://zzh1991.github.io/2019/02/17/java-2018/"/>
     <id>https://zzh1991.github.io/2019/02/17/java-2018/</id>
     <published>2019-02-17T07:22:59.000Z</published>
-    <updated>2019-02-17T07:28:29.663Z</updated>
+    <updated>2019-05-18T01:55:25.789Z</updated>
     <content type="html"><![CDATA[<h3 id="最常用的-JDK"><a href="#最常用的-JDK" class="headerlink" title="最常用的 JDK"></a>最常用的 JDK</h3><ol>
 <li>Oracle JDK(70%)</li>
 <li>OpenJDK(21%)</li>
@@ -247,7 +247,7 @@
 <p>Largest Java Developer Survey 2018<br><a href="https://programmer9.com/2019/02/06/largest-java-survey-2018.html" target="_blank" rel="external">https://programmer9.com/2019/02/06/largest-java-survey-2018.html</a></p>
 </blockquote>
 <p>更多精彩内容请<ruby>关注<rt>扫码</rt></ruby>：</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1fo32397l2gj30760760t8.jpg" alt="图注：KnowledgeCollision 微信公众号"></p>
+<p><img src="https://github.com/zzh1991/pictures/blob/master/markdown/gongzhonghao.jpg" alt="图注：KnowledgeCollision 微信公众号"></p>
 <p><code>Knowledge Collision 激发思维碰撞，IDEA 丛生</code></p>
 ]]></content>
     <summary type="html">
@@ -367,7 +367,7 @@
     <link href="https://zzh1991.github.io/2018/07/29/note-skills/"/>
     <id>https://zzh1991.github.io/2018/07/29/note-skills/</id>
     <published>2018-07-29T08:31:13.000Z</published>
-    <updated>2018-07-29T09:45:10.000Z</updated>
+    <updated>2019-05-18T01:53:32.125Z</updated>
     <content type="html"><![CDATA[<h2 id="知识管理"><a href="#知识管理" class="headerlink" title="知识管理"></a>知识管理</h2><p>我们每天都在接触各种各样的信息，并从中提取出自己所需的知识，那下面就来聊聊如何利用工具来管理知识。</p>
 <h3 id="笔记类工具"><a href="#笔记类工具" class="headerlink" title="笔记类工具"></a>笔记类工具</h3><h4 id="为知笔记-跟-Evernote-和有道云笔记是很类似的"><a href="#为知笔记-跟-Evernote-和有道云笔记是很类似的" class="headerlink" title="为知笔记: 跟 Evernote 和有道云笔记是很类似的"></a><a href="http://wiz.cn/" target="_blank" rel="external">为知笔记</a>: 跟 Evernote 和有道云笔记是很类似的</h4><ul>
 <li>本人已经付费两年，从免费版用到订阅版，一年 60 元，并不是非常贵</li>
@@ -378,7 +378,7 @@
 <li>Markdown 的阅读模式体验还是很不错的，但是编辑的时候不是非常有效率</li>
 <li>富文本的排版比较麻烦，所以一般都采用 Markdown 书写</li>
 </ul>
-<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1fqn16p0b8wj30c8085wee.jpg" alt="为知笔记"></p>
+<p><img src="https://github.com/zzh1991/pictures/blob/master/markdown/wiz.jpg" alt="为知笔记"></p>
 <h4 id="语雀-阿里旗下出品的知识管理分享产品"><a href="#语雀-阿里旗下出品的知识管理分享产品" class="headerlink" title="语雀: 阿里旗下出品的知识管理分享产品"></a><a href="https://www.yuque.com/" target="_blank" rel="external">语雀</a>: 阿里旗下出品的知识管理分享产品</h4><ul>
 <li>网址：<code>www.yuque.com</code></li>
 <li>从内测开始使用，现在已经开放注册了</li>
@@ -428,7 +428,7 @@
 <li>支持排序功能，后续会加入搜索、过滤功能</li>
 </ol>
 <p>更多精彩内容请<ruby>关注<rt>扫码</rt></ruby>：</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1fo32397l2gj30760760t8.jpg" alt="图注：KnowledgeCollision 微信公众号"></p>
+<p><img src="https://github.com/zzh1991/pictures/blob/master/markdown/gongzhonghao.jpg" alt="图注：KnowledgeCollision 微信公众号"></p>
 <p><code>Knowledge Collision 激发思维碰撞，IDEA 丛生</code></p>
 ]]></content>
     <summary type="html">
@@ -524,7 +524,7 @@
     <link href="https://zzh1991.github.io/2018/02/10/workflow/"/>
     <id>https://zzh1991.github.io/2018/02/10/workflow/</id>
     <published>2018-02-10T12:25:51.000Z</published>
-    <updated>2018-02-10T12:39:29.000Z</updated>
+    <updated>2019-05-18T01:56:35.220Z</updated>
     <content type="html"><![CDATA[<h2 id="Workflow-软件"><a href="#Workflow-软件" class="headerlink" title="Workflow 软件"></a>Workflow 软件</h2><h3 id="Workflow-著名的软件，已被-Apple-收购"><a href="#Workflow-著名的软件，已被-Apple-收购" class="headerlink" title="Workflow: 著名的软件，已被 Apple 收购"></a><code>Workflow</code>: 著名的软件，已被 Apple 收购</h3><ul>
 <li>Workflow 自带的 gallery: 里面有很多的自动化流程，需要自己甄别</li>
 <li><a href="http://workflow.sspai.com/#/main/workflow" target="_blank" rel="external">少数派收集的 workflow</a>: 有一些很有意思的自动化流程</li>
@@ -547,7 +547,7 @@
 <li><a href="http://workflow.sspai.com/#/main/workflow" target="_blank" rel="external">12306 SMS to Cal</a>: 少数派 workflow gallery，复制 12306 短信，快速将乘车行程添加到日历中</li>
 </ol>
 <p>更多精彩内容请<ruby>关注<rt>扫码</rt></ruby>：</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1fo32397l2gj30760760t8.jpg" alt="图注：KnowledgeCollision 微信公众号"></p>
+<p><img src="https://github.com/zzh1991/pictures/blob/master/markdown/gongzhonghao.jpg" alt="图注：KnowledgeCollision 微信公众号"></p>
 <p><code>Knowledge Collision 激发思维碰撞，IDEA 丛生</code></p>
 ]]></content>
     <summary type="html">
