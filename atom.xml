@@ -511,19 +511,16 @@
     <link href="https://zzh1991.github.io/2018/02/10/workflow/"/>
     <id>https://zzh1991.github.io/2018/02/10/workflow/</id>
     <published>2018-02-10T12:25:51.000Z</published>
-    <updated>2019-05-18T02:07:19.601Z</updated>
+    <updated>2019-05-19T00:31:30.027Z</updated>
     <content type="html"><![CDATA[<h2 id="Workflow-软件"><a href="#Workflow-软件" class="headerlink" title="Workflow 软件"></a>Workflow 软件</h2><h3 id="Workflow-著名的软件，已被-Apple-收购"><a href="#Workflow-著名的软件，已被-Apple-收购" class="headerlink" title="Workflow: 著名的软件，已被 Apple 收购"></a><code>Workflow</code>: 著名的软件，已被 Apple 收购</h3><ul>
 <li>Workflow 自带的 gallery: 里面有很多的自动化流程，需要自己甄别</li>
 <li><a href="http://workflow.sspai.com/#/main/workflow" target="_blank" rel="external">少数派收集的 workflow</a>: 有一些很有意思的自动化流程</li>
 </ul>
-<h3 id="Microsoft-Flow-微软旗下出品的-workflow-产品"><a href="#Microsoft-Flow-微软旗下出品的-workflow-产品" class="headerlink" title="Microsoft Flow: 微软旗下出品的 workflow 产品"></a><code>Microsoft Flow</code>: 微软旗下出品的 workflow 产品</h3><ul>
-<li>可以联动微软旗下的其他软件<ul>
+<h3 id="Microsoft-Flow-微软旗下出品的-workflow-产品"><a href="#Microsoft-Flow-微软旗下出品的-workflow-产品" class="headerlink" title="Microsoft Flow: 微软旗下出品的 workflow 产品"></a><code>Microsoft Flow</code>: 微软旗下出品的 workflow 产品</h3><h4 id="可以联动微软旗下的其他软件"><a href="#可以联动微软旗下的其他软件" class="headerlink" title="可以联动微软旗下的其他软件"></a>可以联动微软旗下的其他软件</h4><ul>
 <li>OneDrive</li>
 <li>Excel</li>
 <li>Outlook</li>
 <li>Wunderlist</li>
-</ul>
-</li>
 </ul>
 <h2 id="Workflow-Example"><a href="#Workflow-Example" class="headerlink" title="Workflow Example"></a>Workflow Example</h2><p>下面就列举下我所使用的几个 workflow</p>
 <h3 id="使用-Workflow-软件"><a href="#使用-Workflow-软件" class="headerlink" title="使用 Workflow 软件"></a>使用 Workflow 软件</h3><ol>
