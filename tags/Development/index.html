@@ -15,17 +15,13 @@
 
 
 
-<meta name="description" content="主要介绍如何优化程序性能">
-<meta property="og:type" content="article">
-<meta property="og:title" content="优化程序性能">
-<meta property="og:url" content="https://zzh1991.github.io/2018/10/14/optimize/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Welcome Code">
+<meta property="og:url" content="https://zzh1991.github.io/tags/Development/index.html">
 <meta property="og:site_name" content="Welcome Code">
-<meta property="og:description" content="主要介绍如何优化程序性能">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-14T15:12:55.843Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="优化程序性能">
-<meta name="twitter:description" content="主要介绍如何优化程序性能">
+<meta name="twitter:title" content="Welcome Code">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -59,7 +55,7 @@
 <script src="/js/gitment.js"></script> 
 
 
-<title>优化程序性能 | Welcome Code</title>
+<title>Tag: Development | Welcome Code</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -69,9 +65,9 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: true,
+        isPost: false,
         isArchive: false,
-        isTag: false,
+        isTag: true,
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
@@ -271,241 +267,55 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-optimize" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap">
   
-    <div class="article-meta">
-      <a href="/2018/10/14/optimize/" class="article-date">
-      <time datetime="2018-10-14T14:42:13.000Z" itemprop="datePublished">2018-10-14</time>
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+          <div class="article-meta">
+              <a href="/2019/11/02/2019-software-engineer-situation/" class="archive-article-date">
+      <time datetime="2019-11-02T02:32:43.000Z" itemprop="datePublished">11-02</time>
 </a>
 
 
-    </div>
+        </div>
+         
   
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      优化程序性能
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/11/02/2019-software-engineer-situation/">2019 软件工程师现状</a>
     </h1>
   
 
-      </header>
-      
-      <div class="article-info article-info-post">
-        
-
-        
-        <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
+        <div class="article-info info-on-archive">
           
-        <blockquote>
-<p>写程序最主要的目标就是使它在所有可能的情况下都正确工作。<br>代码剖析程序是测量程序各个部分性能的工具。</p>
-</blockquote>
-<h2 id="程序性能分析"><a href="#程序性能分析" class="headerlink" title="程序性能分析"></a>程序性能分析</h2><p>度量标准：<strong>每元素的周期数</strong>(Cycles Per Element, CPE)</p>
-<h2 id="优化编译器的性能"><a href="#优化编译器的性能" class="headerlink" title="优化编译器的性能"></a>优化编译器的性能</h2><ol>
-<li>内存别名使用：两个指针可能指向同一个内存位置的情况</li>
-<li>消除循环的低效率<ul>
-<li>代码移动：为了改进代码，程序员必须经常帮助编译器显式地完成代码的移动</li>
-<li>一个有经验的程序员工作的一部分就是避免引入渐进低效率代码</li>
-</ul>
-</li>
-<li>减少过程调用</li>
-<li>消除不必要的内存引入<ul>
-<li>引入临时变量</li>
-</ul>
-</li>
-<li>循环展开<ol>
-<li>展开因子与延迟界限有一定的关系</li>
-</ol>
-</li>
-<li>提高并行性<ol>
-<li>并行因子与延迟界限和处理单元的数目油一定关系</li>
-<li>多个累计变量</li>
-<li>重新结合变换</li>
-<li>用向量指令达到更高的并行度</li>
-</ol>
-</li>
-<li>低级优化，结构化代码以利用硬件功能</li>
-</ol>
-<h2 id="现代处理器"><a href="#现代处理器" class="headerlink" title="现代处理器"></a>现代处理器</h2><ol>
-<li>指令级并行</li>
-<li>两个界限<ol>
-<li>延迟界限</li>
-<li>吞吐量界限</li>
-</ol>
-</li>
-</ol>
-<h3 id="寄存器"><a href="#寄存器" class="headerlink" title="寄存器"></a>寄存器</h3><ol>
-<li>现代 x86-64 处理器有 16 个寄存器</li>
-</ol>
-<h3 id="分支预测和预测错误处罚"><a href="#分支预测和预测错误处罚" class="headerlink" title="分支预测和预测错误处罚"></a>分支预测和预测错误处罚</h3><ol>
-<li>不要过分关心可预测的分支</li>
-<li>书写适合用条件传送实现的代码<ol>
-<li>用功能性的风格重写条件操作，使得编译采用条件数据传送</li>
-</ol>
-</li>
-</ol>
-<h3 id="内存性能"><a href="#内存性能" class="headerlink" title="内存性能"></a>内存性能</h3><ol>
-<li>加载<ul>
-<li>例如 L1 级 cache 的 4 周期访问时间 </li>
-</ul>
-</li>
-<li>存储<ul>
-<li>读/写相关操作：指令需要一条一条顺序执行</li>
-</ul>
-</li>
-</ol>
 
-      
-    </div>
-    
-  </div>
-  
-    
-    <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/10/14/optimize/">优化程序性能</a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主页">Zhihao Zhang</a></p>
-        <p><span>发布时间:</span>2018-10-14, 22:42:13</p>
-        <p><span>最后更新:</span>2018-10-14, 23:12:55</p>
-        <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/10/14/optimize/" title="优化程序性能">https://zzh1991.github.io/2018/10/14/optimize/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://zzh1991.github.io/2018/10/14/optimize/　　作者: Zhihao Zhang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
-            <script> var clipboard = new Clipboard('.copy-path'); </script>
-        </p>
-        <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
-        </p>
+          
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Development/">Development</a></li></ul>
     </div>
 
-
-
-    <nav id="article-nav">
-        
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/01/01/java-util/">
-                    Java Util
-                </a>
-            </div>
-        
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/2018/07/29/note-skills/">
-                    知识管理
-                </a>
-            </div>
-        
-    </nav>
-
-  
-</article>
-
-    <div id="toc" class="toc-article">
-        <strong class="toc-title">文章目录</strong>
-        
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#程序性能分析"><span class="toc-number">1.</span> <span class="toc-text">程序性能分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#优化编译器的性能"><span class="toc-number">2.</span> <span class="toc-text">优化编译器的性能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#现代处理器"><span class="toc-number">3.</span> <span class="toc-text">现代处理器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#寄存器"><span class="toc-number">3.1.</span> <span class="toc-text">寄存器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分支预测和预测错误处罚"><span class="toc-number">3.2.</span> <span class="toc-text">分支预测和预测错误处罚</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#内存性能"><span class="toc-number">3.3.</span> <span class="toc-text">内存性能</span></a></li></ol></li></ol>
-        
-    </div>
-    <style>
-        .left-col .switch-btn,
-        .left-col .switch-area {
-            display: none;
-        }
-        .toc-level-3 i,
-        .toc-level-3 ol {
-            display: none !important;
-        }
-    </style>
-
-    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
-
-    <script>
-        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
-    </script>
-
-
-
-    
-<div class="share">
-    
-        <div class="bdsharebuttonbox">
-            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
-            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
-            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
-            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
-            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
-            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
         </div>
-        <script>
-            window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"优化程序性能　| Welcome Code　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-        </script>
-    
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+  
+    </div></section>
+  
 
     
-</div>
-
-
-
-
-
-
-
-    
-
-
-
-
-    <div class="scroll" id="post-nav-button">
-        
-            <a href="/2019/01/01/java-util/" title="上一篇: Java Util">
-                <i class="fa fa-angle-left"></i>
-            </a>
-        
-
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-
-        
-            <a href="/2018/07/29/note-skills/" title="下一篇: 知识管理">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        
-    </div>
-
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/11/02/2019-software-engineer-situation/">2019 软件工程师现状</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/02/java-version-management/">Java Version Management</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/10/photograph/">拍照指南--相机参数</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/23/python-2018/">Python 2018 使用状况</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/17/java-2018/">Java 2018 使用状况</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/01/java-util/">Java Util</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/14/optimize/">优化程序性能</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/29/note-skills/">知识管理</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/24/go-skills/">Go Skills</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/10/workflow/">Workflow for iPhone</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/17/kotlin-skills/">Kotlin skills</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/06/shell-skills/">Shell Skills</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/05/java skill/">Java Skill</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/23/react-skill-md/">React Skills</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/09/Windows-Skills/">Windows Skills</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/03/Ubuntu-macOS/">Ubuntu & macOS Skills</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/26/hello-world/">如何搭建 Hexo 博客</a></li></ul>
-
-
-
-
-    <script>
-        
-    </script>
-
-<div id="gitment"></div>
-
-<!-- 主页不要加载gitment -->
-
-
-<script>
-var gitment = new Gitment({
-  owner: 'zzh1991',
-  repo: 'blog-comment',
-  oauth: {
-    client_id: '3c555ac6b77ab906dd3f',
-    client_secret: 'e12890324b51650dad0a32709bb35314b560ba2f',
-  },
-})
-gitment.render('gitment')
-</script>
 
 </div>
       <footer id="footer">

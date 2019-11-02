@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="https://zzh1991.github.io/"/>
-  <updated>2019-11-02T02:23:02.305Z</updated>
+  <updated>2019-11-02T02:34:55.496Z</updated>
   <id>https://zzh1991.github.io/</id>
   
   <author>
@@ -15,11 +15,92 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[java-version-management]]></title>
+    <title><![CDATA[2019 软件工程师现状]]></title>
+    <link href="https://zzh1991.github.io/2019/11/02/2019-software-engineer-situation/"/>
+    <id>https://zzh1991.github.io/2019/11/02/2019-software-engineer-situation/</id>
+    <published>2019-11-02T02:32:43.000Z</published>
+    <updated>2019-11-02T02:34:55.496Z</updated>
+    <content type="html"><![CDATA[<h3 id="热门工作（需求增长率）"><a href="#热门工作（需求增长率）" class="headerlink" title="热门工作（需求增长率）"></a>热门工作（需求增长率）</h3><ul>
+<li>区块链工程师（517%）</li>
+<li>安全工程师（132%）</li>
+<li>数据工程师（38%）</li>
+<li>后端工程师（33%）</li>
+<li>机器学习工程师（27%）</li>
+<li>全栈工程师（7%）</li>
+</ul>
+<h3 id="最受欢迎的编程语言"><a href="#最受欢迎的编程语言" class="headerlink" title="最受欢迎的编程语言"></a>最受欢迎的编程语言</h3><ul>
+<li>Go</li>
+<li>Scale</li>
+<li>Ruby</li>
+<li>TypeScript</li>
+<li>Kotlin</li>
+</ul>
+<h3 id="最常使用的编程语言"><a href="#最常使用的编程语言" class="headerlink" title="最常使用的编程语言"></a>最常使用的编程语言</h3><ul>
+<li>JavaScript（62%）</li>
+<li>Java（42%）</li>
+<li>Python（42%）</li>
+<li>HTML（36%）</li>
+<li><p>C++（14%）</p>
+</li>
+<li><p>TypeScript（12%）</p>
+</li>
+<li>Ruby（10%）</li>
+<li>Go（7%）</li>
+<li>Scale（3%）</li>
+<li>Kotlin（2%）</li>
+</ul>
+<h3 id="编程习惯"><a href="#编程习惯" class="headerlink" title="编程习惯"></a>编程习惯</h3><blockquote>
+<p>56% 喜欢使用 Tabs，而 24% 喜欢 Spaces</p>
+<p>37% 喜欢动态语言，而 23% 喜欢静态语言</p>
+</blockquote>
+<h3 id="面试"><a href="#面试" class="headerlink" title="面试"></a>面试</h3><blockquote>
+<p>经验为王</p>
+<p>46% 有计算机科学教育文凭，而 21% 通过自学的方式获得计算机科学知识</p>
+</blockquote>
+<h4 id="最难的面试环节"><a href="#最难的面试环节" class="headerlink" title="最难的面试环节"></a>最难的面试环节</h4><ul>
+<li>编程测试</li>
+<li>白板会议</li>
+<li>行为面试</li>
+</ul>
+<h3 id="想学习的热门技术"><a href="#想学习的热门技术" class="headerlink" title="想学习的热门技术"></a>想学习的热门技术</h3><ul>
+<li>机器学习</li>
+<li>用户体验</li>
+<li>区块链</li>
+</ul>
+<h3 id="工作方式"><a href="#工作方式" class="headerlink" title="工作方式"></a>工作方式</h3><blockquote>
+<p>工程师最喜欢结对编程的工作方式</p>
+<p>结对编程对初级工程师有好处，但对于有更多经验的人意义不大</p>
+<p>工程师比较希望能够为开源项目进行贡献</p>
+<p>63% 宁愿早睡早起，也不想晚上工作，而 38% 讨厌不切实际的最后期限</p>
+</blockquote>
+<h3 id="竞争力"><a href="#竞争力" class="headerlink" title="竞争力"></a>竞争力</h3><ul>
+<li>持续学习</li>
+<li>了解最新科技需求</li>
+</ul>
+<p>[^note]</p>
+<blockquote>
+<p>2019 The State of Software Engineers</p>
+<p><a href="https://hired.com/page/state-of-software-engineers/key-takeaways/" target="_blank" rel="external">https://hired.com/page/state-of-software-engineers/key-takeaways/</a></p>
+</blockquote>
+<p>更多精彩内容请<ruby>关注<rt>扫码</rt></ruby>：</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1fo32397l2gj30760760t8.jpg" alt="图注：KnowledgeCollision 微信公众号"></p>
+<p><code>Knowledge Collision 激发思维碰撞，IDEA 丛生</code></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[2019 软件工程师现状]]>
+    
+    </summary>
+    
+      <category term="Development" scheme="https://zzh1991.github.io/tags/Development/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Java Version Management]]></title>
     <link href="https://zzh1991.github.io/2019/11/02/java-version-management/"/>
     <id>https://zzh1991.github.io/2019/11/02/java-version-management/</id>
     <published>2019-11-02T02:20:01.000Z</published>
-    <updated>2019-11-02T02:23:02.305Z</updated>
+    <updated>2019-11-02T02:31:48.040Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>是不是每次换新电脑或者安装了新系统，都要烦恼应该如何下载安装 Java 以及进行相应的配置？今天就来介绍一下如何从这种烦恼中解脱出来。</p>
 </blockquote>
