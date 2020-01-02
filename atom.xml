@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Knowlege Collision]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://zzh1991.github.io/"/>
-  <updated>2020-01-02T06:08:16.166Z</updated>
+  <updated>2020-01-02T15:21:02.251Z</updated>
   <id>https://zzh1991.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="https://zzh1991.github.io/2020/01/02/java-map/"/>
     <id>https://zzh1991.github.io/2020/01/02/java-map/</id>
     <published>2020-01-02T06:05:51.000Z</published>
-    <updated>2020-01-02T06:08:16.166Z</updated>
+    <updated>2020-01-02T15:21:02.251Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>在日常的编程活动中，使用 Map 类型是十分常见的，那么你们知道每天使用的 Map 底层是如何实现的呢？今天就带大家来深入了解一下内部的构造。</p>
 </blockquote>
