@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://zzh1991.github.io/2017/01/26/hexo/</loc>
+    <loc>https://zzh1991.github.io/2019/11/02/java-version-management/</loc>
     
-    <lastmod>2020-01-02T04:21:12.623Z</lastmod>
+    <lastmod>2020-01-02T04:30:12.752Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://zzh1991.github.io/2019/11/02/java-version-management/</loc>
+    <loc>https://zzh1991.github.io/2018/10/14/optimize/</loc>
     
-    <lastmod>2020-01-02T04:20:27.184Z</lastmod>
+    <lastmod>2020-01-02T04:29:43.993Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zzh1991.github.io/2017/01/26/hexo/</loc>
+    
+    <lastmod>2020-01-02T04:21:12.623Z</lastmod>
     
   </url>
   
@@ -117,13 +124,6 @@
     <loc>https://zzh1991.github.io/2018/07/24/go-skills/</loc>
     
     <lastmod>2018-11-08T13:58:29.222Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zzh1991.github.io/2018/10/14/optimize/</loc>
-    
-    <lastmod>2018-10-14T15:12:55.843Z</lastmod>
     
   </url>
   
