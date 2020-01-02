@@ -1447,7 +1447,7 @@
     
     <entry>
       <title><![CDATA[如何搭建 Hexo 博客]]></title>
-      <url>https://zzh1991.github.io/2017/01/26/hello-world/</url>
+      <url>https://zzh1991.github.io/2017/01/26/hexo/</url>
       <content type="html"><![CDATA[<h2 id="先决条件"><a href="#先决条件" class="headerlink" title="先决条件"></a>先决条件</h2><ul>
 <li>安装 git 和 node.js</li>
 <li>新建 hexo 文件夹</li>

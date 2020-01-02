@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Knowlege Collision]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://zzh1991.github.io/"/>
-  <updated>2020-01-02T02:12:48.531Z</updated>
+  <updated>2020-01-02T04:20:27.184Z</updated>
   <id>https://zzh1991.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="https://zzh1991.github.io/2019/11/02/java-version-management/"/>
     <id>https://zzh1991.github.io/2019/11/02/java-version-management/</id>
     <published>2019-11-02T02:50:01.000Z</published>
-    <updated>2020-01-02T02:12:48.531Z</updated>
+    <updated>2020-01-02T04:20:27.184Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>是不是每次换新电脑或者安装了新系统，都要烦恼应该如何下载安装 Java 以及进行相应的配置？今天就来介绍一下如何从这种烦恼中解脱出来。</p>
 </blockquote>
@@ -643,7 +643,7 @@
     <link href="https://zzh1991.github.io/2018/02/10/workflow/"/>
     <id>https://zzh1991.github.io/2018/02/10/workflow/</id>
     <published>2018-02-10T12:25:51.000Z</published>
-    <updated>2019-05-19T00:31:30.027Z</updated>
+    <updated>2020-01-02T04:20:02.384Z</updated>
     <content type="html"><![CDATA[<h2 id="Workflow-软件"><a href="#Workflow-软件" class="headerlink" title="Workflow 软件"></a>Workflow 软件</h2><h3 id="Workflow-著名的软件，已被-Apple-收购"><a href="#Workflow-著名的软件，已被-Apple-收购" class="headerlink" title="Workflow: 著名的软件，已被 Apple 收购"></a><code>Workflow</code>: 著名的软件，已被 Apple 收购</h3><ul>
 <li>Workflow 自带的 gallery: 里面有很多的自动化流程，需要自己甄别</li>
 <li><a href="http://workflow.sspai.com/#/main/workflow" target="_blank" rel="external">少数派收集的 workflow</a>: 有一些很有意思的自动化流程</li>
@@ -1494,10 +1494,10 @@
   
   <entry>
     <title><![CDATA[如何搭建 Hexo 博客]]></title>
-    <link href="https://zzh1991.github.io/2017/01/26/hello-world/"/>
-    <id>https://zzh1991.github.io/2017/01/26/hello-world/</id>
+    <link href="https://zzh1991.github.io/2017/01/26/hexo/"/>
+    <id>https://zzh1991.github.io/2017/01/26/hexo/</id>
     <published>2017-01-26T15:59:59.000Z</published>
-    <updated>2018-05-11T13:21:53.000Z</updated>
+    <updated>2020-01-02T04:21:12.623Z</updated>
     <content type="html"><![CDATA[<h2 id="先决条件"><a href="#先决条件" class="headerlink" title="先决条件"></a>先决条件</h2><ul>
 <li>安装 git 和 node.js</li>
 <li>新建 hexo 文件夹</li>
