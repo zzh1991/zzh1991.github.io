@@ -1856,7 +1856,7 @@ gp<span class="token operator">=</span><span class="token string">" --config htt
     <link href="https://zzh1991.github.io/2017/01/26/hexo/"/>
     <id>https://zzh1991.github.io/2017/01/26/hexo/</id>
     <published>2017-01-26T15:59:59.000Z</published>
-    <updated>2020-01-02T04:55:24.318Z</updated>
+    <updated>2020-01-02T05:01:15.079Z</updated>
     <content type="html"><![CDATA[<h2 id="先决条件"><a href="#先决条件" class="headerlink" title="先决条件"></a>先决条件</h2><ul>
 <li>安装 git 和 node.js</li>
 <li>新建 hexo 文件夹</li>
@@ -1897,21 +1897,25 @@ hexo deploy   -<span class="token operator">></span> hexo d
 avaster: <span class="token string">"image source"</span>
 </code></pre>
 <h3 id="更改主题"><a href="#更改主题" class="headerlink" title="更改主题"></a>更改主题</h3><ul>
-<li>在 themes 文件夹下 clone 其他优秀的主题<br>``` bash<br>git clone <a href="https://github.com/MOxFIVE/hexo-theme-yelee.git" target="_blank" rel="external">https://github.com/MOxFIVE/hexo-theme-yelee.git</a> themes/yelee</li>
+<li>在 themes 文件夹下 clone 其他优秀的主题</li>
 </ul>
-<h1 id="在-config-yml-中修改主题名称"><a href="#在-config-yml-中修改主题名称" class="headerlink" title="在 _config.yml 中修改主题名称"></a>在 _config.yml 中修改主题名称</h1><p>theme: yelee</p>
-<pre><code>
-### 加入 README.md
-</code></pre><h1 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h1><p>skip_render:</p>
-<ul>
-<li>README.md</li>
-<li>CNAME<br>```</li>
-</ul>
-<h3 id="添加音乐"><a href="#添加音乐" class="headerlink" title="添加音乐"></a>添加音乐</h3><pre><code># 网易云音乐外链
-&lt;center&gt;
-&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 height=86 src=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;/center&gt;
-</code></pre><h2 id="添加评论"><a href="#添加评论" class="headerlink" title="添加评论"></a>添加评论</h2><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># visit https://github.com/imsun/gitment to download css and js</span>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/MOxFIVE/hexo-theme-yelee.git themes/yelee
+
+<span class="token comment" spellcheck="true"># 在 _config.yml 中修改主题名称</span>
+theme: yelee
+</code></pre>
+<h3 id="加入-README-md"><a href="#加入-README-md" class="headerlink" title="加入 README.md"></a>加入 README.md</h3><pre class=" language-bash"><code class="language-bash">
+<span class="token comment" spellcheck="true"># _config.yml</span>
+skip_render:
+  - README.md
+  - CNAME
+</code></pre>
+<h3 id="添加音乐"><a href="#添加音乐" class="headerlink" title="添加音乐"></a>添加音乐</h3><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 网易云音乐外链</span>
+<span class="token operator">&lt;</span>center<span class="token operator">></span>
+<span class="token operator">&lt;</span>iframe frameborder<span class="token operator">=</span><span class="token string">"no"</span> border<span class="token operator">=</span><span class="token string">"0"</span> marginwidth<span class="token operator">=</span><span class="token string">"0"</span> marginheight<span class="token operator">=</span><span class="token string">"0"</span> width<span class="token operator">=</span>330 height<span class="token operator">=</span>86 src<span class="token operator">=</span><span class="token string">""</span><span class="token operator">></span><span class="token operator">&lt;</span>/iframe<span class="token operator">></span>
+<span class="token operator">&lt;</span>/center<span class="token operator">></span>
+</code></pre>
+<h2 id="添加评论"><a href="#添加评论" class="headerlink" title="添加评论"></a>添加评论</h2><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># visit https://github.com/imsun/gitment to download css and js</span>
 <span class="token comment" spellcheck="true"># 1. copy files</span>
 <span class="token function">cp</span> meta/gitment.css hexo/theme/your_theme/source/css/gitment.css
 <span class="token function">cp</span> meta/gitment.js hexo/theme/your_theme/source/js/js.css
