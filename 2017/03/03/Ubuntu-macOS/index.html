@@ -5,7 +5,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="Ubuntu &amp; macOS Skills, Knowlege Collision">
-    <meta name="description" content="CommonTmux# installbrew install tmux# new sessiontmux new -s session_name# command prefixCTRL + b# list all sessionstmux">
+    <meta name="description" content="CommonTmux# install
+brew install tmux
+
+# new session
+tmux new -s session_name
+
+# command prefix
+CTRL + b
+
+# list all ses">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -26,7 +35,7 @@
     
     <script src="/libs/jquery/jquery.min.js"></script>
     
-</head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -418,7 +427,47 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Common"><a href="#Common" class="headerlink" title="Common"></a>Common</h2><h3 id="Tmux"><a href="#Tmux" class="headerlink" title="Tmux"></a>Tmux</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># install</span></div><div class="line">brew install tmux</div><div class="line"></div><div class="line"><span class="comment"># new session</span></div><div class="line">tmux new <span class="_">-s</span> session_name</div><div class="line"></div><div class="line"><span class="comment"># command prefix</span></div><div class="line">CTRL + b</div><div class="line"></div><div class="line"><span class="comment"># list all sessions</span></div><div class="line">tmux list-sessions</div><div class="line"></div><div class="line"><span class="comment"># detach session</span></div><div class="line">tmux detach (prefix + d)</div><div class="line"></div><div class="line"><span class="comment"># attach session</span></div><div class="line">tmux attach -t session_name</div><div class="line"></div><div class="line"><span class="comment"># new window</span></div><div class="line">prefix + c</div><div class="line"></div><div class="line"><span class="comment"># switch window</span></div><div class="line">prefix + 0-9</div><div class="line"></div><div class="line"><span class="comment"># close window</span></div><div class="line"><span class="built_in">exit</span></div><div class="line"></div><div class="line"><span class="comment"># split panel</span></div><div class="line">prefix + <span class="string">" (horizonal)</span></div><div class="line">prefix + % (vertical)</div><div class="line"></div><div class="line"># switch panel</div><div class="line">prifix + &#123;</div><div class="line">prefix + &#125;</div><div class="line"></div><div class="line"># scroll</div><div class="line">prefix + [</div><div class="line"></div><div class="line"># exit scroll</div><div class="line">q</div></pre></td></tr></table></figure>
+                <h2 id="Common"><a href="#Common" class="headerlink" title="Common"></a>Common</h2><h3 id="Tmux"><a href="#Tmux" class="headerlink" title="Tmux"></a>Tmux</h3><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># install</span>
+brew <span class="token function">install</span> tmux
+
+<span class="token comment" spellcheck="true"># new session</span>
+tmux new -s session_name
+
+<span class="token comment" spellcheck="true"># command prefix</span>
+CTRL + b
+
+<span class="token comment" spellcheck="true"># list all sessions</span>
+tmux list-sessions
+
+<span class="token comment" spellcheck="true"># detach session</span>
+tmux detach <span class="token punctuation">(</span>prefix + d<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true"># attach session</span>
+tmux attach -t session_name
+
+<span class="token comment" spellcheck="true"># new window</span>
+prefix + c
+
+<span class="token comment" spellcheck="true"># switch window</span>
+prefix + 0-9
+
+<span class="token comment" spellcheck="true"># close window</span>
+<span class="token keyword">exit</span>
+
+<span class="token comment" spellcheck="true"># split panel</span>
+prefix + " <span class="token punctuation">(</span>horizonal<span class="token punctuation">)</span>
+prefix + % <span class="token punctuation">(</span>vertical<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true"># switch panel</span>
+prifix + <span class="token punctuation">{</span>
+prefix + <span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true"># scroll</span>
+prefix + <span class="token punctuation">[</span>
+
+<span class="token comment" spellcheck="true"># exit scroll</span>
+q
+</code></pre>
 <!-- #### [中文教程](https://blog.csdn.net/jyfu2_12/article/details/78650685) -->
 <!-- ### Common Services
 - Public ip and private ip -->
@@ -456,8 +505,16 @@
 <h4 id="App-file-broken-solution"><a href="#App-file-broken-solution" class="headerlink" title="App file broken solution"></a>App file broken solution</h4><p><code>sudo spctl --master-disable</code></p>
 <h4 id="Time-Machine-Backup"><a href="#Time-Machine-Backup" class="headerlink" title="Time Machine Backup"></a>Time Machine Backup</h4><p><code>create EFI firstly in the external disk</code></p>
 <h4 id="Mac-Terminal-missing-git"><a href="#Mac-Terminal-missing-git" class="headerlink" title="Mac Terminal missing git"></a>Mac Terminal missing git</h4><p><code>xcode-select --install</code> to install git</p>
-<h4 id="增加-macOs-的待机续航时间"><a href="#增加-macOs-的待机续航时间" class="headerlink" title="增加 macOs 的待机续航时间"></a>增加 macOs 的待机续航时间</h4><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">pmset -g: 查看配置项</div><div class="line">sudo pmset <span class="_">-a</span> hibernatemode 25</div><div class="line">pmset -b tcpkeepalive 0</div></pre></td></tr></table></figure>
-<h4 id="Disable-Spotlight"><a href="#Disable-Spotlight" class="headerlink" title="Disable Spotlight"></a>Disable Spotlight</h4><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># enable</span></div><div class="line">sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist</div><div class="line"></div><div class="line"><span class="comment"># disable</span></div><div class="line">sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist</div></pre></td></tr></table></figure>
+<h4 id="增加-macOs-的待机续航时间"><a href="#增加-macOs-的待机续航时间" class="headerlink" title="增加 macOs 的待机续航时间"></a>增加 macOs 的待机续航时间</h4><pre class=" language-bash"><code class="language-bash">pmset -g: 查看配置项
+<span class="token function">sudo</span> pmset -a hibernatemode 25
+pmset -b tcpkeepalive 0
+</code></pre>
+<h4 id="Disable-Spotlight"><a href="#Disable-Spotlight" class="headerlink" title="Disable Spotlight"></a>Disable Spotlight</h4><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># enable</span>
+<span class="token function">sudo</span> launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
+
+<span class="token comment" spellcheck="true"># disable</span>
+<span class="token function">sudo</span> launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
+</code></pre>
 <h3 id="Free-Services"><a href="#Free-Services" class="headerlink" title="Free Services"></a>Free Services</h3><ul>
 <li>Hammerspoon (Screen split)</li>
 <li>TouchSwitcher (Touchbar switch apps)</li>
@@ -477,15 +534,24 @@
 <li>Command + Shift + 4: 截取所选屏幕到桌面</li>
 <li>Command + Shift + 3: 截取整个屏幕到桌面</li>
 </ul>
-<h3 id="mac-终端代理"><a href="#mac-终端代理" class="headerlink" title="mac 终端代理"></a>mac 终端代理</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># 推荐在当前终端下修改代理配置，只作用于当前终端，关闭后失效</span></div><div class="line"><span class="built_in">export</span> http_proxy=<span class="string">"sock5://127.0.0.1:1080"</span></div><div class="line"><span class="built_in">export</span> https_proxy=<span class="string">"sock5://127.0.0.1:1080"</span></div></pre></td></tr></table></figure>
-<h3 id="macOS-upgrade-PostgreSQL"><a href="#macOS-upgrade-PostgreSQL" class="headerlink" title="macOS upgrade PostgreSQL"></a>macOS upgrade PostgreSQL</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">brew upgrade postgres</div><div class="line">brew postgresql-upgrade-database</div></pre></td></tr></table></figure>
-<h3 id="mac-ping-proxy"><a href="#mac-ping-proxy" class="headerlink" title="mac ping proxy"></a>mac ping proxy</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">httping -x 127.0.0.1:1080 -g github.com -5</div></pre></td></tr></table></figure>
+<h3 id="mac-终端代理"><a href="#mac-终端代理" class="headerlink" title="mac 终端代理"></a>mac 终端代理</h3><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 推荐在当前终端下修改代理配置，只作用于当前终端，关闭后失效</span>
+<span class="token function">export</span> http_proxy<span class="token operator">=</span><span class="token string">"sock5://127.0.0.1:1080"</span>
+<span class="token function">export</span> https_proxy<span class="token operator">=</span><span class="token string">"sock5://127.0.0.1:1080"</span>
+</code></pre>
+<h3 id="macOS-upgrade-PostgreSQL"><a href="#macOS-upgrade-PostgreSQL" class="headerlink" title="macOS upgrade PostgreSQL"></a>macOS upgrade PostgreSQL</h3><pre class=" language-bash"><code class="language-bash">brew upgrade postgres
+brew postgresql-upgrade-database
+</code></pre>
+<h3 id="mac-ping-proxy"><a href="#mac-ping-proxy" class="headerlink" title="mac ping proxy"></a>mac ping proxy</h3><pre class=" language-bash"><code class="language-bash">httping -x 127.0.0.1:1080 -g github.com -5
+</code></pre>
 <h2 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu</h2><h3 id="Install-Node-js"><a href="#Install-Node-js" class="headerlink" title="Install Node.js"></a>Install Node.js</h3><p>可以直接官网下载安装</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">curl <span class="_">-s</span>L https://deb.nodesource.com/setup_7.x | sudo -E bash -</div><div class="line">sudo apt-get install nodejs</div></pre></td></tr></table></figure>
+<pre class=" language-bash"><code class="language-bash">curl -sL https://deb.nodesource.com/setup_7.x <span class="token operator">|</span> <span class="token function">sudo</span> -E <span class="token function">bash</span> -
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> nodejs
+</code></pre>
 <ul>
 <li><a href="https://github.com/creationix/nvm" target="_blank" rel="external">Node version management</a></li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash</div></pre></td></tr></table></figure>
+<pre class=" language-bash"><code class="language-bash">curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh <span class="token operator">|</span> <span class="token function">bash</span>
+</code></pre>
 <h3 id="Software"><a href="#Software" class="headerlink" title="Software"></a>Software</h3><h4 id="Office"><a href="#Office" class="headerlink" title="Office"></a>Office</h4><ul>
 <li><a href="https://www.onlyoffice.com/" target="_blank" rel="external">Only Office</a></li>
 <li><a href="https://drive.google.com/drive/" target="_blank" rel="external">Google Web Office</a></li>
@@ -503,13 +569,122 @@
 <li>markdown preview plus：Chrome 插件</li>
 <li>编辑器安装 PDF 插件</li>
 </ul>
-<h3 id="美化"><a href="#美化" class="headerlink" title="美化"></a>美化</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"></div><div class="line">wget -q -O - http://archive.getdeb.net/getdeb-archive.key | sudo apt-key add -</div><div class="line">sudo sh -c <span class="string">'echo "deb http://archive.getdeb.net/ubuntu xenial-getdeb apps" &gt;&gt; /etc/apt/sources.list.d/getdeb.list'</span></div><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install ubuntu-tweak</div><div class="line"></div><div class="line">sudo add-apt-repository ppa:noobslab/themes</div><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install flatabulous-theme</div><div class="line"></div><div class="line">sudo add-apt-repository ppa:noobslab/icons</div><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install ultra-flat-icons</div><div class="line"></div><div class="line"><span class="comment"># open ubuntu-tweak to configurate</span></div></pre></td></tr></table></figure>
-<h3 id="Install-Nginx"><a href="#Install-Nginx" class="headerlink" title="Install Nginx"></a>Install Nginx</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">vi /etc/apt/sources.list</div><div class="line">deb http://nginx.org/packages/ubuntu/ xenial nginx</div><div class="line">deb-src http://nginx.org/packages/ubuntu/ xenial nginx</div><div class="line"></div><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install nginx</div><div class="line"></div><div class="line"><span class="comment"># or</span></div><div class="line">sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys <span class="variable">$key</span></div><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install nginx</div></pre></td></tr></table></figure>
-<h3 id="Install-Docker-CE"><a href="#Install-Docker-CE" class="headerlink" title="Install Docker CE"></a>Install Docker CE</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># https://docs.docker.com/install/linux/docker-ce/ubuntu/</span></div><div class="line"><span class="comment"># delete old docker</span></div><div class="line">sudo apt-get remove docker docker-engine docker.io</div><div class="line"></div><div class="line"><span class="comment"># install new docker</span></div><div class="line">sudo apt-get update</div><div class="line"></div><div class="line">sudo apt-get install \</div><div class="line">    apt-transport-https \</div><div class="line">    ca-certificates \</div><div class="line">    curl \</div><div class="line">    software-properties-common</div><div class="line"></div><div class="line">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</div><div class="line">sudo apt-key fingerprint 0EBFCD88</div><div class="line">sudo add-apt-repository \</div><div class="line">   <span class="string">"deb [arch=amd64] https://download.docker.com/linux/ubuntu \</span></div><div class="line">   <span class="variable">$(lsb_release -cs)</span> \</div><div class="line">   stable"</div><div class="line"></div><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install docker-ce</div><div class="line">apt-cache madison docker-ce</div><div class="line"></div><div class="line"><span class="comment"># install docker compose</span></div><div class="line">sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname <span class="_">-s</span>)-$(uname -m) -o /usr/<span class="built_in">local</span>/bin/docker-compose</div><div class="line"></div><div class="line">sudo chmod +x /usr/<span class="built_in">local</span>/bin/docker-compose</div><div class="line">docker-compose --version</div></pre></td></tr></table></figure>
-<h3 id="Install-virtualbox-and-vagrant"><a href="#Install-virtualbox-and-vagrant" class="headerlink" title="Install virtualbox and vagrant"></a>Install virtualbox and vagrant</h3><h4 id="pre-install"><a href="#pre-install" class="headerlink" title="pre install"></a>pre install</h4><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">sudo apt-get install libqt5x11extras5</div><div class="line">sudo apt-get install libsdl1.2debian</div></pre></td></tr></table></figure>
-<h4 id="download-virtualbox-care-about-the-version"><a href="#download-virtualbox-care-about-the-version" class="headerlink" title="download virtualbox (care about the version)"></a>download virtualbox (care about the version)</h4><h3 id="change-software-origin"><a href="#change-software-origin" class="headerlink" title="change software origin"></a>change software origin</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">su root</div><div class="line">cp /etc/apt/sources.list /etc/apt/sources.list.backup</div><div class="line"></div><div class="line">vi /etc/apt/sources.list</div><div class="line"><span class="comment"># deb cdrom:[Ubuntu 16.04 LTS _Xenial Xerus_ - Release amd64 (20160420.1)]/ xenial main restricted</span></div><div class="line">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main restricted</div><div class="line">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates main restricted</div><div class="line">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial universe</div><div class="line">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates universe</div><div class="line">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial multiverse</div><div class="line">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates multiverse</div><div class="line">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse</div><div class="line">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted</div><div class="line">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security universe</div><div class="line">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security multiverse</div><div class="line"></div><div class="line">sudo apt-get update</div><div class="line"><span class="comment"># Or Softwate &amp; Update to choose software origin</span></div></pre></td></tr></table></figure>
-<h3 id="删除预装软件"><a href="#删除预装软件" class="headerlink" title="删除预装软件"></a>删除预装软件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># amazon</span></div><div class="line">sudo apt-get remove unity-webapps-common</div><div class="line"></div><div class="line"><span class="comment"># libreOffice</span></div><div class="line">sudo apt-get remove libreoffice-common</div><div class="line"></div><div class="line"><span class="comment"># others</span></div><div class="line">sudo apt-get remove thunderbird totem rhythmbox empathy brasero simple-scan</div><div class="line">sudo apt-get remove gnome-mahjongg aisleriot gnome-mines gnome-sudoku</div><div class="line">sudo apt-get remove cheese transmission-common gnome-orca webbrowser-app landscape-client-ui-install</div><div class="line">sudo apt-get remove onboard deja-dup</div><div class="line"></div><div class="line">sudo apt-get autoremove</div></pre></td></tr></table></figure>
-<h3 id="Terminal-proxy"><a href="#Terminal-proxy" class="headerlink" title="Terminal proxy"></a>Terminal proxy</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># install polipo</span></div><div class="line">sudo apt-get install polipo</div><div class="line"></div><div class="line"><span class="comment"># modify config</span></div><div class="line">sudo vim /etc/polipo/config</div><div class="line">socksParentProxy = <span class="string">"localhost:1080"</span></div><div class="line">socksProxyType = socks5</div><div class="line"><span class="built_in">log</span>File=/var/<span class="built_in">log</span>/polipo</div><div class="line"><span class="built_in">log</span>Level=4</div><div class="line"></div><div class="line"><span class="comment"># start the service</span></div><div class="line">sudo service polipo stop</div><div class="line">sudo service polipo start</div><div class="line"></div><div class="line"><span class="comment"># vim ~/.bashrc</span></div><div class="line"><span class="built_in">alias</span> hp=<span class="string">"http_proxy=http://localhost:8123"</span></div><div class="line">gp=<span class="string">" --config http.proxy=localhost:8123"</span></div><div class="line"></div><div class="line"><span class="built_in">source</span> ~/.bashrc</div><div class="line"><span class="comment"># gh command</span></div><div class="line"><span class="comment"># git command $gp</span></div></pre></td></tr></table></figure>
+<h3 id="美化"><a href="#美化" class="headerlink" title="美化"></a>美化</h3><pre class=" language-bash"><code class="language-bash">
+<span class="token function">wget</span> -q -O - http://archive.getdeb.net/getdeb-archive.key <span class="token operator">|</span> <span class="token function">sudo</span> apt-key add -
+<span class="token function">sudo</span> sh -c <span class="token string">'echo "deb http://archive.getdeb.net/ubuntu xenial-getdeb apps" >> /etc/apt/sources.list.d/getdeb.list'</span>
+<span class="token function">sudo</span> <span class="token function">apt-get</span> update
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> ubuntu-tweak
+
+<span class="token function">sudo</span> add-apt-repository ppa:noobslab/themes
+<span class="token function">sudo</span> <span class="token function">apt-get</span> update
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> flatabulous-theme
+
+<span class="token function">sudo</span> add-apt-repository ppa:noobslab/icons
+<span class="token function">sudo</span> <span class="token function">apt-get</span> update
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> ultra-flat-icons
+
+<span class="token comment" spellcheck="true"># open ubuntu-tweak to configurate</span>
+</code></pre>
+<h3 id="Install-Nginx"><a href="#Install-Nginx" class="headerlink" title="Install Nginx"></a>Install Nginx</h3><pre class=" language-bash"><code class="language-bash"><span class="token function">vi</span> /etc/apt/sources.list
+deb http://nginx.org/packages/ubuntu/ xenial nginx
+deb-src http://nginx.org/packages/ubuntu/ xenial nginx
+
+<span class="token function">sudo</span> <span class="token function">apt-get</span> update
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> nginx
+
+<span class="token comment" spellcheck="true"># or</span>
+<span class="token function">sudo</span> apt-key adv --keyserver keyserver.ubuntu.com --recv-keys <span class="token variable">$key</span>
+<span class="token function">sudo</span> <span class="token function">apt-get</span> update
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> nginx
+</code></pre>
+<h3 id="Install-Docker-CE"><a href="#Install-Docker-CE" class="headerlink" title="Install Docker CE"></a>Install Docker CE</h3><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># https://docs.docker.com/install/linux/docker-ce/ubuntu/</span>
+<span class="token comment" spellcheck="true"># delete old docker</span>
+<span class="token function">sudo</span> <span class="token function">apt-get</span> remove docker docker-engine docker.io
+
+<span class="token comment" spellcheck="true"># install new docker</span>
+<span class="token function">sudo</span> <span class="token function">apt-get</span> update
+
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    software-properties-common
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg <span class="token operator">|</span> <span class="token function">sudo</span> apt-key add -
+<span class="token function">sudo</span> apt-key fingerprint 0EBFCD88
+<span class="token function">sudo</span> add-apt-repository \
+   <span class="token string">"deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   <span class="token variable"><span class="token variable">$(</span>lsb_release -cs<span class="token variable">)</span></span> \
+   stable"</span>
+
+<span class="token function">sudo</span> <span class="token function">apt-get</span> update
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> docker-ce
+apt-cache madison docker-ce
+
+<span class="token comment" spellcheck="true"># install docker compose</span>
+<span class="token function">sudo</span> curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-<span class="token variable"><span class="token variable">$(</span><span class="token function">uname</span> -s<span class="token variable">)</span></span>-<span class="token variable"><span class="token variable">$(</span><span class="token function">uname</span> -m<span class="token variable">)</span></span> -o /usr/local/bin/docker-compose
+
+<span class="token function">sudo</span> <span class="token function">chmod</span> +x /usr/local/bin/docker-compose
+docker-compose --version
+</code></pre>
+<h3 id="Install-virtualbox-and-vagrant"><a href="#Install-virtualbox-and-vagrant" class="headerlink" title="Install virtualbox and vagrant"></a>Install virtualbox and vagrant</h3><h4 id="pre-install"><a href="#pre-install" class="headerlink" title="pre install"></a>pre install</h4><pre class=" language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> libqt5x11extras5
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> libsdl1.2debian
+</code></pre>
+<h4 id="download-virtualbox-care-about-the-version"><a href="#download-virtualbox-care-about-the-version" class="headerlink" title="download virtualbox (care about the version)"></a>download virtualbox (care about the version)</h4><h3 id="change-software-origin"><a href="#change-software-origin" class="headerlink" title="change software origin"></a>change software origin</h3><pre class=" language-bash"><code class="language-bash"><span class="token function">su</span> root
+<span class="token function">cp</span> /etc/apt/sources.list /etc/apt/sources.list.backup
+
+<span class="token function">vi</span> /etc/apt/sources.list
+<span class="token comment" spellcheck="true"># deb cdrom:[Ubuntu 16.04 LTS _Xenial Xerus_ - Release amd64 (20160420.1)]/ xenial main restricted</span>
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main restricted
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates main restricted
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial universe
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates universe
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial multiverse
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates multiverse
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security universe
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security multiverse
+
+<span class="token function">sudo</span> <span class="token function">apt-get</span> update
+<span class="token comment" spellcheck="true"># Or Softwate &amp; Update to choose software origin</span>
+</code></pre>
+<h3 id="删除预装软件"><a href="#删除预装软件" class="headerlink" title="删除预装软件"></a>删除预装软件</h3><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># amazon</span>
+<span class="token function">sudo</span> <span class="token function">apt-get</span> remove unity-webapps-common
+
+<span class="token comment" spellcheck="true"># libreOffice</span>
+<span class="token function">sudo</span> <span class="token function">apt-get</span> remove libreoffice-common
+
+<span class="token comment" spellcheck="true"># others</span>
+<span class="token function">sudo</span> <span class="token function">apt-get</span> remove thunderbird totem rhythmbox empathy brasero simple-scan
+<span class="token function">sudo</span> <span class="token function">apt-get</span> remove gnome-mahjongg aisleriot gnome-mines gnome-sudoku
+<span class="token function">sudo</span> <span class="token function">apt-get</span> remove cheese transmission-common gnome-orca webbrowser-app landscape-client-ui-install
+<span class="token function">sudo</span> <span class="token function">apt-get</span> remove onboard deja-dup
+
+<span class="token function">sudo</span> <span class="token function">apt-get</span> autoremove
+</code></pre>
+<h3 id="Terminal-proxy"><a href="#Terminal-proxy" class="headerlink" title="Terminal proxy"></a>Terminal proxy</h3><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># install polipo</span>
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> polipo
+
+<span class="token comment" spellcheck="true"># modify config</span>
+<span class="token function">sudo</span> vim /etc/polipo/config
+socksParentProxy <span class="token operator">=</span> <span class="token string">"localhost:1080"</span>
+socksProxyType <span class="token operator">=</span> socks5
+logFile<span class="token operator">=</span>/var/log/polipo
+logLevel<span class="token operator">=</span>4
+
+<span class="token comment" spellcheck="true"># start the service</span>
+<span class="token function">sudo</span> <span class="token function">service</span> polipo stop
+<span class="token function">sudo</span> <span class="token function">service</span> polipo start
+
+<span class="token comment" spellcheck="true"># vim ~/.bashrc</span>
+<span class="token function">alias</span> hp<span class="token operator">=</span><span class="token string">"http_proxy=http://localhost:8123"</span>
+gp<span class="token operator">=</span><span class="token string">" --config http.proxy=localhost:8123"</span>
+
+<span class="token function">source</span> ~/.bashrc
+<span class="token comment" spellcheck="true"># gh command</span>
+<span class="token comment" spellcheck="true"># git command $gp</span>
+</code></pre>
 
             </div>
             <hr/>
@@ -713,14 +888,7 @@ dash 整合的文档下载地址
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            先决条件
-安装 git 和 node.js
-新建 hexo 文件夹
-
-搭建 hexo 环境
-git bash: npm install hexo –no-optional
-配置 git 环境下的 github
-安装 hexo-deploye
+                            主要介绍 Windows 和 macOS 平台下的静态博客 Hexo 的安装，以及更改主题头像等操作
                         
                     </div>
                     <div class="publish-info">
@@ -1042,8 +1210,6 @@ $(function () {
     })();
 </script>
 
-    
-    <script src="/libs/others/clicklove.js" async="async"></script>
     
     
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>

@@ -33,7 +33,7 @@ dash 整合的文档下载地址
     
     <script src="/libs/jquery/jquery.min.js"></script>
     
-</head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -450,8 +450,26 @@ dash 整合的文档下载地址
 </ul>
 </li>
 </ul>
-<h4 id="apt-cyg-包管理器"><a href="#apt-cyg-包管理器" class="headerlink" title="apt-cyg: 包管理器"></a><code>apt-cyg</code>: 包管理器</h4><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">lynx -source rawgit.com/transcode-open/apt-cyg/master/apt-cyg &gt; apt-cyg</div><div class="line">install apt-cyg /bin</div></pre></td></tr></table></figure>
-<h4 id="配置-oh-my-zsh"><a href="#配置-oh-my-zsh" class="headerlink" title="配置 oh-my-zsh"></a>配置 oh-my-zsh</h4><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># install oh-my-zsh</span></div><div class="line">sh -c <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)</span>"</span></div><div class="line"></div><div class="line"><span class="comment"># configure .bashrc</span></div><div class="line">vim .bashrc</div><div class="line"></div><div class="line"><span class="comment"># add in the top of file</span></div><div class="line"><span class="built_in">exec</span> zsh</div><div class="line"></div><div class="line"><span class="comment"># support auto suggestion</span></div><div class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions</div><div class="line"></div><div class="line"><span class="comment"># make it available</span></div><div class="line"><span class="built_in">source</span> ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh</div><div class="line"></div><div class="line"><span class="comment"># right arrow to complete the suggestion</span></div></pre></td></tr></table></figure>
+<h4 id="apt-cyg-包管理器"><a href="#apt-cyg-包管理器" class="headerlink" title="apt-cyg: 包管理器"></a><code>apt-cyg</code>: 包管理器</h4><pre class=" language-bash"><code class="language-bash">lynx -source rawgit.com/transcode-open/apt-cyg/master/apt-cyg <span class="token operator">></span> apt-cyg
+<span class="token function">install</span> apt-cyg /bin
+</code></pre>
+<h4 id="配置-oh-my-zsh"><a href="#配置-oh-my-zsh" class="headerlink" title="配置 oh-my-zsh"></a>配置 oh-my-zsh</h4><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># install oh-my-zsh</span>
+sh -c <span class="token string">"<span class="token variable"><span class="token variable">$(</span>curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh<span class="token variable">)</span></span>"</span>
+
+<span class="token comment" spellcheck="true"># configure .bashrc</span>
+vim .bashrc
+
+<span class="token comment" spellcheck="true"># add in the top of file</span>
+<span class="token function">exec</span> zsh
+
+<span class="token comment" spellcheck="true"># support auto suggestion</span>
+<span class="token function">git</span> clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+
+<span class="token comment" spellcheck="true"># make it available</span>
+<span class="token function">source</span> ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+<span class="token comment" spellcheck="true"># right arrow to complete the suggestion</span>
+</code></pre>
 <h4 id="Cygwin-使用技巧"><a href="#Cygwin-使用技巧" class="headerlink" title="Cygwin 使用技巧"></a>Cygwin 使用技巧</h4><ul>
 <li>通过 <code>cd /cygdrive/c</code> 可以到达 C、D 盘目录等</li>
 <li>更改主题、字体、字体大小和透明度</li>
@@ -717,7 +735,16 @@ npm init -y
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            CommonTmux# installbrew install tmux# new sessiontmux new -s session_name# command prefixCTRL + b# list all sessionstmux
+                            CommonTmux# install
+brew install tmux
+
+# new session
+tmux new -s session_name
+
+# command prefix
+CTRL + b
+
+# list all ses
                         
                     </div>
                     <div class="publish-info">
@@ -1043,8 +1070,6 @@ $(function () {
     })();
 </script>
 
-    
-    <script src="/libs/others/clicklove.js" async="async"></script>
     
     
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>

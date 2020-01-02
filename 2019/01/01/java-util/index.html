@@ -34,7 +34,7 @@ junit-platform-engine">
     
     <script src="/libs/jquery/jquery.min.js"></script>
     
-</head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -432,9 +432,24 @@ junit-platform-engine">
 <li>junit-platform-launcher</li>
 <li>junit-platform-engine</li>
 </ol>
-<h2 id="常用代码片段"><a href="#常用代码片段" class="headerlink" title="常用代码片段"></a>常用代码片段</h2><h3 id="分割大的列表变成小的列表"><a href="#分割大的列表变成小的列表" class="headerlink" title="分割大的列表变成小的列表"></a>分割大的列表变成小的列表</h3><figure class="highlight java"><table><tr><td class="code"><pre><div class="line">Lists.partition(bigList, splitSize);</div></pre></td></tr></table></figure>
-<h3 id="将-String-变成-List"><a href="#将-String-变成-List" class="headerlink" title="将 String 变成 List"></a>将 String 变成 List</h3><figure class="highlight java"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> List&lt;String&gt; <span class="title">splitStringToList</span><span class="params">(String text, String separator)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (Strings.isNullOrEmpty(text)) &#123;</div><div class="line">        <span class="keyword">return</span> Lists.newArrayList();</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> Lists.newArrayList(text.split(separator));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="判断是否开启了-Debug-模式"><a href="#判断是否开启了-Debug-模式" class="headerlink" title="判断是否开启了 Debug 模式"></a>判断是否开启了 Debug 模式</h3><figure class="highlight java"><table><tr><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String AGENTLIB_JDWP = <span class="string">"-agentlib:jdwp"</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isDebugMode</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">final</span> RuntimeMXBean runtimeMXBean = ManagementFactory.getRuntimeMXBean();</div><div class="line">    <span class="keyword">return</span> runtimeMXBean.getInputArguments()</div><div class="line">            .stream()</div><div class="line">            .anyMatch(arg -&gt; arg.contains(AGENTLIB_JDWP));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="常用代码片段"><a href="#常用代码片段" class="headerlink" title="常用代码片段"></a>常用代码片段</h2><h3 id="分割大的列表变成小的列表"><a href="#分割大的列表变成小的列表" class="headerlink" title="分割大的列表变成小的列表"></a>分割大的列表变成小的列表</h3><pre class=" language-java"><code class="language-java">Lists<span class="token punctuation">.</span><span class="token function">partition</span><span class="token punctuation">(</span>bigList<span class="token punctuation">,</span> splitSize<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="将-String-变成-List"><a href="#将-String-变成-List" class="headerlink" title="将 String 变成 List"></a>将 String 变成 List</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> List<span class="token operator">&lt;</span>String<span class="token operator">></span> <span class="token function">splitStringToList</span><span class="token punctuation">(</span>String text<span class="token punctuation">,</span> String separator<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>Strings<span class="token punctuation">.</span><span class="token function">isNullOrEmpty</span><span class="token punctuation">(</span>text<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> Lists<span class="token punctuation">.</span><span class="token function">newArrayList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> Lists<span class="token punctuation">.</span><span class="token function">newArrayList</span><span class="token punctuation">(</span>text<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span>separator<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="判断是否开启了-Debug-模式"><a href="#判断是否开启了-Debug-模式" class="headerlink" title="判断是否开启了 Debug 模式"></a>判断是否开启了 Debug 模式</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> String AGENTLIB_JDWP <span class="token operator">=</span> <span class="token string">"-agentlib:jdwp"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">isDebugMode</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">final</span> RuntimeMXBean runtimeMXBean <span class="token operator">=</span> ManagementFactory<span class="token punctuation">.</span><span class="token function">getRuntimeMXBean</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> runtimeMXBean<span class="token punctuation">.</span><span class="token function">getInputArguments</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">anyMatch</span><span class="token punctuation">(</span>arg <span class="token operator">-</span><span class="token operator">></span> arg<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span>AGENTLIB_JDWP<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
 <h2 id="快乐-Guava"><a href="#快乐-Guava" class="headerlink" title="快乐 Guava"></a>快乐 Guava</h2><blockquote>
 <p>未完待续</p>
 </blockquote>
@@ -969,8 +984,6 @@ $(function () {
     })();
 </script>
 
-    
-    <script src="/libs/others/clicklove.js" async="async"></script>
     
     
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>

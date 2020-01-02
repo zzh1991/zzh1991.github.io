@@ -35,7 +35,7 @@ rainbow brack">
     
     <script src="/libs/jquery/jquery.min.js"></script>
     
-</head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -469,7 +469,22 @@ rainbow brack">
 </ul>
 </li>
 </ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">UserInputDTOConvert</span> <span class="keyword">extends</span> <span class="title">Converter</span>&lt;<span class="title">UserInputDTO</span>, <span class="title">User</span>&gt; </span>&#123;</div><div class="line">   <span class="meta">@Override</span></div><div class="line">   <span class="function"><span class="keyword">protected</span> User <span class="title">doForward</span><span class="params">(UserInputDTO userInputDTO)</span> </span>&#123;</div><div class="line">       User user = <span class="keyword">new</span> User();</div><div class="line">       BeanUtils.copyProperties(userInputDTO, user);</div><div class="line">       <span class="keyword">return</span> user;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="meta">@Override</span></div><div class="line">   <span class="function"><span class="keyword">protected</span> UserInputDTO <span class="title">doBackward</span><span class="params">(User user)</span> </span>&#123;</div><div class="line">       UserInputDTO userInputDTO = <span class="keyword">new</span> UserInputDTO();</div><div class="line">       BeanUtils.copyProperties(user, userInputDTO);</div><div class="line">       <span class="keyword">return</span> userInputDTO;</div><div class="line">   &#125;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">UserInputDTOConvert</span> <span class="token keyword">extends</span> <span class="token class-name">Converter</span><span class="token operator">&lt;</span>UserInputDTO<span class="token punctuation">,</span> User<span class="token operator">></span> <span class="token punctuation">{</span>
+   <span class="token annotation punctuation">@Override</span>
+   <span class="token keyword">protected</span> User <span class="token function">doForward</span><span class="token punctuation">(</span>UserInputDTO userInputDTO<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+       User user <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+       BeanUtils<span class="token punctuation">.</span><span class="token function">copyProperties</span><span class="token punctuation">(</span>userInputDTO<span class="token punctuation">,</span> user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+       <span class="token keyword">return</span> user<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+
+   <span class="token annotation punctuation">@Override</span>
+   <span class="token keyword">protected</span> UserInputDTO <span class="token function">doBackward</span><span class="token punctuation">(</span>User user<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+       UserInputDTO userInputDTO <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">UserInputDTO</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+       BeanUtils<span class="token punctuation">.</span><span class="token function">copyProperties</span><span class="token punctuation">(</span>user<span class="token punctuation">,</span> userInputDTO<span class="token punctuation">)</span><span class="token punctuation">;</span>
+       <span class="token keyword">return</span> userInputDTO<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span>
+</code></pre>
 <h3 id="Bean-验证"><a href="#Bean-验证" class="headerlink" title="Bean 验证"></a>Bean 验证</h3><ul>
 <li>Lombok @NotNull 等</li>
 <li>hibernate jsr 303</li>
@@ -503,7 +518,15 @@ rainbow brack">
 </ul>
 <h2 id="Hibernate-Validator"><a href="#Hibernate-Validator" class="headerlink" title="Hibernate Validator"></a>Hibernate Validator</h2><h2 id="类库"><a href="#类库" class="headerlink" title="类库"></a>类库</h2><p>原则：尽量使用类库去实现功能，不要重复造轮子</p>
 <h3 id="命令执行"><a href="#命令执行" class="headerlink" title="命令执行"></a>命令执行</h3><ul>
-<li>Apache Commons Exec<figure class="highlight java"><table><tr><td class="code"><pre><div class="line">String command = <span class="string">"scp --help"</span>;</div><div class="line">ByteArrayOutputStream stdout = <span class="keyword">new</span> ByteArrayOutputStream();</div><div class="line">PumpStreamHandler pumpStreamHandler = <span class="keyword">new</span> PumpStreamHandler(stdout);</div><div class="line">CommandLine cmdLine = CommandLine.parse(command);</div><div class="line">DefaultExecutor executor = <span class="keyword">new</span> DefaultExecutor();</div><div class="line">executor.setStreamHandler(pumpStreamHandler);</div><div class="line"><span class="keyword">int</span> exitValue = executor.execute(cmdLine);</div><div class="line">System.out.println(stdout.toString());</div></pre></td></tr></table></figure>
+<li>Apache Commons Exec<pre class=" language-java"><code class="language-java">String command <span class="token operator">=</span> <span class="token string">"scp --help"</span><span class="token punctuation">;</span>
+ByteArrayOutputStream stdout <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ByteArrayOutputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+PumpStreamHandler pumpStreamHandler <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PumpStreamHandler</span><span class="token punctuation">(</span>stdout<span class="token punctuation">)</span><span class="token punctuation">;</span>
+CommandLine cmdLine <span class="token operator">=</span> CommandLine<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>command<span class="token punctuation">)</span><span class="token punctuation">;</span>
+DefaultExecutor executor <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DefaultExecutor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+executor<span class="token punctuation">.</span><span class="token function">setStreamHandler</span><span class="token punctuation">(</span>pumpStreamHandler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> exitValue <span class="token operator">=</span> executor<span class="token punctuation">.</span><span class="token function">execute</span><span class="token punctuation">(</span>cmdLine<span class="token punctuation">)</span><span class="token punctuation">;</span>
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>stdout<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 </li>
 </ul>
 <h3 id="StringUtils"><a href="#StringUtils" class="headerlink" title="StringUtils"></a>StringUtils</h3><p>-Apache Common Lang</p>
@@ -528,7 +551,11 @@ rainbow brack">
 </ul>
 </li>
 </ul>
-<h2 id="Database"><a href="#Database" class="headerlink" title="Database"></a>Database</h2><h3 id="Database-Projection"><a href="#Database-Projection" class="headerlink" title="Database Projection"></a>Database Projection</h3><figure class="highlight java"><table><tr><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Projection</span> </span>&#123;</div><div class="line">  <span class="meta">@Value</span>(<span class="string">"#&#123;target.firstName&#125; #&#123;target.lastName&#125;"</span>) </div><div class="line">  <span class="function">String <span class="title">getFullName</span><span class="params">()</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Database"><a href="#Database" class="headerlink" title="Database"></a>Database</h2><h3 id="Database-Projection"><a href="#Database-Projection" class="headerlink" title="Database Projection"></a>Database Projection</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">Projection</span> <span class="token punctuation">{</span>
+  <span class="token annotation punctuation">@Value</span><span class="token punctuation">(</span><span class="token string">"#{target.firstName} #{target.lastName}"</span><span class="token punctuation">)</span> 
+  String <span class="token function">getFullName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
 <h2 id="提高"><a href="#提高" class="headerlink" title="提高"></a>提高</h2><ol>
 <li>多看成熟框架的源码</li>
 <li>多回头看自己的代码</li>
@@ -1058,8 +1085,6 @@ $(function () {
     })();
 </script>
 
-    
-    <script src="/libs/others/clicklove.js" async="async"></script>
     
     
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
