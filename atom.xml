@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[Welcome Code]]></title>
+  <title><![CDATA[Knowlege Collision]]></title>
   
   <link href="/atom.xml" rel="self"/>
   <link href="https://zzh1991.github.io/"/>
-  <updated>2019-11-02T02:39:57.912Z</updated>
+  <updated>2020-01-02T02:12:48.531Z</updated>
   <id>https://zzh1991.github.io/</id>
   
   <author>
@@ -13,6 +13,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Java Version Management]]></title>
+    <link href="https://zzh1991.github.io/2019/11/02/java-version-management/"/>
+    <id>https://zzh1991.github.io/2019/11/02/java-version-management/</id>
+    <published>2019-11-02T02:50:01.000Z</published>
+    <updated>2020-01-02T02:12:48.531Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<p>是不是每次换新电脑或者安装了新系统，都要烦恼应该如何下载安装 Java 以及进行相应的配置？今天就来介绍一下如何从这种烦恼中解脱出来。</p>
+</blockquote>
+<h2 id="1-Java-版本控制工具"><a href="#1-Java-版本控制工具" class="headerlink" title="1. Java 版本控制工具"></a>1. Java 版本控制工具</h2><p>普通常规的安装配置方式除了步骤繁琐以外，最大的缺陷就在于不能支持 Java 版本的快速切换，其必须通过更改环境变量的方式进行版本切换。</p>
+<p>针对以上的问题，我们需要选择一款 Java 版本控制工具，将我们从烦恼中解脱出来。以下是我找的几款工具：</p>
+<ul>
+<li><a href="https://github.com/sdkman/sdkman-cli" title="sdkman" target="_blank" rel="external">sdkman</a>: <code>https://github.com/sdkman/sdkman-cli</code></li>
+<li><a href="https://github.com/shyiko/jabba" title="jabba" target="_blank" rel="external">jabba</a>: <code>https://github.com/shyiko/jabba</code></li>
+<li><a href="https://github.com/jenv/jenv" title="jenv" target="_blank" rel="external">jenv</a>: <code>https://github.com/jenv/jenv</code></li>
+</ul>
+<h2 id="2-抉择"><a href="#2-抉择" class="headerlink" title="2. 抉择"></a>2. 抉择</h2><p>考虑到工具的维护情况，本人选择了 <strong>sdkman</strong> 作为目前 Java 版本控制的工具。如果需要安装 <code>Orcale JDK</code>，可以考虑使用 <strong>jabba</strong>（<strong>sdkman</strong> 不支持下载）。</p>
+<h2 id="3-配置-sdkman"><a href="#3-配置-sdkman" class="headerlink" title="3. 配置 sdkman"></a>3. 配置 sdkman</h2><p>由于本人使用的是 <strong>macOS</strong> 和 <strong>Ubuntu</strong>，下面的步骤都是基于这些系统，<a href="https://sdkman.io/install" title="Windows 安装 sdkman" target="_blank" rel="external">Windows 安装 sdkman</a> 详见：<code>https://sdkman.io/install</code>。</p>
+<h3 id="3-1-安装-sdkman"><a href="#3-1-安装-sdkman" class="headerlink" title="3.1 安装 sdkman"></a>3.1 安装 sdkman</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl <span class="_">-s</span> <span class="string">"https://get.sdkman.io"</span> | bash</div></pre></td></tr></table></figure>
+<blockquote>
+<p>提醒：安装成功后，关闭终端并重新打开一个新终端</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 验证 sdkman 是否安装成功</span></div><div class="line">sdk version</div></pre></td></tr></table></figure>
+<h3 id="3-2-sdkman-升级"><a href="#3-2-sdkman-升级" class="headerlink" title="3.2 sdkman 升级"></a>3.2 sdkman 升级</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sdk selfupdate</div></pre></td></tr></table></figure>
+<h3 id="3-3-sdkman-版本库更新"><a href="#3-3-sdkman-版本库更新" class="headerlink" title="3.3 sdkman 版本库更新"></a>3.3 sdkman 版本库更新</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sdk update</div></pre></td></tr></table></figure>
+<h2 id="4-安装配置-Java"><a href="#4-安装配置-Java" class="headerlink" title="4. 安装配置 Java"></a>4. 安装配置 Java</h2><h3 id="4-1-列举可安装（已安装）的-Java-版本"><a href="#4-1-列举可安装（已安装）的-Java-版本" class="headerlink" title="4.1 列举可安装（已安装）的 Java 版本"></a>4.1 列举可安装（已安装）的 Java 版本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sdk list java</div></pre></td></tr></table></figure>
+<blockquote>
+<p>建议：推荐安装 Amazon 和 OpenJDK 的 Java 版本</p>
+</blockquote>
+<h3 id="4-2-安装指定-Java-版本"><a href="#4-2-安装指定-Java-版本" class="headerlink" title="4.2 安装指定 Java 版本"></a>4.2 安装指定 Java 版本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sdk install java 11.0.2-open</div></pre></td></tr></table></figure>
+<h3 id="4-3-查看当前-Java-版本"><a href="#4-3-查看当前-Java-版本" class="headerlink" title="4.3 查看当前 Java 版本"></a>4.3 查看当前 Java 版本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sdk current java</div></pre></td></tr></table></figure>
+<h3 id="4-4-指定默认-Java-版本"><a href="#4-4-指定默认-Java-版本" class="headerlink" title="4.4 指定默认 Java 版本"></a>4.4 指定默认 Java 版本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 永久切换</span></div><div class="line">sdk default java 11.0.2-open</div><div class="line"></div><div class="line"><span class="comment"># 临时切换，只在当前终端有效</span></div><div class="line">sdk use java 11.0.2-open</div></pre></td></tr></table></figure>
+<h3 id="4-5-删除指定的-Java-版本"><a href="#4-5-删除指定的-Java-版本" class="headerlink" title="4.5 删除指定的 Java 版本"></a>4.5 删除指定的 Java 版本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sdk uninstall java 11.0.2-open</div></pre></td></tr></table></figure>
+<h2 id="5-查看-Java-安装路径"><a href="#5-查看-Java-安装路径" class="headerlink" title="5 查看 Java 安装路径"></a>5 查看 Java 安装路径</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">where</span> java</div><div class="line"></div><div class="line"><span class="comment"># 默认路径</span></div><div class="line"><span class="comment"># ～/.sdkman/candidates/java/current/bin/java</span></div></pre></td></tr></table></figure>
+<h3 id="5-1-配置-Intellij-IDEA-的-Java-路径"><a href="#5-1-配置-Intellij-IDEA-的-Java-路径" class="headerlink" title="5.1 配置 Intellij IDEA 的 Java 路径"></a>5.1 配置 Intellij IDEA 的 Java 路径</h3><hr>
+<blockquote>
+<p>看完这篇文章，有没有让你从 Java 安装配置中解脱出来呢？</p>
+<p>更多精彩内容请<ruby>关注<rt>扫码</rt></ruby>：</p>
+</blockquote>
+<p><img src="https://i.loli.net/2019/05/18/5cdf686a103cf11418.jpg" alt="KnowledgeCollision 微信公众号"></p>
+<p><code>Knowledge Collision 激发思维碰撞，IDEA 丛生</code></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[轻松管理不同的 Java 版本]]>
+    
+    </summary>
+    
+      <category term="Java" scheme="https://zzh1991.github.io/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[2019 软件工程师现状]]></title>
@@ -92,57 +143,6 @@
     </summary>
     
       <category term="Development" scheme="https://zzh1991.github.io/tags/Development/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Java Version Management]]></title>
-    <link href="https://zzh1991.github.io/2019/11/02/java-version-management/"/>
-    <id>https://zzh1991.github.io/2019/11/02/java-version-management/</id>
-    <published>2019-11-02T02:20:01.000Z</published>
-    <updated>2019-11-02T02:31:48.040Z</updated>
-    <content type="html"><![CDATA[<blockquote>
-<p>是不是每次换新电脑或者安装了新系统，都要烦恼应该如何下载安装 Java 以及进行相应的配置？今天就来介绍一下如何从这种烦恼中解脱出来。</p>
-</blockquote>
-<h2 id="1-Java-版本控制工具"><a href="#1-Java-版本控制工具" class="headerlink" title="1. Java 版本控制工具"></a>1. Java 版本控制工具</h2><p>普通常规的安装配置方式除了步骤繁琐以外，最大的缺陷就在于不能支持 Java 版本的快速切换，其必须通过更改环境变量的方式进行版本切换。</p>
-<p>针对以上的问题，我们需要选择一款 Java 版本控制工具，将我们从烦恼中解脱出来。以下是我找的几款工具：</p>
-<ul>
-<li><a href="https://github.com/sdkman/sdkman-cli" title="sdkman" target="_blank" rel="external">sdkman</a>: <code>https://github.com/sdkman/sdkman-cli</code></li>
-<li><a href="https://github.com/shyiko/jabba" title="jabba" target="_blank" rel="external">jabba</a>: <code>https://github.com/shyiko/jabba</code></li>
-<li><a href="https://github.com/jenv/jenv" title="jenv" target="_blank" rel="external">jenv</a>: <code>https://github.com/jenv/jenv</code></li>
-</ul>
-<h2 id="2-抉择"><a href="#2-抉择" class="headerlink" title="2. 抉择"></a>2. 抉择</h2><p>考虑到工具的维护情况，本人选择了 <strong>sdkman</strong> 作为目前 Java 版本控制的工具。如果需要安装 <code>Orcale JDK</code>，可以考虑使用 <strong>jabba</strong>（<strong>sdkman</strong> 不支持下载）。</p>
-<h2 id="3-配置-sdkman"><a href="#3-配置-sdkman" class="headerlink" title="3. 配置 sdkman"></a>3. 配置 sdkman</h2><p>由于本人使用的是 <strong>macOS</strong> 和 <strong>Ubuntu</strong>，下面的步骤都是基于这些系统，<a href="https://sdkman.io/install" title="Windows 安装 sdkman" target="_blank" rel="external">Windows 安装 sdkman</a> 详见：<code>https://sdkman.io/install</code>。</p>
-<h3 id="3-1-安装-sdkman"><a href="#3-1-安装-sdkman" class="headerlink" title="3.1 安装 sdkman"></a>3.1 安装 sdkman</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl <span class="_">-s</span> <span class="string">"https://get.sdkman.io"</span> | bash</div></pre></td></tr></table></figure>
-<blockquote>
-<p>提醒：安装成功后，关闭终端并重新打开一个新终端</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 验证 sdkman 是否安装成功</span></div><div class="line">sdk version</div></pre></td></tr></table></figure>
-<h3 id="3-2-sdkman-升级"><a href="#3-2-sdkman-升级" class="headerlink" title="3.2 sdkman 升级"></a>3.2 sdkman 升级</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sdk selfupdate</div></pre></td></tr></table></figure>
-<h3 id="3-3-sdkman-版本库更新"><a href="#3-3-sdkman-版本库更新" class="headerlink" title="3.3 sdkman 版本库更新"></a>3.3 sdkman 版本库更新</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sdk update</div></pre></td></tr></table></figure>
-<h2 id="4-安装配置-Java"><a href="#4-安装配置-Java" class="headerlink" title="4. 安装配置 Java"></a>4. 安装配置 Java</h2><h3 id="4-1-列举可安装（已安装）的-Java-版本"><a href="#4-1-列举可安装（已安装）的-Java-版本" class="headerlink" title="4.1 列举可安装（已安装）的 Java 版本"></a>4.1 列举可安装（已安装）的 Java 版本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sdk list java</div></pre></td></tr></table></figure>
-<blockquote>
-<p>建议：推荐安装 Amazon 和 OpenJDK 的 Java 版本</p>
-</blockquote>
-<h3 id="4-2-安装指定-Java-版本"><a href="#4-2-安装指定-Java-版本" class="headerlink" title="4.2 安装指定 Java 版本"></a>4.2 安装指定 Java 版本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sdk install java 11.0.2-open</div></pre></td></tr></table></figure>
-<h3 id="4-3-查看当前-Java-版本"><a href="#4-3-查看当前-Java-版本" class="headerlink" title="4.3 查看当前 Java 版本"></a>4.3 查看当前 Java 版本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sdk current java</div></pre></td></tr></table></figure>
-<h3 id="4-4-指定默认-Java-版本"><a href="#4-4-指定默认-Java-版本" class="headerlink" title="4.4 指定默认 Java 版本"></a>4.4 指定默认 Java 版本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 永久切换</span></div><div class="line">sdk default java 11.0.2-open</div><div class="line"></div><div class="line"><span class="comment"># 临时切换，只在当前终端有效</span></div><div class="line">sdk use java 11.0.2-open</div></pre></td></tr></table></figure>
-<h3 id="4-5-删除指定的-Java-版本"><a href="#4-5-删除指定的-Java-版本" class="headerlink" title="4.5 删除指定的 Java 版本"></a>4.5 删除指定的 Java 版本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sdk uninstall java 11.0.2-open</div></pre></td></tr></table></figure>
-<h2 id="5-查看-Java-安装路径"><a href="#5-查看-Java-安装路径" class="headerlink" title="5 查看 Java 安装路径"></a>5 查看 Java 安装路径</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">where</span> java</div><div class="line"></div><div class="line"><span class="comment"># 默认路径</span></div><div class="line"><span class="comment"># ～/.sdkman/candidates/java/current/bin/java</span></div></pre></td></tr></table></figure>
-<h3 id="5-1-配置-Intellij-IDEA-的-Java-路径"><a href="#5-1-配置-Intellij-IDEA-的-Java-路径" class="headerlink" title="5.1 配置 Intellij IDEA 的 Java 路径"></a>5.1 配置 Intellij IDEA 的 Java 路径</h3><hr>
-<blockquote>
-<p>看完这篇文章，有没有让你从 Java 安装配置中解脱出来呢？</p>
-<p>更多精彩内容请<ruby>关注<rt>扫码</rt></ruby>：</p>
-</blockquote>
-<p><img src="https://i.loli.net/2019/05/18/5cdf686a103cf11418.jpg" alt="KnowledgeCollision 微信公众号"></p>
-<p><code>Knowledge Collision 激发思维碰撞，IDEA 丛生</code></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[轻松管理不同的 Java 版本]]>
-    
-    </summary>
-    
-      <category term="Java" scheme="https://zzh1991.github.io/tags/Java/"/>
     
   </entry>
   

@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://zzh1991.github.io/2019/11/02/2019-software-engineer-situation/</loc>
+    <loc>https://zzh1991.github.io/categories/index.html</loc>
     
-    <lastmod>2019-11-02T02:39:57.912Z</lastmod>
+    <lastmod>2020-01-02T02:30:10.220Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://zzh1991.github.io/2019/11/02/java-version-management/</loc>
     
-    <lastmod>2019-11-02T02:31:48.040Z</lastmod>
+    <lastmod>2020-01-02T02:12:48.531Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zzh1991.github.io/2019/11/02/2019-software-engineer-situation/</loc>
+    
+    <lastmod>2019-11-02T02:39:57.912Z</lastmod>
     
   </url>
   
