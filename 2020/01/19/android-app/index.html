@@ -4,14 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="深入理解 Java Map, Knowlege Collision">
+    <meta name="keywords" content="小而美的 Android 应用, Knowlege Collision">
     <meta name="description" content="
-在日常的编程活动中，使用 Map 类型是十分常见的，那么你们知道每天使用的 Map 底层是如何实现的呢？今天就带大家来深入了解一下内部的构造。
+以前一直使用的是 iPhone，最近一年开始使用 Android 手机，这也不可避免的在软件方面需要重新选择。下面就来介绍我觉得 Android 平台的一些好软件。
 
-1. 常见的 Map 类型
-HashMap
-HashTable
-ConcurrentHash">
+1. Android 独有的软件应用商场
+国内的应用软件一般我会在手机">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +17,7 @@ ConcurrentHash">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>深入理解 Java Map | Knowlege Collision</title>
+    <title>小而美的 Android 应用 | Knowlege Collision</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/myblog.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -243,12 +241,12 @@ ConcurrentHash">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">深入理解 Java Map</h1>
+                    <h1 class="description center-align post-title">小而美的 Android 应用</h1>
                 </div>
             </div>
         </div>
@@ -365,23 +363,14 @@ ConcurrentHash">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Java/">
-                                <span class="chip bg-color">Java</span>
+                            <a href="/tags/Android/">
+                                <span class="chip bg-color">Android</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/Java/" class="post-category">
-                                Java
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -390,28 +379,28 @@ ConcurrentHash">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-01-02
+                    2020-01-19
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-01-02
+                    2020-01-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.9k
+                    462
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    1 分
                 </div>
                 
 
@@ -428,114 +417,73 @@ ConcurrentHash">
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <blockquote>
-<p>在日常的编程活动中，使用 Map 类型是十分常见的，那么你们知道每天使用的 Map 底层是如何实现的呢？今天就带大家来深入了解一下内部的构造。</p>
+<p>以前一直使用的是 iPhone，最近一年开始使用 Android 手机，这也不可避免的在软件方面需要重新选择。下面就来介绍我觉得 Android 平台的一些好软件。</p>
 </blockquote>
-<h2 id="1-常见的-Map-类型"><a href="#1-常见的-Map-类型" class="headerlink" title="1. 常见的 Map 类型"></a>1. 常见的 Map 类型</h2><ul>
-<li>HashMap</li>
-<li>HashTable</li>
-<li>ConcurrentHashMap</li>
-</ul>
-<h2 id="2-HashMap"><a href="#2-HashMap" class="headerlink" title="2. HashMap"></a>2. HashMap</h2><h3 id="a-存储结构"><a href="#a-存储结构" class="headerlink" title="a. 存储结构"></a>a. 存储结构</h3><p>HashMap 的底层结构采用可扩容的动态数组，而数组中的每个格子里则存储着另一种结构，它有两种可能性：</p>
-<ol>
-<li>当元素个数较少时，存储的是一个链表结构</li>
-<li>当元素个数大于等于一个阈值（默认是8）时，存储的是一个红黑树（Java 8 才引入的），而在扩容中会去判断是否需要转换成链表结构</li>
-</ol>
-<blockquote>
-<p>引入红黑树的目的是减少链表查找的时间开销，从 ${O(n)}$ 减少到 ${O(\log(n))}$ </p>
-</blockquote>
-<h4 id="初始数组大小-capacity"><a href="#初始数组大小-capacity" class="headerlink" title="初始数组大小(capacity)"></a>初始数组大小(capacity)</h4><p>在 Java 8 中的 HashMap 的初始大小设置为 16，是 ${2^n}$ 的整数次方，之所以选择 16，其实更多的是一种经验值，其实只要是 ${2^n}$ 的大小都是合适的。</p>
-<p>之所以选择 ${2^n}$ 作为容量，当数组扩容则是在原来容量的基础上增大一倍，其容量变成 ${2^{n+1}}$，依然是 2 的整数次幂。而这样做的目的是为了减小取模运算的开销，因为对 ${2^n}$ 进行取模操作可以简化为位运算。</p>
-<p>数组的下标位置从 0 ~ ${2^n-1}$，而 ${2^n-1}$ 的二进制表示为 ${….1111}$，数组位置的计算从而可以变成如下的位运算：</p>
-<p>${index = hash \&amp; (2^n-1)}$</p>
-<p>而当扩容时，重新进行数组位置的时候，相当于多了一个最新高一位的与运算，其结果不是 0 就是 1，因此重新的计算的数组位置就只有以下两种可能，大大减小了 rehash 的开销：</p>
-<ol>
-<li>原来存储的数组位置</li>
-<li>原来位置向后移动 ${2^n}$ 的新位置</li>
-</ol>
-<p>那大家可能会问，HashMap 不是支持自定义的初始大小吗，那就不符合上面的简化运算的要求了。而现实是的确考虑到了这一点，所以在初始化时，会计算得到一个比传入数据大的最近的 ${2^n}$ 值，然后赋值为初始容量。</p>
-<h4 id="负载因子-loadFactor-和扩容阈值-threshold"><a href="#负载因子-loadFactor-和扩容阈值-threshold" class="headerlink" title="负载因子(loadFactor)和扩容阈值(threshold)"></a>负载因子(loadFactor)和扩容阈值(threshold)</h4><p>这里简单介绍一下负载因子和扩容阈值的概念。这两个值有着如下的关系：</p>
-<p>${threshold = capacity * loadFactor}$</p>
-<p>默认的负载因子是 0.75，即 ${\frac{3}{4}}$，当元素实际个数大于容量的 ${\frac{3}{4}}$ 时则进行扩容操作。</p>
-<blockquote>
-<p>从这个公式可以看出当容量为 ${2^n}$ 时，threashold 是一个整数，不需要进行向下取整操作。</p>
-</blockquote>
-<h3 id="b-数组元素结构-Node"><a href="#b-数组元素结构-Node" class="headerlink" title="b. 数组元素结构(Node)"></a>b. 数组元素结构(Node)</h3><h4 id="链表结构"><a href="#链表结构" class="headerlink" title="链表结构"></a>链表结构</h4><ul>
-<li>hash：该位置的 hash 值</li>
-<li>key：该位置的键值</li>
-<li>value：该位置的数值</li>
-<li>next：指向下一个 Node 节点</li>
-</ul>
-<h4 id="树结构"><a href="#树结构" class="headerlink" title="树结构"></a>树结构</h4><blockquote>
-<p>继承上述的链表结构，多了一些属性。这里不详细介绍红黑树，下次有机会单独讲解红黑树的知识。</p>
+<h2 id="1-Android-独有的软件"><a href="#1-Android-独有的软件" class="headerlink" title="1. Android 独有的软件"></a>1. Android 独有的软件</h2><h3 id="应用商场"><a href="#应用商场" class="headerlink" title="应用商场"></a>应用商场</h3><blockquote>
+<p>国内的应用软件一般我会在手机自带的应用商场和酷安这两个软件上进行下载安装；而在这两个应用商场没有软件，我会选择使用 APKPure 进行安装。如果你能在 Google Play 安装那自然是更好不过了。 </p>
 </blockquote>
 <ul>
-<li>parent：父亲节点</li>
-<li>left：左儿子节点</li>
-<li>right：右儿子节点</li>
-<li>prev：前面的节点，主要用于删除操作</li>
-<li>red：判断节点是红色还是黑色</li>
+<li><a href="https://www.coolapk.com" title="酷安" target="_blank" rel="external">酷安</a></li>
+<li><a href="https://apkpure.com" title="APKPure" target="_blank" rel="external">APKPure</a></li>
 </ul>
-<h3 id="c-写入操作"><a href="#c-写入操作" class="headerlink" title="c. 写入操作"></a>c. 写入操作</h3><blockquote>
-<p>在初始化的过程中，并不会进行动态数组的创建，相反是在第一个写入操作时才去创建数组，这样可以减少内存的开销。</p>
-</blockquote>
-<ol>
-<li>判断数组是否已经创建，没有则创建</li>
-<li>计算插入数据的 hash 值，根据 hash 值计算得到数组的位置</li>
-<li>将数据插入到计算得到的数组位置<ul>
-<li>数组位置没有任何元素<ul>
-<li>插入完成后，判断是否需要进行扩容，如需要则进行扩容操作</li>
-</ul>
-</li>
-<li>数组位置上已经有元素，判断存储元素的类型<ul>
-<li>红黑树节点，插入在树中的某个位置</li>
-<li>链表，先判断是否需要转换成红黑树，然后再进行插入操作</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<h3 id="d-读取操作"><a href="#d-读取操作" class="headerlink" title="d. 读取操作"></a>d. 读取操作</h3><ol>
-<li>根据 key 值计算得到 hash 值，进而得到数组的位置</li>
-<li>取出数组位置的元素，判断是否为空，进而判断是否是想找的元素</li>
-<li>判断节点类型<ul>
-<li>树节点，在树中进行查找</li>
-<li>链表节点：在链表中进行查找</li>
-</ul>
-</li>
-<li>没有找到，则返回空</li>
-</ol>
-<h4 id="e-删除操作"><a href="#e-删除操作" class="headerlink" title="e. 删除操作"></a>e. 删除操作</h4><blockquote>
-<p>删除操作和查找操作非常类似，只是在最后需要进行删除操作（元素存在的情况下），不过需要注意删除根节点的情况，即删除数组位置里的第一个元素</p>
-</blockquote>
-<h2 id="2-HashTable"><a href="#2-HashTable" class="headerlink" title="2. HashTable"></a>2. HashTable</h2><p>HashTable 可以认为是 HashMap 的线程安全版，很多方面都是类似的。这里主要分析以下两者的差异</p>
-<h3 id="初始容量的不同"><a href="#初始容量的不同" class="headerlink" title="初始容量的不同"></a>初始容量的不同</h3><p>HashTable 的初始容量为 11，扩容的大小为原来的两倍加一，而 HashMap 的初始容量为 16，扩容为原来的两倍。这里可以看出 HashTable 的容量并不是 ${2^n}$，因此它在计算数组位置的时候采用的是取模操作，因此在效率上要差一些的。</p>
-<p>另一点不同则是 HashTable 在初始化的时候就已经分配了数组的空间。</p>
-<h3 id="所有操作都加了-synchronized-关键字"><a href="#所有操作都加了-synchronized-关键字" class="headerlink" title="所有操作都加了 synchronized 关键字"></a>所有操作都加了 synchronized 关键字</h3><p>由于在方法上加了同步锁，HashTable 的并发性能并不是很好。而利用 modcount 进行类似版本的管理（悲观锁）导致性能更差。</p>
-<h3 id="是否允许插入-Null-值"><a href="#是否允许插入-Null-值" class="headerlink" title="是否允许插入 Null 值"></a>是否允许插入 Null 值</h3><p>HashMap 允许插入 Null 值的 Key 和 Value 的，而 HashTable 则不允许。主要是无法在并发操作中无法区分是元素是否存在还是为空。</p>
-<h3 id="迭代机制"><a href="#迭代机制" class="headerlink" title="迭代机制"></a>迭代机制</h3><p>HashMap 是 fail-fast，而 HashTable fail-safe 的。</p>
 <blockquote>
-<p>fail-safe：安全失败机制，此次读到的值不一定是最新的，允许并发修改</p>
-<p>fail-fast：快速失败机制，是集合的一种机制，在迭代过程中对元素的修改会立刻报错</p>
+<p>酷安上又很多小众的软件，我个人非常喜欢。</p>
 </blockquote>
-<h2 id="3-ConcurrentHashMap"><a href="#3-ConcurrentHashMap" class="headerlink" title="3. ConcurrentHashMap"></a>3. ConcurrentHashMap</h2><blockquote>
-<p>HashMap 不支持并发，而 HashTable 性能又这么差，那并发的需求我们到底应该使用什么呢？哈哈，其实 Java 还有 ConcurrentHashMap。</p>
-</blockquote>
-<h3 id="线程安全的实现"><a href="#线程安全的实现" class="headerlink" title="线程安全的实现"></a>线程安全的实现</h3><p>Java 8 采用 CAS + synchronized 的方式来实现并发，抛弃了 Java 7 采用的 Segment 分段锁的方式。并用 volatile 关键字去保证 Map 中数值的可见行。</p>
-<p>其中 CAS 主要用于数组元素为空，即第一次插入到该数组位置中；而 synchronized 则用于数组位置已经存在元素的情况，在进行操作时，锁住该位置上的节点。</p>
+<h3 id="新浪微博"><a href="#新浪微博" class="headerlink" title="新浪微博"></a>新浪微博</h3><ul>
+<li><a href="https://www.coolapk.com/apk/com.hengye.share" title="Share 微博客户端" target="_blank" rel="external">Share 微博客户端</a></li>
+</ul>
 <blockquote>
-<p>CAS(Compare And Set)：是一种乐观锁的实现，同时也是一种轻量级锁。其原理首先记录拿到的原来的值，然后操作数据，等到要真正更新数据时，再次那一次值，并跟记录的原来的值进行相等的判断，如果不相等，则重新进行该操作，如果相等则可以真正更新数据。为了更好地知道数值是否更改过，可以记录版本号、时间戳等信息。</p>
+<p>个人非常喜欢的第三方微博客户端，没有广告，体验是真的号。除了每次升级过后，残忍拒绝一下它的高级版诱惑。</p>
 </blockquote>
-<h4 id="synchronized-获取锁（锁升级）的过程"><a href="#synchronized-获取锁（锁升级）的过程" class="headerlink" title="synchronized 获取锁（锁升级）的过程"></a>synchronized 获取锁（锁升级）的过程</h4><ol>
-<li>偏向锁</li>
-<li>CAS 轻量级锁，并有短暂的自旋</li>
-<li>重量级锁</li>
-</ol>
-<h3 id="与-HashMap-操作的不同"><a href="#与-HashMap-操作的不同" class="headerlink" title="与 HashMap 操作的不同"></a>与 HashMap 操作的不同</h3><ol>
-<li>ConCurrentHashMap 在插入过程中是首先插入，进而再去判断是否需要将链表结构转换成红黑树结构，而 HashMap 则是先判断，再插入。</li>
-</ol>
+<p><img src="https://i.loli.net/2020/01/19/efld8LzaSOZx6BD.jpg" alt="Share 微博客户端"></p>
+<h3 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h3><ul>
+<li><a href="https://www.coolapk.com/apk/mark.via" title="Via 浏览器" target="_blank" rel="external">Via 浏览器</a></li>
+</ul>
+<blockquote>
+<p>不多说了，500 KB 的浏览器，你值得拥有。</p>
+</blockquote>
+<h3 id="网易新闻"><a href="#网易新闻" class="headerlink" title="网易新闻"></a>网易新闻</h3><ul>
+<li><a href="https://www.coolapk.com/apk/androidnews.kiloproject" title="Mere 新闻" target="_blank" rel="external">Mere 新闻</a></li>
+</ul>
+<blockquote>
+<p>没有广告，没有多余内容的新闻阅读体验，不要太舒服哦。</p>
+</blockquote>
+<p><img src="https://i.loli.net/2020/01/19/xb1kBcMVziyNGm5.jpg" alt="Mere 新闻"></p>
+<h3 id="日记"><a href="#日记" class="headerlink" title="日记"></a>日记</h3><ul>
+<li><a href="https://coolapk.com/apk/com.candydiary.dawn" title="时间戳日记" target="_blank" rel="external">时间戳日记</a></li>
+</ul>
+<blockquote>
+<p>其实我主要是喜欢基于时间线的记录风格，如果能在桌面端操作就完美了。</p>
+</blockquote>
+<h3 id="倒计时"><a href="#倒计时" class="headerlink" title="倒计时"></a>倒计时</h3><ul>
+<li><a href="https://www.coolapk.com/apk/com.imzhiqiang.time" title="时光提醒" target="_blank" rel="external">时光提醒</a></li>
+</ul>
+<blockquote>
+<p>比倒数日更美观的 UI 页面，时钟式的显示方式很有感觉</p>
+</blockquote>
+<p><img src="https://i.loli.net/2020/01/19/p5KoJMtvATNUcz1.png" alt="时光提醒"></p>
+<h3 id="RSS"><a href="#RSS" class="headerlink" title="RSS"></a>RSS</h3><ul>
+<li><a href="https://apkpure.com/flym-news-reader/net.frju.flym" title="Flym" target="_blank" rel="external">Flym</a></li>
+</ul>
+<blockquote>
+<p>个人比较后的选择，也可以选择国内的 Rolly（付费去广告）</p>
+</blockquote>
+<h3 id="地图"><a href="#地图" class="headerlink" title="地图"></a>地图</h3><ul>
+<li><a href="https://www.coolapk.com/apk/me.gfuil.bmap" title="Bmap 白马地图" target="_blank" rel="external">Bmap 白马地图</a></li>
+</ul>
+<blockquote>
+<p>没有广告的地图，用的不习惯的可以用回百度地图</p>
+</blockquote>
+<h3 id="阅读"><a href="#阅读" class="headerlink" title="阅读"></a>阅读</h3><ul>
+<li><a href="https://www.coolapk.com/apk/cn.deepink.reader" title="厚墨" target="_blank" rel="external">厚墨</a></li>
+</ul>
+<blockquote>
+<p>阅读电子书的体验较好，同时也支持一些 RSS 的订阅</p>
+</blockquote>
+<p><img src="https://i.loli.net/2020/01/19/AuNTErCMR4LfGao.jpg" alt="厚墨"></p>
 <hr>
 <blockquote>
-<p>看完这篇文章，有没有让你对 Java Map 有更深的了解呢？如果内容对你有所帮助，请点赞支持哦！</p>
+<p>如果大家有更好的软件推荐，可以在留言区讨论哦</p>
 <p>更多精彩内容请<ruby>关注<rt>扫码</rt></ruby>：</p>
 </blockquote>
 <p><img src="https://i.loli.net/2019/05/18/5cdf686a103cf11418.jpg" alt="KnowledgeCollision 微信公众号"></p>
@@ -565,7 +513,7 @@ ConcurrentHash">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://zzh1991.github.io/2020/01/02/java-map/">https://zzh1991.github.io/2020/01/02/java-map/</a>
+                    <a href="https://zzh1991.github.io/2020/01/19/android-app/">https://zzh1991.github.io/2020/01/19/android-app/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -603,8 +551,8 @@ ConcurrentHash">
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Java/">
-                                    <span class="chip bg-color">Java</span>
+                                <a href="/tags/Android/">
+                                    <span class="chip bg-color">Android</span>
                                 </a>
                             
                         </div>
@@ -650,7 +598,7 @@ ConcurrentHash">
         repo: 'blog-comment',
         owner: 'zzh1991',
         admin: "zzh1991",
-        id: '2020-01-02T14-05-51',
+        id: '2020-01-19T22-40-58',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -671,9 +619,10 @@ ConcurrentHash">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/01/19/android-app/">
                     <div class="card-image">
@@ -695,9 +644,9 @@ ConcurrentHash">
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-01-19
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-19
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -706,6 +655,7 @@ ConcurrentHash">
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -724,19 +674,25 @@ ConcurrentHash">
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/01/02/2020-tech-trend/">
+                <a href="/2020/01/02/java-map/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="写在 2020 年前的技术趋势分享">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="深入理解 Java Map">
                         
-                        <span class="card-title">写在 2020 年前的技术趋势分享</span>
+                        <span class="card-title">深入理解 Java Map</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            分享 2020 年可能的技术趋势，主要关于容器安全，新的 JVM 框架以及实用工具等。
+                            
+在日常的编程活动中，使用 Map 类型是十分常见的，那么你们知道每天使用的 Map 底层是如何实现的呢？今天就带大家来深入了解一下内部的构造。
+
+1. 常见的 Map 类型
+HashMap
+HashTable
+ConcurrentHash
                         
                     </div>
                     <div class="publish-info">
@@ -745,8 +701,12 @@ ConcurrentHash">
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Zhihao Zhang
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Java/" class="post-category">
+                                    Java
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -754,8 +714,8 @@ ConcurrentHash">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/technology/">
-                        <span class="chip bg-color">technology</span>
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
                     </a>
                     
                 </div>
@@ -926,13 +886,6 @@ ConcurrentHash">
 
 </main>
 
-
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
-    });
-</script>
 
 
     <footer class="page-footer bg-color">
