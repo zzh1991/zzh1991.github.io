@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
     <meta charset="utf-8">
     <meta name="keywords" content="写在 2020 年前的技术趋势分享, Knowlege Collision">
     <meta name="description" content="分享 2020 年可能的技术趋势，主要关于容器安全，新的 JVM 框架以及实用工具等。">
@@ -26,6 +26,7 @@
     
     <script src="/libs/jquery/jquery.min.js"></script>
     
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Knowlege Collision" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -417,29 +418,26 @@
 </blockquote>
 <h2 id="1-容器安全"><a href="#1-容器安全" class="headerlink" title="1. 容器安全"></a>1. 容器安全</h2><p><strong>现在</strong>越来越多的应用是使用容器（Docker）进行部署在生产环境，容器由于比虚拟机更加轻量便捷，及其容易扩展的特点广受大家喜爱。于此同时，容器的安全问题也受到越来越多人的关注。</p>
 <p>一种行之有效的做法就是在 CI/CD 的过程中对容器进行安全扫描。</p>
-<h3 id="trivy：容器漏洞扫描程序"><a href="#trivy：容器漏洞扫描程序" class="headerlink" title="trivy：容器漏洞扫描程序"></a>trivy：容器漏洞扫描程序</h3><p><a href="https://github.com/aquasecurity/trivy" title="trivy" target="_blank" rel="noopener">trivy</a> 是一个容器漏洞扫描工具，它可以检测出容器的操作系统以及应用所用依赖的漏洞和瑕疵，提早在生产环境中发现潜在的安全问题。</p>
+<h3 id="trivy：容器漏洞扫描程序"><a href="#trivy：容器漏洞扫描程序" class="headerlink" title="trivy：容器漏洞扫描程序"></a>trivy：容器漏洞扫描程序</h3><p><a href="https://github.com/aquasecurity/trivy" target="_blank" rel="noopener" title="trivy">trivy</a> 是一个容器漏洞扫描工具，它可以检测出容器的操作系统以及应用所用依赖的漏洞和瑕疵，提早在生产环境中发现潜在的安全问题。</p>
 <p>安装方法可以参考文章底部的链接，在安装完成后，其检查容器的命令是非常简单明了的。</p>
 <pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 推荐不要检查使用 latest 标签的容器</span>
-trivy <span class="token punctuation">[</span>YOUR_IMAGE_NAME<span class="token punctuation">]</span>
-</code></pre>
+trivy <span class="token punctuation">[</span>YOUR_IMAGE_NAME<span class="token punctuation">]</span></code></pre>
 <h3 id="容器的二进制鉴证"><a href="#容器的二进制鉴证" class="headerlink" title="容器的二进制鉴证"></a>容器的二进制鉴证</h3><p>除了容器的漏洞需要提防，容器有没有被篡改过也是一件值得关注的安全问题。</p>
-<p><a href="https://cloud.google.com/binary-authorization" title="GCP Binary Authorization" target="_blank" rel="noopener">Google Cloud Binary Authorization</a> 提供了二进制授权，只允许签名被认可的容器被部署。但其与特定云厂商绑定，不太适合所有的场景。</p>
-<p><a href="https://in-toto.io" title="in-toto" target="_blank" rel="noopener">in-toto</a> 用来保证软件生产环节中的安全性；<a href="https://docs.docker.com/ee/dtr" title="Docker Notary" target="_blank" rel="noopener">Docker Notary</a> 和 <a href="https://docs.docker.com/ee/dtr/" title="Docker Trusted Registry" target="_blank" rel="noopener">Docker Trusted Registry</a> 是其他的选择。</p>
+<p><a href="https://cloud.google.com/binary-authorization" target="_blank" rel="noopener" title="GCP Binary Authorization">Google Cloud Binary Authorization</a> 提供了二进制授权，只允许签名被认可的容器被部署。但其与特定云厂商绑定，不太适合所有的场景。</p>
+<p><a href="https://in-toto.io" target="_blank" rel="noopener" title="in-toto">in-toto</a> 用来保证软件生产环节中的安全性；<a href="https://docs.docker.com/ee/dtr" target="_blank" rel="noopener" title="Docker Notary">Docker Notary</a> 和 <a href="https://docs.docker.com/ee/dtr/" target="_blank" rel="noopener" title="Docker Trusted Registry">Docker Trusted Registry</a> 是其他的选择。</p>
 <h2 id="2-基础设施即代码的流水线"><a href="#2-基础设施即代码的流水线" class="headerlink" title="2. 基础设施即代码的流水线"></a>2. 基础设施即代码的流水线</h2><p>现在环境的生成（使用如 Terraform， CloudFormation 自动生成云环境），服务的配置使用脚本（如 Ansible playbook）进行生成。通过对上述基础即代码的项目 CI/CD 的成功简历，可以在每次修改配置时提早发现此次修改变更的错误以及可靠性。相信在未来的一段时间里会受到越来越多人的关注。</p>
 <h2 id="3-JVM-框架"><a href="#3-JVM-框架" class="headerlink" title="3. JVM 框架"></a>3. JVM 框架</h2><p>由于 Oracle GraalVM 的横空出世，其支持多种编程语言，启动速度更快以及更少的内存占用，也催化了一些优秀的 Java 框架。</p>
-<h3 id="Micronaut"><a href="#Micronaut" class="headerlink" title="Micronaut"></a>Micronaut</h3><p><a href="https://micronaut.io" title="Micronaut" target="_blank" rel="noopener">Micronaut</a> 是一个 JVM 全栈框架，比较适合构建微服务和无服务应用。由于其使用 Netty，对响应式编程也提供了一流的支持。另外没有使用运行时反射来进行依赖注入，而是在编译是进行依赖注入，因此有了启动快，占用内存少的特点。</p>
-<p>此外，<a href="https://quarkus.io" title="Quarkus" target="_blank" rel="noopener">Quarkus</a> 是与 Micronaut 类似的 JVM 框架，感兴趣的小伙伴可以去了解一下。</p>
+<h3 id="Micronaut"><a href="#Micronaut" class="headerlink" title="Micronaut"></a>Micronaut</h3><p><a href="https://micronaut.io" target="_blank" rel="noopener" title="Micronaut">Micronaut</a> 是一个 JVM 全栈框架，比较适合构建微服务和无服务应用。由于其使用 Netty，对响应式编程也提供了一流的支持。另外没有使用运行时反射来进行依赖注入，而是在编译是进行依赖注入，因此有了启动快，占用内存少的特点。</p>
+<p>此外，<a href="https://quarkus.io" target="_blank" rel="noopener" title="Quarkus">Quarkus</a> 是与 Micronaut 类似的 JVM 框架，感兴趣的小伙伴可以去了解一下。</p>
 <h2 id="4-实用工具"><a href="#4-实用工具" class="headerlink" title="4. 实用工具"></a>4. 实用工具</h2><p>本人比较喜欢折腾工具，因为一直认为好的工具可以提高自己的效率，节省不必要的时间开销。下面我就介绍两个在日常使用中频率较高的工具。</p>
-<h3 id="Draw-io：画图工具"><a href="#Draw-io：画图工具" class="headerlink" title="Draw.io：画图工具"></a>Draw.io：画图工具</h3><p>其实市面上很少有能在三大操作系统（Windows，Linux，macOS）都能运行的画图软件，免费，功能齐全，并提供客户端的画图软件更是少之又少。<a href="https://github.com/jgraph/drawio-desktop" title="Draw.io Desktop" target="_blank" rel="noopener">Draw.io Desktop</a> 是对网页版的封装，完美支持三个操作系统，并支持流程图，UML 等多种图的类型。想要下载请参考 <a href="https://github.com/jgraph/drawio-desktop/releases" title="Draw.io Desktop 下载链接" target="_blank" rel="noopener">Draw.io Desktop 下载链接</a>。</p>
-<h3 id="Git-Commit-规范软件"><a href="#Git-Commit-规范软件" class="headerlink" title="Git Commit 规范软件"></a>Git Commit 规范软件</h3><p><a href="http://commitizen.github.io/cz-cli" title="Commitizen" target="_blank" rel="noopener">Commitizen</a> 是一款对代码提交规范约束的软件。</p>
-<h4 id="安装及配置"><a href="#安装及配置" class="headerlink" title="安装及配置"></a>安装及配置</h4><p>安装是非常简单的，只要你的电脑有 Node，可以直接安装，不然可以先去安装 <a href="https://nodejs.org" title="Node.js" target="_blank" rel="noopener">Node</a>。</p>
+<h3 id="Draw-io：画图工具"><a href="#Draw-io：画图工具" class="headerlink" title="Draw.io：画图工具"></a>Draw.io：画图工具</h3><p>其实市面上很少有能在三大操作系统（Windows，Linux，macOS）都能运行的画图软件，免费，功能齐全，并提供客户端的画图软件更是少之又少。<a href="https://github.com/jgraph/drawio-desktop" target="_blank" rel="noopener" title="Draw.io Desktop">Draw.io Desktop</a> 是对网页版的封装，完美支持三个操作系统，并支持流程图，UML 等多种图的类型。想要下载请参考 <a href="https://github.com/jgraph/drawio-desktop/releases" target="_blank" rel="noopener" title="Draw.io Desktop 下载链接">Draw.io Desktop 下载链接</a>。</p>
+<h3 id="Git-Commit-规范软件"><a href="#Git-Commit-规范软件" class="headerlink" title="Git Commit 规范软件"></a>Git Commit 规范软件</h3><p><a href="http://commitizen.github.io/cz-cli" target="_blank" rel="noopener" title="Commitizen">Commitizen</a> 是一款对代码提交规范约束的软件。</p>
+<h4 id="安装及配置"><a href="#安装及配置" class="headerlink" title="安装及配置"></a>安装及配置</h4><p>安装是非常简单的，只要你的电脑有 Node，可以直接安装，不然可以先去安装 <a href="https://nodejs.org" target="_blank" rel="noopener" title="Node.js">Node</a>。</p>
 <pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g commitizen
 <span class="token function">npm</span> <span class="token function">install</span> -g cz-conventional-changelog
-<span class="token keyword">echo</span> <span class="token string">'{ "path": "cz-conventional-changelog" }'</span> <span class="token operator">></span> ~/.czrc
-</code></pre>
+<span class="token keyword">echo</span> <span class="token string">'{ "path": "cz-conventional-changelog" }'</span> <span class="token operator">></span> ~/.czrc</code></pre>
 <h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 提交代码，代替 git commit 的作用</span>
-<span class="token function">git</span> cz
-</code></pre>
+<span class="token function">git</span> cz</code></pre>
 <h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>本人觉得 Commitizen 是比较适合 Node 项目的，如果大家有更好的选择，可以留言告诉我哦。</p>
 <hr>
 <blockquote>

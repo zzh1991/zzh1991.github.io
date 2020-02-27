@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
     <meta charset="utf-8">
     <meta name="keywords" content="Kotlin skills, Knowlege Collision">
     <meta name="description" content="基础静态类型的编程语言
@@ -34,6 +34,7 @@
     
     <script src="/libs/jquery/jquery.min.js"></script>
     
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Knowlege Collision" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -516,8 +517,7 @@
   init <span class="token punctuation">{</span>
       <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p><code>class User (val name: String)</code></p>
 <ul>
 <li>构造方法参数可以提供默认值</li>
@@ -528,9 +528,12 @@
 </li>
 <li><p>在 setter 的函数体中，使用 field 来访问支持字段的值</p>
 </li>
-<li>在 Kotlin 中，== 运算符是比较是否相等，=== 运算符比较引用是否相等</li>
-<li>数据类：data</li>
-<li>类委托：by</li>
+<li><p>在 Kotlin 中，== 运算符是比较是否相等，=== 运算符比较引用是否相等</p>
+</li>
+<li><p>数据类：data</p>
+</li>
+<li><p>类委托：by</p>
+</li>
 </ul>
 <h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><ul>
 <li>对象声明：object</li>
@@ -553,8 +556,7 @@
 <ul>
 <li>如果 lambda 刚好是函数或者属性的委托，可以用成员引用替换</li>
 <li>Kotlin 的 lambda 表达式始终用花括号包围，实参并没有使用括号括起来，箭头把实参列表和 lambda 的函数体隔开</li>
-<li>需要把一小段代码封闭到一个代码块中，可以使用库函数 <code>run</code> 来执行传给它的 lambda<pre><code>run { lambda expression }
-</code></pre></li>
+<li>需要把一小段代码封闭到一个代码块中，可以使用库函数 <code>run</code> 来执行传给它的 lambda<pre><code>run { lambda expression }</code></pre></li>
 <li>如果 lambda 表达式是函数调用的最后一个实参，它可以被放到括号的外面</li>
 <li>当 lambda 是函数唯一的实参时，还可以去掉调用代码的空括号</li>
 <li>lambda 默认参数名称 it 代替命名参数</li>

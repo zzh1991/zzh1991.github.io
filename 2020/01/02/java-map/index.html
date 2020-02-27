@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
     <meta charset="utf-8">
     <meta name="keywords" content="深入理解 Java Map, Knowlege Collision">
     <meta name="description" content="
@@ -32,6 +32,7 @@ ConcurrentHash">
     
     <script src="/libs/jquery/jquery.min.js"></script>
     
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Knowlege Collision" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -446,7 +447,7 @@ ConcurrentHash">
 <h4 id="初始数组大小-capacity"><a href="#初始数组大小-capacity" class="headerlink" title="初始数组大小(capacity)"></a>初始数组大小(capacity)</h4><p>在 Java 8 中的 HashMap 的初始大小设置为 16，是 ${2^n}$ 的整数次方，之所以选择 16，其实更多的是一种经验值，其实只要是 ${2^n}$ 的大小都是合适的。</p>
 <p>之所以选择 ${2^n}$ 作为容量，当数组扩容则是在原来容量的基础上增大一倍，其容量变成 ${2^{n+1}}$，依然是 2 的整数次幂。而这样做的目的是为了减小取模运算的开销，因为对 ${2^n}$ 进行取模操作可以简化为位运算。</p>
 <p>数组的下标位置从 0 ~ ${2^n-1}$，而 ${2^n-1}$ 的二进制表示为 ${….1111}$，数组位置的计算从而可以变成如下的位运算：</p>
-<p>${index = hash \&amp; (2^n-1)}$</p>
+<p>${index = hash &amp; (2^n-1)}$</p>
 <p>而当扩容时，重新进行数组位置的时候，相当于多了一个最新高一位的与运算，其结果不是 0 就是 1，因此重新的计算的数组位置就只有以下两种可能，大大减小了 rehash 的开销：</p>
 <ol>
 <li>原来存储的数组位置</li>
