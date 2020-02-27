@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 
 
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta name="keywords" content="Java Version Management, Knowlege Collision">
     <meta name="description" content="轻松管理不同的 Java 版本">
@@ -427,12 +427,12 @@
 <h2 id="1-Java-版本控制工具"><a href="#1-Java-版本控制工具" class="headerlink" title="1. Java 版本控制工具"></a>1. Java 版本控制工具</h2><p>普通常规的安装配置方式除了步骤繁琐以外，最大的缺陷就在于不能支持 Java 版本的快速切换，其必须通过更改环境变量的方式进行版本切换。</p>
 <p>针对以上的问题，我们需要选择一款 Java 版本控制工具，将我们从烦恼中解脱出来。以下是我找的几款工具：</p>
 <ul>
-<li><a href="https://github.com/sdkman/sdkman-cli" title="sdkman" target="_blank" rel="external">sdkman</a>: <code>https://github.com/sdkman/sdkman-cli</code></li>
-<li><a href="https://github.com/shyiko/jabba" title="jabba" target="_blank" rel="external">jabba</a>: <code>https://github.com/shyiko/jabba</code></li>
-<li><a href="https://github.com/jenv/jenv" title="jenv" target="_blank" rel="external">jenv</a>: <code>https://github.com/jenv/jenv</code></li>
+<li><a href="https://github.com/sdkman/sdkman-cli" title="sdkman" target="_blank" rel="noopener">sdkman</a>: <code>https://github.com/sdkman/sdkman-cli</code></li>
+<li><a href="https://github.com/shyiko/jabba" title="jabba" target="_blank" rel="noopener">jabba</a>: <code>https://github.com/shyiko/jabba</code></li>
+<li><a href="https://github.com/jenv/jenv" title="jenv" target="_blank" rel="noopener">jenv</a>: <code>https://github.com/jenv/jenv</code></li>
 </ul>
 <h2 id="2-抉择"><a href="#2-抉择" class="headerlink" title="2. 抉择"></a>2. 抉择</h2><p>考虑到工具的维护情况，本人选择了 <strong>sdkman</strong> 作为目前 Java 版本控制的工具。如果需要安装 <code>Orcale JDK</code>，可以考虑使用 <strong>jabba</strong>（<strong>sdkman</strong> 不支持下载）。</p>
-<h2 id="3-配置-sdkman"><a href="#3-配置-sdkman" class="headerlink" title="3. 配置 sdkman"></a>3. 配置 sdkman</h2><p>由于本人使用的是 <strong>macOS</strong> 和 <strong>Ubuntu</strong>，下面的步骤都是基于这些系统，<a href="https://sdkman.io/install" title="Windows 安装 sdkman" target="_blank" rel="external">Windows 安装 sdkman</a> 详见：<code>https://sdkman.io/install</code>。</p>
+<h2 id="3-配置-sdkman"><a href="#3-配置-sdkman" class="headerlink" title="3. 配置 sdkman"></a>3. 配置 sdkman</h2><p>由于本人使用的是 <strong>macOS</strong> 和 <strong>Ubuntu</strong>，下面的步骤都是基于这些系统，<a href="https://sdkman.io/install" title="Windows 安装 sdkman" target="_blank" rel="noopener">Windows 安装 sdkman</a> 详见：<code>https://sdkman.io/install</code>。</p>
 <h3 id="3-1-安装-sdkman"><a href="#3-1-安装-sdkman" class="headerlink" title="3.1 安装 sdkman"></a>3.1 安装 sdkman</h3><pre class=" language-bash"><code class="language-bash">curl -s <span class="token string">"https://get.sdkman.io"</span> <span class="token operator">|</span> <span class="token function">bash</span>
 </code></pre>
 <blockquote>
@@ -470,6 +470,8 @@ sdk use java 11.0.2-open
 <h3 id="5-1-配置-Intellij-IDEA-的-Java-路径"><a href="#5-1-配置-Intellij-IDEA-的-Java-路径" class="headerlink" title="5.1 配置 Intellij IDEA 的 Java 路径"></a>5.1 配置 Intellij IDEA 的 Java 路径</h3><hr>
 <blockquote>
 <p>看完这篇文章，有没有让你从 Java 安装配置中解脱出来呢？</p>
+</blockquote>
+<blockquote>
 <p>更多精彩内容请<ruby>关注<rt>扫码</rt></ruby>：</p>
 </blockquote>
 <p><img src="https://i.loli.net/2019/05/18/5cdf686a103cf11418.jpg" alt="KnowledgeCollision 微信公众号"></p>

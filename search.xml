@@ -8,6 +8,8 @@
       <url>https://zzh1991.github.io/2020/02/27/jvm/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>在日常的编程活动中，我们经常使用 Java 编程语言编写代码，那么你们知道每天使用的 Java 语言中对象是分配在内存的何处呢，今天就带大家了解一下 JVM 的内存结构。</p>
+</blockquote>
+<blockquote>
 <p>JVM 的内存区域主要可以分为线程隔离的数据区域和线程共享的数据区域，还有一块经常被我们忽略的直接内存区域。</p>
 </blockquote>
 <h3 id="JVM-运行时数据区域"><a href="#JVM-运行时数据区域" class="headerlink" title="JVM 运行时数据区域"></a>JVM 运行时数据区域</h3><h4 id="线程隔离的数据区域"><a href="#线程隔离的数据区域" class="headerlink" title="线程隔离的数据区域"></a>线程隔离的数据区域</h4><ul>
@@ -157,6 +159,8 @@
 <hr>
 <blockquote>
 <p>看完这篇文章，有没有让你对 JVM 的内存结构有更深的了解呢？如果内容对你有所帮助，请点赞支持哦！</p>
+</blockquote>
+<blockquote>
 <p>更多精彩内容请<ruby>关注<rt>扫码</rt></ruby>：</p>
 </blockquote>
 <p><img src="https://i.loli.net/2019/05/18/5cdf686a103cf11418.jpg" alt="KnowledgeCollision 微信公众号"></p>
@@ -182,59 +186,59 @@
 <p>国内的应用软件一般我会在手机自带的应用商场和酷安这两个软件上进行下载安装；而在这两个应用商场没有软件，我会选择使用 APKPure 进行安装。如果你能在 Google Play 安装那自然是更好不过了。 </p>
 </blockquote>
 <ul>
-<li><a href="https://www.coolapk.com" title="酷安" target="_blank" rel="external">酷安</a></li>
-<li><a href="https://apkpure.com" title="APKPure" target="_blank" rel="external">APKPure</a></li>
+<li><a href="https://www.coolapk.com" title="酷安" target="_blank" rel="noopener">酷安</a></li>
+<li><a href="https://apkpure.com" title="APKPure" target="_blank" rel="noopener">APKPure</a></li>
 </ul>
 <blockquote>
 <p>酷安上又很多小众的软件，我个人非常喜欢。</p>
 </blockquote>
 <h3 id="新浪微博"><a href="#新浪微博" class="headerlink" title="新浪微博"></a>新浪微博</h3><ul>
-<li><a href="https://www.coolapk.com/apk/com.hengye.share" title="Share 微博客户端" target="_blank" rel="external">Share 微博客户端</a></li>
+<li><a href="https://www.coolapk.com/apk/com.hengye.share" title="Share 微博客户端" target="_blank" rel="noopener">Share 微博客户端</a></li>
 </ul>
 <blockquote>
 <p>个人非常喜欢的第三方微博客户端，没有广告，体验是真的号。除了每次升级过后，残忍拒绝一下它的高级版诱惑。</p>
 </blockquote>
 <p><img src="https://i.loli.net/2020/01/19/efld8LzaSOZx6BD.jpg" alt="Share 微博客户端"></p>
 <h3 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h3><ul>
-<li><a href="https://www.coolapk.com/apk/mark.via" title="Via 浏览器" target="_blank" rel="external">Via 浏览器</a></li>
+<li><a href="https://www.coolapk.com/apk/mark.via" title="Via 浏览器" target="_blank" rel="noopener">Via 浏览器</a></li>
 </ul>
 <blockquote>
 <p>不多说了，500 KB 的浏览器，你值得拥有。</p>
 </blockquote>
 <h3 id="网易新闻"><a href="#网易新闻" class="headerlink" title="网易新闻"></a>网易新闻</h3><ul>
-<li><a href="https://www.coolapk.com/apk/androidnews.kiloproject" title="Mere 新闻" target="_blank" rel="external">Mere 新闻</a></li>
+<li><a href="https://www.coolapk.com/apk/androidnews.kiloproject" title="Mere 新闻" target="_blank" rel="noopener">Mere 新闻</a></li>
 </ul>
 <blockquote>
 <p>没有广告，没有多余内容的新闻阅读体验，不要太舒服哦。</p>
 </blockquote>
 <p><img src="https://i.loli.net/2020/01/19/xb1kBcMVziyNGm5.jpg" alt="Mere 新闻"></p>
 <h3 id="日记"><a href="#日记" class="headerlink" title="日记"></a>日记</h3><ul>
-<li><a href="https://coolapk.com/apk/com.candydiary.dawn" title="时间戳日记" target="_blank" rel="external">时间戳日记</a></li>
+<li><a href="https://coolapk.com/apk/com.candydiary.dawn" title="时间戳日记" target="_blank" rel="noopener">时间戳日记</a></li>
 </ul>
 <blockquote>
 <p>其实我主要是喜欢基于时间线的记录风格，如果能在桌面端操作就完美了。</p>
 </blockquote>
 <h3 id="倒计时"><a href="#倒计时" class="headerlink" title="倒计时"></a>倒计时</h3><ul>
-<li><a href="https://www.coolapk.com/apk/com.imzhiqiang.time" title="时光提醒" target="_blank" rel="external">时光提醒</a></li>
+<li><a href="https://www.coolapk.com/apk/com.imzhiqiang.time" title="时光提醒" target="_blank" rel="noopener">时光提醒</a></li>
 </ul>
 <blockquote>
 <p>比倒数日更美观的 UI 页面，时钟式的显示方式很有感觉</p>
 </blockquote>
 <p><img src="https://i.loli.net/2020/01/19/p5KoJMtvATNUcz1.png" alt="时光提醒"></p>
 <h3 id="RSS"><a href="#RSS" class="headerlink" title="RSS"></a>RSS</h3><ul>
-<li><a href="https://apkpure.com/flym-news-reader/net.frju.flym" title="Flym" target="_blank" rel="external">Flym</a></li>
+<li><a href="https://apkpure.com/flym-news-reader/net.frju.flym" title="Flym" target="_blank" rel="noopener">Flym</a></li>
 </ul>
 <blockquote>
 <p>个人比较后的选择，也可以选择国内的 Rolly（付费去广告）</p>
 </blockquote>
 <h3 id="地图"><a href="#地图" class="headerlink" title="地图"></a>地图</h3><ul>
-<li><a href="https://www.coolapk.com/apk/me.gfuil.bmap" title="Bmap 白马地图" target="_blank" rel="external">Bmap 白马地图</a></li>
+<li><a href="https://www.coolapk.com/apk/me.gfuil.bmap" title="Bmap 白马地图" target="_blank" rel="noopener">Bmap 白马地图</a></li>
 </ul>
 <blockquote>
 <p>没有广告的地图，用的不习惯的可以用回百度地图</p>
 </blockquote>
 <h3 id="阅读"><a href="#阅读" class="headerlink" title="阅读"></a>阅读</h3><ul>
-<li><a href="https://www.coolapk.com/apk/cn.deepink.reader" title="厚墨" target="_blank" rel="external">厚墨</a></li>
+<li><a href="https://www.coolapk.com/apk/cn.deepink.reader" title="厚墨" target="_blank" rel="noopener">厚墨</a></li>
 </ul>
 <blockquote>
 <p>阅读电子书的体验较好，同时也支持一些 RSS 的订阅</p>
@@ -243,6 +247,8 @@
 <hr>
 <blockquote>
 <p>如果大家有更好的软件推荐，可以在留言区讨论哦</p>
+</blockquote>
+<blockquote>
 <p>更多精彩内容请<ruby>关注<rt>扫码</rt></ruby>：</p>
 </blockquote>
 <p><img src="https://i.loli.net/2019/05/18/5cdf686a103cf11418.jpg" alt="KnowledgeCollision 微信公众号"></p>
@@ -349,6 +355,8 @@
 <h3 id="迭代机制"><a href="#迭代机制" class="headerlink" title="迭代机制"></a>迭代机制</h3><p>HashMap 是 fail-fast，而 HashTable fail-safe 的。</p>
 <blockquote>
 <p>fail-safe：安全失败机制，此次读到的值不一定是最新的，允许并发修改</p>
+</blockquote>
+<blockquote>
 <p>fail-fast：快速失败机制，是集合的一种机制，在迭代过程中对元素的修改会立刻报错</p>
 </blockquote>
 <h2 id="3-ConcurrentHashMap"><a href="#3-ConcurrentHashMap" class="headerlink" title="3. ConcurrentHashMap"></a>3. ConcurrentHashMap</h2><blockquote>
@@ -370,6 +378,8 @@
 <hr>
 <blockquote>
 <p>看完这篇文章，有没有让你对 Java Map 有更深的了解呢？如果内容对你有所帮助，请点赞支持哦！</p>
+</blockquote>
+<blockquote>
 <p>更多精彩内容请<ruby>关注<rt>扫码</rt></ruby>：</p>
 </blockquote>
 <p><img src="https://i.loli.net/2019/05/18/5cdf686a103cf11418.jpg" alt="KnowledgeCollision 微信公众号"></p>
@@ -399,22 +409,22 @@
 </blockquote>
 <h2 id="1-容器安全"><a href="#1-容器安全" class="headerlink" title="1. 容器安全"></a>1. 容器安全</h2><p><strong>现在</strong>越来越多的应用是使用容器（Docker）进行部署在生产环境，容器由于比虚拟机更加轻量便捷，及其容易扩展的特点广受大家喜爱。于此同时，容器的安全问题也受到越来越多人的关注。</p>
 <p>一种行之有效的做法就是在 CI/CD 的过程中对容器进行安全扫描。</p>
-<h3 id="trivy：容器漏洞扫描程序"><a href="#trivy：容器漏洞扫描程序" class="headerlink" title="trivy：容器漏洞扫描程序"></a>trivy：容器漏洞扫描程序</h3><p><a href="https://github.com/aquasecurity/trivy" title="trivy" target="_blank" rel="external">trivy</a> 是一个容器漏洞扫描工具，它可以检测出容器的操作系统以及应用所用依赖的漏洞和瑕疵，提早在生产环境中发现潜在的安全问题。</p>
+<h3 id="trivy：容器漏洞扫描程序"><a href="#trivy：容器漏洞扫描程序" class="headerlink" title="trivy：容器漏洞扫描程序"></a>trivy：容器漏洞扫描程序</h3><p><a href="https://github.com/aquasecurity/trivy" title="trivy" target="_blank" rel="noopener">trivy</a> 是一个容器漏洞扫描工具，它可以检测出容器的操作系统以及应用所用依赖的漏洞和瑕疵，提早在生产环境中发现潜在的安全问题。</p>
 <p>安装方法可以参考文章底部的链接，在安装完成后，其检查容器的命令是非常简单明了的。</p>
 <pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 推荐不要检查使用 latest 标签的容器</span>
 trivy <span class="token punctuation">[</span>YOUR_IMAGE_NAME<span class="token punctuation">]</span>
 </code></pre>
 <h3 id="容器的二进制鉴证"><a href="#容器的二进制鉴证" class="headerlink" title="容器的二进制鉴证"></a>容器的二进制鉴证</h3><p>除了容器的漏洞需要提防，容器有没有被篡改过也是一件值得关注的安全问题。</p>
-<p><a href="https://cloud.google.com/binary-authorization" title="GCP Binary Authorization" target="_blank" rel="external">Google Cloud Binary Authorization</a> 提供了二进制授权，只允许签名被认可的容器被部署。但其与特定云厂商绑定，不太适合所有的场景。</p>
-<p><a href="https://in-toto.io" title="in-toto" target="_blank" rel="external">in-toto</a> 用来保证软件生产环节中的安全性；<a href="https://docs.docker.com/ee/dtr" title="Docker Notary" target="_blank" rel="external">Docker Notary</a> 和 <a href="https://docs.docker.com/ee/dtr/" title="Docker Trusted Registry" target="_blank" rel="external">Docker Trusted Registry</a> 是其他的选择。</p>
+<p><a href="https://cloud.google.com/binary-authorization" title="GCP Binary Authorization" target="_blank" rel="noopener">Google Cloud Binary Authorization</a> 提供了二进制授权，只允许签名被认可的容器被部署。但其与特定云厂商绑定，不太适合所有的场景。</p>
+<p><a href="https://in-toto.io" title="in-toto" target="_blank" rel="noopener">in-toto</a> 用来保证软件生产环节中的安全性；<a href="https://docs.docker.com/ee/dtr" title="Docker Notary" target="_blank" rel="noopener">Docker Notary</a> 和 <a href="https://docs.docker.com/ee/dtr/" title="Docker Trusted Registry" target="_blank" rel="noopener">Docker Trusted Registry</a> 是其他的选择。</p>
 <h2 id="2-基础设施即代码的流水线"><a href="#2-基础设施即代码的流水线" class="headerlink" title="2. 基础设施即代码的流水线"></a>2. 基础设施即代码的流水线</h2><p>现在环境的生成（使用如 Terraform， CloudFormation 自动生成云环境），服务的配置使用脚本（如 Ansible playbook）进行生成。通过对上述基础即代码的项目 CI/CD 的成功简历，可以在每次修改配置时提早发现此次修改变更的错误以及可靠性。相信在未来的一段时间里会受到越来越多人的关注。</p>
 <h2 id="3-JVM-框架"><a href="#3-JVM-框架" class="headerlink" title="3. JVM 框架"></a>3. JVM 框架</h2><p>由于 Oracle GraalVM 的横空出世，其支持多种编程语言，启动速度更快以及更少的内存占用，也催化了一些优秀的 Java 框架。</p>
-<h3 id="Micronaut"><a href="#Micronaut" class="headerlink" title="Micronaut"></a>Micronaut</h3><p><a href="https://micronaut.io" title="Micronaut" target="_blank" rel="external">Micronaut</a> 是一个 JVM 全栈框架，比较适合构建微服务和无服务应用。由于其使用 Netty，对响应式编程也提供了一流的支持。另外没有使用运行时反射来进行依赖注入，而是在编译是进行依赖注入，因此有了启动快，占用内存少的特点。</p>
-<p>此外，<a href="https://quarkus.io" title="Quarkus" target="_blank" rel="external">Quarkus</a> 是与 Micronaut 类似的 JVM 框架，感兴趣的小伙伴可以去了解一下。</p>
+<h3 id="Micronaut"><a href="#Micronaut" class="headerlink" title="Micronaut"></a>Micronaut</h3><p><a href="https://micronaut.io" title="Micronaut" target="_blank" rel="noopener">Micronaut</a> 是一个 JVM 全栈框架，比较适合构建微服务和无服务应用。由于其使用 Netty，对响应式编程也提供了一流的支持。另外没有使用运行时反射来进行依赖注入，而是在编译是进行依赖注入，因此有了启动快，占用内存少的特点。</p>
+<p>此外，<a href="https://quarkus.io" title="Quarkus" target="_blank" rel="noopener">Quarkus</a> 是与 Micronaut 类似的 JVM 框架，感兴趣的小伙伴可以去了解一下。</p>
 <h2 id="4-实用工具"><a href="#4-实用工具" class="headerlink" title="4. 实用工具"></a>4. 实用工具</h2><p>本人比较喜欢折腾工具，因为一直认为好的工具可以提高自己的效率，节省不必要的时间开销。下面我就介绍两个在日常使用中频率较高的工具。</p>
-<h3 id="Draw-io：画图工具"><a href="#Draw-io：画图工具" class="headerlink" title="Draw.io：画图工具"></a>Draw.io：画图工具</h3><p>其实市面上很少有能在三大操作系统（Windows，Linux，macOS）都能运行的画图软件，免费，功能齐全，并提供客户端的画图软件更是少之又少。<a href="https://github.com/jgraph/drawio-desktop" title="Draw.io Desktop" target="_blank" rel="external">Draw.io Desktop</a> 是对网页版的封装，完美支持三个操作系统，并支持流程图，UML 等多种图的类型。想要下载请参考 <a href="https://github.com/jgraph/drawio-desktop/releases" title="Draw.io Desktop 下载链接" target="_blank" rel="external">Draw.io Desktop 下载链接</a>。</p>
-<h3 id="Git-Commit-规范软件"><a href="#Git-Commit-规范软件" class="headerlink" title="Git Commit 规范软件"></a>Git Commit 规范软件</h3><p><a href="http://commitizen.github.io/cz-cli" title="Commitizen" target="_blank" rel="external">Commitizen</a> 是一款对代码提交规范约束的软件。</p>
-<h4 id="安装及配置"><a href="#安装及配置" class="headerlink" title="安装及配置"></a>安装及配置</h4><p>安装是非常简单的，只要你的电脑有 Node，可以直接安装，不然可以先去安装 <a href="https://nodejs.org" title="Node.js" target="_blank" rel="external">Node</a>。</p>
+<h3 id="Draw-io：画图工具"><a href="#Draw-io：画图工具" class="headerlink" title="Draw.io：画图工具"></a>Draw.io：画图工具</h3><p>其实市面上很少有能在三大操作系统（Windows，Linux，macOS）都能运行的画图软件，免费，功能齐全，并提供客户端的画图软件更是少之又少。<a href="https://github.com/jgraph/drawio-desktop" title="Draw.io Desktop" target="_blank" rel="noopener">Draw.io Desktop</a> 是对网页版的封装，完美支持三个操作系统，并支持流程图，UML 等多种图的类型。想要下载请参考 <a href="https://github.com/jgraph/drawio-desktop/releases" title="Draw.io Desktop 下载链接" target="_blank" rel="noopener">Draw.io Desktop 下载链接</a>。</p>
+<h3 id="Git-Commit-规范软件"><a href="#Git-Commit-规范软件" class="headerlink" title="Git Commit 规范软件"></a>Git Commit 规范软件</h3><p><a href="http://commitizen.github.io/cz-cli" title="Commitizen" target="_blank" rel="noopener">Commitizen</a> 是一款对代码提交规范约束的软件。</p>
+<h4 id="安装及配置"><a href="#安装及配置" class="headerlink" title="安装及配置"></a>安装及配置</h4><p>安装是非常简单的，只要你的电脑有 Node，可以直接安装，不然可以先去安装 <a href="https://nodejs.org" title="Node.js" target="_blank" rel="noopener">Node</a>。</p>
 <pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g commitizen
 <span class="token function">npm</span> <span class="token function">install</span> -g cz-conventional-changelog
 <span class="token keyword">echo</span> <span class="token string">'{ "path": "cz-conventional-changelog" }'</span> <span class="token operator">></span> ~/.czrc
@@ -426,6 +436,8 @@ trivy <span class="token punctuation">[</span>YOUR_IMAGE_NAME<span class="token 
 <hr>
 <blockquote>
 <p>看完这篇文章，有没有让你对新的技术趋势有所了解呢？如果内容对你有所帮助，请点赞支持哦！</p>
+</blockquote>
+<blockquote>
 <p>更多精彩内容请<ruby>关注<rt>扫码</rt></ruby>：</p>
 </blockquote>
 <p><img src="https://i.loli.net/2019/05/18/5cdf686a103cf11418.jpg" alt="KnowledgeCollision 微信公众号"></p>
@@ -450,12 +462,12 @@ trivy <span class="token punctuation">[</span>YOUR_IMAGE_NAME<span class="token 
 <h2 id="1-Java-版本控制工具"><a href="#1-Java-版本控制工具" class="headerlink" title="1. Java 版本控制工具"></a>1. Java 版本控制工具</h2><p>普通常规的安装配置方式除了步骤繁琐以外，最大的缺陷就在于不能支持 Java 版本的快速切换，其必须通过更改环境变量的方式进行版本切换。</p>
 <p>针对以上的问题，我们需要选择一款 Java 版本控制工具，将我们从烦恼中解脱出来。以下是我找的几款工具：</p>
 <ul>
-<li><a href="https://github.com/sdkman/sdkman-cli" title="sdkman" target="_blank" rel="external">sdkman</a>: <code>https://github.com/sdkman/sdkman-cli</code></li>
-<li><a href="https://github.com/shyiko/jabba" title="jabba" target="_blank" rel="external">jabba</a>: <code>https://github.com/shyiko/jabba</code></li>
-<li><a href="https://github.com/jenv/jenv" title="jenv" target="_blank" rel="external">jenv</a>: <code>https://github.com/jenv/jenv</code></li>
+<li><a href="https://github.com/sdkman/sdkman-cli" title="sdkman" target="_blank" rel="noopener">sdkman</a>: <code>https://github.com/sdkman/sdkman-cli</code></li>
+<li><a href="https://github.com/shyiko/jabba" title="jabba" target="_blank" rel="noopener">jabba</a>: <code>https://github.com/shyiko/jabba</code></li>
+<li><a href="https://github.com/jenv/jenv" title="jenv" target="_blank" rel="noopener">jenv</a>: <code>https://github.com/jenv/jenv</code></li>
 </ul>
 <h2 id="2-抉择"><a href="#2-抉择" class="headerlink" title="2. 抉择"></a>2. 抉择</h2><p>考虑到工具的维护情况，本人选择了 <strong>sdkman</strong> 作为目前 Java 版本控制的工具。如果需要安装 <code>Orcale JDK</code>，可以考虑使用 <strong>jabba</strong>（<strong>sdkman</strong> 不支持下载）。</p>
-<h2 id="3-配置-sdkman"><a href="#3-配置-sdkman" class="headerlink" title="3. 配置 sdkman"></a>3. 配置 sdkman</h2><p>由于本人使用的是 <strong>macOS</strong> 和 <strong>Ubuntu</strong>，下面的步骤都是基于这些系统，<a href="https://sdkman.io/install" title="Windows 安装 sdkman" target="_blank" rel="external">Windows 安装 sdkman</a> 详见：<code>https://sdkman.io/install</code>。</p>
+<h2 id="3-配置-sdkman"><a href="#3-配置-sdkman" class="headerlink" title="3. 配置 sdkman"></a>3. 配置 sdkman</h2><p>由于本人使用的是 <strong>macOS</strong> 和 <strong>Ubuntu</strong>，下面的步骤都是基于这些系统，<a href="https://sdkman.io/install" title="Windows 安装 sdkman" target="_blank" rel="noopener">Windows 安装 sdkman</a> 详见：<code>https://sdkman.io/install</code>。</p>
 <h3 id="3-1-安装-sdkman"><a href="#3-1-安装-sdkman" class="headerlink" title="3.1 安装 sdkman"></a>3.1 安装 sdkman</h3><pre class=" language-bash"><code class="language-bash">curl -s <span class="token string">"https://get.sdkman.io"</span> <span class="token operator">|</span> <span class="token function">bash</span>
 </code></pre>
 <blockquote>
@@ -493,6 +505,8 @@ sdk use java 11.0.2-open
 <h3 id="5-1-配置-Intellij-IDEA-的-Java-路径"><a href="#5-1-配置-Intellij-IDEA-的-Java-路径" class="headerlink" title="5.1 配置 Intellij IDEA 的 Java 路径"></a>5.1 配置 Intellij IDEA 的 Java 路径</h3><hr>
 <blockquote>
 <p>看完这篇文章，有没有让你从 Java 安装配置中解脱出来呢？</p>
+</blockquote>
+<blockquote>
 <p>更多精彩内容请<ruby>关注<rt>扫码</rt></ruby>：</p>
 </blockquote>
 <p><img src="https://i.loli.net/2019/05/18/5cdf686a103cf11418.jpg" alt="KnowledgeCollision 微信公众号"></p>
@@ -548,10 +562,14 @@ sdk use java 11.0.2-open
 </ul>
 <h3 id="编程习惯"><a href="#编程习惯" class="headerlink" title="编程习惯"></a>编程习惯</h3><blockquote>
 <p>56% 喜欢使用 Tabs，而 24% 喜欢 Spaces</p>
+</blockquote>
+<blockquote>
 <p>37% 喜欢动态语言，而 23% 喜欢静态语言</p>
 </blockquote>
 <h3 id="面试"><a href="#面试" class="headerlink" title="面试"></a>面试</h3><blockquote>
 <p>经验为王</p>
+</blockquote>
+<blockquote>
 <p>46% 有计算机科学教育文凭，而 21% 通过自学的方式获得计算机科学知识</p>
 </blockquote>
 <h4 id="最难的面试环节"><a href="#最难的面试环节" class="headerlink" title="最难的面试环节"></a>最难的面试环节</h4><ul>
@@ -566,8 +584,14 @@ sdk use java 11.0.2-open
 </ul>
 <h3 id="工作方式"><a href="#工作方式" class="headerlink" title="工作方式"></a>工作方式</h3><blockquote>
 <p>工程师最喜欢结对编程的工作方式</p>
+</blockquote>
+<blockquote>
 <p>结对编程对初级工程师有好处，但对于有更多经验的人意义不大</p>
+</blockquote>
+<blockquote>
 <p>工程师比较希望能够为开源项目进行贡献</p>
+</blockquote>
+<blockquote>
 <p>63% 宁愿早睡早起，也不想晚上工作，而 38% 讨厌不切实际的最后期限</p>
 </blockquote>
 <h3 id="竞争力"><a href="#竞争力" class="headerlink" title="竞争力"></a>竞争力</h3><ul>
@@ -577,7 +601,9 @@ sdk use java 11.0.2-open
 <p>[^note]</p>
 <blockquote>
 <p>2019 The State of Software Engineers</p>
-<p><a href="https://hired.com/page/state-of-software-engineers/key-takeaways/" target="_blank" rel="external">https://hired.com/page/state-of-software-engineers/key-takeaways/</a></p>
+</blockquote>
+<blockquote>
+<p><a href="https://hired.com/page/state-of-software-engineers/key-takeaways/" target="_blank" rel="noopener">https://hired.com/page/state-of-software-engineers/key-takeaways/</a></p>
 </blockquote>
 <p>更多精彩内容请<ruby>关注<rt>扫码</rt></ruby>：</p>
 <p><img src="https://i.loli.net/2019/05/18/5cdf686a103cf11418.jpg" alt="KnowledgeCollision 微信公众号"></p>
@@ -736,7 +762,9 @@ sdk use java 11.0.2-open
 <p>[^note]</p>
 <blockquote>
 <p>Python Developers Survey 2018 Results</p>
-<p><a href="https://www.jetbrains.com/research/python-developers-survey-2018" target="_blank" rel="external">https://www.jetbrains.com/research/python-developers-survey-2018</a></p>
+</blockquote>
+<blockquote>
+<p><a href="https://www.jetbrains.com/research/python-developers-survey-2018" target="_blank" rel="noopener">https://www.jetbrains.com/research/python-developers-survey-2018</a></p>
 </blockquote>
 <p>更多精彩内容请<ruby>关注<rt>扫码</rt></ruby>：</p>
 <p><img src="https://i.loli.net/2019/05/18/5cdf686a103cf11418.jpg" alt="图注：KnowledgeCollision 微信公众号"></p>
@@ -803,7 +831,7 @@ sdk use java 11.0.2-open
 </ol>
 <p>[^note]</p>
 <blockquote>
-<p>Largest Java Developer Survey 2018<br><a href="https://programmer9.com/2019/02/06/largest-java-survey-2018.html" target="_blank" rel="external">https://programmer9.com/2019/02/06/largest-java-survey-2018.html</a></p>
+<p>Largest Java Developer Survey 2018<br><a href="https://programmer9.com/2019/02/06/largest-java-survey-2018.html" target="_blank" rel="noopener">https://programmer9.com/2019/02/06/largest-java-survey-2018.html</a></p>
 </blockquote>
 <p>更多精彩内容请<ruby>关注<rt>扫码</rt></ruby>：</p>
 <p><img src="https://i.loli.net/2019/05/18/5cdf686a103cf11418.jpg" alt="图注：KnowledgeCollision 微信公众号"></p>
@@ -939,7 +967,7 @@ sdk use java 11.0.2-open
       <title><![CDATA[知识管理]]></title>
       <url>https://zzh1991.github.io/2018/07/29/note-skills/</url>
       <content type="html"><![CDATA[<h2 id="知识管理"><a href="#知识管理" class="headerlink" title="知识管理"></a>知识管理</h2><p>我们每天都在接触各种各样的信息，并从中提取出自己所需的知识，那下面就来聊聊如何利用工具来管理知识。</p>
-<h3 id="笔记类工具"><a href="#笔记类工具" class="headerlink" title="笔记类工具"></a>笔记类工具</h3><h4 id="为知笔记-跟-Evernote-和有道云笔记是很类似的"><a href="#为知笔记-跟-Evernote-和有道云笔记是很类似的" class="headerlink" title="为知笔记: 跟 Evernote 和有道云笔记是很类似的"></a><a href="http://wiz.cn/" target="_blank" rel="external">为知笔记</a>: 跟 Evernote 和有道云笔记是很类似的</h4><ul>
+<h3 id="笔记类工具"><a href="#笔记类工具" class="headerlink" title="笔记类工具"></a>笔记类工具</h3><h4 id="为知笔记-跟-Evernote-和有道云笔记是很类似的"><a href="#为知笔记-跟-Evernote-和有道云笔记是很类似的" class="headerlink" title="为知笔记: 跟 Evernote 和有道云笔记是很类似的"></a><a href="http://wiz.cn/" target="_blank" rel="noopener">为知笔记</a>: 跟 Evernote 和有道云笔记是很类似的</h4><ul>
 <li>本人已经付费两年，从免费版用到订阅版，一年 60 元，并不是非常贵</li>
 <li>支持 Markdown 模式，版本控制，跨平台同步，体验就好</li>
 <li>目前用来记录一些比较琐细的 idea 和知识点，后期再作统一处理</li>
@@ -948,8 +976,8 @@ sdk use java 11.0.2-open
 <li>Markdown 的阅读模式体验还是很不错的，但是编辑的时候不是非常有效率</li>
 <li>富文本的排版比较麻烦，所以一般都采用 Markdown 书写</li>
 </ul>
-<p><a href="https://i.loli.net/2019/05/18/5cdf686a0044246460.jpg" target="_blank" rel="external"><img src="https://i.loli.net/2019/05/18/5cdf686a0044246460.jpg" alt="wiz.jpg"></a></p>
-<h4 id="语雀-阿里旗下出品的知识管理分享产品"><a href="#语雀-阿里旗下出品的知识管理分享产品" class="headerlink" title="语雀: 阿里旗下出品的知识管理分享产品"></a><a href="https://www.yuque.com/" target="_blank" rel="external">语雀</a>: 阿里旗下出品的知识管理分享产品</h4><ul>
+<p><a href="https://i.loli.net/2019/05/18/5cdf686a0044246460.jpg" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/05/18/5cdf686a0044246460.jpg" alt="wiz.jpg"></a></p>
+<h4 id="语雀-阿里旗下出品的知识管理分享产品"><a href="#语雀-阿里旗下出品的知识管理分享产品" class="headerlink" title="语雀: 阿里旗下出品的知识管理分享产品"></a><a href="https://www.yuque.com/" target="_blank" rel="noopener">语雀</a>: 阿里旗下出品的知识管理分享产品</h4><ul>
 <li>网址：<code>www.yuque.com</code></li>
 <li>从内测开始使用，现在已经开放注册了</li>
 <li>自动排版：富文本排版，样式好看</li>
@@ -960,7 +988,7 @@ sdk use java 11.0.2-open
 <h5 id="缺点-1"><a href="#缺点-1" class="headerlink" title="缺点"></a>缺点</h5><ul>
 <li>目前没有移动端，只有网页端，手机只能打开浏览器进行查看</li>
 </ul>
-<h4 id="Notion-颠覆式笔记应用"><a href="#Notion-颠覆式笔记应用" class="headerlink" title="Notion: 颠覆式笔记应用"></a><a href="https://www.notion.so" target="_blank" rel="external">Notion</a>: 颠覆式笔记应用</h4><ul>
+<h4 id="Notion-颠覆式笔记应用"><a href="#Notion-颠覆式笔记应用" class="headerlink" title="Notion: 颠覆式笔记应用"></a><a href="https://www.notion.so" target="_blank" rel="noopener">Notion</a>: 颠覆式笔记应用</h4><ul>
 <li>拖拽式组合网页：随意插入想要的组件</li>
 <li>笔记之间可以相互链接，类似网页</li>
 <li>谷歌账号可以直接登入，不需要注册账号</li>
@@ -973,7 +1001,7 @@ sdk use java 11.0.2-open
 <li>手机 APP 和网页端只能进行 1000 次的操作，超出就需要付费才能进行修改，现在支持删除已有的条目，然后继续使用</li>
 <li>手机上的操作并不会影响数目，所以尽量在手机上操作（目前已经修改规则了）</li>
 </ul>
-<h4 id="Airtable-amp-Trello"><a href="#Airtable-amp-Trello" class="headerlink" title="Airtable &amp; Trello"></a><a href="https://airtable.com/" target="_blank" rel="external">Airtable</a> &amp; <a href="https://trello.com/" target="_blank" rel="external">Trello</a></h4><ul>
+<h4 id="Airtable-amp-Trello"><a href="#Airtable-amp-Trello" class="headerlink" title="Airtable &amp; Trello"></a><a href="https://airtable.com/" target="_blank" rel="noopener">Airtable</a> &amp; <a href="https://trello.com/" target="_blank" rel="noopener">Trello</a></h4><ul>
 <li>主要用于一些任务的记录与跟踪</li>
 <li>Airtable 可以集成 Slack 和 Trello（借助 Zapier）</li>
 </ul>
@@ -981,7 +1009,7 @@ sdk use java 11.0.2-open
 <li>Airtable 免费版不能使用一些 Block 可视化插件</li>
 <li>Airtable 与 Trello 的互动比较少</li>
 </ul>
-<h4 id="日历工具-Sunsama"><a href="#日历工具-Sunsama" class="headerlink" title="日历工具 Sunsama"></a>日历工具 <a href="https://sunsama.com/" target="_blank" rel="external">Sunsama</a></h4><ul>
+<h4 id="日历工具-Sunsama"><a href="#日历工具-Sunsama" class="headerlink" title="日历工具 Sunsama"></a>日历工具 <a href="https://sunsama.com/" target="_blank" rel="noopener">Sunsama</a></h4><ul>
 <li>对接 Google 日历</li>
 <li>集成 Slack、Trello</li>
 <li>一个 channel 跟踪一个 GitHub 仓库的变更</li>
@@ -991,7 +1019,7 @@ sdk use java 11.0.2-open
 <li>一个 channel 只能设置一个 GitHub 仓库，不能设置成多个</li>
 <li>免费版也有操作的次数限制</li>
 </ul>
-<h3 id="todo-自己实现的-todo-管理工具"><a href="#todo-自己实现的-todo-管理工具" class="headerlink" title="todo: 自己实现的 todo 管理工具"></a><a href="http://todo.zzhpro.com" target="_blank" rel="external">todo</a>: 自己实现的 todo 管理工具</h3><h4 id="功能（目前还是比较基础的）"><a href="#功能（目前还是比较基础的）" class="headerlink" title="功能（目前还是比较基础的）"></a>功能（目前还是比较基础的）</h4><ol>
+<h3 id="todo-自己实现的-todo-管理工具"><a href="#todo-自己实现的-todo-管理工具" class="headerlink" title="todo: 自己实现的 todo 管理工具"></a><a href="http://todo.zzhpro.com" target="_blank" rel="noopener">todo</a>: 自己实现的 todo 管理工具</h3><h4 id="功能（目前还是比较基础的）"><a href="#功能（目前还是比较基础的）" class="headerlink" title="功能（目前还是比较基础的）"></a>功能（目前还是比较基础的）</h4><ol>
 <li>提供编辑器记录详细信息，支持 Markdown 语法</li>
 <li>比较适合网页版操作，目前并没有适配移动端</li>
 <li>详细的时间记录</li>
@@ -1093,7 +1121,7 @@ sdk use java 11.0.2-open
       <url>https://zzh1991.github.io/2018/02/10/workflow/</url>
       <content type="html"><![CDATA[<h2 id="Workflow-软件"><a href="#Workflow-软件" class="headerlink" title="Workflow 软件"></a>Workflow 软件</h2><h3 id="Workflow-著名的软件，已被-Apple-收购"><a href="#Workflow-著名的软件，已被-Apple-收购" class="headerlink" title="Workflow: 著名的软件，已被 Apple 收购"></a><code>Workflow</code>: 著名的软件，已被 Apple 收购</h3><ul>
 <li>Workflow 自带的 gallery: 里面有很多的自动化流程，需要自己甄别</li>
-<li><a href="http://workflow.sspai.com/#/main/workflow" target="_blank" rel="external">少数派收集的 workflow</a>: 有一些很有意思的自动化流程</li>
+<li><a href="http://workflow.sspai.com/#/main/workflow" target="_blank" rel="noopener">少数派收集的 workflow</a>: 有一些很有意思的自动化流程</li>
 </ul>
 <h3 id="Microsoft-Flow-微软旗下出品的-workflow-产品"><a href="#Microsoft-Flow-微软旗下出品的-workflow-产品" class="headerlink" title="Microsoft Flow: 微软旗下出品的 workflow 产品"></a><code>Microsoft Flow</code>: 微软旗下出品的 workflow 产品</h3><h4 id="可以联动微软旗下的其他软件"><a href="#可以联动微软旗下的其他软件" class="headerlink" title="可以联动微软旗下的其他软件"></a>可以联动微软旗下的其他软件</h4><ul>
 <li>OneDrive</li>
@@ -1105,9 +1133,9 @@ sdk use java 11.0.2-open
 <h3 id="使用-Workflow-软件"><a href="#使用-Workflow-软件" class="headerlink" title="使用 Workflow 软件"></a>使用 Workflow 软件</h3><ol>
 <li>Add Event: 快速添加到日历，软件内部 gallery 收录</li>
 <li>Save as Reminder Note: 快速添加到提醒事项，软件内部 gallery 收录</li>
-<li><a href="http://workflow.sspai.com/#/main/workflow" target="_blank" rel="external">闪念胶囊</a>：少数派 workflow gallery，通过语音和文字快速记录备忘录</li>
-<li><a href="http://workflow.sspai.com/#/main/workflow" target="_blank" rel="external">WiFi Priority</a>: 少数派 workflow gallery，终于可以连接指定 WiFi，而不是默认信号好的那个了</li>
-<li><a href="http://workflow.sspai.com/#/main/workflow" target="_blank" rel="external">12306 SMS to Cal</a>: 少数派 workflow gallery，复制 12306 短信，快速将乘车行程添加到日历中</li>
+<li><a href="http://workflow.sspai.com/#/main/workflow" target="_blank" rel="noopener">闪念胶囊</a>：少数派 workflow gallery，通过语音和文字快速记录备忘录</li>
+<li><a href="http://workflow.sspai.com/#/main/workflow" target="_blank" rel="noopener">WiFi Priority</a>: 少数派 workflow gallery，终于可以连接指定 WiFi，而不是默认信号好的那个了</li>
+<li><a href="http://workflow.sspai.com/#/main/workflow" target="_blank" rel="noopener">12306 SMS to Cal</a>: 少数派 workflow gallery，复制 12306 短信，快速将乘车行程添加到日历中</li>
 </ol>
 <p>更多精彩内容请<ruby>关注<rt>扫码</rt></ruby>：</p>
 <p><img src="https://i.loli.net/2019/05/18/5cdf686a103cf11418.jpg" alt="图注：KnowledgeCollision 微信公众号"></p>
@@ -1349,7 +1377,7 @@ sdk use java 11.0.2-open
 <span class="token punctuation">[</span> condition <span class="token punctuation">]</span> <span class="token operator">||</span> <span class="token function">command</span> <span class="token punctuation">;</span>
 
 <span class="token comment" spellcheck="true"># 三元表达式</span>
-<span class="token punctuation">[</span> condition <span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> command1 <span class="token keyword">:</span> command2 <span class="token punctuation">;</span>
+<span class="token punctuation">[</span> condition <span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> command1 <span class="token keyword">:</span> command2 <span class="token punctuation">;</span> 
 </code></pre>
 <h4 id="算术比较"><a href="#算术比较" class="headerlink" title="算术比较"></a>算术比较</h4><ul>
 <li>条件通常被放置在封闭的中括号内</li>
@@ -1593,8 +1621,8 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 <h3 id="任务调度"><a href="#任务调度" class="headerlink" title="任务调度"></a>任务调度</h3><ul>
 <li>Qrtz Scheduler</li>
 <li>资料<ul>
-<li><a href="http://samchu.logdown.com/posts/297038-use-quartz-in-spring-boot" target="_blank" rel="external">quarz sample</a></li>
-<li><a href="http://www.opencodez.com/java/quartz-scheduler-with-spring-boot.htm" target="_blank" rel="external">spring boot quartz</a></li>
+<li><a href="http://samchu.logdown.com/posts/297038-use-quartz-in-spring-boot" target="_blank" rel="noopener">quarz sample</a></li>
+<li><a href="http://www.opencodez.com/java/quartz-scheduler-with-spring-boot.htm" target="_blank" rel="noopener">spring boot quartz</a></li>
 </ul>
 </li>
 </ul>
@@ -1609,7 +1637,7 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 <li>勤于重构</li>
 </ol>
 <h2 id="Java-1"><a href="#Java-1" class="headerlink" title="Java"></a>Java</h2><ol>
-<li><a href="https://docs.oracle.com/javase/8/docs/technotes/tools/windows/java.html#nonstandard" target="_blank" rel="external">Java parameter</a></li>
+<li><a href="https://docs.oracle.com/javase/8/docs/technotes/tools/windows/java.html#nonstandard" target="_blank" rel="noopener">Java parameter</a></li>
 </ol>
 ]]></content>
       
@@ -1781,7 +1809,7 @@ create-react-app my-app
 <span class="token function">cd</span> <span class="token function">dir</span>
 <span class="token function">npm</span> start
 </code></pre>
-<h2 id="Material-UI"><a href="#Material-UI" class="headerlink" title="Material UI"></a>Material UI</h2><h3 id="SVG-ICON"><a href="#SVG-ICON" class="headerlink" title="SVG ICON"></a><a href="https://material.io/icons/" target="_blank" rel="external">SVG ICON</a></h3><h3 id="安装-material-UI"><a href="#安装-material-UI" class="headerlink" title="安装 material UI"></a>安装 material UI</h3><pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> material-ui
+<h2 id="Material-UI"><a href="#Material-UI" class="headerlink" title="Material UI"></a>Material UI</h2><h3 id="SVG-ICON"><a href="#SVG-ICON" class="headerlink" title="SVG ICON"></a><a href="https://material.io/icons/" target="_blank" rel="noopener">SVG ICON</a></h3><h3 id="安装-material-UI"><a href="#安装-material-UI" class="headerlink" title="安装 material UI"></a>安装 material UI</h3><pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> material-ui
 <span class="token function">npm</span> i --save react-tap-event-plugin
 </code></pre>
 <h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 导入使点击事件有效</span>
@@ -1847,25 +1875,25 @@ npm install babel<span class="token operator">-</span>plugin<span class="token o
       <title><![CDATA[Windows Skills]]></title>
       <url>https://zzh1991.github.io/2017/08/09/Windows-Skills/</url>
       <content type="html"><![CDATA[<h2 id="windows-下解压-Linux、macOS-压缩格式"><a href="#windows-下解压-Linux、macOS-压缩格式" class="headerlink" title="windows 下解压 Linux、macOS 压缩格式"></a>windows 下解压 Linux、macOS 压缩格式</h2><ul>
-<li><a href="https://cloudconvert.com/" target="_blank" rel="external">在线的转换格式网站</a></li>
+<li><a href="https://cloudconvert.com/" target="_blank" rel="noopener">在线的转换格式网站</a></li>
 <li>7zip manager 工具选项里勾选 tgz 等格式</li>
 <li>减小切换系统，方便直接转换</li>
 </ul>
 <h2 id="各编程语言的开发文档及-API"><a href="#各编程语言的开发文档及-API" class="headerlink" title="各编程语言的开发文档及 API"></a>各编程语言的开发文档及 API</h2><ul>
-<li><a href="https://kapeli.com/docset_links" target="_blank" rel="external">dash 整合的文档下载地址</a><ul>
+<li><a href="https://kapeli.com/docset_links" target="_blank" rel="noopener">dash 整合的文档下载地址</a><ul>
 <li>其下载下来的格式均为 tgz，解压需使用上面的转换工具</li>
 </ul>
 </li>
 <li>Zeal (可以整合 IDE 一起使用，其自带一些文档)</li>
-<li><a href="http://devdocs.io/" target="_blank" rel="external">DevDocs</a>: 在线 API 网站，唯一不好的就是没有 JAVA 的文档</li>
+<li><a href="http://devdocs.io/" target="_blank" rel="noopener">DevDocs</a>: 在线 API 网站，唯一不好的就是没有 JAVA 的文档</li>
 </ul>
 <h2 id="PDF-与-MS-Office-以及图片格式的互相转换"><a href="#PDF-与-MS-Office-以及图片格式的互相转换" class="headerlink" title="PDF 与 MS Office 以及图片格式的互相转换"></a>PDF 与 MS Office 以及图片格式的互相转换</h2><ul>
-<li><a href="https://pdfcandy.com/" target="_blank" rel="external">PDF<em>Candy</em></a></li>
-<li><a href="https://smallpdf.com/" target="_blank" rel="external">SmallPDF</a></li>
-<li><a href="http://www.ilovepdf.com" target="_blank" rel="external">IlovePDF</a></li>
+<li><a href="https://pdfcandy.com/" target="_blank" rel="noopener">PDF<em>Candy</em></a></li>
+<li><a href="https://smallpdf.com/" target="_blank" rel="noopener">SmallPDF</a></li>
+<li><a href="http://www.ilovepdf.com" target="_blank" rel="noopener">IlovePDF</a></li>
 </ul>
 <h2 id="终端软件"><a href="#终端软件" class="headerlink" title="终端软件"></a>终端软件</h2><h3 id="配置-Cygwin"><a href="#配置-Cygwin" class="headerlink" title="配置 Cygwin"></a>配置 Cygwin</h3><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><ul>
-<li><a href="https://cygwin.com/install.com" target="_blank" rel="external">下载网址</a></li>
+<li><a href="https://cygwin.com/install.com" target="_blank" rel="noopener">下载网址</a></li>
 <li>选择需要下载和安装的包<ul>
 <li>curl</li>
 <li>git</li>
@@ -2099,21 +2127,21 @@ brew postgresql-upgrade-database
 <span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> nodejs
 </code></pre>
 <ul>
-<li><a href="https://github.com/creationix/nvm" target="_blank" rel="external">Node version management</a></li>
+<li><a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">Node version management</a></li>
 </ul>
 <pre class=" language-bash"><code class="language-bash">curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh <span class="token operator">|</span> <span class="token function">bash</span>
 </code></pre>
 <h3 id="Software"><a href="#Software" class="headerlink" title="Software"></a>Software</h3><h4 id="Office"><a href="#Office" class="headerlink" title="Office"></a>Office</h4><ul>
-<li><a href="https://www.onlyoffice.com/" target="_blank" rel="external">Only Office</a></li>
-<li><a href="https://drive.google.com/drive/" target="_blank" rel="external">Google Web Office</a></li>
-<li><a href="https://www.office.com" target="_blank" rel="external">Microsoft Web Office</a></li>
+<li><a href="https://www.onlyoffice.com/" target="_blank" rel="noopener">Only Office</a></li>
+<li><a href="https://drive.google.com/drive/" target="_blank" rel="noopener">Google Web Office</a></li>
+<li><a href="https://www.office.com" target="_blank" rel="noopener">Microsoft Web Office</a></li>
 </ul>
 <h4 id="API-Document"><a href="#API-Document" class="headerlink" title="API Document"></a>API Document</h4><ul>
-<li><a href="https://zealdocs.org" target="_blank" rel="external">Zeal</a></li>
+<li><a href="https://zealdocs.org" target="_blank" rel="noopener">Zeal</a></li>
 </ul>
 <h4 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h4><ul>
-<li><a href="http://www.edrawsoft.cn/mindmaster/" target="_blank" rel="external">MindMaster: 亿图免费思维导图</a></li>
-<li><a href="https://www.xmind.cn/download/linux/" target="_blank" rel="external">XMind</a></li>
+<li><a href="http://www.edrawsoft.cn/mindmaster/" target="_blank" rel="noopener">MindMaster: 亿图免费思维导图</a></li>
+<li><a href="https://www.xmind.cn/download/linux/" target="_blank" rel="noopener">XMind</a></li>
 </ul>
 <h3 id="文本导出为-PDF-格式"><a href="#文本导出为-PDF-格式" class="headerlink" title="文本导出为 PDF 格式"></a>文本导出为 PDF 格式</h3><ul>
 <li>Typora 可以直接导出 PDF</li>
@@ -2307,7 +2335,7 @@ avaster: <span class="token string">"image source"</span>
 <h3 id="更改主题"><a href="#更改主题" class="headerlink" title="更改主题"></a>更改主题</h3><ul>
 <li>在 themes 文件夹下 clone 其他优秀的主题</li>
 </ul>
-<h4 id="使用-hexo-theme-matery-主题"><a href="#使用-hexo-theme-matery-主题" class="headerlink" title="使用 hexo-theme-matery 主题"></a><a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" rel="external">使用 hexo-theme-matery 主题</a></h4><pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/blinkfox/hexo-theme-matery.git
+<h4 id="使用-hexo-theme-matery-主题"><a href="#使用-hexo-theme-matery-主题" class="headerlink" title="使用 hexo-theme-matery 主题"></a><a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" rel="noopener">使用 hexo-theme-matery 主题</a></h4><pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/blinkfox/hexo-theme-matery.git
 
 <span class="token comment" spellcheck="true"># 在 _config.yml 中修改主题名称</span>
 theme: hexo-theme-matery
