@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Knowlege Collision]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://zzh1991.github.io/"/>
-  <updated>2020-01-19T14:43:49.437Z</updated>
+  <updated>2020-02-27T15:40:30.931Z</updated>
   <id>https://zzh1991.github.io/</id>
   
   <author>
@@ -13,6 +13,178 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[深入理解 JVM 内存结构]]></title>
+    <link href="https://zzh1991.github.io/2020/02/27/jvm/"/>
+    <id>https://zzh1991.github.io/2020/02/27/jvm/</id>
+    <published>2020-02-27T15:31:28.000Z</published>
+    <updated>2020-02-27T15:40:30.931Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<p>在日常的编程活动中，我们经常使用 Java 编程语言编写代码，那么你们知道每天使用的 Java 语言中对象是分配在内存的何处呢，今天就带大家了解一下 JVM 的内存结构。</p>
+<p>JVM 的内存区域主要可以分为线程隔离的数据区域和线程共享的数据区域，还有一块经常被我们忽略的直接内存区域。</p>
+</blockquote>
+<h3 id="JVM-运行时数据区域"><a href="#JVM-运行时数据区域" class="headerlink" title="JVM 运行时数据区域"></a>JVM 运行时数据区域</h3><h4 id="线程隔离的数据区域"><a href="#线程隔离的数据区域" class="headerlink" title="线程隔离的数据区域"></a>线程隔离的数据区域</h4><ul>
+<li>程序计数器(PC)：占用内存空间较小，主要存储字节码的行号指示器，控制程序的执行</li>
+<li>JVM 栈：默认一个线程的栈大小为 1 MB<ul>
+<li>栈帧<ul>
+<li>局部变量表：储存基本数据类型和对象引用（地址信息）<ul>
+<li>方法参数</li>
+<li>局部变量</li>
+</ul>
+</li>
+<li>操作树栈（基于栈的指令集执行）</li>
+<li>动态连接<ul>
+<li>一个指向运行时常量池中该栈帧所属方法的引用</li>
+</ul>
+</li>
+<li>方法出口<ul>
+<li>方法返回地址：主调方法的 PC 计数器值或者发生异常时异常处理器表确定的返回地址</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>本地方法栈：为本地方法服务，在 Hotspot 虚拟机中与 JVM 栈合而为一</li>
+</ul>
+<h4 id="线程共享的数据区域"><a href="#线程共享的数据区域" class="headerlink" title="线程共享的数据区域"></a>线程共享的数据区域</h4><ul>
+<li>Java 堆：存储对象的实例<ul>
+<li>运行时常量池（Java 8+）<ul>
+<li>字面量</li>
+<li>符号引用<ul>
+<li>类或接口</li>
+<li>字段</li>
+<li>类中方法</li>
+<li>接口中方法</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="对象的内存布局"><a href="#对象的内存布局" class="headerlink" title="对象的内存布局"></a>对象的内存布局</h5><ul>
+<li>对象头<ul>
+<li>对象运行时数据（64 位虚拟机为 64 bit，32 位虚拟机则为 32 bit）<ul>
+<li>对象哈希码</li>
+<li>分代年龄</li>
+<li>锁指针</li>
+<li>线程 ID 和时间戳</li>
+<li>锁偏向模式</li>
+<li>锁标志</li>
+</ul>
+</li>
+<li>类型元数据指针（4 byte，64 位虚拟机不开启指针压缩为 8 byte）</li>
+</ul>
+</li>
+<li>实例数据</li>
+<li>对齐填充</li>
+</ul>
+<h3 id="直接内存"><a href="#直接内存" class="headerlink" title="直接内存"></a>直接内存</h3><ul>
+<li>元空间(metaspace)：存储已加载类的元数据（Java 8 引入，代替以前的永久代）</li>
+<li>代码缓存：存储即时编译（JIT）后的代码缓存</li>
+<li>垃圾收集器占用</li>
+<li>直接字节缓存：主要用于 NIO 拷贝数据</li>
+</ul>
+<h2 id="2-垃圾收集算法"><a href="#2-垃圾收集算法" class="headerlink" title="2. 垃圾收集算法"></a>2. 垃圾收集算法</h2><h3 id="a-分代收集"><a href="#a-分代收集" class="headerlink" title="a. 分代收集"></a>a. 分代收集</h3><ul>
+<li>Partial GC：部分区域的垃圾收集<ul>
+<li>Minor GC：新生代垃圾收集</li>
+<li>Major GC：老年代垃圾收集</li>
+<li>Mixed GC：整个新生代和部分老年代的垃圾收集</li>
+</ul>
+</li>
+<li>Full GC：Java 堆和方法区的垃圾收集</li>
+</ul>
+<h3 id="b-垃圾收集算法"><a href="#b-垃圾收集算法" class="headerlink" title="b. 垃圾收集算法"></a>b. 垃圾收集算法</h3><ul>
+<li>标记-清除（Mark-Sweep）</li>
+<li>标记-复制（Mark-Copy）</li>
+<li>标记-整理（Mark-Compact）</li>
+</ul>
+<h2 id="3-垃圾收集器"><a href="#3-垃圾收集器" class="headerlink" title="3. 垃圾收集器"></a>3. 垃圾收集器</h2><blockquote>
+<p>迄今为止，所有的垃圾收集器在根节点枚举的过程中都必须暂停用户线程</p>
+</blockquote>
+<ul>
+<li>Serial + Serial Old：客户端模式下的默认选择，标记-复制收集新生代，标记-整理收集老年代</li>
+<li>ParNew + CMS</li>
+<li>Parallel Scavenge + Parallel Old：Java 9 之前的服务端默认配置</li>
+<li>G1：Java 9 后的服务端默认配置</li>
+</ul>
+<h3 id="三大性能指标"><a href="#三大性能指标" class="headerlink" title="三大性能指标"></a>三大性能指标</h3><ul>
+<li>内存占用</li>
+<li>吞吐量</li>
+<li>延迟</li>
+</ul>
+<h3 id="CMS-Concurrent-Mark-Sweep"><a href="#CMS-Concurrent-Mark-Sweep" class="headerlink" title="CMS(Concurrent Mark Sweep)"></a>CMS(Concurrent Mark Sweep)</h3><ul>
+<li>初始标记</li>
+<li>并发标记</li>
+<li>重新标记：使用增量更新</li>
+<li>并发清除</li>
+</ul>
+<blockquote>
+<p>初始标记和重新标记都是需要暂停用户线程的</p>
+</blockquote>
+<h4 id="CMS-的几个缺陷"><a href="#CMS-的几个缺陷" class="headerlink" title="CMS 的几个缺陷"></a>CMS 的几个缺陷</h4><ul>
+<li>并发对处理器的资源比较敏感，比较适合处理器核数较多的情况（大于 4 核）</li>
+<li>在并发阶段，用户线程可能会分配内存，进而造成老年代区域需要提前进行 GC 操作，一般又一个触发的阈值，太大或者太小都有性能问题</li>
+<li>标记-清除存在内存碎片的问题</li>
+</ul>
+<h3 id="G1"><a href="#G1" class="headerlink" title="G1"></a>G1</h3><ul>
+<li>初始标记</li>
+<li>并发标记</li>
+<li>最终标记：使用原始快照</li>
+<li>筛选回收</li>
+</ul>
+<blockquote>
+<p>G1 为了维护不同 Region 之间的引用关系，至少需要花费大约相当于 Java 堆内存的 10% ~ 20% 的额外内存来维持收集器的正常工作，比较适合比较大的堆内存使用</p>
+</blockquote>
+<h3 id="低延迟垃圾收集器"><a href="#低延迟垃圾收集器" class="headerlink" title="低延迟垃圾收集器"></a>低延迟垃圾收集器</h3><h4 id="Shenandoah-收集器"><a href="#Shenandoah-收集器" class="headerlink" title="Shenandoah 收集器"></a>Shenandoah 收集器</h4><blockquote>
+<p>只在 OpenJDK 12+ 的版本出现，使用读屏障和转发指针来实现并发整理</p>
+</blockquote>
+<ul>
+<li>初始标记</li>
+<li>并发标记</li>
+<li>最终标记</li>
+<li>并发清理</li>
+<li>并发回收</li>
+<li>初始引用更新</li>
+<li>并发引用更新</li>
+<li>最终引用更新</li>
+<li>并发清理</li>
+</ul>
+<h4 id="ZGC-收集器"><a href="#ZGC-收集器" class="headerlink" title="ZGC 收集器"></a>ZGC 收集器</h4><blockquote>
+<p>使用读屏障和染色体指针实现并发整理，但不支持 32 位平台，且不能开启指针压缩</p>
+</blockquote>
+<ul>
+<li>初始标记</li>
+<li>并发标记</li>
+<li>最终标记</li>
+<li>并发预备重分配</li>
+<li>并发重分配</li>
+<li>并发重映射</li>
+</ul>
+<h3 id="其他商业垃圾收集器"><a href="#其他商业垃圾收集器" class="headerlink" title="其他商业垃圾收集器"></a>其他商业垃圾收集器</h3><ul>
+<li>IBM J9</li>
+<li>Azul C4</li>
+<li>Azul Zing</li>
+</ul>
+<hr>
+<blockquote>
+<p>看完这篇文章，有没有让你对 JVM 的内存结构有更深的了解呢？如果内容对你有所帮助，请点赞支持哦！</p>
+<p>更多精彩内容请<ruby>关注<rt>扫码</rt></ruby>：</p>
+</blockquote>
+<p><img src="https://i.loli.net/2019/05/18/5cdf686a103cf11418.jpg" alt="KnowledgeCollision 微信公众号"></p>
+<p><code>Knowledge Collision 激发思维碰撞，IDEA 丛生</code></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<blockquote>
+<p>在日常的编程活动中，我们经常使用 Java 编程语言编写代码，那么你们知道每天使用的 Java 语言中对象是分配在内存的何处呢，今天就带大家了解一下 JVM 的内存结构。</p>
+<p>JVM 的内存区域主要可以分为线程隔离的数据区域和线程共享的数]]>
+    </summary>
+    
+      <category term="Java" scheme="https://zzh1991.github.io/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[小而美的 Android 应用]]></title>
@@ -2125,132 +2297,6 @@ gp<span class="token operator">=</span><span class="token string">" --config htt
       <category term="Ubuntu" scheme="https://zzh1991.github.io/tags/Ubuntu/"/>
     
       <category term="macOS" scheme="https://zzh1991.github.io/tags/macOS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[如何搭建 Hexo 博客]]></title>
-    <link href="https://zzh1991.github.io/2017/01/26/hexo/"/>
-    <id>https://zzh1991.github.io/2017/01/26/hexo/</id>
-    <published>2017-01-26T15:59:59.000Z</published>
-    <updated>2020-01-02T07:02:40.478Z</updated>
-    <content type="html"><![CDATA[<h2 id="先决条件"><a href="#先决条件" class="headerlink" title="先决条件"></a>先决条件</h2><ul>
-<li>安装 git 和 node.js</li>
-<li>新建 hexo 文件夹</li>
-</ul>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g hexo-cli --no-optional
-
-<span class="token comment" spellcheck="true"># 可以是其他目录，这里是 macOS 的 Documents 目录下创建的 hexo 文件夹</span>
-<span class="token function">cd</span> ~/Document/hexo
-
-hexo init
-<span class="token function">npm</span> <span class="token function">install</span>
-</code></pre>
-<h2 id="配置-Hexo"><a href="#配置-Hexo" class="headerlink" title="配置 Hexo"></a>配置 Hexo</h2><pre class=" language-bash"><code class="language-bash">hexo init
-<span class="token function">npm</span> <span class="token function">install</span>
-<span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git --save
-
-<span class="token comment" spellcheck="true"># modify the top _config.yaml</span>
-deploy:
-  type: <span class="token function">git</span>
-  repository: https://github.com/*/*.github.io.git
-  branch: master
-</code></pre>
-<h3 id="配置-git"><a href="#配置-git" class="headerlink" title="配置 git"></a>配置 git</h3><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># for Windows</span>
-ssh-keygen -t rsa -C <span class="token string">"邮箱地址"</span>
-ssh-agent -s
-<span class="token function">eval</span> <span class="token variable"><span class="token variable">`</span>ssh-agent -s<span class="token variable">`</span></span>
-ssh-add
-<span class="token operator">&lt;</span><span class="token operator">!</span>-- clip <span class="token operator">&lt;</span> ~/.ssh/id_rsa.pub --<span class="token operator">></span>
-
-<span class="token comment" spellcheck="true"># for macOS</span>
-ssh-keygen -t rsa -C <span class="token string">"邮箱地址"</span>
-pbcopy <span class="token operator">&lt;</span> ~/.ssh/id_rsa.pub
-
-<span class="token comment" spellcheck="true"># add to GitHub SSH Key</span>
-<span class="token function">ssh</span> -T git@github.com
-<span class="token function">git</span> config --global user.name <span class="token string">"用户名"</span>  
-<span class="token function">git</span> config --global user.email <span class="token string">"邮箱"</span>
-</code></pre>
-<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><pre class=" language-bash"><code class="language-bash">hexo clean
-hexo generate -<span class="token operator">></span> hexo g
-hexo deploy   -<span class="token operator">></span> hexo d
-</code></pre>
-<h2 id="使用技巧"><a href="#使用技巧" class="headerlink" title="使用技巧"></a>使用技巧</h2><h3 id="新建博客文章"><a href="#新建博客文章" class="headerlink" title="新建博客文章"></a>新建博客文章</h3><pre class=" language-bash"><code class="language-bash">hexo new <span class="token string">"paper name"</span>
-</code></pre>
-<h3 id="新建草稿"><a href="#新建草稿" class="headerlink" title="新建草稿"></a>新建草稿</h3><pre class=" language-bash"><code class="language-bash">hexo new draft <span class="token string">"paper name"</span>
-</code></pre>
-<h3 id="增加头像"><a href="#增加头像" class="headerlink" title="增加头像"></a>增加头像</h3><blockquote>
-<p>不同的主题，设置的方法可能不太一样</p>
-</blockquote>
-<pre class=" language-bash"><code class="language-bash">vim themes/specific theme/_config.yml
-avaster: <span class="token string">"image source"</span>
-</code></pre>
-<h3 id="更改主题"><a href="#更改主题" class="headerlink" title="更改主题"></a>更改主题</h3><ul>
-<li>在 themes 文件夹下 clone 其他优秀的主题</li>
-</ul>
-<h4 id="使用-hexo-theme-matery-主题"><a href="#使用-hexo-theme-matery-主题" class="headerlink" title="使用 hexo-theme-matery 主题"></a><a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" rel="external">使用 hexo-theme-matery 主题</a></h4><pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/blinkfox/hexo-theme-matery.git
-
-<span class="token comment" spellcheck="true"># 在 _config.yml 中修改主题名称</span>
-theme: hexo-theme-matery
-</code></pre>
-<h4 id="使用-yelee-主题"><a href="#使用-yelee-主题" class="headerlink" title="使用 yelee 主题"></a>使用 yelee 主题</h4><pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/MOxFIVE/hexo-theme-yelee.git themes/yelee
-
-<span class="token comment" spellcheck="true"># 在 _config.yml 中修改主题名称</span>
-theme: yelee
-</code></pre>
-<h3 id="加入-README-md"><a href="#加入-README-md" class="headerlink" title="加入 README.md"></a>加入 README.md</h3><pre class=" language-bash"><code class="language-bash">
-<span class="token comment" spellcheck="true"># _config.yml</span>
-skip_render:
-  - README.md
-  - CNAME
-</code></pre>
-<h3 id="文章中添加音乐"><a href="#文章中添加音乐" class="headerlink" title="文章中添加音乐"></a>文章中添加音乐</h3><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 网易云音乐外链</span>
-<span class="token operator">&lt;</span>center<span class="token operator">></span>
-<span class="token operator">&lt;</span>iframe frameborder<span class="token operator">=</span><span class="token string">"no"</span> border<span class="token operator">=</span><span class="token string">"0"</span> marginwidth<span class="token operator">=</span><span class="token string">"0"</span> marginheight<span class="token operator">=</span><span class="token string">"0"</span> width<span class="token operator">=</span>330 height<span class="token operator">=</span>86 src<span class="token operator">=</span><span class="token string">""</span><span class="token operator">></span><span class="token operator">&lt;</span>/iframe<span class="token operator">></span>
-<span class="token operator">&lt;</span>/center<span class="token operator">></span>
-</code></pre>
-<h2 id="添加评论（目前已经不采用了）"><a href="#添加评论（目前已经不采用了）" class="headerlink" title="添加评论（目前已经不采用了）"></a>添加评论（目前已经不采用了）</h2><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># visit https://github.com/imsun/gitment to download css and js</span>
-<span class="token comment" spellcheck="true"># 1. copy files</span>
-<span class="token function">cp</span> meta/gitment.css hexo/theme/your_theme/source/css/gitment.css
-<span class="token function">cp</span> meta/gitment.js hexo/theme/your_theme/source/js/js.css
-<span class="token function">cp</span> meta/gitment.ejs hexo/theme/your_theme/layout/_partial/gitment.ejs
-
-<span class="token comment" spellcheck="true"># 2. regist GitHub OAuth Application and modify file gitment.ejs</span>
-owner: <span class="token string">''</span>,
-repo: <span class="token string">''</span>,
-oauth: <span class="token punctuation">{</span>
-  client_id: <span class="token string">''</span>,
-  client_secret: <span class="token string">''</span>,
-<span class="token punctuation">}</span>,
-
-<span class="token comment" spellcheck="true"># 3. add css and js to head.ejs</span>
-vim hexo/theme/your_theme/layout/_partial/head.ejs
-<span class="token operator">&lt;</span>link rel<span class="token operator">=</span><span class="token string">"stylesheet"</span> href<span class="token operator">=</span><span class="token string">"/css/gitment.css"</span><span class="token operator">></span> 
-<span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"/js/gitment.js"</span><span class="token operator">></span><span class="token operator">&lt;</span>/script<span class="token operator">></span>
-
-<span class="token comment" spellcheck="true"># 4. add ejs to article.ejs</span>
-vim hexo/theme/your_theme/layout/_partial/head.ejs
-
-<span class="token comment" spellcheck="true"># add in the last line</span>
-<span class="token operator">&lt;</span>%- partial<span class="token punctuation">(</span><span class="token string">'gitment'</span><span class="token punctuation">)</span> %<span class="token operator">></span>
-
-<span class="token comment" spellcheck="true"># 5. login in the GitHub page and initialize comment</span>
-
-<span class="token comment" spellcheck="true"># 限制</span>
-1. 域名加上 markdown 的文件名的字符串长度不能大于等于 50，
-这是由于 GitHub Issue 的 label 限制
-</code></pre>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="先决条件"><a href="#先决条件" class="headerlink" title="先决条件"></a>先决条件</h2><ul>
-<li>安装 git 和 node.js</li>
-<li>新建 hexo 文件夹</li>
-</ul>
-<pre cl]]>
-    </summary>
-    
-      <category term="Hexo" scheme="https://zzh1991.github.io/tags/Hexo/"/>
     
   </entry>
   
