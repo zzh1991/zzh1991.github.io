@@ -420,7 +420,7 @@ ConcurrentHash">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-01-02
+                    2020-05-17
                 </div>
                 
 
@@ -548,7 +548,7 @@ ConcurrentHash">
 <h3 id="线程安全的实现"><a href="#线程安全的实现" class="headerlink" title="线程安全的实现"></a>线程安全的实现</h3><p>Java 8 采用 CAS + synchronized 的方式来实现并发，抛弃了 Java 7 采用的 Segment 分段锁的方式。并用 volatile 关键字去保证 Map 中数值的可见行。</p>
 <p>其中 CAS 主要用于数组元素为空，即第一次插入到该数组位置中；而 synchronized 则用于数组位置已经存在元素的情况，在进行操作时，锁住该位置上的节点。</p>
 <blockquote>
-<p>CAS(Compare And Set)：是一种乐观锁的实现，同时也是一种轻量级锁。其原理首先记录拿到的原来的值，然后操作数据，等到要真正更新数据时，再次那一次值，并跟记录的原来的值进行相等的判断，如果不相等，则重新进行该操作，如果相等则可以真正更新数据。为了更好地知道数值是否更改过，可以记录版本号、时间戳等信息。</p>
+<p>CAS(Compare And Swap)：是一种乐观锁的实现，同时也是一种轻量级锁。其原理首先记录拿到的原来的值，然后操作数据，等到要真正更新数据时，再次那一次值，并跟记录的原来的值进行相等的判断，如果不相等，则重新进行该操作，如果相等则可以真正更新数据。为了更好地知道数值是否更改过，可以记录版本号、时间戳等信息。</p>
 </blockquote>
 <h4 id="synchronized-获取锁（锁升级）的过程"><a href="#synchronized-获取锁（锁升级）的过程" class="headerlink" title="synchronized 获取锁（锁升级）的过程"></a>synchronized 获取锁（锁升级）的过程</h4><ol>
 <li>偏向锁</li>

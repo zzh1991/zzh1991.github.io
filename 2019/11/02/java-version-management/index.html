@@ -414,21 +414,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-01-02
+                    2020-05-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    532
+                    713
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 
@@ -454,8 +454,8 @@
 <li><a href="https://github.com/shyiko/jabba" target="_blank" rel="noopener" title="jabba">jabba</a>: <code>https://github.com/shyiko/jabba</code></li>
 <li><a href="https://github.com/jenv/jenv" target="_blank" rel="noopener" title="jenv">jenv</a>: <code>https://github.com/jenv/jenv</code></li>
 </ul>
-<h2 id="2-抉择"><a href="#2-抉择" class="headerlink" title="2. 抉择"></a>2. 抉择</h2><p>考虑到工具的维护情况，本人选择了 <strong>sdkman</strong> 作为目前 Java 版本控制的工具。如果需要安装 <code>Orcale JDK</code>，可以考虑使用 <strong>jabba</strong>（<strong>sdkman</strong> 不支持下载）。</p>
-<h2 id="3-配置-sdkman"><a href="#3-配置-sdkman" class="headerlink" title="3. 配置 sdkman"></a>3. 配置 sdkman</h2><p>由于本人使用的是 <strong>macOS</strong> 和 <strong>Ubuntu</strong>，下面的步骤都是基于这些系统，<a href="https://sdkman.io/install" target="_blank" rel="noopener" title="Windows 安装 sdkman">Windows 安装 sdkman</a> 详见：<code>https://sdkman.io/install</code>。</p>
+<h2 id="2-抉择"><a href="#2-抉择" class="headerlink" title="2. 抉择"></a>2. 抉择</h2><p>考虑到工具的维护情况，本人选择了 <strong>sdkman</strong> 作为目前 Java 版本控制的工具。如果需要安装 <code>Orcale JDK</code>，可以考虑使用 <strong>jabba</strong>（<strong>sdkman</strong> 不支持下载），个人推荐安装 <code>AdpotOpenJDK</code>。</p>
+<h2 id="3-配置-sdkman"><a href="#3-配置-sdkman" class="headerlink" title="3. 配置 sdkman"></a>3. 配置 sdkman</h2><p>由于本人使用的是 <strong>macOS</strong> 和 <strong>Ubuntu</strong>，下面的步骤都是基于这些系统，<a href="https://sdkman.io/install" target="_blank" rel="noopener" title="Windows 安装 sdkman">Windows 安装 sdkman</a> 详见彩蛋部分。</p>
 <h3 id="3-1-安装-sdkman"><a href="#3-1-安装-sdkman" class="headerlink" title="3.1 安装 sdkman"></a>3.1 安装 sdkman</h3><pre class=" language-bash"><code class="language-bash">curl -s <span class="token string">"https://get.sdkman.io"</span> <span class="token operator">|</span> <span class="token function">bash</span></code></pre>
 <blockquote>
 <p>提醒：安装成功后，关闭终端并重新打开一个新终端</p>
@@ -481,6 +481,16 @@ sdk use java 11.0.2-open</code></pre>
 <span class="token comment" spellcheck="true"># 默认路径</span>
 <span class="token comment" spellcheck="true"># ～/.sdkman/candidates/java/current/bin/java</span></code></pre>
 <h3 id="5-1-配置-Intellij-IDEA-的-Java-路径"><a href="#5-1-配置-Intellij-IDEA-的-Java-路径" class="headerlink" title="5.1 配置 Intellij IDEA 的 Java 路径"></a>5.1 配置 Intellij IDEA 的 Java 路径</h3><hr>
+<h2 id="彩蛋"><a href="#彩蛋" class="headerlink" title="彩蛋"></a>彩蛋</h2><h3 id="Windows-怎样配置"><a href="#Windows-怎样配置" class="headerlink" title="Windows 怎样配置"></a>Windows 怎样配置</h3><blockquote>
+<p>根据 <a href="https://sdkman.io/install" target="_blank" rel="noopener">https://sdkman.io/install</a> 的介绍，其有三种方式进行安装 sdkman</p>
+</blockquote>
+<p>这里只针对 Git Bash 这种情况，参考了 <a href="https://ranxing.wordpress.com/2016/12/13/add-zip-into-git-bash-on-windows" target="_blank" rel="noopener">https://ranxing.wordpress.com/2016/12/13/add-zip-into-git-bash-on-windows</a></p>
+<ol>
+<li>Go to the following link <a href="https://sourceforge.net/projects/gnuwin32/files/" target="_blank" rel="noopener">https://sourceforge.net/projects/gnuwin32/files/</a></li>
+<li>Find out whatever command you are missing<br>Here I need zip and bzip2 for zip command. Because zip command relies on bzip2.dll to run. Otherwise you will get error “error while loading shared libraries: ?: cannot open shared object file: No such file or directory”.</li>
+<li>Unzip the downloaded files<br>Here I am downloading “zip-3.0-bin.zip” for “zip.exe” and “bzip2-1.0.5-bin.zip” for “bzip2.dll” in the bin folder. <code>&lt;unzipped file&gt;/bin/&lt;command&gt;.exe</code></li>
+<li>Copy the command exe file into git-bash folder Here I am copying “zip.exe” and “bzip2.dll” to <code>&lt;Program folder&gt;\Git\usr\bin</code>.</li>
+</ol>
 <blockquote>
 <p>看完这篇文章，有没有让你从 Java 安装配置中解脱出来呢？</p>
 </blockquote>
