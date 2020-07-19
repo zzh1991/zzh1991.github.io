@@ -4,12 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="日常桌面软件第一弹, 知识碰撞">
+    <meta name="keywords" content="走进 PostgreSQL 世界第一篇章--内部结构, 知识碰撞">
     <meta name="description" content="
-在日常工作与休闲娱乐中，我们总是离不开电脑的使用，虽然智能手机和平板的横空出世，分流了一大部分的电脑使用场景，但是我们依然无法完全脱离电脑。那下面就带大家讲讲有哪些必需和好用的软件，提升工作效率和娱乐度。
+在日常的应用程序开发过程中，都离不开数据库的使用。今天就带大家走进非常有名的关系型数据库管理系统：PostgreSQL。
 
-1. 浏览器
-日常使用软件频率">
+
+
+1 安装 PostgreSQL在深入了解 PostgreSQL 前，先得在我们得主机上安装一下 Postgre">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +18,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>日常桌面软件第一弹 | 知识碰撞</title>
+    <title>走进 PostgreSQL 世界第一篇章--内部结构 | 知识碰撞</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/myblog.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -264,12 +265,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">日常桌面软件第一弹</h1>
+                    <h1 class="description center-align post-title">走进 PostgreSQL 世界第一篇章--内部结构</h1>
                 </div>
             </div>
         </div>
@@ -386,14 +387,23 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Software/">
-                                <span class="chip bg-color">Software</span>
+                            <a href="/tags/Postgre/">
+                                <span class="chip bg-color">Postgre</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Postgres/" class="post-category">
+                                Postgres
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -402,28 +412,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-12
+                    2020-07-19
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-05-23
+                    2020-07-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    6 分
                 </div>
                 
 
@@ -440,87 +450,141 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <blockquote>
-<p>在日常工作与休闲娱乐中，我们总是离不开电脑的使用，虽然智能手机和平板的横空出世，分流了一大部分的电脑使用场景，但是我们依然无法完全脱离电脑。那下面就带大家讲讲有哪些必需和好用的软件，提升工作效率和娱乐度。</p>
+<p>在日常的应用程序开发过程中，都离不开数据库的使用。今天就带大家走进非常有名的关系型数据库管理系统：PostgreSQL。</p>
 </blockquote>
-<h2 id="1-浏览器"><a href="#1-浏览器" class="headerlink" title="1. 浏览器"></a>1. 浏览器</h2><blockquote>
-<p>日常使用软件频率第一毫无疑问是浏览器了，挑选一款合适的浏览器就变得尤为重要，直接影响我们的使用体验。</p>
+<img src="https://i.loli.net/2020/07/19/57YrlKdCIbUeTVH.png" style="zoom:50%;" />
+
+<h2 id="1-安装-PostgreSQL"><a href="#1-安装-PostgreSQL" class="headerlink" title="1 安装 PostgreSQL"></a>1 安装 PostgreSQL</h2><p>在深入了解 PostgreSQL 前，先得在我们得主机上安装一下 PostgreSQL。</p>
+<p>对于 macOS 用户非常简单，使用以下命令安装</p>
+<pre class=" language-bash"><code class="language-bash">brew <span class="token function">install</span> postgresql</code></pre>
+<p>一开始我也是这么安装的，它也可以支持升级新的 PostgreSQL，是非常方便的。但是这里我更加推荐一种安装方式，使用 Docker 来安装启动 PostgreSQL，因为它可以跨平台按需使用，更加方便且易于后期修改。<br>关于 Docker 的安装，可以在 <a href="https://www.docker.com/products/docker-desktop" target="_blank" rel="noopener" title="Docker Desktop for Mac and Windows">Docker Desktop for Mac and Windows</a> 安装对应的客户端软件。</p>
+<p><img src="https://i.loli.net/2020/07/19/RnBisdZXaSTM2NC.png" alt="Docker Desktop"></p>
+<pre class=" language-bash"><code class="language-bash">docker run --name postgres -p 5432:5432 -v ~/Documents/docker-volumn/postgres:/var/lib/postgresql/data -e POSTGRES_PASSWORD<span class="token operator">=</span>postgres -d postgres:12-alpine</code></pre>
+<p>另外可以去<a href="https://www.postgresql.org/docs/current/index.html" target="_blank" rel="noopener" title="PostgreSQL 官方文档">PostgreSQL 官方文档</a>多多了解 PostgreSQL，丰富的知识点在等着你们学习，下图的黄色部分尤其是重点也是难点。</p>
+<p><img src="https://i.loli.net/2020/07/19/rUovNVtfkM6qg89.png" alt="PostgreSQL Document"></p>
+<h2 id="2-走进-PostgreSQL-内部"><a href="#2-走进-PostgreSQL-内部" class="headerlink" title="2 走进 PostgreSQL 内部"></a>2 走进 PostgreSQL 内部</h2><h3 id="2-1-组织结构"><a href="#2-1-组织结构" class="headerlink" title="2.1 组织结构"></a>2.1 组织结构</h3><p>假设我们是使用 macOS 的 brew 安装的 PostgreSQL。那么数据库的文件路径应该在 <code>/usr/local/var/postgres</code> 下。它的目录结构如下所示</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 文件</span>
+├── PG_VERSION    主版本号
+├── pg_hba.conf
+├── pg_ident.conf
+├── postgresql.auto.conf
+├── postgresql.conf        配置参数
+├── postmaster.opts
+└── postmaster.pid
+
+<span class="token comment" spellcheck="true"># 目录</span>
+├── base        数据库文件
+├── global
+├── pg_commit_ts
+├── pg_dynshmem
+├── pg_logical
+├── pg_multixact        多事务状态数据
+├── pg_notify
+├── pg_replslot
+├── pg_serial
+├── pg_snapshots
+├── pg_stat
+├── pg_stat_tmp
+├── pg_subtrans        子事务状态数据
+├── pg_tblspc
+├── pg_twophase        两阶段事务的状态文件
+├── pg_wal        WAL 段文件
+└── pg_xact        事务提交状态</code></pre>
+<p>数据库中表和索引都是文件形式存储在磁盘上，文件名为 oid，大小最大为 1 GB，超过则会创建一个新的文件。而文件的内部被划分成一个个页，而页的大小默认为 8 KB。</p>
+<p>那么怎样才能找到对应的文件在我们磁盘的哪个位置呢？可以利用 SQL 查询得到我们想要的结果。</p>
+<pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">-- 找到数据库的 oid</span>
+<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> pg_database <span class="token keyword">where</span> datname <span class="token operator">=</span> <span class="token string">'数据库名'</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">-- 找到表或者索引的 oid 或者 relfilenode</span>
+<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> pg_class <span class="token keyword">where</span> relname <span class="token operator">=</span> <span class="token string">'表或索引名'</span><span class="token punctuation">;</span></code></pre>
+<p>表相关的文件类型有三类，除了存储表数据的文件外，还有后缀为 <code>_fsm</code> 的是空闲空间映射文件，而 <code>_vm</code> 为可见性映射文件。值得注意的是索引文件是没有可见性映射文件的。</p>
+<pre class=" language-bash"><code class="language-bash">➜  16401 <span class="token function">pwd</span>
+/usr/local/var/postgres/base/16401
+➜  16401 <span class="token function">ls</span> -la 33657*
+<span class="token comment" spellcheck="true"># 表相关的文件</span>
+-rw-------  1 postgres  postgres  811008 Mar 28 13:02 33657
+-rw-------  1 postgres  postgres   24576 Mar 28 13:02 33657_fsm
+-rw-------  1 postgres  postgres    8192 Mar 28 13:02 33657_vm</code></pre>
+<blockquote>
+<p>这里跟 MySQL 不同的一点是 MySQL 的页大小为 16 KB，而操作系统默认的页大小也为 4 KB。</p>
 </blockquote>
-<h3 id="Microsoft-Edge"><a href="#Microsoft-Edge" class="headerlink" title="Microsoft Edge"></a>Microsoft Edge</h3><p>没错，首推的就是改版后的 <a href="https://www.microsoft.com/en-us/edge" target="_blank" rel="noopener" title="Microsoft Edge">Microsoft Edge</a> 浏览器，使用 Chromium 架构后，我已经没有理由再去使用 Google Chrome 浏览器了。</p>
-<p>比较有特色的优点：</p>
+<h3 id="2-2-堆表文件"><a href="#2-2-堆表文件" class="headerlink" title="2.2 堆表文件"></a>2.2 堆表文件</h3><blockquote>
+<p>PostgreSQL 内部采用堆元组存储数据本身，因此一个页上将会有多个元组（heap tuple），并使用元组标识符（tuple identifier，tid）来表示，其结构为（页号，行指针偏移量）</p>
+</blockquote>
+<h4 id="页结构"><a href="#页结构" class="headerlink" title="页结构"></a>页结构</h4><ul>
+<li>头部数据<ul>
+<li>p d_lsn: 最近应用到本页面 XLog 记录的 LSN</li>
+<li>pd_lower: 指向行指针的末尾，空闲空间开始的位置</li>
+<li>pd_upper: 指向最新元组的位置，空闲空间结束的位置</li>
+</ul>
+</li>
+<li>行指针<ul>
+<li>长度为 15 bit</li>
+<li>有偏移量，长度和标志这三个属性</li>
+</ul>
+</li>
+<li>堆元组数据<ul>
+<li>HeapTupleHeaderData<ul>
+<li>t_xmin：插入事务的 ID</li>
+<li>t_xmax：删除或更新的事务的 ID</li>
+<li>t_cid：命令 ID</li>
+<li>t_ctid：当前元组或者更新元组的 TID</li>
+<li>t_infomask2：属性和标志位</li>
+<li>t_infomask：标志位</li>
+<li>t_hoff：首部 + 位图 + 填充的长度</li>
+</ul>
+</li>
+<li>空值位图</li>
+<li>用户数据</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-3-内存结构"><a href="#2-3-内存结构" class="headerlink" title="2.3 内存结构"></a>2.3 内存结构</h3><ul>
+<li>本地内存区域<ul>
+<li>work_mem：工作内存，用于排序命令使用</li>
+<li>maintenance_work_mem：维护工作内存，主要用于自动清理和重新索引</li>
+<li>temp_buffers：临时缓冲，用于临时表的使用</li>
+</ul>
+</li>
+<li>共享内存区域<ul>
+<li>shared buffer pool：表和索引的数据会加载到这里</li>
+<li>WAL buffer：存储事务日志</li>
+<li>commit log：存储事务提交日志</li>
+<li>其他共享区域</li>
+</ul>
+</li>
+</ul>
+<h4 id="缓冲区管理器"><a href="#缓冲区管理器" class="headerlink" title="缓冲区管理器"></a>缓冲区管理器</h4><p>PostgreSQL 缓冲区管理器由缓冲表、缓冲区描述符和缓冲池组成，管理着共享内存和持久存储之间的数据传输。其维护缓冲区标签（数据库 oid，表 oid，文件类型分支号）到缓冲池页位置的关系，并采用时钟扫描算法（LFU 的一种变体）来进行页面置换，辅以后台的检查点进程和后台写入器进程来进行脏页刷盘。</p>
 <ul>
-<li>朗读功能，亲测效果不错</li>
-<li>比 chrome 要更省资源</li>
+<li>缓冲表层是一个散列表，存储着页面的缓冲区标签与缓冲区描述符的缓冲 ID（同时也是缓冲池位置） 之间的映射关系，提供共享模式和独占模式的分段式、轻量级锁</li>
+<li>缓冲区描述符层是一个由缓冲描述符组成的数组，每个缓冲区描述符与下层的缓冲池槽一一对应，保存着相关页面的元数据。为了加快分配过程，维护了一个空闲列表，用于快速分配下一个可用的缓存区描述符。并提供用于内容读写的共享模式和独占模式的内容锁和独占的 I/O 锁。</li>
+<li>缓冲池是一个每个槽为 8 KB，用来保存页面文件数据的一个数组。</li>
 </ul>
-<blockquote>
-<p>Linux 系统的用户可能得等上一段时间了，好消息是 Microsoft 已经决定出 Linux 版本的 Edge 浏览器了，可以暂时使用其他浏览器。</p>
+<h3 id="2-4-多进程架构"><a href="#2-4-多进程架构" class="headerlink" title="2.4 多进程架构"></a>2.4 多进程架构</h3><p>PostgreSQL 采用的多进程的架构，通过以下命令可以找出所有的 postgre 进程。</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 先使用 ps 找到 postgres 的 ppid(上级父程序的 pid)</span>
+<span class="token function">ps</span> -ef <span class="token operator">|</span><span class="token function">grep</span> postgres
+<span class="token comment" spellcheck="true"># 再列出所有的 postgre 的相关进程</span>
+➜  ~ pstree -p <span class="token operator">&lt;</span>ppid<span class="token operator">></span>
+-+<span class="token operator">=</span> 00001 root /sbin/launchd
+ \-+<span class="token operator">=</span> 76776 zhihaozhang /usr/local/opt/postgresql/bin/postgres -D /usr/local/va
+   <span class="token operator">|</span>--<span class="token operator">=</span> 44288 postgres postgres: postgres mydb 127.0.0.1<span class="token punctuation">(</span>51293<span class="token punctuation">)</span> idle
+   <span class="token operator">|</span>--<span class="token operator">=</span> 76779 postgres postgres: checkpointer
+   <span class="token operator">|</span>--<span class="token operator">=</span> 76780 postgres postgres: background writer
+   <span class="token operator">|</span>--<span class="token operator">=</span> 76781 postgres postgres: walwriter
+   <span class="token operator">|</span>--<span class="token operator">=</span> 76782 postgres postgres: autovacuum launcher
+   <span class="token operator">|</span>--<span class="token operator">=</span> 76784 postgres postgres: stats collector
+   \--<span class="token operator">=</span> 76785 postgres postgres: logical replication launcher</code></pre>
+<p>PostgreSQL 默认的最大客户端连接数为 100 个，由于多进程的缘故，与 MySQL 的线程连接模型相比，其内存压力更大。</p>
+<h2 id="3-索引"><a href="#3-索引" class="headerlink" title="3 索引"></a>3 索引</h2><blockquote>
+<p>PostgreSQL 的索引有多种类型，其中比较常见的是 B 树，而 MySQL 则使用的是 B+ 树，这是两者的一大区别。</p>
 </blockquote>
-<h2 id="2-视频播放器"><a href="#2-视频播放器" class="headerlink" title="2. 视频播放器"></a>2. 视频播放器</h2><blockquote>
-<p>看电影怎么能少一个称心如意的播放器呢？Windows 首推 <a href="https://potplayer.org" target="_blank" rel="noopener" title="PotPlayer">PotPlayer</a>，而 macOS 首推 <a href="https://www.iina.io" target="_blank" rel="noopener" title="IINA">IINA</a></p>
-</blockquote>
-<h3 id="PotPlayer"><a href="#PotPlayer" class="headerlink" title="PotPlayer"></a>PotPlayer</h3><ul>
-<li>支持多种视频格式</li>
-<li>支持倍速播放</li>
-<li>简洁干净</li>
-</ul>
-<h2 id="3-下载器"><a href="#3-下载器" class="headerlink" title="3. 下载器"></a>3. 下载器</h2><blockquote>
-<p>由于免不了需要下载一些文件，一款下载速度快的下载软件就显得非常重要了。如果浏览器下载速度还行的话，就不需要下载软件出动了。</p>
-</blockquote>
-<p>推荐使用 <a href="https://motrix.app" target="_blank" rel="noopener" title="Motrix">Motrix</a> 去下载一般的文件，尤其对于 GitHub 和 托管在 Amazon 上的文件，下载速度非常可观。针对难以下载的资源，就只能求助于迅雷了。</p>
-<h3 id="解压缩"><a href="#解压缩" class="headerlink" title="解压缩"></a>解压缩</h3><blockquote>
-<p>下载器下载的文件很有可能是压缩的文件，那这个时候，解压缩文件就出场了。</p>
-</blockquote>
-<p>Windows 下推荐使用轻便小巧的 <a href="https://www.7-zip.org" target="_blank" rel="noopener" title="7zip">7zip</a>，macOS 下当系统自带的无法解压时，去应用商店下载一个合适的解压缩软件，我目前在用的 <a href="https://ezip.awehunt.com" target="_blank" rel="noopener" title="ezip">ezip</a>。</p>
-<h2 id="4-文件查阅处理"><a href="#4-文件查阅处理" class="headerlink" title="4. 文件查阅处理"></a>4. 文件查阅处理</h2><h3 id="文件查找"><a href="#文件查找" class="headerlink" title="文件查找"></a>文件查找</h3><blockquote>
-<p>电脑在使用一段时间后，文件数会极速增长，与此同时，我们也更加难以知道各个文件的具体所在位置了。那能否可以快速地找到想要的文件呢？</p>
-</blockquote>
-<p><a href="https://www.voidtools.com" target="_blank" rel="noopener" title="Everything">Everything</a> 是一款在 Windows 下非常实用的文件查找利器，可以快速定位文件的位置。macOS 用户则可以 Spotlight，更推荐付费使用 Alfred。</p>
-<h3 id="文件处理"><a href="#文件处理" class="headerlink" title="文件处理"></a>文件处理</h3><p>免费的话，我是比较推荐使用 <a href="https://pc.wps.cn" target="_blank" rel="noopener" title="WPS">WPS</a>，手机和客户端一应俱全，同步会非常方便。Windows 下存在广告的问题，可以付费去使用 Microsoft Office 365。</p>
-<blockquote>
-<p>由于 WPS 和浏览器都可以支持 PDF 文件的查阅，甚至可以修改，只有需要时再去下载特定的 PDF 软件。</p>
-</blockquote>
-<blockquote>
-<p>如果想要一个便捷的简单文本编辑器，可以使用 <a href="https://code.visualstudio.com" target="_blank" rel="noopener" title="VS Code">VS Code</a></p>
-</blockquote>
-<h2 id="5-各种客户端"><a href="#5-各种客户端" class="headerlink" title="5. 各种客户端"></a>5. 各种客户端</h2><blockquote>
-<p>当我们拿到一台新电脑的时候，总是会下意识地安装一些客户端软件。这里只是列举一些必要的。</p>
-</blockquote>
-<h3 id="微信电脑客户端"><a href="#微信电脑客户端" class="headerlink" title="微信电脑客户端"></a>微信电脑客户端</h3><blockquote>
-<p>有了微信客户端，等于我们也有了一个截图工具，加上系统内置的截图工具，应该足够使用了。针对高级的截图需求，再去寻找像 <a href="https://zh.snipaste.com" target="_blank" rel="noopener" title="Snipaste">Snipaste</a> 的工具。</p>
-</blockquote>
-<h3 id="网易云音乐客户端"><a href="#网易云音乐客户端" class="headerlink" title="网易云音乐客户端"></a>网易云音乐客户端</h3><blockquote>
-<p>为什么没有单独设立一块关于音乐播放器的章节呢？主要是我也找不到一款十分令我满意的一款音乐播放器。网易云音乐是不错，但是音乐版权的缺失是没有办法弥补的。只能通过导入本地音乐资源解决。</p>
-</blockquote>
-<h3 id="其他客户端"><a href="#其他客户端" class="headerlink" title="其他客户端"></a>其他客户端</h3><blockquote>
-<p>我不确定现在是否还需要 QQ 的电脑客户端。</p>
-</blockquote>
-<blockquote>
-<p>至于邮件客户端，这个看个人喜好的，我一般都是使用网页版的。</p>
-</blockquote>
-<blockquote>
-<p>喜欢看球赛的球友们，可能就需要安装一下 <a href="http://www.pptv.com" target="_blank" rel="noopener" title="PPTV">PPTV</a> 客户端了，谁叫 PPTV 网页现在还是 Flash 的呢？</p>
-</blockquote>
-<h2 id="6-快捷启动"><a href="#6-快捷启动" class="headerlink" title="6. 快捷启动"></a>6. 快捷启动</h2><blockquote>
-<p>能够快速启动应用程序等快捷操作可以极大得提高使用电脑的效率，节约花费在操作上的时间。</p>
-</blockquote>
-<p><a href="https://www.u.tools" target="_blank" rel="noopener" title="uTools">uTools</a> 就是这样一款软件，在使用后，相信你们也会爱不释手的。</p>
-<h2 id="7-其他（准则）"><a href="#7-其他（准则）" class="headerlink" title="7. 其他（准则）"></a>7. 其他（准则）</h2><ol>
-<li>针对在哪里下载软件，一般我都是推荐直接在官网上下载安装，这样是能够保证你所安装的软件是没有经过他人篡改的，比较安全。</li>
-<li>能够在网页端完成的，一般我不会特意去下载客户端进行完成，除非客户端能够完胜网页端的功能和体验（离线功能除外）。</li>
-<li>功能够用的话，无须去下载高级的软件，只在需要时，再去使用更高级的软件。</li>
-<li>少即是多，少才能让人专注，做到物尽其用。</li>
-</ol>
+<p>未完待续…</p>
 <hr>
-<blockquote>
-<p>看完这篇文章，有没有让你有一种重新打造重整电脑工作环境的冲动呢？如果内容对你有所帮助，请点赞支持哦！</p>
-</blockquote>
 <blockquote>
 <p>更多精彩内容请<ruby>关注<rt>扫码</rt></ruby>：</p>
 </blockquote>
-<div align="center">
-  <img src="https://i.loli.net/2019/05/18/5cdf686a103cf11418.jpg" width="300px" />
-</div>
+<p><img src="https://i.loli.net/2019/05/18/5cdf686a103cf11418.jpg" alt="KnowledgeCollision 微信公众号"></p>
+<p><code>Knowledge Collision 激发思维碰撞，IDEA 丛生</code></p>
 
-<div align="center">Knowledge Collision 激发思维碰撞，IDEA 丛生</div>
             </div>
             <hr/>
 
@@ -545,7 +609,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://zzh1991.github.io/2020/03/12/daily-software/">https://zzh1991.github.io/2020/03/12/daily-software/</a>
+                    <a href="https://zzh1991.github.io/2020/07/19/postgres-internal-first/">https://zzh1991.github.io/2020/07/19/postgres-internal-first/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -583,8 +647,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Software/">
-                                    <span class="chip bg-color">Software</span>
+                                <a href="/tags/Postgre/">
+                                    <span class="chip bg-color">Postgre</span>
                                 </a>
                             
                         </div>
@@ -630,7 +694,7 @@
         repo: 'blog-comment',
         owner: 'zzh1991',
         admin: "zzh1991",
-        id: '2020-03-12T21-20-33',
+        id: '2020-07-19T20-21-43',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -651,9 +715,65 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/07/19/postgres-internal-first/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="走进 PostgreSQL 世界第一篇章--内部结构">
+                        
+                        <span class="card-title">走进 PostgreSQL 世界第一篇章--内部结构</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+在日常的应用程序开发过程中，都离不开数据库的使用。今天就带大家走进非常有名的关系型数据库管理系统：PostgreSQL。
+
+
+
+1 安装 PostgreSQL在深入了解 PostgreSQL 前，先得在我们得主机上安装一下 Postgre
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-19
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Postgres/" class="post-category">
+                                    Postgres
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Postgre/">
+                        <span class="chip bg-color">Postgre</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2020/05/23/study-life-software/">
                     <div class="card-image">
@@ -675,9 +795,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -691,59 +811,6 @@
                     
                     <a href="/tags/Software/">
                         <span class="chip bg-color">Software</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/02/27/jvm/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="深入理解 JVM 内存结构">
-                        
-                        <span class="card-title">深入理解 JVM 内存结构</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-在日常的编程活动中，我们经常使用 Java 编程语言编写代码，那么你们知道每天使用的 Java 语言中对象是分配在内存的何处呢，今天就带大家了解一下 JVM 的内存结构。
-
-
-JVM 的内存区域主要可以分为线程隔离的数据区域和线程共享的数
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-27
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/JVM/" class="post-category">
-                                    JVM
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/JVM/">
-                        <span class="chip bg-color">JVM</span>
                     </a>
                     
                 </div>

@@ -414,14 +414,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-05-23
+                    2020-07-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    713
+                    717
                 </div>
                 
 
@@ -466,16 +466,16 @@ sdk version</code></pre>
 <h3 id="3-3-sdkman-版本库更新"><a href="#3-3-sdkman-版本库更新" class="headerlink" title="3.3 sdkman 版本库更新"></a>3.3 sdkman 版本库更新</h3><pre class=" language-bash"><code class="language-bash">sdk update</code></pre>
 <h2 id="4-安装配置-Java"><a href="#4-安装配置-Java" class="headerlink" title="4. 安装配置 Java"></a>4. 安装配置 Java</h2><h3 id="4-1-列举可安装（已安装）的-Java-版本"><a href="#4-1-列举可安装（已安装）的-Java-版本" class="headerlink" title="4.1 列举可安装（已安装）的 Java 版本"></a>4.1 列举可安装（已安装）的 Java 版本</h3><pre class=" language-bash"><code class="language-bash">sdk list java</code></pre>
 <blockquote>
-<p>建议：推荐安装 Amazon 和 OpenJDK 的 Java 版本</p>
+<p>建议：推荐安装 AdpotOpenJDK 和 Amazon 的 Java 版本</p>
 </blockquote>
-<h3 id="4-2-安装指定-Java-版本"><a href="#4-2-安装指定-Java-版本" class="headerlink" title="4.2 安装指定 Java 版本"></a>4.2 安装指定 Java 版本</h3><pre class=" language-bash"><code class="language-bash">sdk <span class="token function">install</span> java 11.0.2-open</code></pre>
+<h3 id="4-2-安装指定-Java-版本"><a href="#4-2-安装指定-Java-版本" class="headerlink" title="4.2 安装指定 Java 版本"></a>4.2 安装指定 Java 版本</h3><pre class=" language-bash"><code class="language-bash">sdk <span class="token function">install</span> java 14.0.1.hs-adpt</code></pre>
 <h3 id="4-3-查看当前-Java-版本"><a href="#4-3-查看当前-Java-版本" class="headerlink" title="4.3 查看当前 Java 版本"></a>4.3 查看当前 Java 版本</h3><pre class=" language-bash"><code class="language-bash">sdk current java</code></pre>
 <h3 id="4-4-指定默认-Java-版本"><a href="#4-4-指定默认-Java-版本" class="headerlink" title="4.4 指定默认 Java 版本"></a>4.4 指定默认 Java 版本</h3><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 永久切换</span>
-sdk default java 11.0.2-open
+sdk default java 114.0.1.hs-adpt
 
 <span class="token comment" spellcheck="true"># 临时切换，只在当前终端有效</span>
-sdk use java 11.0.2-open</code></pre>
-<h3 id="4-5-删除指定的-Java-版本"><a href="#4-5-删除指定的-Java-版本" class="headerlink" title="4.5 删除指定的 Java 版本"></a>4.5 删除指定的 Java 版本</h3><pre class=" language-bash"><code class="language-bash">sdk uninstall java 11.0.2-open</code></pre>
+sdk use java 14.0.1.hs-adpt</code></pre>
+<h3 id="4-5-删除指定的-Java-版本"><a href="#4-5-删除指定的-Java-版本" class="headerlink" title="4.5 删除指定的 Java 版本"></a>4.5 删除指定的 Java 版本</h3><pre class=" language-bash"><code class="language-bash">sdk uninstall java 14.0.1.hs-adpt</code></pre>
 <h2 id="5-查看-Java-安装路径"><a href="#5-查看-Java-安装路径" class="headerlink" title="5 查看 Java 安装路径"></a>5 查看 Java 安装路径</h2><pre class=" language-bash"><code class="language-bash">where java
 
 <span class="token comment" spellcheck="true"># 默认路径</span>
@@ -1009,6 +1009,16 @@ $(function () {
 
 
     <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?041e5d4c12342bb051fb77373c270c8f";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
 
     <!-- Baidu Push -->
 
