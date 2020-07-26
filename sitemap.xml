@@ -2,23 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://zzh1991.github.io/2020/07/19/postgres-internal-first/</loc>
+    <loc>https://zzh1991.github.io/2020/07/26/2020-development-ecosystem/</loc>
     
-    <lastmod>2020-07-19T12:51:40.123Z</lastmod>
+    <lastmod>2020-07-26T13:55:19.157Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://zzh1991.github.io/2019/11/02/java-version-management/</loc>
     
-    <lastmod>2020-07-19T12:27:56.259Z</lastmod>
+    <lastmod>2020-07-26T12:19:12.355Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zzh1991.github.io/2017/01/26/hexo/</loc>
+    
+    <lastmod>2020-07-26T12:17:32.971Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://zzh1991.github.io/2020/05/23/study-life-software/</loc>
     
-    <lastmod>2020-05-23T12:55:07.559Z</lastmod>
+    <lastmod>2020-07-19T13:15:56.394Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zzh1991.github.io/2020/07/19/postgres-internal-first/</loc>
+    
+    <lastmod>2020-07-19T12:51:40.123Z</lastmod>
     
   </url>
   
@@ -82,13 +96,6 @@
     <loc>https://zzh1991.github.io/2020/01/19/android-app/</loc>
     
     <lastmod>2020-01-19T14:43:49.437Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zzh1991.github.io/2017/01/26/hexo/</loc>
-    
-    <lastmod>2020-01-02T07:02:40.478Z</lastmod>
     
   </url>
   

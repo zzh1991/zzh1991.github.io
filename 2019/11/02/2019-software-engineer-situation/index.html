@@ -5,20 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="2019 软件工程师现状, 知识碰撞">
-    <meta name="description" content="热门工作（需求增长率）
-区块链工程师（517%）
-安全工程师（132%）
-数据工程师（38%）
-后端工程师（33%）
-机器学习工程师（27%）
-全栈工程师（7%）
-
-最受欢迎的编程语言
-Go
-Scale
-Ruby
-TypeScript
-Ko">
+    <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -26,6 +13,20 @@ Ko">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-126255692-2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-126255692-2');
+</script>
+
+
     <title>2019 软件工程师现状 | 知识碰撞</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/myblog.ico">
 
@@ -36,9 +37,9 @@ Ko">
     <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
-    
+
     <script src="/libs/jquery/jquery.min.js"></script>
-    
+
 <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="知识碰撞" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
@@ -46,7 +47,7 @@ Ko">
 <body>
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
-        <div id="navContainer" class="nav-wrapper head-container">
+        <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
@@ -121,6 +122,7 @@ Ko">
     </a>
   </li>
 </ul>
+
 
 <div id="mobile-nav" class="side-nav sidenav">
 
@@ -205,6 +207,7 @@ Ko">
         
     </ul>
 </div>
+
 
         </div>
 
@@ -355,14 +358,14 @@ Ko">
     #toc-content .toc-link::before {
         background-color: transparent;
         max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
     }
 
     #toc-content .is-active-link {
         color: #42b983;
-    }
-
-    #toc-content .is-active-link::before {
-        background-color: #42b983;
     }
 
     #floating-toc-btn {
@@ -443,7 +446,6 @@ Ko">
                     </div>
 				
             </div>
-
         </div>
         <hr class="clearfix">
         <div class="card-content article-card-content">
@@ -548,7 +550,7 @@ Ko">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://zzh1991.github.io" rel="external nofollow noreferrer">Zhihao Zhang</a>
+                    <a href="/about" rel="external nofollow noreferrer">Zhihao Zhang</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -571,7 +573,7 @@ Ko">
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="https://zzh1991.github.io" target="_blank">Zhihao Zhang</a>
+                    <a href="/about" target="_blank">Zhihao Zhang</a>
                     !
                 </span>
             </div>
@@ -605,9 +607,8 @@ Ko">
                 </div>
                 <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
                     <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
-
 <div id="article-share">
-    
+
     
     <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
     <script src="/libs/share/js/social-share.min.js"></script>
@@ -628,7 +629,7 @@ Ko">
 <link rel="stylesheet" href="/css/my-gitalk.css">
 
 <div class="card gitalk-card" data-aos="fade-up">
-    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; left: 20px; top: 15px; padding-bottom: 5px;">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
         <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
         <span>评论</span>
     </div>
@@ -649,6 +650,9 @@ Ko">
 
     gitalk.render('gitalk-container');
 </script>
+
+    
+
     
 
     
@@ -672,15 +676,18 @@ Ko">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Java Version Management">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="轻松管理不同的 Java 版本">
                         
-                        <span class="card-title">Java Version Management</span>
+                        <span class="card-title">轻松管理不同的 Java 版本</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            轻松管理不同的 Java 版本
+                            
+是不是每次换新电脑或者安装了新系统，都要烦恼应该如何下载安装 Java 以及进行相应的配置？今天就来介绍一下如何从这种烦恼中解脱出来。
+
+1. Java 版本控制工具普通常规的安装配置方式除了步骤繁琐以外，最大的缺陷就在于不能支持 Jav
                         
                     </div>
                     <div class="publish-info">
@@ -931,12 +938,68 @@ EV 值每增加 1.0
 
 
 
+
     <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
     <div class="container row center-align" style="margin-bottom: 0px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             <span id="year">2017 - 2020</span>
-            <a href="https://zzh1991.github.io" target="_blank">Zhihao Zhang</a>
+            <a href="/about" target="_blank">Zhihao Zhang</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
@@ -1011,9 +1074,10 @@ EV 值每增加 1.0
 <script src="/js/search.js"></script>
 <script type="text/javascript">
 $(function () {
-    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
 });
 </script>
+
     <!-- 回到顶部按钮 -->
 <div id="backTop" class="top-scroll">
     <a class="btn-floating btn-large waves-effect waves-light" href="#!">
@@ -1028,20 +1092,6 @@ $(function () {
     <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
     <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-126255692-2"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-    gtag('config', 'UA-126255692-2');
-</script>
-
 
     <!-- Baidu Analytics -->
 
@@ -1085,7 +1135,7 @@ $(function () {
     
 
     
-    
+
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
