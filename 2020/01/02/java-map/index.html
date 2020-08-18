@@ -430,21 +430,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-05-17
+                    2020-08-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.9k
+                    2.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    7 分
                 </div>
                 
 
@@ -479,18 +479,33 @@
 <p>之所以选择 ${2^n}$ 作为容量，当数组扩容则是在原来容量的基础上增大一倍，其容量变成 ${2^{n+1}}$，依然是 2 的整数次幂。而这样做的目的是为了减小取模运算的开销，因为对 ${2^n}$ 进行取模操作可以简化为位运算。</p>
 <p>数组的下标位置从 0 ~ ${2^n-1}$，而 ${2^n-1}$ 的二进制表示为 ${….1111}$，数组位置的计算从而可以变成如下的位运算：</p>
 <p>${index = hash &amp; (2^n-1)}$</p>
-<p>而当扩容时，重新进行数组位置的时候，相当于多了一个最新高一位的与运算，其结果不是 0 就是 1，因此重新的计算的数组位置就只有以下两种可能，大大减小了 rehash 的开销：</p>
+<p>而当扩容时，重新计算数组新位置的时候，相当于多了一个最新高一位的与运算 ${result = hash &amp; 2^n}$，其结果不是 0 就是 1，因此重新的计算的数组位置就只有以下两种可能，大大减小了 rehash 的开销：</p>
 <ol>
 <li>原来存储的数组位置</li>
 <li>原来位置向后移动 ${2^n}$ 的新位置</li>
 </ol>
 <p>那大家可能会问，HashMap 不是支持自定义的初始大小吗，那就不符合上面的简化运算的要求了。而现实是的确考虑到了这一点，所以在初始化时，会计算得到一个比传入数据大的最近的 ${2^n}$ 值，然后赋值为初始容量。</p>
+<p>计算最近的 ${2^n}$ 值的代码如下：</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token operator">>>></span> Integer<span class="token punctuation">.</span><span class="token function">numberOfLeadingZeros</span><span class="token punctuation">(</span>cap <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">numberOfLeadingZeros</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// HD, Count leading 0's</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;=</span> <span class="token number">0</span><span class="token punctuation">)</span>
+                <span class="token keyword">return</span> i <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">?</span> <span class="token number">32</span> <span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token number">31</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">>=</span> <span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token number">16</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> n <span class="token operator">-=</span> <span class="token number">16</span><span class="token punctuation">;</span> i <span class="token operator">>>>=</span> <span class="token number">16</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">>=</span> <span class="token number">1</span> <span class="token operator">&lt;&lt;</span>  <span class="token number">8</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> n <span class="token operator">-=</span>  <span class="token number">8</span><span class="token punctuation">;</span> i <span class="token operator">>>>=</span>  <span class="token number">8</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">>=</span> <span class="token number">1</span> <span class="token operator">&lt;&lt;</span>  <span class="token number">4</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> n <span class="token operator">-=</span>  <span class="token number">4</span><span class="token punctuation">;</span> i <span class="token operator">>>>=</span>  <span class="token number">4</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">>=</span> <span class="token number">1</span> <span class="token operator">&lt;&lt;</span>  <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> n <span class="token operator">-=</span>  <span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">>>>=</span>  <span class="token number">2</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> n <span class="token operator">-</span> <span class="token punctuation">(</span>i <span class="token operator">>>></span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
 <h4 id="负载因子-loadFactor-和扩容阈值-threshold"><a href="#负载因子-loadFactor-和扩容阈值-threshold" class="headerlink" title="负载因子(loadFactor)和扩容阈值(threshold)"></a>负载因子(loadFactor)和扩容阈值(threshold)</h4><p>这里简单介绍一下负载因子和扩容阈值的概念。这两个值有着如下的关系：</p>
 <p>${threshold = capacity * loadFactor}$</p>
 <p>默认的负载因子是 0.75，即 ${\frac{3}{4}}$，当元素实际个数大于容量的 ${\frac{3}{4}}$ 时则进行扩容操作。</p>
 <blockquote>
 <p>从这个公式可以看出当容量为 ${2^n}$ 时，threashold 是一个整数，不需要进行向下取整操作。</p>
 </blockquote>
+<h4 id="特别"><a href="#特别" class="headerlink" title="特别"></a>特别</h4><p>hashmap 是可以存储 key 值为 null 的，其 hashcode 为 0，即会存储在数组位置为 0 的地方。 </p>
 <h3 id="b-数组元素结构-Node"><a href="#b-数组元素结构-Node" class="headerlink" title="b. 数组元素结构(Node)"></a>b. 数组元素结构(Node)</h3><h4 id="链表结构"><a href="#链表结构" class="headerlink" title="链表结构"></a>链表结构</h4><ul>
 <li>hash：该位置的 hash 值</li>
 <li>key：该位置的键值</li>
@@ -500,6 +515,7 @@
 <h4 id="树结构"><a href="#树结构" class="headerlink" title="树结构"></a>树结构</h4><blockquote>
 <p>继承上述的链表结构，多了一些属性。这里不详细介绍红黑树，下次有机会单独讲解红黑树的知识。</p>
 </blockquote>
+<p>树节点是根据 key 的 hashcode 进行组织的，通常而言，树节点占据的空间要比普通节点大一倍。</p>
 <ul>
 <li>parent：父亲节点</li>
 <li>left：左儿子节点</li>
@@ -515,16 +531,17 @@
 <li>计算插入数据的 hash 值，根据 hash 值计算得到数组的位置</li>
 <li>将数据插入到计算得到的数组位置<ul>
 <li>数组位置没有任何元素<ul>
-<li>插入完成后，判断是否需要进行扩容，如需要则进行扩容操作</li>
+<li>直接插入</li>
 </ul>
 </li>
 <li>数组位置上已经有元素，判断存储元素的类型<ul>
 <li>红黑树节点，插入在树中的某个位置</li>
-<li>链表，先判断是否需要转换成红黑树，然后再进行插入操作</li>
+<li>链表，先进行插入操作，然后判断是否需要转换成红黑树</li>
 </ul>
 </li>
 </ul>
 </li>
+<li>插入完成后，判断是否需要进行扩容，如需要则进行扩容操作</li>
 </ol>
 <h3 id="d-读取操作"><a href="#d-读取操作" class="headerlink" title="d. 读取操作"></a>d. 读取操作</h3><ol>
 <li>根据 key 值计算得到 hash 值，进而得到数组的位置</li>
