@@ -1,9 +1,11 @@
 # [知识碰撞](https://zzh1991.github.io)
 
-> 主要介绍一些知识点以及科技前沿趋势，争取成为一个 Progmatic 的小菜鸟
+[![Page Views Count](https://badges.toozhao.com/badges/01EH2EZGTS539APE0RGF44TJ0Q/green.svg)](https://badges.toozhao.com/badges/01EH2EZGTS539APE0RGF44TJ0Q/green.svg "Get your own page views count badge on badges.toozhao.com")
 
-## Snapshot
+> Knowledge Collision 激发思维碰撞，IDEA 丛生
+
+## 博客展示图
 
 <div align="center">
-  <img src="new_blog.png" width="1000px" />
+  <img src="new_blog.png" width="800px" />
 </div>
