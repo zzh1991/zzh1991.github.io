@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.zzhpro.com/"/>
-  <updated>2020-10-03T02:44:21.554Z</updated>
+  <updated>2020-10-18T07:43:44.145Z</updated>
   <id>https://blog.zzhpro.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>为知笔记 Lite 使用指南</title>
+    <link href="https://blog.zzhpro.com/2020/10/18/wiznote-lite/"/>
+    <id>https://blog.zzhpro.com/2020/10/18/wiznote-lite/</id>
+    <published>2020-10-18T07:39:44.000Z</published>
+    <updated>2020-10-18T07:43:44.145Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>这篇文章主要介绍一下最新的为知笔记 Lite 编辑器的使用指南。由于官方并没有详细的使用说明，本人在尝试后总结了一些使用经验。</p></blockquote><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>目前一共有 5 级标题，点击相应的标题可以进行标题级别的更改，同时也可以转化为普通段落或者引用。</p><p><img src="/2020/10/18/wiznote-lite/0157b201-be4f-4a11-8686-4e82c254c23c.png" alt="image"></p><h2 id="使用-或者-快速插入"><a href="#使用-或者-快速插入" class="headerlink" title="使用 + 或者 / 快速插入"></a>使用 + 或者 / 快速插入</h2><blockquote><p>输入 + 或者 / 可以快速插入相应的板块，包括链接，代办事项，表格，图片已经代码块。</p></blockquote><p><img src="/2020/10/18/wiznote-lite/d8ae9d25-9f45-407c-9f72-dd5967280558.png" alt="image"></p><h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><blockquote><p>代码的使用方式跟 Markdown 的语法是一模一样的，只需要选择合适的语言进行展示即可。</p></blockquote><p><code>hello world</code></p><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloWorld</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></code></pre><h3 id="mermaid"><a href="#mermaid" class="headerlink" title="mermaid"></a><a href="https://mermaid-js.github.io/mermaid/#/" target="_blank" rel="noopener">mermaid</a></h3><pre class=" language-mermaid"><code class="language-mermaid">graph TD;A-->B;A-->C;B-->D;C-->D;</code></pre><p><img src="/2020/10/18/wiznote-lite/7f284a97-3565-438f-9012-37a4f5dbc930.png" alt="image"></p><h2 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h2><blockquote><p>使用公式以 <code>$$</code> 开始和结尾，中间就是常见的 Latex 的公式语法了。</p><p>其中单 <code>$</code> 是行间公式，而双 <code>$$</code> 为公式块表示。</p></blockquote><p>$x=y$</p><p>$$<br>x^2=y * z<br>$$</p><h2 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h2><blockquote><p>其实思维导图，其实就是为知笔记里面的大纲模式。</p></blockquote><pre class=" language-mindmap"><code class="language-mindmap">- spring    - spring ioc        - bean factory        - application context            - file system xml            - class path xml            - web xml    - bean life cycle        - initialize            - initializing bean        - destroy            - disposal bean</code></pre><p><img src="/2020/10/18/wiznote-lite/687fc5a6-f1b8-4c64-890c-23c4e98000e9.png" alt="image"></p><h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><h3 id="标题-1"><a href="#标题-1" class="headerlink" title="标题"></a>标题</h3><p><code>command + option + [12345]</code>可以控制标题级别</p><h3 id="加粗"><a href="#加粗" class="headerlink" title="加粗"></a>加粗</h3><p><code>command + B</code> 可以用来<strong>加粗</strong></p><h3 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h3><p><code>command + I</code> 可以<em>倾斜字体</em></p><h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p><code>command + O</code> 可以编写有序的列表</p><ol><li>第一个</li><li>第二个</li></ol><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p><code>command + L</code>可以编写无序的列表</p><ul><li>一个</li><li>两个</li></ul><h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><p><code>command + M</code> 可以用来生成表格</p><table><thead><tr><th>col1</th><th>col2</th><th>col3</th></tr></thead><tbody><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr></tbody></table><h3 id="代码块-1"><a href="#代码块-1" class="headerlink" title="代码块"></a>代码块</h3><p><code>command + U</code> 可以用来生成代码块</p><pre class=" language-bash"><code class="language-bash"><span class="token keyword">echo</span> <span class="token string">"hello world"</span></code></pre><h3 id="行间代码块"><a href="#行间代码块" class="headerlink" title="行间代码块"></a>行间代码块</h3><p><code>command + G</code> 可以生成行间代码 <code>hello world</code></p><h3 id="代办事务"><a href="#代办事务" class="headerlink" title="代办事务"></a>代办事务</h3><p><code>command + J</code> 可以生成代办事项</p><ul><li><input checked disabled type="checkbox"> 探索为知笔记 Lite 的快捷键</li><li><input disabled type="checkbox"> 使用说明</li></ul><hr><blockquote><p>更多精彩内容请<ruby>关注<rt>扫码</rt></ruby>：</p></blockquote><p><img src="https://i.loli.net/2019/05/18/5cdf686a103cf11418.jpg" alt="KnowledgeCollision 微信公众号"></p><center><strong>Knowledge Collision 激发思维碰撞，IDEA 丛生</strong></center>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;这篇文章主要介绍一下最新的为知笔记 Lite 编辑器的使用指南。由于官方并没有详细的使用说明，本人在尝试后总结了一些使用经验。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;标题&quot;&gt;&lt;a href=&quot;#标题&quot; class=&quot;headerlin
+      
+    
+    </summary>
+    
+    
+      <category term="note" scheme="https://blog.zzhpro.com/categories/note/"/>
+    
+    
+      <category term="note" scheme="https://blog.zzhpro.com/tags/note/"/>
+    
+  </entry>
   
   <entry>
     <title>完美 macOS，体验 💯</title>
@@ -511,27 +540,6 @@
     
     
       <category term="Computer System" scheme="https://blog.zzhpro.com/tags/Computer-System/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>知识管理</title>
-    <link href="https://blog.zzhpro.com/2018/07/29/note-skills/"/>
-    <id>https://blog.zzhpro.com/2018/07/29/note-skills/</id>
-    <published>2018-07-29T08:31:13.000Z</published>
-    <updated>2020-09-30T14:10:55.962Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="知识管理"><a href="#知识管理" class="headerlink" title="知识管理"></a>知识管理</h2><p>我们每天都在接触各种各样的信息，并从中提取出自己所需的知识，那下面就来聊聊如何利用工具来管理知识。</p><h3 id="笔记类工具"><a href="#笔记类工具" class="headerlink" title="笔记类工具"></a>笔记类工具</h3><h4 id="为知笔记-跟-Evernote-和有道云笔记是很类似的"><a href="#为知笔记-跟-Evernote-和有道云笔记是很类似的" class="headerlink" title="为知笔记: 跟 Evernote 和有道云笔记是很类似的"></a><a href="http://wiz.cn/" target="_blank" rel="noopener">为知笔记</a>: 跟 Evernote 和有道云笔记是很类似的</h4><ul><li>本人已经付费两年，从免费版用到订阅版，一年 60 元，并不是非常贵</li><li>支持 Markdown 模式，版本控制，跨平台同步，体验就好</li><li>目前用来记录一些比较琐细的 idea 和知识点，后期再作统一处理</li></ul><h5 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h5><ul><li>Markdown 的阅读模式体验还是很不错的，但是编辑的时候不是非常有效率</li><li>富文本的排版比较麻烦，所以一般都采用 Markdown 书写</li></ul><p><a href="https://i.loli.net/2019/05/18/5cdf686a0044246460.jpg" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/05/18/5cdf686a0044246460.jpg" alt="wiz.jpg"></a></p><h4 id="语雀-阿里旗下出品的知识管理分享产品"><a href="#语雀-阿里旗下出品的知识管理分享产品" class="headerlink" title="语雀: 阿里旗下出品的知识管理分享产品"></a><a href="https://www.yuque.com/" target="_blank" rel="noopener">语雀</a>: 阿里旗下出品的知识管理分享产品</h4><ul><li>网址：<code>www.yuque.com</code></li><li>从内测开始使用，现在已经开放注册了</li><li>自动排版：富文本排版，样式好看</li><li>知识库管理：类似笔记库</li><li>目录索引：与为知笔记一样具有协作分享功能</li><li>目前主要用其记录比较详细，内容比较多的笔记</li></ul><h5 id="缺点-1"><a href="#缺点-1" class="headerlink" title="缺点"></a>缺点</h5><ul><li>目前没有移动端，只有网页端，手机只能打开浏览器进行查看</li></ul><h4 id="Notion-颠覆式笔记应用"><a href="#Notion-颠覆式笔记应用" class="headerlink" title="Notion: 颠覆式笔记应用"></a><a href="https://www.notion.so" target="_blank" rel="noopener">Notion</a>: 颠覆式笔记应用</h4><ul><li>拖拽式组合网页：随意插入想要的组件</li><li>笔记之间可以相互链接，类似网页</li><li>谷歌账号可以直接登入，不需要注册账号</li><li>支持嵌入网页内容、媒体，功能十分强大</li><li>iPhone，Andriod，Windows，Mac，网页端</li><li>目前我主要用其记录一些网页的链接和图片</li></ul><h5 id="缺点-2"><a href="#缺点-2" class="headerlink" title="缺点"></a>缺点</h5><ul><li>高级功能需要付费，而且价格不菲，4 美元 / 月</li><li>手机 APP 和网页端只能进行 1000 次的操作，超出就需要付费才能进行修改，现在支持删除已有的条目，然后继续使用</li><li>手机上的操作并不会影响数目，所以尽量在手机上操作（目前已经修改规则了）</li></ul><h4 id="Airtable-amp-Trello"><a href="#Airtable-amp-Trello" class="headerlink" title="Airtable &amp; Trello"></a><a href="https://airtable.com/" target="_blank" rel="noopener">Airtable</a> &amp; <a href="https://trello.com/" target="_blank" rel="noopener">Trello</a></h4><ul><li>主要用于一些任务的记录与跟踪</li><li>Airtable 可以集成 Slack 和 Trello（借助 Zapier）</li></ul><h5 id="缺点-3"><a href="#缺点-3" class="headerlink" title="缺点"></a>缺点</h5><ul><li>Airtable 免费版不能使用一些 Block 可视化插件</li><li>Airtable 与 Trello 的互动比较少</li></ul><h4 id="日历工具-Sunsama"><a href="#日历工具-Sunsama" class="headerlink" title="日历工具 Sunsama"></a>日历工具 <a href="https://sunsama.com/" target="_blank" rel="noopener">Sunsama</a></h4><ul><li>对接 Google 日历</li><li>集成 Slack、Trello</li><li>一个 channel 跟踪一个 GitHub 仓库的变更</li></ul><h5 id="缺点-4"><a href="#缺点-4" class="headerlink" title="缺点"></a>缺点</h5><ul><li>只有网页版和 Mac 端应用，没有手机应用</li><li>一个 channel 只能设置一个 GitHub 仓库，不能设置成多个</li><li>免费版也有操作的次数限制</li></ul><h3 id="todo-自己实现的-todo-管理工具"><a href="#todo-自己实现的-todo-管理工具" class="headerlink" title="todo: 自己实现的 todo 管理工具"></a><a href="http://todo.zzhpro.com" target="_blank" rel="noopener">todo</a>: 自己实现的 todo 管理工具</h3><h4 id="功能（目前还是比较基础的）"><a href="#功能（目前还是比较基础的）" class="headerlink" title="功能（目前还是比较基础的）"></a>功能（目前还是比较基础的）</h4><ol><li>提供编辑器记录详细信息，支持 Markdown 语法</li><li>比较适合网页版操作，目前并没有适配移动端</li><li>详细的时间记录</li><li>支持排序功能，后续会加入搜索、过滤功能</li></ol><p>更多精彩内容请<ruby>关注<rt>扫码</rt></ruby>：</p><p><img src="https://i.loli.net/2019/05/18/5cdf686a103cf11418.jpg" alt="图注：KnowledgeCollision 微信公众号"></p><p><code>Knowledge Collision 激发思维碰撞，IDEA 丛生</code></p>]]></content>
-    
-    <summary type="html">
-    
-      主要介绍知识管理，如何应用工具记录知识
-    
-    </summary>
-    
-    
-    
-      <category term="note" scheme="https://blog.zzhpro.com/tags/note/"/>
     
   </entry>
   
