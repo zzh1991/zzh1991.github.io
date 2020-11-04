@@ -40,7 +40,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="知识碰撞" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="知识碰撞" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -430,7 +430,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-09-30
+                    2020-11-04
                 </div>
                 
 
@@ -467,10 +467,10 @@
 <h2 id="1-安装-PostgreSQL"><a href="#1-安装-PostgreSQL" class="headerlink" title="1 安装 PostgreSQL"></a>1 安装 PostgreSQL</h2><p>在深入了解 PostgreSQL 前，先得在我们得主机上安装一下 PostgreSQL。</p>
 <p>对于 macOS 用户非常简单，使用以下命令安装</p>
 <pre class=" language-bash"><code class="language-bash">brew <span class="token function">install</span> postgresql</code></pre>
-<p>一开始我也是这么安装的，它也可以支持升级新的 PostgreSQL，是非常方便的。但是这里我更加推荐一种安装方式，使用 Docker 来安装启动 PostgreSQL，因为它可以跨平台按需使用，更加方便且易于后期修改。<br>关于 Docker 的安装，可以在 <a href="https://www.docker.com/products/docker-desktop" target="_blank" rel="noopener" title="Docker Desktop for Mac and Windows">Docker Desktop for Mac and Windows</a> 安装对应的客户端软件。</p>
+<p>一开始我也是这么安装的，它也可以支持升级新的 PostgreSQL，是非常方便的。但是这里我更加推荐一种安装方式，使用 Docker 来安装启动 PostgreSQL，因为它可以跨平台按需使用，更加方便且易于后期修改。<br>关于 Docker 的安装，可以在 <a target="_blank" rel="noopener" href="https://www.docker.com/products/docker-desktop" title="Docker Desktop for Mac and Windows">Docker Desktop for Mac and Windows</a> 安装对应的客户端软件。</p>
 <p><img src="https://i.loli.net/2020/07/19/RnBisdZXaSTM2NC.png" alt="Docker Desktop"></p>
 <pre class=" language-bash"><code class="language-bash">docker run --name postgres -p 5432:5432 -v ~/Documents/docker-volumn/postgres:/var/lib/postgresql/data -e POSTGRES_PASSWORD<span class="token operator">=</span>postgres -d postgres:12-alpine</code></pre>
-<p>另外可以去<a href="https://www.postgresql.org/docs/current/index.html" target="_blank" rel="noopener" title="PostgreSQL 官方文档">PostgreSQL 官方文档</a>多多了解 PostgreSQL，丰富的知识点在等着你们学习，下图的黄色部分尤其是重点也是难点。</p>
+<p>另外可以去<a target="_blank" rel="noopener" href="https://www.postgresql.org/docs/current/index.html" title="PostgreSQL 官方文档">PostgreSQL 官方文档</a>多多了解 PostgreSQL，丰富的知识点在等着你们学习，下图的黄色部分尤其是重点也是难点。</p>
 <p><img src="https://i.loli.net/2020/07/19/rUovNVtfkM6qg89.png" alt="PostgreSQL Document"></p>
 <h2 id="2-走进-PostgreSQL-内部"><a href="#2-走进-PostgreSQL-内部" class="headerlink" title="2 走进 PostgreSQL 内部"></a>2 走进 PostgreSQL 内部</h2><h3 id="2-1-组织结构"><a href="#2-1-组织结构" class="headerlink" title="2.1 组织结构"></a>2.1 组织结构</h3><p>假设我们是使用 macOS 的 brew 安装的 PostgreSQL。那么数据库的文件路径应该在 <code>/usr/local/var/postgres</code> 下。它的目录结构如下所示</p>
 <pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 文件</span>

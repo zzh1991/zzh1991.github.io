@@ -40,7 +40,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="知识碰撞" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="知识碰撞" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -428,7 +428,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    430
+                    454
                 </div>
                 
 
@@ -496,21 +496,21 @@
 </ul>
 </li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">UserInputDTOConvert</span> <span class="token keyword">extends</span> <span class="token class-name">Converter</span><span class="token operator">&lt;</span>UserInputDTO<span class="token punctuation">,</span> User<span class="token operator">></span> <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">UserInputDTOConvert</span> <span class="token keyword">extends</span> <span class="token class-name">Converter</span><span class="token operator">&lt;</span>UserInputDTO<span class="token punctuation">,</span> User<span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
    <span class="token annotation punctuation">@Override</span>
-   <span class="token keyword">protected</span> User <span class="token function">doForward</span><span class="token punctuation">(</span>UserInputDTO userInputDTO<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token keyword">protected</span> User <span class="token function">doForward</span><span class="token punctuation">(</span>UserInputDTO userInputDTO<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
        User user <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
        BeanUtils<span class="token punctuation">.</span><span class="token function">copyProperties</span><span class="token punctuation">(</span>userInputDTO<span class="token punctuation">,</span> user<span class="token punctuation">)</span><span class="token punctuation">;</span>
        <span class="token keyword">return</span> user<span class="token punctuation">;</span>
-   <span class="token punctuation">}</span>
+   <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 
    <span class="token annotation punctuation">@Override</span>
-   <span class="token keyword">protected</span> UserInputDTO <span class="token function">doBackward</span><span class="token punctuation">(</span>User user<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token keyword">protected</span> UserInputDTO <span class="token function">doBackward</span><span class="token punctuation">(</span>User user<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
        UserInputDTO userInputDTO <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">UserInputDTO</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
        BeanUtils<span class="token punctuation">.</span><span class="token function">copyProperties</span><span class="token punctuation">(</span>user<span class="token punctuation">,</span> userInputDTO<span class="token punctuation">)</span><span class="token punctuation">;</span>
        <span class="token keyword">return</span> userInputDTO<span class="token punctuation">;</span>
-   <span class="token punctuation">}</span>
- <span class="token punctuation">}</span></code></pre>
+   <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+ <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
 <h3 id="Bean-验证"><a href="#Bean-验证" class="headerlink" title="Bean 验证"></a>Bean 验证</h3><ul>
 <li>Lombok @NotNull 等</li>
 <li>hibernate jsr 303</li>
@@ -571,22 +571,22 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 <h3 id="任务调度"><a href="#任务调度" class="headerlink" title="任务调度"></a>任务调度</h3><ul>
 <li>Qrtz Scheduler</li>
 <li>资料<ul>
-<li><a href="http://samchu.logdown.com/posts/297038-use-quartz-in-spring-boot" target="_blank" rel="noopener">quarz sample</a></li>
-<li><a href="http://www.opencodez.com/java/quartz-scheduler-with-spring-boot.htm" target="_blank" rel="noopener">spring boot quartz</a></li>
+<li><a target="_blank" rel="noopener" href="http://samchu.logdown.com/posts/297038-use-quartz-in-spring-boot">quarz sample</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.opencodez.com/java/quartz-scheduler-with-spring-boot.htm">spring boot quartz</a></li>
 </ul>
 </li>
 </ul>
-<h2 id="Database"><a href="#Database" class="headerlink" title="Database"></a>Database</h2><h3 id="Database-Projection"><a href="#Database-Projection" class="headerlink" title="Database Projection"></a>Database Projection</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">Projection</span> <span class="token punctuation">{</span>
-  <span class="token annotation punctuation">@Value</span><span class="token punctuation">(</span><span class="token string">"#{target.firstName} #{target.lastName}"</span><span class="token punctuation">)</span> 
+<h2 id="Database"><a href="#Database" class="headerlink" title="Database"></a>Database</h2><h3 id="Database-Projection"><a href="#Database-Projection" class="headerlink" title="Database Projection"></a>Database Projection</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">Projection</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token annotation punctuation">@Value</span><span class="token punctuation">(</span><span class="token string">"#&amp;#123;target.firstName&amp;#125; #&amp;#123;target.lastName&amp;#125;"</span><span class="token punctuation">)</span> 
   String <span class="token function">getFullName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
 <h2 id="提高"><a href="#提高" class="headerlink" title="提高"></a>提高</h2><ol>
 <li>多看成熟框架的源码</li>
 <li>多回头看自己的代码</li>
 <li>勤于重构</li>
 </ol>
 <h2 id="Java-1"><a href="#Java-1" class="headerlink" title="Java"></a>Java</h2><ol>
-<li><a href="https://docs.oracle.com/javase/8/docs/technotes/tools/windows/java.html#nonstandard" target="_blank" rel="noopener">Java parameter</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/8/docs/technotes/tools/windows/java.html#nonstandard">Java parameter</a></li>
 </ol>
 
             </div>
