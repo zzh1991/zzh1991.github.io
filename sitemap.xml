@@ -2,9 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.zzhpro.com/2020/01/19/android-app/</loc>
+    
+    <lastmod>2021-01-09</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.zzhpro.com/2020/10/18/wiznote-lite/</loc>
+    
+    <lastmod>2021-01-09</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.zzhpro.com/2020/01/02/2020-tech-trend/</loc>
+    
+    <lastmod>2021-01-09</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.zzhpro.com/2020/07/26/2020-development-ecosystem/</loc>
+    
+    <lastmod>2021-01-09</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.zzhpro.com/2020/12/29/macOS/</loc>
     
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-09</lastmod>
     
   </url>
   
@@ -24,13 +52,6 @@
   
   <url>
     <loc>https://blog.zzhpro.com/2017/03/03/ubuntu/</loc>
-    
-    <lastmod>2020-11-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.zzhpro.com/2020/10/18/wiznote-lite/</loc>
     
     <lastmod>2020-11-04</lastmod>
     
@@ -107,13 +128,6 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/2020/07/26/2020-development-ecosystem/</loc>
-    
-    <lastmod>2020-07-27</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://blog.zzhpro.com/2019/11/02/java-version-management/</loc>
     
     <lastmod>2020-07-27</lastmod>
@@ -145,20 +159,6 @@
     <loc>https://blog.zzhpro.com/2018/02/10/workflow/</loc>
     
     <lastmod>2020-05-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.zzhpro.com/2020/01/19/android-app/</loc>
-    
-    <lastmod>2020-01-19</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.zzhpro.com/2020/01/02/2020-tech-trend/</loc>
-    
-    <lastmod>2020-01-02</lastmod>
     
   </url>
   
@@ -256,7 +256,7 @@
 
   <url>
     <loc>https://blog.zzhpro.com/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -264,154 +264,154 @@
   
   <url>
     <loc>https://blog.zzhpro.com/tags/Development/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.zzhpro.com/tags/technology/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.zzhpro.com/tags/Android/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.zzhpro.com/tags/Software/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.zzhpro.com/tags/go/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.zzhpro.com/tags/Hexo/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.zzhpro.com/tags/Java/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.zzhpro.com/tags/JVM/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.zzhpro.com/tags/Kotlin/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.zzhpro.com/tags/mac/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.zzhpro.com/tags/macOS/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.zzhpro.com/tags/life/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.zzhpro.com/tags/note/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.zzhpro.com/tags/Computer-System/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.zzhpro.com/tags/%E6%8B%8D%E7%85%A7/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.zzhpro.com/tags/Postgre/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.zzhpro.com/tags/Python/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.zzhpro.com/tags/React/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.zzhpro.com/tags/Shell/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.zzhpro.com/tags/Ubuntu/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.zzhpro.com/tags/Windows/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.zzhpro.com/tags/Workflow/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.zzhpro.com/tags/Android/</loc>
+    <lastmod>2021-01-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.zzhpro.com/tags/Kotlin/</loc>
+    <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -420,63 +420,63 @@
   
   <url>
     <loc>https://blog.zzhpro.com/categories/Development/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.zzhpro.com/categories/Java/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.zzhpro.com/categories/JVM/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.zzhpro.com/categories/mac/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.zzhpro.com/categories/macOS/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.zzhpro.com/categories/life/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.zzhpro.com/categories/note/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.zzhpro.com/categories/Postgres/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.zzhpro.com/categories/Windows/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
