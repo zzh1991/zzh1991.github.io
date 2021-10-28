@@ -28,7 +28,7 @@ gtag('config', 'UA-126255692-2');
   localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
   translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
   noticeOutdate: undefined,
-  highlight: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
   copy: {
     success: '复制成功',
     error: '复制错误',
@@ -357,19 +357,7 @@ gtag('config', 'UA-126255692-2');
 <li>根据转发表更新对象的新引用地址，并将 Remapped 设为 1，返回新的引用地址</li>
 </ul>
 <h5 id="JVM-相关配置">JVM 相关配置</h5>
-<pre><code class="language-bash"># 开启 ZGC
--XX:+UnlockExperimentalVMOptions -XX:+UseZGC
-# 并发回收垃圾的线程。默认是总核数的 1/8，调大后 GC 变快，但会占用程序运行时的CPU资源，吞吐会受到影响
--XX:ConcGCThreads=2
-# stop the world 时使用的线程数，默认为总核数的 3/5
--XX:ParallelGCThreads=6
-# ZGC 发生的最小时间间隔，单位秒。基于固定时间间隔进行触发 ZGC
--XX:ZCollectionInterval=120
-# ZGC 触发基于分配速率的自适应算法的修正系数，默认值为 2，数值越大，越早的触发 ZGC 
--XX:ZAllocationSpikeTolerance=5
-# 不开启 ZGC 的主动回收
--XX:+UnlockDiagnosticVMOptions -XX:-ZProactive
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 开启 ZGC</span></span><br><span class="line">-XX:+UnlockExperimentalVMOptions -XX:+UseZGC</span><br><span class="line"><span class="comment"># 并发回收垃圾的线程。默认是总核数的 1/8，调大后 GC 变快，但会占用程序运行时的CPU资源，吞吐会受到影响</span></span><br><span class="line">-XX:ConcGCThreads=2</span><br><span class="line"><span class="comment"># stop the world 时使用的线程数，默认为总核数的 3/5</span></span><br><span class="line">-XX:ParallelGCThreads=6</span><br><span class="line"><span class="comment"># ZGC 发生的最小时间间隔，单位秒。基于固定时间间隔进行触发 ZGC</span></span><br><span class="line">-XX:ZCollectionInterval=120</span><br><span class="line"><span class="comment"># ZGC 触发基于分配速率的自适应算法的修正系数，默认值为 2，数值越大，越早的触发 ZGC </span></span><br><span class="line">-XX:ZAllocationSpikeTolerance=5</span><br><span class="line"><span class="comment"># 不开启 ZGC 的主动回收</span></span><br><span class="line">-XX:+UnlockDiagnosticVMOptions -XX:-ZProactive</span><br></pre></td></tr></table></figure>
 <h3 id="其他商业垃圾收集器">其他商业垃圾收集器</h3>
 <ul>
 <li>IBM J9</li>

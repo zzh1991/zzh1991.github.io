@@ -23,7 +23,7 @@ gtag('config', 'UA-126255692-2');
   localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
   translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
   noticeOutdate: undefined,
-  highlight: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
   copy: {
     success: '复制成功',
     error: '复制错误',
@@ -64,7 +64,7 @@ gtag('config', 'UA-126255692-2');
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2021-10-29 01:15:48'
+  postUpdate: '2021-10-29 01:23:57'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -228,17 +228,9 @@ WizNote Lite 的使用指南可以参考我的另一篇文章：为知笔记 Lit
 代码的使用方式跟 Markdown 的语法是一模一样的，只需要选择合适的语言进行展示即可。
 
 hello world
-public class HelloWorld &#123;
-
-&#125;
-
+123public class HelloWorld &#123;&#125;
 mermaid
-graph TD;
-A--&gt;B;
-A--&gt;C;
-B--&gt;D;
-C--&gt;D;
-
+12345graph TD;A--&gt;B;A--&gt;C;B--&gt;D;C--&gt;D;
 
 公式
 
@@ -252,8 +244,7 @@ x2=y∗z
 
 其实思维导图，其实就是为知笔记里面的大纲模式。
 
-- spring
-    - spri ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/09/30/mac/" title="完美 macOS，体验 💯">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/zzh1991/pictures/blog/image-20210110214255426.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="完美 macOS，体验 💯"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/09/30/mac/" title="完美 macOS，体验 💯">完美 macOS，体验 💯</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-30T14:07:34.000Z" title="发表于 2020-09-30 22:07:34">2020-09-30</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/mac/">mac</a></span></div><div class="content">
+123456789101112- sp ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/09/30/mac/" title="完美 macOS，体验 💯">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/zzh1991/pictures/blog/image-20210110214255426.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="完美 macOS，体验 💯"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/09/30/mac/" title="完美 macOS，体验 💯">完美 macOS，体验 💯</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-30T14:07:34.000Z" title="发表于 2020-09-30 22:07:34">2020-09-30</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/mac/">mac</a></span></div><div class="content">
 当你拥有一台崭新的 mac 电脑时，内心应该是十分激动的。怎样让你❤️的 mac 电脑发挥💯，请仔细观看下面的内容哦。
 
 常规设置
@@ -399,12 +390,11 @@ Java 版本
 1 安装 PostgreSQL
 在深入了解 PostgreSQL 前，先得在我们得主机上安装一下 PostgreSQL。
 对于 macOS 用户非常简单，使用以下命令安装
-brew install postgresql
-
+1brew install postgresql
 一开始我也是这么安装的，它也可以支持升级新的 PostgreSQL，是非常方便的。但是这里我更加推荐一种安装方式，使用 Docker 来安装启动 PostgreSQL，因为它可以跨平台按需使用，更加方便且易于后期修改。
 关于 Docker 的安装，可以在 Docker Desktop for Mac and Windows 安装对应的客户端软件。
 
-docker run --name postgres -p 5432:5432 -v ~/Documents/docker-volumn/postgres:/var/lib/postgresql/data -e POSTGRES_PASSWORD=postgres -d postgres:12-a ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/05/23/study-life-software/" title="提升学习和生活的软件服务清单">提升学习和生活的软件服务清单</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-05-23T12:51:41.000Z" title="发表于 2020-05-23 20:51:41">2020-05-23</time></span></div><div class="content">
+1docker run --name postgres -p 5432:5432 -v ~/Documents/docker-volumn/postgres:/var/lib/postgresql/data -e POSTGRES_PASSWORD=postgres -d postgres:12- ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/05/23/study-life-software/" title="提升学习和生活的软件服务清单">提升学习和生活的软件服务清单</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-05-23T12:51:41.000Z" title="发表于 2020-05-23 20:51:41">2020-05-23</time></span></div><div class="content">
 最新，为了提升自己的学习效率和生活体验，我的工具库列表又多了一些新的选项。
 
 1. 浏览器

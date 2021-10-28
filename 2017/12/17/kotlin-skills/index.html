@@ -28,7 +28,7 @@ gtag('config', 'UA-126255692-2');
   localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
   translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
   noticeOutdate: undefined,
-  highlight: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
   copy: {
     success: '复制成功',
     error: '复制错误',
@@ -275,14 +275,7 @@ gtag('config', 'UA-126255692-2');
 <ul>
 <li>主构造方法</li>
 </ul>
-<pre><code class="language-java">class User constructor(name: String) &#123;
-	val name: String
-
-	init &#123;
-		this.name = name
-	&#125;
-&#125;
-</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class User constructor(name: String) &#123;</span><br><span class="line">	val name: String</span><br><span class="line"></span><br><span class="line">	init &#123;</span><br><span class="line">		<span class="keyword">this</span>.name = name</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><code>class User (val name: String)</code><br>
 - 构造方法参数可以提供默认值<br>
 - 要创建一个类的实例，只需要直接调用构造方法，不需要 new 关键字</p>
@@ -332,8 +325,7 @@ gtag('config', 'UA-126255692-2');
 <li>Kotlin 的 lambda 表达式始终用花括号包围，实参并没有使用括号括起来，箭头把实参列表和 lambda 的函数体隔开</li>
 <li>需要把一小段代码封闭到一个代码块中，可以使用库函数 <code>run</code> 来执行传给它的 lambda</li>
 </ul>
-<pre><code>run &#123; lambda expression &#125;
-</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">run &#123; lambda expression &#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>如果 lambda 表达式是函数调用的最后一个实参，它可以被放到括号的外面</li>
 <li>当 lambda 是函数唯一的实参时，还可以去掉调用代码的空括号</li>

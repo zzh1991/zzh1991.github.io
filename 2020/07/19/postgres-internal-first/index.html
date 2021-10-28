@@ -1,9 +1,9 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>走进 PostgreSQL 世界第一篇章--内部结构 | 知识碰撞</title><meta name="keywords" content="Postgre"><meta name="author" content="Zhihao Zhang"><meta name="copyright" content="Zhihao Zhang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="在日常的应用程序开发过程中，都离不开数据库的使用。今天就带大家走进非常有名的关系型数据库管理系统：PostgreSQL。   1 安装 PostgreSQL 在深入了解 PostgreSQL 前，先得在我们得主机上安装一下 PostgreSQL。 对于 macOS 用户非常简单，使用以下命令安装 brew install postgresql  一开始我也是这么安装的，它也可以支持升级新的 Po">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>走进 PostgreSQL 世界第一篇章--内部结构 | 知识碰撞</title><meta name="keywords" content="Postgre"><meta name="author" content="Zhihao Zhang"><meta name="copyright" content="Zhihao Zhang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="在日常的应用程序开发过程中，都离不开数据库的使用。今天就带大家走进非常有名的关系型数据库管理系统：PostgreSQL。   1 安装 PostgreSQL 在深入了解 PostgreSQL 前，先得在我们得主机上安装一下 PostgreSQL。 对于 macOS 用户非常简单，使用以下命令安装 1brew install postgresql 一开始我也是这么安装的，它也可以支持升级新的 Po">
 <meta property="og:type" content="article">
 <meta property="og:title" content="走进 PostgreSQL 世界第一篇章--内部结构">
 <meta property="og:url" content="https://blog.zzhpro.com/2020/07/19/postgres-internal-first/index.html">
 <meta property="og:site_name" content="知识碰撞">
-<meta property="og:description" content="在日常的应用程序开发过程中，都离不开数据库的使用。今天就带大家走进非常有名的关系型数据库管理系统：PostgreSQL。   1 安装 PostgreSQL 在深入了解 PostgreSQL 前，先得在我们得主机上安装一下 PostgreSQL。 对于 macOS 用户非常简单，使用以下命令安装 brew install postgresql  一开始我也是这么安装的，它也可以支持升级新的 Po">
+<meta property="og:description" content="在日常的应用程序开发过程中，都离不开数据库的使用。今天就带大家走进非常有名的关系型数据库管理系统：PostgreSQL。   1 安装 PostgreSQL 在深入了解 PostgreSQL 前，先得在我们得主机上安装一下 PostgreSQL。 对于 macOS 用户非常简单，使用以下命令安装 1brew install postgresql 一开始我也是这么安装的，它也可以支持升级新的 Po">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://blog.zzhpro.com/img/myblog.ico">
 <meta property="article:published_time" content="2020-07-19T12:21:43.000Z">
@@ -28,7 +28,7 @@ gtag('config', 'UA-126255692-2');
   localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
   translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
   noticeOutdate: undefined,
-  highlight: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
   copy: {
     success: '复制成功',
     error: '复制错误',
@@ -171,62 +171,22 @@ gtag('config', 'UA-126255692-2');
 <h2 id="1-安装-PostgreSQL">1 安装 PostgreSQL</h2>
 <p>在深入了解 PostgreSQL 前，先得在我们得主机上安装一下 PostgreSQL。</p>
 <p>对于 macOS 用户非常简单，使用以下命令安装</p>
-<pre><code class="language-bash">brew install postgresql
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install postgresql</span><br></pre></td></tr></table></figure>
 <p>一开始我也是这么安装的，它也可以支持升级新的 PostgreSQL，是非常方便的。但是这里我更加推荐一种安装方式，使用 Docker 来安装启动 PostgreSQL，因为它可以跨平台按需使用，更加方便且易于后期修改。<br>
 关于 Docker 的安装，可以在 <a target="_blank" rel="noopener" href="https://www.docker.com/products/docker-desktop" title="Docker Desktop for Mac and Windows">Docker Desktop for Mac and Windows</a> 安装对应的客户端软件。</p>
 <p><img src="https://i.loli.net/2020/07/19/RnBisdZXaSTM2NC.png" alt="Docker Desktop"></p>
-<pre><code class="language-bash">docker run --name postgres -p 5432:5432 -v ~/Documents/docker-volumn/postgres:/var/lib/postgresql/data -e POSTGRES_PASSWORD=postgres -d postgres:12-alpine
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name postgres -p 5432:5432 -v ~/Documents/docker-volumn/postgres:/var/lib/postgresql/data -e POSTGRES_PASSWORD=postgres -d postgres:12-alpine</span><br></pre></td></tr></table></figure>
 <p>另外可以去<a target="_blank" rel="noopener" href="https://www.postgresql.org/docs/current/index.html" title="PostgreSQL 官方文档">PostgreSQL 官方文档</a>多多了解 PostgreSQL，丰富的知识点在等着你们学习，下图的黄色部分尤其是重点也是难点。</p>
 <p><img src="https://i.loli.net/2020/07/19/rUovNVtfkM6qg89.png" alt="PostgreSQL Document"></p>
 <h2 id="2-走进-PostgreSQL-内部">2 走进 PostgreSQL 内部</h2>
 <h3 id="2-1-组织结构">2.1 组织结构</h3>
 <p>假设我们是使用 macOS 的 brew 安装的 PostgreSQL。那么数据库的文件路径应该在 <code>/usr/local/var/postgres</code> 下。它的目录结构如下所示</p>
-<pre><code class="language-bash"># 文件
-├── PG_VERSION	主版本号
-├── pg_hba.conf
-├── pg_ident.conf
-├── postgresql.auto.conf
-├── postgresql.conf		配置参数
-├── postmaster.opts
-└── postmaster.pid
-
-# 目录
-├── base		数据库文件
-├── global
-├── pg_commit_ts
-├── pg_dynshmem
-├── pg_logical
-├── pg_multixact		多事务状态数据
-├── pg_notify
-├── pg_replslot
-├── pg_serial
-├── pg_snapshots
-├── pg_stat
-├── pg_stat_tmp
-├── pg_subtrans		子事务状态数据
-├── pg_tblspc
-├── pg_twophase		两阶段事务的状态文件
-├── pg_wal		WAL 段文件
-└── pg_xact		事务提交状态
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 文件</span></span><br><span class="line">├── PG_VERSION	主版本号</span><br><span class="line">├── pg_hba.conf</span><br><span class="line">├── pg_ident.conf</span><br><span class="line">├── postgresql.auto.conf</span><br><span class="line">├── postgresql.conf		配置参数</span><br><span class="line">├── postmaster.opts</span><br><span class="line">└── postmaster.pid</span><br><span class="line"></span><br><span class="line"><span class="comment"># 目录</span></span><br><span class="line">├── base		数据库文件</span><br><span class="line">├── global</span><br><span class="line">├── pg_commit_ts</span><br><span class="line">├── pg_dynshmem</span><br><span class="line">├── pg_logical</span><br><span class="line">├── pg_multixact		多事务状态数据</span><br><span class="line">├── pg_notify</span><br><span class="line">├── pg_replslot</span><br><span class="line">├── pg_serial</span><br><span class="line">├── pg_snapshots</span><br><span class="line">├── pg_stat</span><br><span class="line">├── pg_stat_tmp</span><br><span class="line">├── pg_subtrans		子事务状态数据</span><br><span class="line">├── pg_tblspc</span><br><span class="line">├── pg_twophase		两阶段事务的状态文件</span><br><span class="line">├── pg_wal		WAL 段文件</span><br><span class="line">└── pg_xact		事务提交状态</span><br></pre></td></tr></table></figure>
 <p>数据库中表和索引都是文件形式存储在磁盘上，文件名为 oid，大小最大为 1 GB，超过则会创建一个新的文件。而文件的内部被划分成一个个页，而页的大小默认为 8 KB。</p>
 <p>那么怎样才能找到对应的文件在我们磁盘的哪个位置呢？可以利用 SQL 查询得到我们想要的结果。</p>
-<pre><code class="language-sql">-- 找到数据库的 oid
-select * from pg_database where datname = '数据库名';
--- 找到表或者索引的 oid 或者 relfilenode
-select * from pg_class where relname = '表或索引名';
-</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 找到数据库的 oid</span></span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> pg_database <span class="keyword">where</span> datname = <span class="string">&#x27;数据库名&#x27;</span>;</span><br><span class="line"><span class="comment">-- 找到表或者索引的 oid 或者 relfilenode</span></span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> pg_class <span class="keyword">where</span> relname = <span class="string">&#x27;表或索引名&#x27;</span>;</span><br></pre></td></tr></table></figure>
 <p>表相关的文件类型有三类，除了存储表数据的文件外，还有后缀为 <code>_fsm</code> 的是空闲空间映射文件，而 <code>_vm</code> 为可见性映射文件。值得注意的是索引文件是没有可见性映射文件的。</p>
-<pre><code class="language-bash">➜  16401 pwd
-/usr/local/var/postgres/base/16401
-➜  16401 ls -la 33657*
-# 表相关的文件
--rw-------  1 postgres  postgres  811008 Mar 28 13:02 33657
--rw-------  1 postgres  postgres   24576 Mar 28 13:02 33657_fsm
--rw-------  1 postgres  postgres    8192 Mar 28 13:02 33657_vm
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">➜  16401 <span class="built_in">pwd</span></span><br><span class="line">/usr/<span class="built_in">local</span>/var/postgres/base/16401</span><br><span class="line">➜  16401 ls -la 33657*</span><br><span class="line"><span class="comment"># 表相关的文件</span></span><br><span class="line">-rw-------  1 postgres  postgres  811008 Mar 28 13:02 33657</span><br><span class="line">-rw-------  1 postgres  postgres   24576 Mar 28 13:02 33657_fsm</span><br><span class="line">-rw-------  1 postgres  postgres    8192 Mar 28 13:02 33657_vm</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>这里跟 MySQL 不同的一点是 MySQL 的页大小为 16 KB，而操作系统默认的页大小也为 4 KB。</p>
 </blockquote>
@@ -294,20 +254,7 @@ select * from pg_class where relname = '表或索引名';
 </ul>
 <h3 id="2-4-多进程架构">2.4 多进程架构</h3>
 <p>PostgreSQL 采用的多进程的架构，通过以下命令可以找出所有的 postgre 进程。</p>
-<pre><code class="language-bash"># 先使用 ps 找到 postgres 的 ppid(上级父程序的 pid)
-ps -ef |grep postgres
-# 再列出所有的 postgre 的相关进程
-➜  ~ pstree -p &lt;ppid&gt;
--+= 00001 root /sbin/launchd
- \-+= 76776 zhihaozhang /usr/local/opt/postgresql/bin/postgres -D /usr/local/va
-   |--= 44288 postgres postgres: postgres mydb 127.0.0.1(51293) idle
-   |--= 76779 postgres postgres: checkpointer
-   |--= 76780 postgres postgres: background writer
-   |--= 76781 postgres postgres: walwriter
-   |--= 76782 postgres postgres: autovacuum launcher
-   |--= 76784 postgres postgres: stats collector
-   \--= 76785 postgres postgres: logical replication launcher
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 先使用 ps 找到 postgres 的 ppid(上级父程序的 pid)</span></span><br><span class="line">ps -ef |grep postgres</span><br><span class="line"><span class="comment"># 再列出所有的 postgre 的相关进程</span></span><br><span class="line">➜  ~ pstree -p &lt;ppid&gt;</span><br><span class="line">-+= 00001 root /sbin/launchd</span><br><span class="line"> \-+= 76776 zhihaozhang /usr/<span class="built_in">local</span>/opt/postgresql/bin/postgres -D /usr/<span class="built_in">local</span>/va</span><br><span class="line">   |--= 44288 postgres postgres: postgres mydb 127.0.0.1(51293) idle</span><br><span class="line">   |--= 76779 postgres postgres: checkpointer</span><br><span class="line">   |--= 76780 postgres postgres: background writer</span><br><span class="line">   |--= 76781 postgres postgres: walwriter</span><br><span class="line">   |--= 76782 postgres postgres: autovacuum launcher</span><br><span class="line">   |--= 76784 postgres postgres: stats collector</span><br><span class="line">   \--= 76785 postgres postgres: logical replication launcher</span><br></pre></td></tr></table></figure>
 <p>PostgreSQL 默认的最大客户端连接数为 100 个，由于多进程的缘故，与 MySQL 的线程连接模型相比，其内存压力更大。</p>
 <h2 id="3-索引">3 索引</h2>
 <blockquote>

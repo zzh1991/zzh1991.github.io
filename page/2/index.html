@@ -23,7 +23,7 @@ gtag('config', 'UA-126255692-2');
   localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
   translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
   noticeOutdate: undefined,
-  highlight: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
   copy: {
     success: '复制成功',
     error: '复制错误',
@@ -64,7 +64,7 @@ gtag('config', 'UA-126255692-2');
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2021-10-29 01:15:48'
+  postUpdate: '2021-10-29 01:23:57'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -330,9 +330,7 @@ HashMap 的底层结构采用可扩容的动态数组，而数组中的每个格
 trivy：容器漏洞扫描程序
 trivy 是一个容器漏洞扫描工具，它可以检测出容器的操作系统以及应用所用依赖的漏洞和瑕疵，提早在生产环境中发现潜在的安全问题。
 安装方法可以参考文章底部的链接，在安装完成后，其检查容器的命令是非常简单明了的。
-# 推荐不要检查使用 latest 标签的容器
-trivy [YOUR_IMAGE_NAME]
-
+12# 推荐不要检查使用 latest 标签的容器trivy [YOUR_IMAGE_NAME]
 容器的二进制鉴证
 除了容器的漏洞需要提防，容器有没有被篡改过也是一件值得关注的安全问题。
 Google Cloud Binary Authorization 提供了二进制授权，只允许签名被认可的容器被部署。但其与特定云厂商绑定，不太适合所有的场景。
@@ -604,18 +602,11 @@ junit-platform-engine
 
 常用代码片段
 分割大的列表变成小的列表
-Lists.partition(bigList, splitSize);
-
+1Lists.partition(bigList, splitSize);
 将 String 变成 List
-public static List&lt;String&gt; splitStringToList(String text, String separator) &#123;
-    if (Strings.isNullOrEmpty(text)) &#123;
-        return Lists.newArrayList();
-    &#125;
-    return Lists.newArrayList(text.split(separator));
-&#125;
-
+123456public static List&lt;String&gt; splitStringToList(String text, String separator) &#123;    if (Strings.isNullOrEmpty(text)) &#123;        return Lists.newArrayList();    &#125;    return Lists.newArrayList(text.split(separator));&#125;
 判断是否开启了 Debug 模式
-private static final String AGENTLIB_JDWP ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2018/10/14/optimize/" title="优化程序性能">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/zzh1991/pictures/blog/image-20210110214255426.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="优化程序性能"></a></div><div class="recent-post-info"><a class="article-title" href="/2018/10/14/optimize/" title="优化程序性能">优化程序性能</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2018-10-14T14:42:13.000Z" title="发表于 2018-10-14 22:42:13">2018-10-14</time></span></div><div class="content">
+12345678private static final String AGENT ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2018/10/14/optimize/" title="优化程序性能">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/zzh1991/pictures/blog/image-20210110214255426.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="优化程序性能"></a></div><div class="recent-post-info"><a class="article-title" href="/2018/10/14/optimize/" title="优化程序性能">优化程序性能</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2018-10-14T14:42:13.000Z" title="发表于 2018-10-14 22:42:13">2018-10-14</time></span></div><div class="content">
 写程序最主要的目标就是使它在所有可能的情况下都正确工作。
 代码剖析程序是测量程序各个部分性能的工具。
 

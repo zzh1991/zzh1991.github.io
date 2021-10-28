@@ -28,7 +28,7 @@ gtag('config', 'UA-126255692-2');
   localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
   translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
   noticeOutdate: undefined,
-  highlight: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
   copy: {
     success: '复制成功',
     error: '复制错误',
@@ -259,13 +259,10 @@ gtag('config', 'UA-126255692-2');
 <p>Windows 10 跟原来系统比较大的区别是支持 Windows Subsystem for Linux，这也意味在 Windows 电脑上可以有 Linux 的运行环境。</p>
 <p>那下面具体介绍怎么开启 WSL2，并安装最新的 Ubuntu 子系统。</p>
 <p>首先打开刚刚安装的 Windows Terminal，然后输入下列命令</p>
-<pre><code class="language-powershell">dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
-</code></pre>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dism.exe /online /<span class="built_in">enable-feature</span> /featurename:Microsoft<span class="literal">-Windows</span><span class="literal">-Subsystem</span><span class="literal">-Linux</span> /all /norestart</span><br><span class="line">dism.exe /online /<span class="built_in">enable-feature</span> /featurename:VirtualMachinePlatform /all /norestart</span><br></pre></td></tr></table></figure>
 <p>然后重新启动计算机，以完成 WSL 安装并更新到 WSL 。</p>
 <p>现在我们在微软应用商城安装 <a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/p/ubuntu-2004-lts/9n6svws3rx71?activetab=pivot:overviewtab" title="Ubuntu 20.04 LTS">Ubuntu 20.04 LTS</a>，当然你也可以选择其他 Linux 发行版本。安装完成后，打开 Windows Terminal 运行以下命令，以将 WSL 2 设置为默认版本。</p>
-<pre><code class="language-powershell">wsl --set-default-version 2
-</code></pre>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl -<span class="literal">-set</span><span class="literal">-default</span><span class="literal">-version</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
 <p>如果执行命令报错，可能需要下载安装 <a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/wsl/wsl2-kernel#download-the-linux-kernel-update-package" title="Linux 内核更新包">Linux 内核更新包</a>，然后重新执行命令即可。至此，你已经拥有了一个 Linux 的运行环境。</p>
 <p><img src="/2020/07/27/win10/image-20200724121730742.png" alt="Windows Terminal"></p>
 <h3 id="Docker">Docker</h3>
