@@ -164,26 +164,26 @@ gtag('config', 'UA-126255692-2');
     }
     detectApple()
     })(window)</script><meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="知识碰撞" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">33</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">23</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">知识碰撞</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">走进 PostgreSQL 世界第一篇章--内部结构</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-07-19T12:21:43.000Z" title="发表于 2020-07-19 20:21:43">2020-07-19</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-11-04T13:11:55.147Z" title="更新于 2020-11-04 21:11:55">2020-11-04</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Postgres/">Postgres</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="走进 PostgreSQL 世界第一篇章--内部结构"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div><article class="post-content" id="article-container"><blockquote>
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">33</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">23</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">知识碰撞</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">走进 PostgreSQL 世界第一篇章--内部结构</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-07-19T12:21:43.000Z" title="发表于 2020-07-19 20:21:43">2020-07-19</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-11-04T13:11:55.147Z" title="更新于 2020-11-04 21:11:55">2020-11-04</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Postgres/">Postgres</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="走进 PostgreSQL 世界第一篇章--内部结构"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div><article class="post-content" id="article-container"><blockquote>
 <p>在日常的应用程序开发过程中，都离不开数据库的使用。今天就带大家走进非常有名的关系型数据库管理系统：PostgreSQL。</p>
 </blockquote>
 <img src="https://i.loli.net/2020/07/19/57YrlKdCIbUeTVH.png" style="zoom:50%;">
 <h2 id="1-安装-PostgreSQL">1 安装 PostgreSQL</h2>
 <p>在深入了解 PostgreSQL 前，先得在我们得主机上安装一下 PostgreSQL。</p>
 <p>对于 macOS 用户非常简单，使用以下命令安装</p>
-<pre class=" language-language-bash"><code class="language-language-bash">brew install postgresql
+<pre><code class="language-bash">brew install postgresql
 </code></pre>
 <p>一开始我也是这么安装的，它也可以支持升级新的 PostgreSQL，是非常方便的。但是这里我更加推荐一种安装方式，使用 Docker 来安装启动 PostgreSQL，因为它可以跨平台按需使用，更加方便且易于后期修改。<br>
 关于 Docker 的安装，可以在 <a target="_blank" rel="noopener" href="https://www.docker.com/products/docker-desktop" title="Docker Desktop for Mac and Windows">Docker Desktop for Mac and Windows</a> 安装对应的客户端软件。</p>
 <p><img src="https://i.loli.net/2020/07/19/RnBisdZXaSTM2NC.png" alt="Docker Desktop"></p>
-<pre class=" language-language-bash"><code class="language-language-bash">docker run --name postgres -p 5432:5432 -v ~/Documents/docker-volumn/postgres:/var/lib/postgresql/data -e POSTGRES_PASSWORD=postgres -d postgres:12-alpine
+<pre><code class="language-bash">docker run --name postgres -p 5432:5432 -v ~/Documents/docker-volumn/postgres:/var/lib/postgresql/data -e POSTGRES_PASSWORD=postgres -d postgres:12-alpine
 </code></pre>
 <p>另外可以去<a target="_blank" rel="noopener" href="https://www.postgresql.org/docs/current/index.html" title="PostgreSQL 官方文档">PostgreSQL 官方文档</a>多多了解 PostgreSQL，丰富的知识点在等着你们学习，下图的黄色部分尤其是重点也是难点。</p>
 <p><img src="https://i.loli.net/2020/07/19/rUovNVtfkM6qg89.png" alt="PostgreSQL Document"></p>
 <h2 id="2-走进-PostgreSQL-内部">2 走进 PostgreSQL 内部</h2>
 <h3 id="2-1-组织结构">2.1 组织结构</h3>
 <p>假设我们是使用 macOS 的 brew 安装的 PostgreSQL。那么数据库的文件路径应该在 <code>/usr/local/var/postgres</code> 下。它的目录结构如下所示</p>
-<pre class=" language-language-bash"><code class="language-language-bash"># 文件
+<pre><code class="language-bash"># 文件
 ├── PG_VERSION	主版本号
 ├── pg_hba.conf
 ├── pg_ident.conf
@@ -213,13 +213,13 @@ gtag('config', 'UA-126255692-2');
 </code></pre>
 <p>数据库中表和索引都是文件形式存储在磁盘上，文件名为 oid，大小最大为 1 GB，超过则会创建一个新的文件。而文件的内部被划分成一个个页，而页的大小默认为 8 KB。</p>
 <p>那么怎样才能找到对应的文件在我们磁盘的哪个位置呢？可以利用 SQL 查询得到我们想要的结果。</p>
-<pre class=" language-language-sql"><code class="language-language-sql">-- 找到数据库的 oid
+<pre><code class="language-sql">-- 找到数据库的 oid
 select * from pg_database where datname = '数据库名';
 -- 找到表或者索引的 oid 或者 relfilenode
 select * from pg_class where relname = '表或索引名';
 </code></pre>
 <p>表相关的文件类型有三类，除了存储表数据的文件外，还有后缀为 <code>_fsm</code> 的是空闲空间映射文件，而 <code>_vm</code> 为可见性映射文件。值得注意的是索引文件是没有可见性映射文件的。</p>
-<pre class=" language-language-bash"><code class="language-language-bash">➜  16401 pwd
+<pre><code class="language-bash">➜  16401 pwd
 /usr/local/var/postgres/base/16401
 ➜  16401 ls -la 33657*
 # 表相关的文件
@@ -294,10 +294,10 @@ select * from pg_class where relname = '表或索引名';
 </ul>
 <h3 id="2-4-多进程架构">2.4 多进程架构</h3>
 <p>PostgreSQL 采用的多进程的架构，通过以下命令可以找出所有的 postgre 进程。</p>
-<pre class=" language-language-bash"><code class="language-language-bash"># 先使用 ps 找到 postgres 的 ppid(上级父程序的 pid)
+<pre><code class="language-bash"># 先使用 ps 找到 postgres 的 ppid(上级父程序的 pid)
 ps -ef |grep postgres
 # 再列出所有的 postgre 的相关进程
-➜  ~ pstree -p <ppid>
+➜  ~ pstree -p &lt;ppid&gt;
 -+= 00001 root /sbin/launchd
  \-+= 76776 zhihaozhang /usr/local/opt/postgresql/bin/postgres -D /usr/local/va
    |--= 44288 postgres postgres: postgres mydb 127.0.0.1(51293) idle

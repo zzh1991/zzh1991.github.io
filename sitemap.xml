@@ -291,13 +291,6 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/Android/</loc>
-    <lastmod>2021-10-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.zzhpro.com/tags/Software/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
@@ -313,6 +306,13 @@
   
   <url>
     <loc>https://blog.zzhpro.com/tags/Hexo/</loc>
+    <lastmod>2021-10-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.zzhpro.com/tags/Android/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -361,6 +361,13 @@
   </url>
   
   <url>
+    <loc>https://blog.zzhpro.com/tags/life/</loc>
+    <lastmod>2021-10-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.zzhpro.com/tags/note/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
@@ -375,20 +382,6 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/life/</loc>
-    <lastmod>2021-10-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.zzhpro.com/tags/%E6%8B%8D%E7%85%A7/</loc>
-    <lastmod>2021-10-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.zzhpro.com/tags/Postgre/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
@@ -396,7 +389,7 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/React/</loc>
+    <loc>https://blog.zzhpro.com/tags/%E6%8B%8D%E7%85%A7/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -411,6 +404,13 @@
   
   <url>
     <loc>https://blog.zzhpro.com/tags/Shell/</loc>
+    <lastmod>2021-10-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.zzhpro.com/tags/React/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -489,6 +489,13 @@
   </url>
   
   <url>
+    <loc>https://blog.zzhpro.com/categories/note/</loc>
+    <lastmod>2021-10-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.zzhpro.com/categories/Postgres/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
@@ -497,13 +504,6 @@
   
   <url>
     <loc>https://blog.zzhpro.com/categories/Windows/</loc>
-    <lastmod>2021-10-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.zzhpro.com/categories/note/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
