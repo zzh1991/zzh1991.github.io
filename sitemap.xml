@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.zzhpro.com/2020/12/29/macOS/</loc>
+    
+    <lastmod>2021-10-28</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.zzhpro.com/2020/01/02/java-map/</loc>
     
     <lastmod>2021-10-28</lastmod>
@@ -75,13 +82,6 @@
     <loc>https://blog.zzhpro.com/categories/index.html</loc>
     
     <lastmod>2021-10-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.zzhpro.com/2020/12/29/macOS/</loc>
-    
-    <lastmod>2021-01-28</lastmod>
     
   </url>
   
@@ -319,13 +319,6 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/Java/</loc>
-    <lastmod>2021-10-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.zzhpro.com/tags/iPad/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
@@ -333,14 +326,14 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/JVM/</loc>
+    <loc>https://blog.zzhpro.com/tags/Java/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/Kotlin/</loc>
+    <loc>https://blog.zzhpro.com/tags/JVM/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -382,14 +375,14 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/%E6%8B%8D%E7%85%A7/</loc>
+    <loc>https://blog.zzhpro.com/tags/Postgre/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/Postgre/</loc>
+    <loc>https://blog.zzhpro.com/tags/%E6%8B%8D%E7%85%A7/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -431,6 +424,13 @@
   </url>
   
   <url>
+    <loc>https://blog.zzhpro.com/tags/Kotlin/</loc>
+    <lastmod>2021-10-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.zzhpro.com/tags/Workflow/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
@@ -447,14 +447,14 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/categories/Java/</loc>
+    <loc>https://blog.zzhpro.com/categories/iPad/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/categories/iPad/</loc>
+    <loc>https://blog.zzhpro.com/categories/Java/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
