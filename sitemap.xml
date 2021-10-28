@@ -128,14 +128,14 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/2018/07/29/note-skills/</loc>
+    <loc>https://blog.zzhpro.com/2020/07/19/postgres-internal-first/</loc>
     
     <lastmod>2020-11-04</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/2020/07/19/postgres-internal-first/</loc>
+    <loc>https://blog.zzhpro.com/2018/07/29/note-skills/</loc>
     
     <lastmod>2020-11-04</lastmod>
     
@@ -298,14 +298,14 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/Software/</loc>
+    <loc>https://blog.zzhpro.com/tags/go/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/go/</loc>
+    <loc>https://blog.zzhpro.com/tags/Software/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -333,13 +333,6 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/JVM/</loc>
-    <lastmod>2021-10-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.zzhpro.com/tags/Kotlin/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
@@ -347,7 +340,7 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/mac/</loc>
+    <loc>https://blog.zzhpro.com/tags/JVM/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -361,7 +354,7 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/life/</loc>
+    <loc>https://blog.zzhpro.com/tags/mac/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -375,7 +368,7 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/Computer-System/</loc>
+    <loc>https://blog.zzhpro.com/tags/life/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -396,7 +389,7 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/Python/</loc>
+    <loc>https://blog.zzhpro.com/tags/Computer-System/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -404,6 +397,20 @@
   
   <url>
     <loc>https://blog.zzhpro.com/tags/React/</loc>
+    <lastmod>2021-10-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.zzhpro.com/tags/Shell/</loc>
+    <lastmod>2021-10-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.zzhpro.com/tags/Python/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -425,13 +432,6 @@
   
   <url>
     <loc>https://blog.zzhpro.com/tags/Workflow/</loc>
-    <lastmod>2021-10-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.zzhpro.com/tags/Shell/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -468,13 +468,6 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/categories/mac/</loc>
-    <lastmod>2021-10-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.zzhpro.com/categories/macOS/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
@@ -482,7 +475,7 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/categories/life/</loc>
+    <loc>https://blog.zzhpro.com/categories/mac/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -490,6 +483,13 @@
   
   <url>
     <loc>https://blog.zzhpro.com/categories/note/</loc>
+    <lastmod>2021-10-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.zzhpro.com/categories/life/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
