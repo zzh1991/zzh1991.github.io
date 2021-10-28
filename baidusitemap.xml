@@ -2,23 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://blog.zzhpro.com/2020/07/27/win10/</loc>
-    <lastmod>2021-01-28</lastmod>
+    <lastmod>2021-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.zzhpro.com/2020/11/12/note-2020/</loc>
+    <lastmod>2021-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.zzhpro.com/2020/09/30/mac/</loc>
+    <lastmod>2021-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.zzhpro.com/2020/11/10/macbook-pro-issues/</loc>
+    <lastmod>2021-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.zzhpro.com/2020/01/02/java-map/</loc>
+    <lastmod>2021-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.zzhpro.com/2020/09/07/intellij-idea/</loc>
+    <lastmod>2021-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.zzhpro.com/2021/01/24/ipad/</loc>
+    <lastmod>2021-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.zzhpro.com/2019/11/02/java-version-management/</loc>
+    <lastmod>2021-10-28</lastmod>
   </url>
   <url>
     <loc>https://blog.zzhpro.com/2020/12/29/macOS/</loc>
     <lastmod>2021-01-28</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.zzhpro.com/2021/01/24/ipad/</loc>
-    <lastmod>2021-01-24</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.zzhpro.com/2020/09/07/intellij-idea/</loc>
-    <lastmod>2021-01-24</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.zzhpro.com/2020/11/10/macbook-pro-issues/</loc>
-    <lastmod>2021-01-11</lastmod>
   </url>
   <url>
     <loc>https://blog.zzhpro.com/2020/01/19/android-app/</loc>
@@ -37,10 +53,6 @@
     <lastmod>2021-01-09</lastmod>
   </url>
   <url>
-    <loc>https://blog.zzhpro.com/2020/11/12/note-2020/</loc>
-    <lastmod>2020-11-12</lastmod>
-  </url>
-  <url>
     <loc>https://blog.zzhpro.com/2017/03/03/ubuntu/</loc>
     <lastmod>2020-11-04</lastmod>
   </url>
@@ -57,14 +69,6 @@
     <lastmod>2020-11-04</lastmod>
   </url>
   <url>
-    <loc>https://blog.zzhpro.com/2020/09/30/mac/</loc>
-    <lastmod>2020-11-04</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.zzhpro.com/2020/01/02/java-map/</loc>
-    <lastmod>2020-11-04</lastmod>
-  </url>
-  <url>
     <loc>https://blog.zzhpro.com/2020/02/27/jvm/</loc>
     <lastmod>2020-11-04</lastmod>
   </url>
@@ -75,10 +79,6 @@
   <url>
     <loc>https://blog.zzhpro.com/2017/01/26/hexo/</loc>
     <lastmod>2020-11-04</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.zzhpro.com/2019/11/02/java-version-management/</loc>
-    <lastmod>2020-07-27</lastmod>
   </url>
   <url>
     <loc>https://blog.zzhpro.com/2020/03/12/daily-software/</loc>
