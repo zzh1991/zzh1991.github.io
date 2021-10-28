@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.zzhpro.com/2020/01/02/java-map/</loc>
+    
+    <lastmod>2021-10-28</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.zzhpro.com/2020/07/27/win10/</loc>
     
     <lastmod>2021-10-28</lastmod>
@@ -24,13 +31,6 @@
   
   <url>
     <loc>https://blog.zzhpro.com/2020/11/10/macbook-pro-issues/</loc>
-    
-    <lastmod>2021-10-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.zzhpro.com/2020/01/02/java-map/</loc>
     
     <lastmod>2021-10-28</lastmod>
     
@@ -361,13 +361,6 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/life/</loc>
-    <lastmod>2021-10-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.zzhpro.com/tags/note/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
@@ -376,6 +369,13 @@
   
   <url>
     <loc>https://blog.zzhpro.com/tags/Computer-System/</loc>
+    <lastmod>2021-10-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.zzhpro.com/tags/life/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -396,14 +396,14 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/Python/</loc>
+    <loc>https://blog.zzhpro.com/tags/React/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/React/</loc>
+    <loc>https://blog.zzhpro.com/tags/Python/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -424,14 +424,14 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/Workflow/</loc>
+    <loc>https://blog.zzhpro.com/tags/Windows/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/Windows/</loc>
+    <loc>https://blog.zzhpro.com/tags/Workflow/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -489,13 +489,6 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/categories/note/</loc>
-    <lastmod>2021-10-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.zzhpro.com/categories/Postgres/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
@@ -504,6 +497,13 @@
   
   <url>
     <loc>https://blog.zzhpro.com/categories/Windows/</loc>
+    <lastmod>2021-10-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.zzhpro.com/categories/note/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
