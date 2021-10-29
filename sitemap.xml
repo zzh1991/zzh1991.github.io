@@ -284,14 +284,14 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/Android/</loc>
+    <loc>https://blog.zzhpro.com/tags/technology/</loc>
     <lastmod>2021-10-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/technology/</loc>
+    <loc>https://blog.zzhpro.com/tags/Android/</loc>
     <lastmod>2021-10-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -354,14 +354,21 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/note/</loc>
+    <loc>https://blog.zzhpro.com/tags/macOS/</loc>
     <lastmod>2021-10-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/Computer-System/</loc>
+    <loc>https://blog.zzhpro.com/tags/life/</loc>
+    <lastmod>2021-10-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.zzhpro.com/tags/note/</loc>
     <lastmod>2021-10-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -375,14 +382,14 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/Postgre/</loc>
+    <loc>https://blog.zzhpro.com/tags/Computer-System/</loc>
     <lastmod>2021-10-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/Shell/</loc>
+    <loc>https://blog.zzhpro.com/tags/Postgre/</loc>
     <lastmod>2021-10-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -403,7 +410,7 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/Ubuntu/</loc>
+    <loc>https://blog.zzhpro.com/tags/Shell/</loc>
     <lastmod>2021-10-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -417,21 +424,14 @@
   </url>
   
   <url>
+    <loc>https://blog.zzhpro.com/tags/Ubuntu/</loc>
+    <lastmod>2021-10-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.zzhpro.com/tags/Workflow/</loc>
-    <lastmod>2021-10-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.zzhpro.com/tags/macOS/</loc>
-    <lastmod>2021-10-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.zzhpro.com/tags/life/</loc>
     <lastmod>2021-10-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -475,6 +475,20 @@
   </url>
   
   <url>
+    <loc>https://blog.zzhpro.com/categories/macOS/</loc>
+    <lastmod>2021-10-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.zzhpro.com/categories/life/</loc>
+    <lastmod>2021-10-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.zzhpro.com/categories/note/</loc>
     <lastmod>2021-10-29</lastmod>
     <changefreq>daily</changefreq>
@@ -490,20 +504,6 @@
   
   <url>
     <loc>https://blog.zzhpro.com/categories/Windows/</loc>
-    <lastmod>2021-10-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.zzhpro.com/categories/macOS/</loc>
-    <lastmod>2021-10-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.zzhpro.com/categories/life/</loc>
     <lastmod>2021-10-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
