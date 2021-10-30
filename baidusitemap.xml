@@ -1,12 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://blog.zzhpro.com/2021/01/24/ipad/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <loc>https://blog.zzhpro.com/2020/09/30/mac/</loc>
+    <lastmod>2021-10-30</lastmod>
   </url>
   <url>
-    <loc>https://blog.zzhpro.com/2020/09/30/mac/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <loc>https://blog.zzhpro.com/2020/09/07/intellij-idea/</loc>
+    <lastmod>2021-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.zzhpro.com/2021/01/24/ipad/</loc>
+    <lastmod>2021-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.zzhpro.com/2020/07/26/2020-development-ecosystem/</loc>
+    <lastmod>2021-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.zzhpro.com/2020/02/27/jvm/</loc>
+    <lastmod>2021-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.zzhpro.com/2020/11/10/macbook-pro-issues/</loc>
+    <lastmod>2021-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.zzhpro.com/2020/11/12/note-2020/</loc>
+    <lastmod>2021-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.zzhpro.com/2020/07/27/win10/</loc>
+    <lastmod>2021-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.zzhpro.com/2020/10/18/wiznote-lite/</loc>
+    <lastmod>2021-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.zzhpro.com/2017/01/26/hexo/</loc>
+    <lastmod>2021-10-30</lastmod>
   </url>
   <url>
     <loc>https://blog.zzhpro.com/2020/12/29/macOS/</loc>
@@ -14,22 +46,6 @@
   </url>
   <url>
     <loc>https://blog.zzhpro.com/2020/01/02/java-map/</loc>
-    <lastmod>2021-10-28</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.zzhpro.com/2020/07/27/win10/</loc>
-    <lastmod>2021-10-28</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.zzhpro.com/2020/11/12/note-2020/</loc>
-    <lastmod>2021-10-28</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.zzhpro.com/2020/11/10/macbook-pro-issues/</loc>
-    <lastmod>2021-10-28</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.zzhpro.com/2020/09/07/intellij-idea/</loc>
     <lastmod>2021-10-28</lastmod>
   </url>
   <url>
@@ -41,15 +57,7 @@
     <lastmod>2021-01-09</lastmod>
   </url>
   <url>
-    <loc>https://blog.zzhpro.com/2020/10/18/wiznote-lite/</loc>
-    <lastmod>2021-01-09</lastmod>
-  </url>
-  <url>
     <loc>https://blog.zzhpro.com/2020/01/02/2020-tech-trend/</loc>
-    <lastmod>2021-01-09</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.zzhpro.com/2020/07/26/2020-development-ecosystem/</loc>
     <lastmod>2021-01-09</lastmod>
   </url>
   <url>
@@ -69,15 +77,7 @@
     <lastmod>2020-11-04</lastmod>
   </url>
   <url>
-    <loc>https://blog.zzhpro.com/2020/02/27/jvm/</loc>
-    <lastmod>2020-11-04</lastmod>
-  </url>
-  <url>
     <loc>https://blog.zzhpro.com/2020/08/29/2020-stackoverflow-survey/</loc>
-    <lastmod>2020-11-04</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.zzhpro.com/2017/01/26/hexo/</loc>
     <lastmod>2020-11-04</lastmod>
   </url>
   <url>
