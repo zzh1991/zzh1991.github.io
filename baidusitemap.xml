@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.zzhpro.com/2017/01/26/hexo/</loc>
+    <lastmod>2021-10-30</lastmod>
+  </url>
+  <url>
     <loc>https://blog.zzhpro.com/2020/09/30/mac/</loc>
     <lastmod>2021-10-30</lastmod>
   </url>
@@ -34,10 +38,6 @@
   </url>
   <url>
     <loc>https://blog.zzhpro.com/2020/10/18/wiznote-lite/</loc>
-    <lastmod>2021-10-30</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.zzhpro.com/2017/01/26/hexo/</loc>
     <lastmod>2021-10-30</lastmod>
   </url>
   <url>
