@@ -2,6 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.zzhpro.com/2020/07/27/win10/</loc>
+    
+    <lastmod>2022-09-01</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.zzhpro.com/2020/11/12/note-2020/</loc>
+    
+    <lastmod>2022-09-01</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.zzhpro.com/2020/11/10/macbook-pro-issues/</loc>
+    
+    <lastmod>2022-09-01</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.zzhpro.com/2020/12/29/macOS/</loc>
+    
+    <lastmod>2022-09-01</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.zzhpro.com/2021/01/24/ipad/</loc>
+    
+    <lastmod>2022-09-01</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.zzhpro.com/2020/09/30/mac/</loc>
+    
+    <lastmod>2022-09-01</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.zzhpro.com/2017/01/26/hexo/</loc>
     
     <lastmod>2022-09-01</lastmod>
@@ -11,14 +53,7 @@
   <url>
     <loc>https://blog.zzhpro.com/2020/09/07/intellij-idea/</loc>
     
-    <lastmod>2021-11-25</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.zzhpro.com/2021/01/24/ipad/</loc>
-    
-    <lastmod>2021-10-30</lastmod>
+    <lastmod>2022-09-01</lastmod>
     
   </url>
   
@@ -37,37 +72,9 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/2020/11/10/macbook-pro-issues/</loc>
-    
-    <lastmod>2021-10-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.zzhpro.com/2020/11/12/note-2020/</loc>
-    
-    <lastmod>2021-10-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.zzhpro.com/2020/07/27/win10/</loc>
-    
-    <lastmod>2021-10-30</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://blog.zzhpro.com/2020/10/18/wiznote-lite/</loc>
     
     <lastmod>2021-10-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.zzhpro.com/2020/12/29/macOS/</loc>
-    
-    <lastmod>2021-10-29</lastmod>
     
   </url>
   
@@ -277,14 +284,14 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/technology/</loc>
+    <loc>https://blog.zzhpro.com/tags/Android/</loc>
     <lastmod>2022-09-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/Android/</loc>
+    <loc>https://blog.zzhpro.com/tags/technology/</loc>
     <lastmod>2022-09-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -340,6 +347,13 @@
   </url>
   
   <url>
+    <loc>https://blog.zzhpro.com/tags/mac/</loc>
+    <lastmod>2022-09-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.zzhpro.com/tags/macOS/</loc>
     <lastmod>2022-09-01</lastmod>
     <changefreq>daily</changefreq>
@@ -368,14 +382,14 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/%E6%8B%8D%E7%85%A7/</loc>
+    <loc>https://blog.zzhpro.com/tags/Postgre/</loc>
     <lastmod>2022-09-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/Postgre/</loc>
+    <loc>https://blog.zzhpro.com/tags/%E6%8B%8D%E7%85%A7/</loc>
     <lastmod>2022-09-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -448,6 +462,13 @@
   
   <url>
     <loc>https://blog.zzhpro.com/categories/JVM/</loc>
+    <lastmod>2022-09-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.zzhpro.com/categories/mac/</loc>
     <lastmod>2022-09-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
