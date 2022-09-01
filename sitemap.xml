@@ -298,14 +298,14 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/go/</loc>
+    <loc>https://blog.zzhpro.com/tags/Software/</loc>
     <lastmod>2022-09-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/Software/</loc>
+    <loc>https://blog.zzhpro.com/tags/go/</loc>
     <lastmod>2022-09-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -319,6 +319,13 @@
   </url>
   
   <url>
+    <loc>https://blog.zzhpro.com/tags/Java/</loc>
+    <lastmod>2022-09-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.zzhpro.com/tags/iPad/</loc>
     <lastmod>2022-09-01</lastmod>
     <changefreq>daily</changefreq>
@@ -326,7 +333,7 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/Java/</loc>
+    <loc>https://blog.zzhpro.com/tags/Kotlin/</loc>
     <lastmod>2022-09-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -340,13 +347,6 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/macOS/</loc>
-    <lastmod>2022-09-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.zzhpro.com/tags/mac/</loc>
     <lastmod>2022-09-01</lastmod>
     <changefreq>daily</changefreq>
@@ -354,7 +354,7 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/Kotlin/</loc>
+    <loc>https://blog.zzhpro.com/tags/macOS/</loc>
     <lastmod>2022-09-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -447,14 +447,14 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/categories/iPad/</loc>
+    <loc>https://blog.zzhpro.com/categories/Java/</loc>
     <lastmod>2022-09-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/categories/Java/</loc>
+    <loc>https://blog.zzhpro.com/categories/iPad/</loc>
     <lastmod>2022-09-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -468,14 +468,14 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/categories/macOS/</loc>
+    <loc>https://blog.zzhpro.com/categories/mac/</loc>
     <lastmod>2022-09-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/categories/mac/</loc>
+    <loc>https://blog.zzhpro.com/categories/macOS/</loc>
     <lastmod>2022-09-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
