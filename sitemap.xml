@@ -299,7 +299,7 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/2020/07/19/postgres-internal-first/</loc>
+    <loc>https://blog.zzhpro.com/2018/07/29/note-skills/</loc>
     
     <lastmod>2020-11-04</lastmod>
     
@@ -308,7 +308,7 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/2018/07/29/note-skills/</loc>
+    <loc>https://blog.zzhpro.com/2020/07/19/postgres-internal-first/</loc>
     
     <lastmod>2020-11-04</lastmod>
     
@@ -367,7 +367,21 @@
   </url>
   
   <url>
+    <loc>https://blog.zzhpro.com/tags/technology/</loc>
+    <lastmod>2024-01-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.zzhpro.com/tags/go/</loc>
+    <lastmod>2024-01-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.zzhpro.com/tags/Software/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -395,20 +409,6 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/technology/</loc>
-    <lastmod>2024-01-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.zzhpro.com/tags/Software/</loc>
-    <lastmod>2024-01-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.zzhpro.com/tags/JVM/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -416,7 +416,7 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/macOS/</loc>
+    <loc>https://blog.zzhpro.com/tags/Kotlin/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -424,6 +424,13 @@
   
   <url>
     <loc>https://blog.zzhpro.com/tags/mac/</loc>
+    <lastmod>2024-01-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.zzhpro.com/tags/macOS/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -444,7 +451,7 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/Computer-System/</loc>
+    <loc>https://blog.zzhpro.com/tags/%E6%8B%8D%E7%85%A7/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -458,13 +465,6 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/React/</loc>
-    <lastmod>2024-01-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.zzhpro.com/tags/Postgre/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -472,7 +472,7 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/Shell/</loc>
+    <loc>https://blog.zzhpro.com/tags/React/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -480,13 +480,6 @@
   
   <url>
     <loc>https://blog.zzhpro.com/tags/Ubuntu/</loc>
-    <lastmod>2024-01-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.zzhpro.com/tags/Kotlin/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -507,7 +500,14 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/%E6%8B%8D%E7%85%A7/</loc>
+    <loc>https://blog.zzhpro.com/tags/Computer-System/</loc>
+    <lastmod>2024-01-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.zzhpro.com/tags/Shell/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -544,14 +544,14 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/categories/macOS/</loc>
+    <loc>https://blog.zzhpro.com/categories/mac/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/categories/mac/</loc>
+    <loc>https://blog.zzhpro.com/categories/macOS/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

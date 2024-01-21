@@ -152,11 +152,14 @@ gtag('config', 'UA-126255692-2');
       }
       detectApple()
     })(window)</script><meta name="generator" content="Hexo 7.1.0"><link rel="alternate" href="/atom.xml" title="知识碰撞" type="application/atom+xml">
-</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">33</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">23</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="知识碰撞"><span class="site-name">知识碰撞</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">优化程序性能</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2018-10-14T14:42:13.000Z" title="发表于 2018-10-14 22:42:13">2018-10-14</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-09-01T14:32:39.690Z" title="更新于 2022-09-01 22:32:39">2022-09-01</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">418</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>1分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="优化程序性能"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="post-content" id="article-container"><blockquote>
-<p>写程序最主要的目标就是使它在所有可能的情况下都正确工作。<br>代码剖析程序是测量程序各个部分性能的工具。</p>
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">33</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">23</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="知识碰撞"><span class="site-name">知识碰撞</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">优化程序性能</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2018-10-14T14:42:13.000Z" title="发表于 2018-10-14 22:42:13">2018-10-14</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-09-01T14:32:39.690Z" title="更新于 2022-09-01 22:32:39">2022-09-01</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">417</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>1分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="优化程序性能"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="post-content" id="article-container"><blockquote>
+<p>写程序最主要的目标就是使它在所有可能的情况下都正确工作。<br>
+代码剖析程序是测量程序各个部分性能的工具。</p>
 </blockquote>
-<h2 id="程序性能分析"><a href="#程序性能分析" class="headerlink" title="程序性能分析"></a>程序性能分析</h2><p>度量标准：<strong>每元素的周期数</strong>(Cycles Per Element, CPE)</p>
-<h2 id="优化编译器的性能"><a href="#优化编译器的性能" class="headerlink" title="优化编译器的性能"></a>优化编译器的性能</h2><ol>
+<h2 id="程序性能分析">程序性能分析</h2>
+<p>度量标准：<strong>每元素的周期数</strong>(Cycles Per Element, CPE)</p>
+<h2 id="优化编译器的性能">优化编译器的性能</h2>
+<ol>
 <li>内存别名使用：两个指针可能指向同一个内存位置的情况</li>
 <li>消除循环的低效率</li>
 </ol>
@@ -181,29 +184,34 @@ gtag('config', 'UA-126255692-2');
 <li>用向量指令达到更高的并行度</li>
 <li>低级优化，结构化代码以利用硬件功能</li>
 </ol>
-<h2 id="现代处理器"><a href="#现代处理器" class="headerlink" title="现代处理器"></a>现代处理器</h2><ol>
+<h2 id="现代处理器">现代处理器</h2>
+<ol>
 <li>指令级并行</li>
 <li>两个界限</li>
 <li>延迟界限</li>
 <li>吞吐量界限</li>
 </ol>
-<h3 id="寄存器"><a href="#寄存器" class="headerlink" title="寄存器"></a>寄存器</h3><ol>
+<h3 id="寄存器">寄存器</h3>
+<ol>
 <li>现代 x86-64 处理器有 16 个寄存器</li>
 </ol>
-<h3 id="分支预测和预测错误处罚"><a href="#分支预测和预测错误处罚" class="headerlink" title="分支预测和预测错误处罚"></a>分支预测和预测错误处罚</h3><ol>
+<h3 id="分支预测和预测错误处罚">分支预测和预测错误处罚</h3>
+<ol>
 <li>不要过分关心可预测的分支</li>
 <li>书写适合用条件传送实现的代码</li>
 <li>用功能性的风格重写条件操作，使得编译采用条件数据传送</li>
 </ol>
-<h3 id="内存性能"><a href="#内存性能" class="headerlink" title="内存性能"></a>内存性能</h3><ol>
+<h3 id="内存性能">内存性能</h3>
+<ol>
 <li>加载</li>
 </ol>
 <ul>
 <li>例如 L1 级 cache 的 4 周期访问时间</li>
 </ul>
 <ol start="2">
-<li>存储<ul>
-<li>读&#x2F;写相关操作：指令需要一条一条顺序执行</li>
+<li>存储
+<ul>
+<li>读/写相关操作：指令需要一条一条顺序执行</li>
 </ul>
 </li>
 </ol>
