@@ -360,13 +360,6 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/Android/</loc>
-    <lastmod>2024-01-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.zzhpro.com/tags/technology/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -374,14 +367,7 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/Hexo/</loc>
-    <lastmod>2024-01-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.zzhpro.com/tags/Java/</loc>
+    <loc>https://blog.zzhpro.com/tags/Android/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -402,14 +388,21 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/iPad/</loc>
+    <loc>https://blog.zzhpro.com/tags/Hexo/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/JVM/</loc>
+    <loc>https://blog.zzhpro.com/tags/Java/</loc>
+    <lastmod>2024-01-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.zzhpro.com/tags/iPad/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -423,13 +416,6 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/macOS/</loc>
-    <lastmod>2024-01-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.zzhpro.com/tags/mac/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -437,7 +423,7 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/note/</loc>
+    <loc>https://blog.zzhpro.com/tags/macOS/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -445,6 +431,13 @@
   
   <url>
     <loc>https://blog.zzhpro.com/tags/life/</loc>
+    <lastmod>2024-01-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.zzhpro.com/tags/note/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -486,6 +479,13 @@
   </url>
   
   <url>
+    <loc>https://blog.zzhpro.com/tags/Shell/</loc>
+    <lastmod>2024-01-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.zzhpro.com/tags/Ubuntu/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -493,7 +493,7 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/Shell/</loc>
+    <loc>https://blog.zzhpro.com/tags/Windows/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -507,7 +507,7 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/Windows/</loc>
+    <loc>https://blog.zzhpro.com/tags/JVM/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -544,13 +544,6 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/categories/macOS/</loc>
-    <lastmod>2024-01-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.zzhpro.com/categories/mac/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -558,7 +551,7 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/categories/note/</loc>
+    <loc>https://blog.zzhpro.com/categories/macOS/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -566,6 +559,13 @@
   
   <url>
     <loc>https://blog.zzhpro.com/categories/life/</loc>
+    <lastmod>2024-01-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.zzhpro.com/categories/note/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
