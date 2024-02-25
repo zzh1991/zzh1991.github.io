@@ -38,10 +38,10 @@ https://blog.zzhpro.com/about/index.html
 https://blog.zzhpro.com/404.html
 https://blog.zzhpro.com/
 https://blog.zzhpro.com/tags/Development/
-https://blog.zzhpro.com/tags/technology/
 https://blog.zzhpro.com/tags/Android/
-https://blog.zzhpro.com/tags/go/
+https://blog.zzhpro.com/tags/technology/
 https://blog.zzhpro.com/tags/Software/
+https://blog.zzhpro.com/tags/go/
 https://blog.zzhpro.com/tags/Hexo/
 https://blog.zzhpro.com/tags/iPad/
 https://blog.zzhpro.com/tags/Java/
@@ -49,8 +49,8 @@ https://blog.zzhpro.com/tags/JVM/
 https://blog.zzhpro.com/tags/Kotlin/
 https://blog.zzhpro.com/tags/macOS/
 https://blog.zzhpro.com/tags/mac/
-https://blog.zzhpro.com/tags/life/
 https://blog.zzhpro.com/tags/note/
+https://blog.zzhpro.com/tags/life/
 https://blog.zzhpro.com/tags/Computer-System/
 https://blog.zzhpro.com/tags/%E6%8B%8D%E7%85%A7/
 https://blog.zzhpro.com/tags/Postgre/
@@ -66,7 +66,7 @@ https://blog.zzhpro.com/categories/Java/
 https://blog.zzhpro.com/categories/JVM/
 https://blog.zzhpro.com/categories/macOS/
 https://blog.zzhpro.com/categories/mac/
-https://blog.zzhpro.com/categories/life/
 https://blog.zzhpro.com/categories/note/
+https://blog.zzhpro.com/categories/life/
 https://blog.zzhpro.com/categories/Postgres/
 https://blog.zzhpro.com/categories/Windows/

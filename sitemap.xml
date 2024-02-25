@@ -360,13 +360,6 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/technology/</loc>
-    <lastmod>2024-02-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.zzhpro.com/tags/Android/</loc>
     <lastmod>2024-02-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -374,7 +367,7 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/go/</loc>
+    <loc>https://blog.zzhpro.com/tags/technology/</loc>
     <lastmod>2024-02-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -382,6 +375,13 @@
   
   <url>
     <loc>https://blog.zzhpro.com/tags/Software/</loc>
+    <lastmod>2024-02-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.zzhpro.com/tags/go/</loc>
     <lastmod>2024-02-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -437,14 +437,14 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/life/</loc>
+    <loc>https://blog.zzhpro.com/tags/note/</loc>
     <lastmod>2024-02-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/note/</loc>
+    <loc>https://blog.zzhpro.com/tags/life/</loc>
     <lastmod>2024-02-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -558,14 +558,14 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/categories/life/</loc>
+    <loc>https://blog.zzhpro.com/categories/note/</loc>
     <lastmod>2024-02-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/categories/note/</loc>
+    <loc>https://blog.zzhpro.com/categories/life/</loc>
     <lastmod>2024-02-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
