@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>走进 PostgreSQL 世界第一篇章--内部结构 | 知识碰撞</title><meta name="author" content="Zhihao Zhang"><meta name="copyright" content="Zhihao Zhang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="在日常的应用程序开发过程中，都离不开数据库的使用。今天就带大家走进非常有名的关系型数据库管理系统：PostgreSQL。   1 安装 PostgreSQL 在深入了解 PostgreSQL 前，先得在我们得主机上安装一下 PostgreSQL。 对于 macOS 用户非常简单，使用以下命令安装"><link rel="shortcut icon" href="/img/blog-solid.svg"><link rel="canonical" href="https://blog.zzhpro.com/2020/07/19/postgres-internal-first/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>走进 PostgreSQL 世界第一篇章--内部结构 | 知识碰撞</title><meta name="author" content="Zhihao Zhang"><meta name="copyright" content="Zhihao Zhang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="在日常的应用程序开发过程中，都离不开数据库的使用。今天就带大家走进非常有名的关系型数据库管理系统：PostgreSQL。    1 安装 PostgreSQL在深入了解 PostgreSQL 前，先得在我们得主机上安装一下 PostgreSQL。 对于 macOS 用户非常简单，使用以下命令安装"><link rel="shortcut icon" href="/img/blog-solid.svg"><link rel="canonical" href="https://blog.zzhpro.com/2020/07/19/postgres-internal-first/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
   hm.src = "https://hm.baidu.com/hm.js?041e5d4c12342bb051fb77373c270c8f";
@@ -155,52 +155,47 @@ gtag('config', 'UA-126255692-2');
 </head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">33</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">23</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="知识碰撞"><span class="site-name">知识碰撞</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">走进 PostgreSQL 世界第一篇章--内部结构</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-07-19T12:21:43.000Z" title="发表于 2020-07-19 20:21:43">2020-07-19</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-11-04T13:11:55.147Z" title="更新于 2020-11-04 21:11:55">2020-11-04</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Postgres/">Postgres</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>5分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="走进 PostgreSQL 世界第一篇章--内部结构"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="post-content" id="article-container"><blockquote>
 <p>在日常的应用程序开发过程中，都离不开数据库的使用。今天就带大家走进非常有名的关系型数据库管理系统：PostgreSQL。</p>
 </blockquote>
-<img src="https://i.loli.net/2020/07/19/57YrlKdCIbUeTVH.png" style="zoom:50%;" />
-<h2 id="1-安装-PostgreSQL">1 安装 PostgreSQL</h2>
-<p>在深入了解 PostgreSQL 前，先得在我们得主机上安装一下 PostgreSQL。</p>
+<img src="https://i.loli.net/2020/07/19/57YrlKdCIbUeTVH.png" style="zoom:50%;">
+
+<h2 id="1-安装-PostgreSQL"><a href="#1-安装-PostgreSQL" class="headerlink" title="1 安装 PostgreSQL"></a>1 安装 PostgreSQL</h2><p>在深入了解 PostgreSQL 前，先得在我们得主机上安装一下 PostgreSQL。</p>
 <p>对于 macOS 用户非常简单，使用以下命令安装</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install postgresql</span><br></pre></td></tr></table></figure>
-<p>一开始我也是这么安装的，它也可以支持升级新的 PostgreSQL，是非常方便的。但是这里我更加推荐一种安装方式，使用 Docker 来安装启动 PostgreSQL，因为它可以跨平台按需使用，更加方便且易于后期修改。<br>
-关于 Docker 的安装，可以在 <a target="_blank" rel="noopener" href="https://www.docker.com/products/docker-desktop" title="Docker Desktop for Mac and Windows">Docker Desktop for Mac and Windows</a> 安装对应的客户端软件。</p>
+<p>一开始我也是这么安装的，它也可以支持升级新的 PostgreSQL，是非常方便的。但是这里我更加推荐一种安装方式，使用 Docker 来安装启动 PostgreSQL，因为它可以跨平台按需使用，更加方便且易于后期修改。<br>关于 Docker 的安装，可以在 <a target="_blank" rel="noopener" href="https://www.docker.com/products/docker-desktop" title="Docker Desktop for Mac and Windows">Docker Desktop for Mac and Windows</a> 安装对应的客户端软件。</p>
 <p><img src="https://i.loli.net/2020/07/19/RnBisdZXaSTM2NC.png" alt="Docker Desktop"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name postgres -p 5432:5432 -v ~/Documents/docker-volumn/postgres:/var/lib/postgresql/data -e POSTGRES_PASSWORD=postgres -d postgres:12-alpine</span><br></pre></td></tr></table></figure>
+
 <p>另外可以去<a target="_blank" rel="noopener" href="https://www.postgresql.org/docs/current/index.html" title="PostgreSQL 官方文档">PostgreSQL 官方文档</a>多多了解 PostgreSQL，丰富的知识点在等着你们学习，下图的黄色部分尤其是重点也是难点。</p>
 <p><img src="https://i.loli.net/2020/07/19/rUovNVtfkM6qg89.png" alt="PostgreSQL Document"></p>
-<h2 id="2-走进-PostgreSQL-内部">2 走进 PostgreSQL 内部</h2>
-<h3 id="2-1-组织结构">2.1 组织结构</h3>
-<p>假设我们是使用 macOS 的 brew 安装的 PostgreSQL。那么数据库的文件路径应该在 <code>/usr/local/var/postgres</code> 下。它的目录结构如下所示</p>
+<h2 id="2-走进-PostgreSQL-内部"><a href="#2-走进-PostgreSQL-内部" class="headerlink" title="2 走进 PostgreSQL 内部"></a>2 走进 PostgreSQL 内部</h2><h3 id="2-1-组织结构"><a href="#2-1-组织结构" class="headerlink" title="2.1 组织结构"></a>2.1 组织结构</h3><p>假设我们是使用 macOS 的 brew 安装的 PostgreSQL。那么数据库的文件路径应该在 <code>/usr/local/var/postgres</code> 下。它的目录结构如下所示</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 文件</span></span><br><span class="line">├── PG_VERSION	主版本号</span><br><span class="line">├── pg_hba.conf</span><br><span class="line">├── pg_ident.conf</span><br><span class="line">├── postgresql.auto.conf</span><br><span class="line">├── postgresql.conf		配置参数</span><br><span class="line">├── postmaster.opts</span><br><span class="line">└── postmaster.pid</span><br><span class="line"></span><br><span class="line"><span class="comment"># 目录</span></span><br><span class="line">├── base		数据库文件</span><br><span class="line">├── global</span><br><span class="line">├── pg_commit_ts</span><br><span class="line">├── pg_dynshmem</span><br><span class="line">├── pg_logical</span><br><span class="line">├── pg_multixact		多事务状态数据</span><br><span class="line">├── pg_notify</span><br><span class="line">├── pg_replslot</span><br><span class="line">├── pg_serial</span><br><span class="line">├── pg_snapshots</span><br><span class="line">├── pg_stat</span><br><span class="line">├── pg_stat_tmp</span><br><span class="line">├── pg_subtrans		子事务状态数据</span><br><span class="line">├── pg_tblspc</span><br><span class="line">├── pg_twophase		两阶段事务的状态文件</span><br><span class="line">├── pg_wal		WAL 段文件</span><br><span class="line">└── pg_xact		事务提交状态</span><br></pre></td></tr></table></figure>
+
 <p>数据库中表和索引都是文件形式存储在磁盘上，文件名为 oid，大小最大为 1 GB，超过则会创建一个新的文件。而文件的内部被划分成一个个页，而页的大小默认为 8 KB。</p>
 <p>那么怎样才能找到对应的文件在我们磁盘的哪个位置呢？可以利用 SQL 查询得到我们想要的结果。</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 找到数据库的 oid</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> pg_database <span class="keyword">where</span> datname <span class="operator">=</span> <span class="string">&#x27;数据库名&#x27;</span>;</span><br><span class="line"><span class="comment">-- 找到表或者索引的 oid 或者 relfilenode</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> pg_class <span class="keyword">where</span> relname <span class="operator">=</span> <span class="string">&#x27;表或索引名&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
 <p>表相关的文件类型有三类，除了存储表数据的文件外，还有后缀为 <code>_fsm</code> 的是空闲空间映射文件，而 <code>_vm</code> 为可见性映射文件。值得注意的是索引文件是没有可见性映射文件的。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">➜  16401 <span class="built_in">pwd</span></span><br><span class="line">/usr/local/var/postgres/base/16401</span><br><span class="line">➜  16401 <span class="built_in">ls</span> -la 33657*</span><br><span class="line"><span class="comment"># 表相关的文件</span></span><br><span class="line">-rw-------  1 postgres  postgres  811008 Mar 28 13:02 33657</span><br><span class="line">-rw-------  1 postgres  postgres   24576 Mar 28 13:02 33657_fsm</span><br><span class="line">-rw-------  1 postgres  postgres    8192 Mar 28 13:02 33657_vm</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p>这里跟 MySQL 不同的一点是 MySQL 的页大小为 16 KB，而操作系统默认的页大小也为 4 KB。</p>
 </blockquote>
-<h3 id="2-2-堆表文件">2.2 堆表文件</h3>
-<blockquote>
+<h3 id="2-2-堆表文件"><a href="#2-2-堆表文件" class="headerlink" title="2.2 堆表文件"></a>2.2 堆表文件</h3><blockquote>
 <p>PostgreSQL 内部采用堆元组存储数据本身，因此一个页上将会有多个元组（heap tuple），并使用元组标识符（tuple identifier，tid）来表示，其结构为（页号，行指针偏移量）</p>
 </blockquote>
-<h4 id="页结构">页结构</h4>
-<ul>
-<li>头部数据
-<ul>
+<h4 id="页结构"><a href="#页结构" class="headerlink" title="页结构"></a>页结构</h4><ul>
+<li>头部数据<ul>
 <li>p d_lsn: 最近应用到本页面 XLog 记录的 LSN</li>
 <li>pd_lower: 指向行指针的末尾，空闲空间开始的位置</li>
 <li>pd_upper: 指向最新元组的位置，空闲空间结束的位置</li>
 </ul>
 </li>
-<li>行指针
-<ul>
+<li>行指针<ul>
 <li>长度为 15 bit</li>
 <li>有偏移量，长度和标志这三个属性</li>
 </ul>
 </li>
-<li>堆元组数据
-<ul>
-<li>HeapTupleHeaderData
-<ul>
+<li>堆元组数据<ul>
+<li>HeapTupleHeaderData<ul>
 <li>t_xmin：插入事务的 ID</li>
 <li>t_xmax：删除或更新的事务的 ID</li>
 <li>t_cid：命令 ID</li>
@@ -215,17 +210,14 @@ gtag('config', 'UA-126255692-2');
 </ul>
 </li>
 </ul>
-<h3 id="2-3-内存结构">2.3 内存结构</h3>
-<ul>
-<li>本地内存区域
-<ul>
+<h3 id="2-3-内存结构"><a href="#2-3-内存结构" class="headerlink" title="2.3 内存结构"></a>2.3 内存结构</h3><ul>
+<li>本地内存区域<ul>
 <li>work_mem：工作内存，用于排序命令使用</li>
 <li>maintenance_work_mem：维护工作内存，主要用于自动清理和重新索引</li>
 <li>temp_buffers：临时缓冲，用于临时表的使用</li>
 </ul>
 </li>
-<li>共享内存区域
-<ul>
+<li>共享内存区域<ul>
 <li>shared buffer pool：表和索引的数据会加载到这里</li>
 <li>WAL buffer：存储事务日志</li>
 <li>commit log：存储事务提交日志</li>
@@ -233,19 +225,17 @@ gtag('config', 'UA-126255692-2');
 </ul>
 </li>
 </ul>
-<h4 id="缓冲区管理器">缓冲区管理器</h4>
-<p>PostgreSQL 缓冲区管理器由缓冲表、缓冲区描述符和缓冲池组成，管理着共享内存和持久存储之间的数据传输。其维护缓冲区标签（数据库 oid，表 oid，文件类型分支号）到缓冲池页位置的关系，并采用时钟扫描算法（LFU 的一种变体）来进行页面置换，辅以后台的检查点进程和后台写入器进程来进行脏页刷盘。</p>
+<h4 id="缓冲区管理器"><a href="#缓冲区管理器" class="headerlink" title="缓冲区管理器"></a>缓冲区管理器</h4><p>PostgreSQL 缓冲区管理器由缓冲表、缓冲区描述符和缓冲池组成，管理着共享内存和持久存储之间的数据传输。其维护缓冲区标签（数据库 oid，表 oid，文件类型分支号）到缓冲池页位置的关系，并采用时钟扫描算法（LFU 的一种变体）来进行页面置换，辅以后台的检查点进程和后台写入器进程来进行脏页刷盘。</p>
 <ul>
 <li>缓冲表层是一个散列表，存储着页面的缓冲区标签与缓冲区描述符的缓冲 ID（同时也是缓冲池位置） 之间的映射关系，提供共享模式和独占模式的分段式、轻量级锁</li>
-<li>缓冲区描述符层是一个由缓冲描述符组成的数组，每个缓冲区描述符与下层的缓冲池槽一一对应，保存着相关页面的元数据。为了加快分配过程，维护了一个空闲列表，用于快速分配下一个可用的缓存区描述符。并提供用于内容读写的共享模式和独占模式的内容锁和独占的 I/O 锁。</li>
+<li>缓冲区描述符层是一个由缓冲描述符组成的数组，每个缓冲区描述符与下层的缓冲池槽一一对应，保存着相关页面的元数据。为了加快分配过程，维护了一个空闲列表，用于快速分配下一个可用的缓存区描述符。并提供用于内容读写的共享模式和独占模式的内容锁和独占的 I&#x2F;O 锁。</li>
 <li>缓冲池是一个每个槽为 8 KB，用来保存页面文件数据的一个数组。</li>
 </ul>
-<h3 id="2-4-多进程架构">2.4 多进程架构</h3>
-<p>PostgreSQL 采用的多进程的架构，通过以下命令可以找出所有的 postgre 进程。</p>
+<h3 id="2-4-多进程架构"><a href="#2-4-多进程架构" class="headerlink" title="2.4 多进程架构"></a>2.4 多进程架构</h3><p>PostgreSQL 采用的多进程的架构，通过以下命令可以找出所有的 postgre 进程。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 先使用 ps 找到 postgres 的 ppid(上级父程序的 pid)</span></span><br><span class="line">ps -ef |grep postgres</span><br><span class="line"><span class="comment"># 再列出所有的 postgre 的相关进程</span></span><br><span class="line">➜  ~ pstree -p &lt;ppid&gt;</span><br><span class="line">-+= 00001 root /sbin/launchd</span><br><span class="line"> \-+= 76776 zhihaozhang /usr/local/opt/postgresql/bin/postgres -D /usr/local/va</span><br><span class="line">   |--= 44288 postgres postgres: postgres mydb 127.0.0.1(51293) idle</span><br><span class="line">   |--= 76779 postgres postgres: checkpointer</span><br><span class="line">   |--= 76780 postgres postgres: background writer</span><br><span class="line">   |--= 76781 postgres postgres: walwriter</span><br><span class="line">   |--= 76782 postgres postgres: autovacuum launcher</span><br><span class="line">   |--= 76784 postgres postgres: stats collector</span><br><span class="line">   \--= 76785 postgres postgres: logical replication launcher</span><br></pre></td></tr></table></figure>
+
 <p>PostgreSQL 默认的最大客户端连接数为 100 个，由于多进程的缘故，与 MySQL 的线程连接模型相比，其内存压力更大。</p>
-<h2 id="3-索引">3 索引</h2>
-<blockquote>
+<h2 id="3-索引"><a href="#3-索引" class="headerlink" title="3 索引"></a>3 索引</h2><blockquote>
 <p>PostgreSQL 的索引有多种类型，其中比较常见的是 B 树，而 MySQL 则使用的是 B+ 树，这是两者的一大区别。</p>
 </blockquote>
 <p>未完待续…</p>

@@ -158,28 +158,21 @@ gtag('config', 'UA-126255692-2');
 <blockquote>
 <p>JVM 的内存区域主要可以分为线程隔离的数据区域和线程共享的数据区域，还有一块经常被我们忽略的直接内存区域。</p>
 </blockquote>
-<h3 id="JVM-运行时数据区域">JVM 运行时数据区域</h3>
-<h4 id="线程隔离的数据区域">线程隔离的数据区域</h4>
-<ul>
+<h3 id="JVM-运行时数据区域"><a href="#JVM-运行时数据区域" class="headerlink" title="JVM 运行时数据区域"></a>JVM 运行时数据区域</h3><h4 id="线程隔离的数据区域"><a href="#线程隔离的数据区域" class="headerlink" title="线程隔离的数据区域"></a>线程隔离的数据区域</h4><ul>
 <li>程序计数器(PC)：占用内存空间较小，主要存储字节码的行号指示器，控制程序的执行</li>
-<li>JVM 栈：默认一个线程的栈大小为 1 MB
-<ul>
-<li>栈帧
-<ul>
-<li>局部变量表：储存基本数据类型和对象引用（地址信息）
-<ul>
+<li>JVM 栈：默认一个线程的栈大小为 1 MB<ul>
+<li>栈帧<ul>
+<li>局部变量表：储存基本数据类型和对象引用（地址信息）<ul>
 <li>方法参数</li>
 <li>局部变量</li>
 </ul>
 </li>
 <li>操作树栈（基于栈的指令集执行）</li>
-<li>动态连接
-<ul>
+<li>动态连接<ul>
 <li>一个指向运行时常量池中该栈帧所属方法的引用</li>
 </ul>
 </li>
-<li>方法出口
-<ul>
+<li>方法出口<ul>
 <li>方法返回地址：主调方法的 PC 计数器值或者发生异常时异常处理器表确定的返回地址</li>
 </ul>
 </li>
@@ -189,15 +182,11 @@ gtag('config', 'UA-126255692-2');
 </li>
 <li>本地方法栈：为本地方法服务，在 Hotspot 虚拟机中与 JVM 栈合而为一</li>
 </ul>
-<h4 id="线程共享的数据区域">线程共享的数据区域</h4>
-<ul>
-<li>Java 堆：存储对象的实例
-<ul>
-<li>运行时常量池（Java 8+）
-<ul>
+<h4 id="线程共享的数据区域"><a href="#线程共享的数据区域" class="headerlink" title="线程共享的数据区域"></a>线程共享的数据区域</h4><ul>
+<li>Java 堆：存储对象的实例<ul>
+<li>运行时常量池（Java 8+）<ul>
 <li>字面量</li>
-<li>符号引用
-<ul>
+<li>符号引用<ul>
 <li>类或接口</li>
 <li>字段</li>
 <li>类中方法</li>
@@ -209,12 +198,9 @@ gtag('config', 'UA-126255692-2');
 </ul>
 </li>
 </ul>
-<h5 id="对象的内存布局">对象的内存布局</h5>
-<ul>
-<li>对象头
-<ul>
-<li>对象运行时数据（64 位虚拟机为 64 bit，32 位虚拟机则为 32 bit）
-<ul>
+<h5 id="对象的内存布局"><a href="#对象的内存布局" class="headerlink" title="对象的内存布局"></a>对象的内存布局</h5><ul>
+<li>对象头<ul>
+<li>对象运行时数据（64 位虚拟机为 64 bit，32 位虚拟机则为 32 bit）<ul>
 <li>对象哈希码</li>
 <li>分代年龄</li>
 <li>锁指针</li>
@@ -229,18 +215,14 @@ gtag('config', 'UA-126255692-2');
 <li>实例数据</li>
 <li>对齐填充</li>
 </ul>
-<h3 id="直接内存">直接内存</h3>
-<ul>
+<h3 id="直接内存"><a href="#直接内存" class="headerlink" title="直接内存"></a>直接内存</h3><ul>
 <li>元空间(metaspace)：存储已加载类的元数据（Java 8 引入，代替以前的永久代）</li>
 <li>代码缓存：存储即时编译（JIT）后的代码缓存</li>
 <li>垃圾收集器占用</li>
 <li>直接字节缓存：主要用于 NIO 拷贝数据</li>
 </ul>
-<h2 id="2-垃圾收集算法">2. 垃圾收集算法</h2>
-<h3 id="a-分代收集">a. 分代收集</h3>
-<ul>
-<li>Partial GC：部分区域的垃圾收集
-<ul>
+<h2 id="2-垃圾收集算法"><a href="#2-垃圾收集算法" class="headerlink" title="2. 垃圾收集算法"></a>2. 垃圾收集算法</h2><h3 id="a-分代收集"><a href="#a-分代收集" class="headerlink" title="a. 分代收集"></a>a. 分代收集</h3><ul>
+<li>Partial GC：部分区域的垃圾收集<ul>
 <li>Minor GC：新生代垃圾收集</li>
 <li>Major GC：老年代垃圾收集</li>
 <li>Mixed GC：整个新生代和部分老年代的垃圾收集</li>
@@ -248,14 +230,12 @@ gtag('config', 'UA-126255692-2');
 </li>
 <li>Full GC：Java 堆和方法区的垃圾收集</li>
 </ul>
-<h3 id="b-垃圾收集算法">b. 垃圾收集算法</h3>
-<ul>
+<h3 id="b-垃圾收集算法"><a href="#b-垃圾收集算法" class="headerlink" title="b. 垃圾收集算法"></a>b. 垃圾收集算法</h3><ul>
 <li>标记-清除（Mark-Sweep）</li>
 <li>标记-复制（Mark-Copy）</li>
 <li>标记-整理（Mark-Compact）</li>
 </ul>
-<h2 id="3-垃圾收集器">3. 垃圾收集器</h2>
-<blockquote>
+<h2 id="3-垃圾收集器"><a href="#3-垃圾收集器" class="headerlink" title="3. 垃圾收集器"></a>3. 垃圾收集器</h2><blockquote>
 <p>迄今为止，所有的垃圾收集器在根节点枚举的过程中都必须暂停用户线程</p>
 </blockquote>
 <ul>
@@ -264,14 +244,12 @@ gtag('config', 'UA-126255692-2');
 <li>Parallel Scavenge + Parallel Old：Java 9 之前的服务端默认配置</li>
 <li>G1：Java 9 后的服务端默认配置</li>
 </ul>
-<h3 id="三大性能指标">三大性能指标</h3>
-<ul>
+<h3 id="三大性能指标"><a href="#三大性能指标" class="headerlink" title="三大性能指标"></a>三大性能指标</h3><ul>
 <li>内存占用</li>
 <li>吞吐量</li>
 <li>延迟</li>
 </ul>
-<h3 id="CMS-Concurrent-Mark-Sweep">CMS(Concurrent Mark Sweep)</h3>
-<ul>
+<h3 id="CMS-Concurrent-Mark-Sweep"><a href="#CMS-Concurrent-Mark-Sweep" class="headerlink" title="CMS(Concurrent Mark Sweep)"></a>CMS(Concurrent Mark Sweep)</h3><ul>
 <li>初始标记</li>
 <li>并发标记</li>
 <li>重新标记：使用增量更新</li>
@@ -280,14 +258,12 @@ gtag('config', 'UA-126255692-2');
 <blockquote>
 <p>初始标记和重新标记都是需要暂停用户线程的</p>
 </blockquote>
-<h4 id="CMS-的几个缺陷">CMS 的几个缺陷</h4>
-<ul>
+<h4 id="CMS-的几个缺陷"><a href="#CMS-的几个缺陷" class="headerlink" title="CMS 的几个缺陷"></a>CMS 的几个缺陷</h4><ul>
 <li>并发对处理器的资源比较敏感，比较适合处理器核数较多的情况（大于 4 核）</li>
 <li>在并发阶段，用户线程可能会分配内存，进而造成老年代区域需要提前进行 GC 操作，一般又一个触发的阈值，太大或者太小都有性能问题</li>
 <li>标记-清除存在内存碎片的问题</li>
 </ul>
-<h3 id="G1">G1</h3>
-<ul>
+<h3 id="G1"><a href="#G1" class="headerlink" title="G1"></a>G1</h3><ul>
 <li>初始标记</li>
 <li>并发标记</li>
 <li>最终标记：使用原始快照</li>
@@ -296,9 +272,7 @@ gtag('config', 'UA-126255692-2');
 <blockquote>
 <p>G1 为了维护不同 Region 之间的引用关系，至少需要花费大约相当于 Java 堆内存的 10% ~ 20% 的额外内存来维持收集器的正常工作，比较适合比较大的堆内存使用</p>
 </blockquote>
-<h3 id="低延迟垃圾收集器">低延迟垃圾收集器</h3>
-<h4 id="Shenandoah-收集器">Shenandoah 收集器</h4>
-<blockquote>
+<h3 id="低延迟垃圾收集器"><a href="#低延迟垃圾收集器" class="headerlink" title="低延迟垃圾收集器"></a>低延迟垃圾收集器</h3><h4 id="Shenandoah-收集器"><a href="#Shenandoah-收集器" class="headerlink" title="Shenandoah 收集器"></a>Shenandoah 收集器</h4><blockquote>
 <p>只在 OpenJDK 12+ 的版本出现，使用读屏障和转发指针来实现并发整理</p>
 </blockquote>
 <ul>
@@ -312,8 +286,7 @@ gtag('config', 'UA-126255692-2');
 <li>最终引用更新</li>
 <li>并发清理</li>
 </ul>
-<h4 id="ZGC-收集器">ZGC 收集器</h4>
-<blockquote>
+<h4 id="ZGC-收集器"><a href="#ZGC-收集器" class="headerlink" title="ZGC 收集器"></a>ZGC 收集器</h4><blockquote>
 <p>堆内存布局分为：小，中和大三种 Region。</p>
 <p>使用读屏障和染色指针实现并发整理，但不支持 32 位平台，且不能开启指针压缩</p>
 <p>将垃圾收集的停顿时间限制在 10 ms 以内</p>
@@ -327,15 +300,13 @@ gtag('config', 'UA-126255692-2');
 <li>并发重分配：对重分配集中剩下的对象进行重分配（复制到新的 Region），并维护一张转发表，维护旧引用地址信息到新引用地址信息的映射</li>
 <li>并发重映射：将对象引用地址信息进行更新，在并发标记过程中完成</li>
 </ul>
-<h5 id="染色指针">染色指针</h5>
-<p><img src="jvm/image-20200913175126639.png" alt="染色指针"></p>
+<h5 id="染色指针"><a href="#染色指针" class="headerlink" title="染色指针"></a>染色指针</h5><p><img src="/.com//02/27/jvm/image-20200913175126639.png" alt="染色指针"></p>
 <ul>
 <li>Finalizable：对象只能被 finalizer 访问</li>
 <li>Remapped：对象引用地址是新的</li>
 <li>Marked 0 和 Marked 1：标记对象是可访问的，同时用于对比前后两次 GC 的结果</li>
 </ul>
-<h5 id="读屏障">读屏障</h5>
-<blockquote>
+<h5 id="读屏障"><a href="#读屏障" class="headerlink" title="读屏障"></a>读屏障</h5><blockquote>
 <p>从堆中读取对象的引用信息时，会加入读屏障</p>
 </blockquote>
 <ul>
@@ -344,10 +315,9 @@ gtag('config', 'UA-126255692-2');
 <li>当对象在重分配集中，并没有完成重分配，帮助其重分配，并在转发表中创建旧地址到新地址的记录</li>
 <li>根据转发表更新对象的新引用地址，并将 Remapped 设为 1，返回新的引用地址</li>
 </ul>
-<h5 id="JVM-相关配置">JVM 相关配置</h5>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 开启 ZGC</span></span><br><span class="line">-XX:+UnlockExperimentalVMOptions -XX:+UseZGC</span><br><span class="line"><span class="comment"># 并发回收垃圾的线程。默认是总核数的 1/8，调大后 GC 变快，但会占用程序运行时的CPU资源，吞吐会受到影响</span></span><br><span class="line">-XX:ConcGCThreads=2</span><br><span class="line"><span class="comment"># stop the world 时使用的线程数，默认为总核数的 3/5</span></span><br><span class="line">-XX:ParallelGCThreads=6</span><br><span class="line"><span class="comment"># ZGC 发生的最小时间间隔，单位秒。基于固定时间间隔进行触发 ZGC</span></span><br><span class="line">-XX:ZCollectionInterval=120</span><br><span class="line"><span class="comment"># ZGC 触发基于分配速率的自适应算法的修正系数，默认值为 2，数值越大，越早的触发 ZGC </span></span><br><span class="line">-XX:ZAllocationSpikeTolerance=5</span><br><span class="line"><span class="comment"># 不开启 ZGC 的主动回收</span></span><br><span class="line">-XX:+UnlockDiagnosticVMOptions -XX:-ZProactive</span><br></pre></td></tr></table></figure>
-<h3 id="其他商业垃圾收集器">其他商业垃圾收集器</h3>
-<ul>
+<h5 id="JVM-相关配置"><a href="#JVM-相关配置" class="headerlink" title="JVM 相关配置"></a>JVM 相关配置</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 开启 ZGC</span></span><br><span class="line">-XX:+UnlockExperimentalVMOptions -XX:+UseZGC</span><br><span class="line"><span class="comment"># 并发回收垃圾的线程。默认是总核数的 1/8，调大后 GC 变快，但会占用程序运行时的CPU资源，吞吐会受到影响</span></span><br><span class="line">-XX:ConcGCThreads=2</span><br><span class="line"><span class="comment"># stop the world 时使用的线程数，默认为总核数的 3/5</span></span><br><span class="line">-XX:ParallelGCThreads=6</span><br><span class="line"><span class="comment"># ZGC 发生的最小时间间隔，单位秒。基于固定时间间隔进行触发 ZGC</span></span><br><span class="line">-XX:ZCollectionInterval=120</span><br><span class="line"><span class="comment"># ZGC 触发基于分配速率的自适应算法的修正系数，默认值为 2，数值越大，越早的触发 ZGC </span></span><br><span class="line">-XX:ZAllocationSpikeTolerance=5</span><br><span class="line"><span class="comment"># 不开启 ZGC 的主动回收</span></span><br><span class="line">-XX:+UnlockDiagnosticVMOptions -XX:-ZProactive</span><br></pre></td></tr></table></figure>
+
+<h3 id="其他商业垃圾收集器"><a href="#其他商业垃圾收集器" class="headerlink" title="其他商业垃圾收集器"></a>其他商业垃圾收集器</h3><ul>
 <li>IBM J9</li>
 <li>Azul C4</li>
 <li>Azul Zing</li>
@@ -357,8 +327,7 @@ gtag('config', 'UA-126255692-2');
 <p>看完这篇文章，有没有让你对 JVM 的内存结构有更深的了解呢？如果内容对你有所帮助，请点赞支持哦！</p>
 </blockquote>
 <hr>
-<h2 id="参考文献">参考文献</h2>
-<ol>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
 <li><a target="_blank" rel="noopener" href="https://www.baeldung.com/jvm-zgc-garbage-collector">An Introduction to ZGC: A Scalable and Experimental Low-Latency JVM Garbage Collector</a></li>
 <li><a target="_blank" rel="noopener" href="https://tech.meituan.com/2020/08/06/new-zgc-practice-in-meituan.html">新一代垃圾回收器ZGC的探索与实践</a></li>
 </ol>
