@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://blog.zzhpro.com/2020/09/30/mac/</loc>
-    <lastmod>2024-02-25</lastmod>
+    <loc>https://blog.zzhpro.com/2020/09/07/intellij-idea/</loc>
+    <lastmod>2024-02-26</lastmod>
   </url>
   <url>
-    <loc>https://blog.zzhpro.com/2020/09/07/intellij-idea/</loc>
+    <loc>https://blog.zzhpro.com/2017/01/26/hexo/</loc>
+    <lastmod>2024-02-26</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.zzhpro.com/2020/09/30/mac/</loc>
     <lastmod>2024-02-25</lastmod>
   </url>
   <url>
@@ -98,10 +102,6 @@
   </url>
   <url>
     <loc>https://blog.zzhpro.com/2021/01/24/ipad/</loc>
-    <lastmod>2022-09-01</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.zzhpro.com/2017/01/26/hexo/</loc>
     <lastmod>2022-09-01</lastmod>
   </url>
   <url>
