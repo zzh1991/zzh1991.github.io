@@ -254,7 +254,7 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/2020/03/12/daily-software/</loc>
+    <loc>https://blog.zzhpro.com/2018/07/24/go-skills/</loc>
     
     <lastmod>2024-07-10</lastmod>
     
@@ -263,7 +263,7 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/2018/07/24/go-skills/</loc>
+    <loc>https://blog.zzhpro.com/2020/03/12/daily-software/</loc>
     
     <lastmod>2024-07-10</lastmod>
     
@@ -383,14 +383,14 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/Software/</loc>
+    <loc>https://blog.zzhpro.com/tags/go/</loc>
     <lastmod>2024-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/go/</loc>
+    <loc>https://blog.zzhpro.com/tags/Software/</loc>
     <lastmod>2024-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
