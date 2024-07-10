@@ -110,15 +110,6 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/2018/10/14/optimize/</loc>
-    
-    <lastmod>2024-07-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.zzhpro.com/2019/03/10/photograph/</loc>
     
     <lastmod>2024-07-10</lastmod>
@@ -129,6 +120,15 @@
   
   <url>
     <loc>https://blog.zzhpro.com/2020/07/19/postgres-internal-first/</loc>
+    
+    <lastmod>2024-07-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.zzhpro.com/2018/10/14/optimize/</loc>
     
     <lastmod>2024-07-10</lastmod>
     
@@ -376,14 +376,14 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/Android/</loc>
+    <loc>https://blog.zzhpro.com/tags/Software/</loc>
     <lastmod>2024-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/Software/</loc>
+    <loc>https://blog.zzhpro.com/tags/Android/</loc>
     <lastmod>2024-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -460,13 +460,6 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/tags/Computer-System/</loc>
-    <lastmod>2024-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.zzhpro.com/tags/%E6%8B%8D%E7%85%A7/</loc>
     <lastmod>2024-07-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -475,6 +468,13 @@
   
   <url>
     <loc>https://blog.zzhpro.com/tags/Postgre/</loc>
+    <lastmod>2024-07-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.zzhpro.com/tags/Computer-System/</loc>
     <lastmod>2024-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
