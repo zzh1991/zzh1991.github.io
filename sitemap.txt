@@ -6,8 +6,8 @@ https://blog.zzhpro.com/categories/index.html
 https://blog.zzhpro.com/link/index.html
 https://blog.zzhpro.com/2020/10/18/wiznote-lite/
 https://blog.zzhpro.com/2020/07/27/win10/
-https://blog.zzhpro.com/2017/03/03/ubuntu/
 https://blog.zzhpro.com/2020/05/23/study-life-software/
+https://blog.zzhpro.com/2017/03/03/ubuntu/
 https://blog.zzhpro.com/2019/02/23/python-2018/
 https://blog.zzhpro.com/2017/08/23/react-skill-md/
 https://blog.zzhpro.com/2017/12/06/shell-skills/
