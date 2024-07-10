@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.zzhpro.com/2020/01/02/java-map/</loc>
+    
+    <lastmod>2024-07-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.zzhpro.com/tags/index.html</loc>
     
     <lastmod>2024-07-10</lastmod>
@@ -65,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/2020/05/23/study-life-software/</loc>
+    <loc>https://blog.zzhpro.com/2017/03/03/ubuntu/</loc>
     
     <lastmod>2024-07-10</lastmod>
     
@@ -74,7 +83,7 @@
   </url>
   
   <url>
-    <loc>https://blog.zzhpro.com/2017/03/03/ubuntu/</loc>
+    <loc>https://blog.zzhpro.com/2020/05/23/study-life-software/</loc>
     
     <lastmod>2024-07-10</lastmod>
     
@@ -210,15 +219,6 @@
   
   <url>
     <loc>https://blog.zzhpro.com/2019/11/02/java-version-management/</loc>
-    
-    <lastmod>2024-07-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.zzhpro.com/2020/01/02/java-map/</loc>
     
     <lastmod>2024-07-10</lastmod>
     
