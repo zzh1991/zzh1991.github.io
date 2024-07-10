@@ -1,0 +1,400 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>2020 开发者生态系统现状 | 知识碰撞</title><meta name="author" content="Zhihao Zhang"><meta name="copyright" content="Zhihao Zhang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="最常使用的程序语言  不出所料，前端相关的语言 JavaScript、HTML 以及 CSS 是最多人使用的语言，而对具体的开发而言，Python 和 Java 是比较受人喜爱的。另外 SQL 和 Shell 也是各自领域发挥着重要的作用。   开发对应平台及内容  大部分的开发者都是针对 Web 进行开发任务，而最常用于网站的开发。另外，工具、数据存储和框架的开发也是非常常见的开发内容。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2020 开发者生态系统现状">
+<meta property="og:url" content="https://blog.zzhpro.com/2020/07/26/2020-development-ecosystem/index.html">
+<meta property="og:site_name" content="知识碰撞">
+<meta property="og:description" content="最常使用的程序语言  不出所料，前端相关的语言 JavaScript、HTML 以及 CSS 是最多人使用的语言，而对具体的开发而言，Python 和 Java 是比较受人喜爱的。另外 SQL 和 Shell 也是各自领域发挥着重要的作用。   开发对应平台及内容  大部分的开发者都是针对 Web 进行开发任务，而最常用于网站的开发。另外，工具、数据存储和框架的开发也是非常常见的开发内容。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2020-07-26T12:27:44.000Z">
+<meta property="article:modified_time" content="2024-07-10T15:12:57.421Z">
+<meta property="article:author" content="Zhihao Zhang">
+<meta property="article:tag" content="Development">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://blog.zzhpro.com/2020/07/26/2020-development-ecosystem/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.14.0-b3"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.35/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>(()=>{
+      const saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+      
+      window.btf = {
+        saveToLocal: saveToLocal,
+        getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+          script.src = url
+          script.async = true
+          script.onerror = reject
+          script.onload = script.onreadystatechange = function() {
+            const loadState = this.readyState
+            if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+            script.onload = script.onreadystatechange = null
+            resolve()
+          }
+
+          Object.keys(attr).forEach(key => {
+            script.setAttribute(key, attr[key])
+          })
+
+          document.head.appendChild(script)
+        }),
+
+        getCSS: (url, id = false) => new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+          link.rel = 'stylesheet'
+          link.href = url
+          if (id) link.id = id
+          link.onerror = reject
+          link.onload = link.onreadystatechange = function() {
+            const loadState = this.readyState
+            if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+            link.onload = link.onreadystatechange = null
+            resolve()
+          }
+          document.head.appendChild(link)
+        }),
+
+        addGlobalFn: (key, fn, name = false, parent = window) => {
+          const pjaxEnable = false
+          if (!pjaxEnable && key.startsWith('pjax')) return
+
+          const globalFn = parent.globalFn || {}
+          const keyObj = globalFn[key] || {}
+    
+          if (name && keyObj[name]) return
+    
+          name = name || Object.keys(keyObj).length
+          keyObj[name] = fn
+          globalFn[key] = keyObj
+          parent.globalFn = globalFn
+        }
+      }
+    
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+      
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })()</script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?041e5d4c12342bb051fb77373c270c8f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+btf.addGlobalFn('pjaxComplete', () => {
+  _hmt.push(['_trackPageview',window.location.pathname])
+}, 'baidu_analytics')
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-126255692-2"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'UA-126255692-2')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'UA-126255692-2', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":true,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '2020 开发者生态系统现状',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-07-10 23:12:57'
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="知识碰撞" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">34</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">24</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="知识碰撞"><span class="site-name">知识碰撞</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">2020 开发者生态系统现状</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-07-26T12:27:44.000Z" title="发表于 2020-07-26 20:27:44">2020-07-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-07-10T15:12:57.421Z" title="更新于 2024-07-10 23:12:57">2024-07-10</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Development/">Development</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">942</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>2分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="2020 开发者生态系统现状"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="最常使用的程序语言">最常使用的程序语言</h2>
+<blockquote>
+<p>不出所料，前端相关的语言 JavaScript、HTML 以及 CSS 是最多人使用的语言，而对具体的开发而言，Python 和 Java 是比较受人喜爱的。另外 SQL 和 Shell 也是各自领域发挥着重要的作用。</p>
+</blockquote>
+<p><img src="/2020/07/26/2020-development-ecosystem/image-20200726203200037.png" alt="最常使用的程序语言"></p>
+<h2 id="开发对应平台及内容">开发对应平台及内容</h2>
+<blockquote>
+<p>大部分的开发者都是针对 Web 进行开发任务，而最常用于网站的开发。另外，工具、数据存储和框架的开发也是非常常见的开发内容。</p>
+</blockquote>
+<img src="image-20200726203740457.png" alt="开发目标平台" style="zoom:50%;" />
+<img src="image-20200726203818582.png" alt="开发内容" style="zoom:50%;" />
+<h2 id="获取信息的来源">获取信息的来源</h2>
+<blockquote>
+<p>开发者喜爱在 Stack Overflow 等社区论坛和社交媒体上获取信息。这是个非常有意思的调查结果。</p>
+</blockquote>
+<img src="image-20200726204320666.png" alt="获取信息来源" style="zoom:50%;" />
+<h2 id="敏捷软件开发框架">敏捷软件开发框架</h2>
+<blockquote>
+<p>大约 1/3 选择了 Scrum 进行敏捷开发，而也有不到 1/3 不使用任何敏捷开发。</p>
+</blockquote>
+<img src="image-20200726204729520.png" alt="敏捷软件开发框架" style="zoom:50%;" />
+<p><a target="_blank" rel="noopener" href="https://www.scrum.org/">Scrum</a> 是迭代式增量软件开发过程，具体的流程如下图所示。</p>
+<img src="https://media.surgeforward.com/wp-content/uploads/2018/01/scrum-workflow.png" alt="Scrum" style="zoom:60%;" />
+<h2 id="Java-主题">Java 主题</h2>
+<h3 id="Java-版本">Java 版本</h3>
+<blockquote>
+<p>如我们所料，Java 8 是最受欢迎的，而最为另一个长期支持版本 Java 11 的热度排在第二位，目前 Java 14 已已经亮相，而且 Spring Boot 也是支持最新的 Java 14。因此这三个版本也是目前最推荐大家使用的三个 Java 大版本了。</p>
+</blockquote>
+<p><img src="/2020/07/26/2020-development-ecosystem/image-20200726205629709.png" alt="Java 版本使用情况"></p>
+<p>下图是最新的 Oracle Java 版本的支持情况，大家可以随时去<a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/java-se-support-roadmap.html">网站</a>了解最新的版本支持情况。</p>
+<p><img src="/2020/07/26/2020-development-ecosystem/image-20200726210020167.png" alt="Oracle Java SE Support Roadmap"></p>
+<h3 id="应用程序服务器">应用程序服务器</h3>
+<blockquote>
+<p>毫无悬念，Tomcat 是最受欢迎的应用程序服务器，领先优势非常巨大。</p>
+</blockquote>
+<img src="image-20200726210356463.png" alt="应用程序服务器" style="zoom:50%;" />
+<h3 id="Web-框架">Web 框架</h3>
+<p><img src="/2020/07/26/2020-development-ecosystem/image-20200726210633345.png" alt="Web 框架"></p>
+<h3 id="IDE">IDE</h3>
+<blockquote>
+<p>对于 Java IDE 的选择，其实也没有什么大的争议了。Intellij IDEA 是目前最好的 Java IDEA，即时付费也是非常值得的。</p>
+</blockquote>
+<img src="image-20200726210754775.png" alt="Java IDE" style="zoom:50%;" />
+<h2 id="JavaScript-主题">JavaScript 主题</h2>
+<h3 id="框架">框架</h3>
+<blockquote>
+<p>前端 UI 框架首选 React，而在服务端首选位 Express。</p>
+</blockquote>
+<p><img src="/2020/07/26/2020-development-ecosystem/image-20200726213915147.png" alt="框架使用情况"></p>
+<blockquote>
+<p>而在模块化打包方面，首选为 Webpack，而测试框架为 Jest。</p>
+</blockquote>
+<h3 id="样式表语言">样式表语言</h3>
+<p><img src="/2020/07/26/2020-development-ecosystem/image-20200726214236618.png" alt="样式表语言"></p>
+<h2 id="数据库">数据库</h2>
+<blockquote>
+<p>对于数据库的选择，关系型数据库是最受关注，其主要有两大选择：MySQL 和 PostgreSQL。另外，文档型数据库 MongoDB 和内存型 KV 数据库 Redis 都是各自领域的领先者。</p>
+<p>哈哈，开发者都是不怎么愿意去迁移到新数据库，其中的迁移过程是非常复杂的。</p>
+</blockquote>
+<img src="image-20200726211022973.png" alt="数据库" style="zoom:50%;" />
+<h2 id="DevOps">DevOps</h2>
+<h3 id="配置管理工具">配置管理工具</h3>
+<blockquote>
+<p>这块还没有明显的巨头出现，日常我也是使用基于 Python 的 Ansible 为主。</p>
+</blockquote>
+<img src="image-20200726211543590.png" alt="配置管理工具" style="zoom:50%;" />
+<h3 id="基础结构配置工具">基础结构配置工具</h3>
+<blockquote>
+<p>目前我还没怎么使用过 Terraform，有计划会去尝试下。工作中基本是使用 AWS CloudFormation 进行 AWS 的基础配置的。</p>
+</blockquote>
+<p><img src="/2020/07/26/2020-development-ecosystem/image-20200726211820101.png" alt="基础结构配置工具"></p>
+<h3 id="容器编排">容器编排</h3>
+<img src="image-20200726212016037.png" alt="容器编排" style="zoom:50%;" />
+<h3 id="云服务">云服务</h3>
+<blockquote>
+<p>这份调查是基于全球的，国内著名的阿里云和腾讯云可能只包含在其他里了。毫无疑问，这两者在国内是巨头的存在。</p>
+</blockquote>
+<p><img src="/2020/07/26/2020-development-ecosystem/image-20200726212141544.png" alt="云服务"></p>
+<h3 id="持续集成">持续集成</h3>
+<blockquote>
+<p>对于公司来说 Jenkins 是最常用的持续集成工具，而对于开源软件来说，开始使用 GitHub Actions 会是一个很不错的选择。</p>
+</blockquote>
+<img src="image-20200726213001001.png" alt="持续集成工具" style="zoom:50%;" />
+<h3 id="问题跟踪系统">问题跟踪系统</h3>
+<blockquote>
+<p>付费的可以选择 Jira 作为第一选择，开源的话可以选择 GitLab 或者 Redmine。</p>
+</blockquote>
+<img src="image-20200726213148034.png" alt="问题跟踪系统软件" style="zoom:50%;" />
+<h2 id="微服务">微服务</h2>
+<h3 id="分布式通信方式">分布式通信方式</h3>
+<blockquote>
+<p>根据调查 REST 是最受欢迎的方式，这可能跟 Spring Cloud 的流行有很大的关系。</p>
+</blockquote>
+<img src="image-20200726212400167.png" alt="分布式通信方式" style="zoom:50%;" />
+<h3 id="API-规范">API 规范</h3>
+<blockquote>
+<p>在跨部分、跨团队的开发过程中，好的 API 规范是非常重要的。</p>
+</blockquote>
+<p><img src="/2020/07/26/2020-development-ecosystem/image-20200726212734589.png" alt="API 规范"></p>
+<h2 id="测试">测试</h2>
+<img src="image-20200726213454382.png" alt="测试" style="zoom:50%;" />
+<h3 id="测试类型">测试类型</h3>
+<img src="image-20200726213542338.png" alt="测试类型" style="zoom:50%;" />
+<h3 id="测试框架与工具">测试框架与工具</h3>
+<p><img src="/2020/07/26/2020-development-ecosystem/image-20200726213731608.png" alt="测试框架与工具"></p>
+<hr>
+<h2 id="附录">附录</h2>
+<p>想要查看具体详细的调查分析报告，通过下面的网址进行查阅。</p>
+<blockquote>
+<p>2020 开发人员生态系统现状: <a target="_blank" rel="noopener" href="https://www.jetbrains.com/zh-cn/lp/devecosystem-2020/">https://www.jetbrains.com/zh-cn/lp/devecosystem-2020/</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>更多精彩内容请<ruby>关注<rt>扫码</rt></ruby>：</p>
+</blockquote>
+<p><img src="https://i.loli.net/2019/05/18/5cdf686a103cf11418.jpg" alt="KnowledgeCollision 微信公众号"></p>
+<center><strong>Knowledge Collision 激发思维碰撞，IDEA 丛生</strong></center></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://blog.zzhpro.com">Zhihao Zhang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://blog.zzhpro.com/2020/07/26/2020-development-ecosystem/">https://blog.zzhpro.com/2020/07/26/2020-development-ecosystem/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.zzhpro.com" target="_blank">知识碰撞</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Development/">Development</a></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/07/27/win10/" title="从头武装 win10，体验💯"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">从头武装 win10，体验💯</div></div></a></div><div class="next-post pull-right"><a href="/2020/07/19/postgres-internal-first/" title="走进 PostgreSQL 世界第一篇章--内部结构"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">走进 PostgreSQL 世界第一篇章--内部结构</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2019/11/02/2019-software-engineer-situation/" title="2019 软件工程师现状"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-11-02</div><div class="title">2019 软件工程师现状</div></div></a></div><div><a href="/2020/08/29/2020-stackoverflow-survey/" title="2020 StackOverflow 开发者现状调研"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-08-29</div><div class="title">2020 StackOverflow 开发者现状调研</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Zhihao Zhang</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">34</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">24</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/zzh1991" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%B8%B8%E4%BD%BF%E7%94%A8%E7%9A%84%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">最常使用的程序语言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E5%AF%B9%E5%BA%94%E5%B9%B3%E5%8F%B0%E5%8F%8A%E5%86%85%E5%AE%B9"><span class="toc-number">2.</span> <span class="toc-text">开发对应平台及内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E4%BF%A1%E6%81%AF%E7%9A%84%E6%9D%A5%E6%BA%90"><span class="toc-number">3.</span> <span class="toc-text">获取信息的来源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%8F%E6%8D%B7%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6"><span class="toc-number">4.</span> <span class="toc-text">敏捷软件开发框架</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-%E4%B8%BB%E9%A2%98"><span class="toc-number">5.</span> <span class="toc-text">Java 主题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Java-%E7%89%88%E6%9C%AC"><span class="toc-number">5.1.</span> <span class="toc-text">Java 版本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">5.2.</span> <span class="toc-text">应用程序服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Web-%E6%A1%86%E6%9E%B6"><span class="toc-number">5.3.</span> <span class="toc-text">Web 框架</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IDE"><span class="toc-number">5.4.</span> <span class="toc-text">IDE</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript-%E4%B8%BB%E9%A2%98"><span class="toc-number">6.</span> <span class="toc-text">JavaScript 主题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A1%86%E6%9E%B6"><span class="toc-number">6.1.</span> <span class="toc-text">框架</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B7%E5%BC%8F%E8%A1%A8%E8%AF%AD%E8%A8%80"><span class="toc-number">6.2.</span> <span class="toc-text">样式表语言</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">7.</span> <span class="toc-text">数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DevOps"><span class="toc-number">8.</span> <span class="toc-text">DevOps</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7"><span class="toc-number">8.1.</span> <span class="toc-text">配置管理工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E7%BB%93%E6%9E%84%E9%85%8D%E7%BD%AE%E5%B7%A5%E5%85%B7"><span class="toc-number">8.2.</span> <span class="toc-text">基础结构配置工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%B9%E5%99%A8%E7%BC%96%E6%8E%92"><span class="toc-number">8.3.</span> <span class="toc-text">容器编排</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%91%E6%9C%8D%E5%8A%A1"><span class="toc-number">8.4.</span> <span class="toc-text">云服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90"><span class="toc-number">8.5.</span> <span class="toc-text">持续集成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E8%B7%9F%E8%B8%AA%E7%B3%BB%E7%BB%9F"><span class="toc-number">8.6.</span> <span class="toc-text">问题跟踪系统</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E6%9C%8D%E5%8A%A1"><span class="toc-number">9.</span> <span class="toc-text">微服务</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E5%B8%83%E5%BC%8F%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F"><span class="toc-number">9.1.</span> <span class="toc-text">分布式通信方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#API-%E8%A7%84%E8%8C%83"><span class="toc-number">9.2.</span> <span class="toc-text">API 规范</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95"><span class="toc-number">10.</span> <span class="toc-text">测试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E7%B1%BB%E5%9E%8B"><span class="toc-number">10.1.</span> <span class="toc-text">测试类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6%E4%B8%8E%E5%B7%A5%E5%85%B7"><span class="toc-number">10.2.</span> <span class="toc-text">测试框架与工具</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%99%84%E5%BD%95"><span class="toc-number">11.</span> <span class="toc-text">附录</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/16/%E5%B0%8F-Z-%E7%9A%84%E7%BB%98%E5%9B%BE%E6%8C%87%E5%8D%97/" title="小 Z 的绘图指南">小 Z 的绘图指南</a><time datetime="2024-03-16T00:58:41.000Z" title="发表于 2024-03-16 08:58:41">2024-03-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/01/24/ipad/" title="小 Z 的 iPad Pro 使用指南">小 Z 的 iPad Pro 使用指南</a><time datetime="2021-01-24T07:49:12.000Z" title="发表于 2021-01-24 15:49:12">2021-01-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2020/12/29/macOS/" title="小 Z 的 MacBook Pro 系统之旅">小 Z 的 MacBook Pro 系统之旅</a><time datetime="2020-12-29T14:50:04.000Z" title="发表于 2020-12-29 22:50:04">2020-12-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2020/11/12/note-2020/" title="2020 笔记详谈">2020 笔记详谈</a><time datetime="2020-11-12T12:08:53.000Z" title="发表于 2020-11-12 20:08:53">2020-11-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2020/11/10/macbook-pro-issues/" title="小 Z 的 MacBook Pro 奇妙之旅">小 Z 的 MacBook Pro 奇妙之旅</a><time datetime="2020-11-10T07:17:08.000Z" title="发表于 2020-11-10 15:17:08">2020-11-10</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Zhihao Zhang</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.14.0-b3"></script><script src="/js/main.js?v=4.14.0-b3"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.35/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const runMermaid = (ele) => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from(ele).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const codeToMermaid = () => {
+    const codeMermaidEle = document.querySelectorAll('pre > code.mermaid')
+    if (codeMermaidEle.length === 0) return
+    
+    codeMermaidEle.forEach(ele => {
+      const newEle = document.createElement('div')
+      newEle.className = 'mermaid-wrap'
+      newEle.innerHTML = `<pre class="mermaid-src" hidden>${ele.textContent}</pre>`
+      ele.parentNode.replaceWith(newEle)
+    })
+  }
+
+  const loadMermaid = () => {
+    if (false) codeToMermaid()
+    const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+    if ($mermaid.length === 0) return
+
+    const runMermaidFn = () => runMermaid($mermaid)
+    btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+    window.loadMermaid ? runMermaidFn() : btf.getScript('https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js').then(runMermaidFn)
+  }
+  
+  btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const initGitalk = () => {
+    const gitalk = new Gitalk(Object.assign({
+      clientID: '3c555ac6b77ab906dd3f',
+      clientSecret: '9b0536b61f9b7da7b4641662f5120a5d06862e2c',
+      repo: 'blog-comment',
+      owner: 'zzh1991',
+      admin: ['zzh1991'],
+      id: '51ef6c1087c18adda908326fee6b56cb',
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  const loadGitalk = async() => {
+    if (typeof Gitalk === 'function') initGitalk()
+    else {
+      await btf.getCSS('https://cdn.jsdelivr.net/npm/gitalk@1.8.0/dist/gitalk.min.css')
+      await btf.getScript('https://cdn.jsdelivr.net/npm/gitalk@1.8.0/dist/gitalk.min.js')
+      initGitalk()
+    }
+  }
+  
+  const commentCount = n => {
+    const isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+    if (isCommentCount) {
+      isCommentCount.textContent= n
+    }
+  }
+
+  if ('Gitalk' === 'Gitalk' || !false) {
+    if (false) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+    else loadGitalk()
+  } else {
+    window.loadOtherComment = loadGitalk
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

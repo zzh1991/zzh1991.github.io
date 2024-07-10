@@ -1,0 +1,374 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>小 Z 的 iPad Pro 使用指南 | 知识碰撞</title><meta name="author" content="Zhihao Zhang"><meta name="copyright" content="Zhihao Zhang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="小 Z 的 iPad Pro 已经购买了有将近半年的时间了，大家是否非常好奇是否是买前生产力，买后爱奇艺呢？😄，小 Z 除了把平板当成一个观感极佳的影音设备外，主要将其应用到了读书和阅读方面。下面小 Z 就来讲讲如何发挥 iPad Pro 的生产力潜力。  应用程序 Microsoft Edge  在 iPad 上，浏览器没有电脑上那么重要，可以直接使用自带的 Safari 浏览器，也可以使用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小 Z 的 iPad Pro 使用指南">
+<meta property="og:url" content="https://blog.zzhpro.com/2021/01/24/ipad/index.html">
+<meta property="og:site_name" content="知识碰撞">
+<meta property="og:description" content="小 Z 的 iPad Pro 已经购买了有将近半年的时间了，大家是否非常好奇是否是买前生产力，买后爱奇艺呢？😄，小 Z 除了把平板当成一个观感极佳的影音设备外，主要将其应用到了读书和阅读方面。下面小 Z 就来讲讲如何发挥 iPad Pro 的生产力潜力。  应用程序 Microsoft Edge  在 iPad 上，浏览器没有电脑上那么重要，可以直接使用自带的 Safari 浏览器，也可以使用">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2021-01-24T07:49:12.000Z">
+<meta property="article:modified_time" content="2024-07-10T15:12:57.463Z">
+<meta property="article:author" content="Zhihao Zhang">
+<meta property="article:tag" content="iPad">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://blog.zzhpro.com/2021/01/24/ipad/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.14.0-b3"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.35/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>(()=>{
+      const saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+      
+      window.btf = {
+        saveToLocal: saveToLocal,
+        getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+          script.src = url
+          script.async = true
+          script.onerror = reject
+          script.onload = script.onreadystatechange = function() {
+            const loadState = this.readyState
+            if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+            script.onload = script.onreadystatechange = null
+            resolve()
+          }
+
+          Object.keys(attr).forEach(key => {
+            script.setAttribute(key, attr[key])
+          })
+
+          document.head.appendChild(script)
+        }),
+
+        getCSS: (url, id = false) => new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+          link.rel = 'stylesheet'
+          link.href = url
+          if (id) link.id = id
+          link.onerror = reject
+          link.onload = link.onreadystatechange = function() {
+            const loadState = this.readyState
+            if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+            link.onload = link.onreadystatechange = null
+            resolve()
+          }
+          document.head.appendChild(link)
+        }),
+
+        addGlobalFn: (key, fn, name = false, parent = window) => {
+          const pjaxEnable = false
+          if (!pjaxEnable && key.startsWith('pjax')) return
+
+          const globalFn = parent.globalFn || {}
+          const keyObj = globalFn[key] || {}
+    
+          if (name && keyObj[name]) return
+    
+          name = name || Object.keys(keyObj).length
+          keyObj[name] = fn
+          globalFn[key] = keyObj
+          parent.globalFn = globalFn
+        }
+      }
+    
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+      
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })()</script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?041e5d4c12342bb051fb77373c270c8f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+btf.addGlobalFn('pjaxComplete', () => {
+  _hmt.push(['_trackPageview',window.location.pathname])
+}, 'baidu_analytics')
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-126255692-2"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'UA-126255692-2')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'UA-126255692-2', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":true,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '小 Z 的 iPad Pro 使用指南',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-07-10 23:12:57'
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="知识碰撞" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">34</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">24</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="知识碰撞"><span class="site-name">知识碰撞</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">小 Z 的 iPad Pro 使用指南</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-01-24T07:49:12.000Z" title="发表于 2021-01-24 15:49:12">2021-01-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-07-10T15:12:57.463Z" title="更新于 2024-07-10 23:12:57">2024-07-10</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/iPad/">iPad</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="小 Z 的 iPad Pro 使用指南"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+<p>小 Z 的 iPad Pro 已经购买了有将近半年的时间了，大家是否非常好奇是否是买前生产力，买后爱奇艺呢？😄，小 Z 除了把平板当成一个观感极佳的影音设备外，主要将其应用到了读书和阅读方面。下面小 Z 就来讲讲如何发挥 iPad Pro 的生产力潜力。</p>
+</blockquote>
+<h2 id="应用程序">应用程序</h2>
+<h3 id="Microsoft-Edge">Microsoft Edge</h3>
+<blockquote>
+<p>在 iPad 上，浏览器没有电脑上那么重要，可以直接使用自带的 Safari 浏览器，也可以使用第三方的浏览器，比如 Microsoft Edge 和 Alook 浏览器。</p>
+</blockquote>
+<p>有了浏览器，几乎就覆盖到了很多使用电脑的场景，小 Z 使用笔记本电脑的时候，大多也是在网上浏览各大网站的内容。</p>
+<p>设置其为默认的浏览器，替代自带的 Safari</p>
+<p><img src="/2021/01/24/ipad/111E852B-D778-4247-ABBE-4F0699A4C65D.jpeg" alt="默认浏览器设置"></p>
+<h2 id="图书阅读">图书阅读</h2>
+<blockquote>
+<p>首先使用 Microsfot Edge 下载相应的电子书，然后将其导入到自带的图书应用程序中去。下次就可以使用图书应用进行阅读了。</p>
+</blockquote>
+<p>图书的阅读进度是可以在不同的苹果设备上面同步的</p>
+<h2 id="截图">截图</h2>
+<p>在使用 Apple Pencil 的过程中，可以使用笔从 iPad 的左下角往斜上角滑动，就可以截图了，然后再对截图进行相应的图片处理</p>
+<h2 id="微信公众号">微信公众号</h2>
+<blockquote>
+<p>在 iPad 使用微信就可以阅读公众号文章了，不需要通过其他方式了。<br>
+<s>关于微信公众号的阅读，小 Z使用的是轻芒杂志进行订阅和阅读，而不是使用微信应用进行阅读。轻芒杂志免费版最多可以订阅 30 个公众号，目前对于小 Z 来说已经足够了。同时轻芒杂志是跨平台的，看不完的内容，小 Z 可以继续在手机上继续阅读。</s></p>
+</blockquote>
+<h2 id="手写笔记">手写笔记</h2>
+<p>手写笔记应用目前在用的是 Notability，但是还不怎么会用这个软件。苹果自带的备忘录也可以实现简单的手写功能。至于另一个畅销的软件 GoodNotes 5，小 Z 并没有购买。</p>
+<h2 id="其他">其他</h2>
+<blockquote>
+<p>比较奇怪的地方在于 iPadOS 里面没有计算器和天气应用</p>
+</blockquote>
+<p>在 iPadOS 14 中默认有天气的小组件，可以显示天气信息。</p>
+<p><img src="/2021/01/24/ipad/926286B1-89F8-42EA-9D17-A84ABCA88319.jpeg" alt="天气小组件"></p>
+<p>通过在屏幕下拉，可以弹出 spotlight 搜索，可以输入相应的计算公式得到计算结果。</p>
+<p><img src="/2021/01/24/ipad/5D0B41DD-200C-415C-A368-3B7798C3C401.jpeg" alt="如何快速计算"></p>
+<p>当然，也可以使用其他第三方的计算应用，比如手写的 calculator。</p>
+<h2 id="配件">配件</h2>
+<h3 id="Apple-Pencil">Apple Pencil</h3>
+<blockquote>
+<p>要说什么是买了 iPad Pro 后必须购买，小 Z 想毫不犹豫是苹果自家的 Apple Pencil。</p>
+</blockquote>
+<p><img src="/2021/01/24/ipad/Untitled%201.png" alt="Apple Pencil"></p>
+<h2 id="保护壳">保护壳</h2>
+<p>官网的保护壳和键盘套装价格太不友好了，可以去电商平台选择自己喜欢的保护壳。</p>
+<h3 id="外接键盘">外接键盘</h3>
+<blockquote>
+<p>首选是使用蓝牙键盘，因为蓝牙键盘是不需要使用任何接口的。考虑到一些蓝牙键盘高昂的价格，次选可以使用有线键盘，只不过你需要一根 type c 转 usb 的转接线。成本来看，两者其实相差不大，从易用性来说，蓝牙键盘还是最好的选择。小 Z 的这篇文章就是使用下图的这样方式编写的。</p>
+</blockquote>
+<p><img src="/2021/01/24/ipad/Untitled%202.png" alt="外接有线键盘"></p>
+<hr>
+<p>目前已经入手雷柏的蓝牙无线键盘，摆脱了有线的束缚。键盘快捷键正在陆续梳理中，比较遗憾的是目前移动端的浏览器都还不能安装插件，不然就可以使用 vim 快捷键全权控制浏览器了。</p>
+<p><img src="/2021/01/24/ipad/img_2579.jpg" alt="外接蓝牙无线键盘"></p>
+<h4 id="键盘技巧">键盘技巧</h4>
+<blockquote>
+<p>在应用中，长按 Command 键会显示当前应用的快捷健。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command + H</td>
+<td>回到桌面</td>
+</tr>
+<tr>
+<td>Command + Tab</td>
+<td>切换应用</td>
+</tr>
+</tbody>
+</table>
+<h3 id="鼠标">鼠标</h3>
+<blockquote>
+<p>至于鼠标，目前来看，是不怎么需要的，可以使用键盘快捷键操控，实现不行可以用手或者笔进行移动和操作。</p>
+</blockquote>
+<h3 id="转接线">转接线</h3>
+<blockquote>
+<p>比起几年前的转接线，最近的转接线价格还是下探了不少的。</p>
+</blockquote>
+<p>目前小米官网在售的这款 89 元转接线，比小 Z  2017 年初购买的将近 200 元的绿联转接线价格友好了不少。利用 HDMI 接口可以扩展 iPad Pro；USB 接口则用来连接有线键盘或者鼠标。</p>
+<p><img src="/2021/01/24/ipad/Untitled%203.png" alt="小米转接线"></p>
+<p>为了兼容老式的 VGA 屏幕，小 Z 购买的是如下所示带 VGA 接口的转接线。各位可以根据自己的需求进行选择，也许你根本就不需要这样一条转接线，为此还能节省一笔开销。</p>
+<p><img src="/2021/01/24/ipad/3E1A7627-D22A-4F8D-B24C-24A4FE257467.jpeg" alt="绿联转接线"></p>
+<hr>
+<blockquote>
+<p>更多精彩内容请<ruby>关注<rt>扫码</rt></ruby>：</p>
+</blockquote>
+<p><img src="https://i.loli.net/2019/05/18/5cdf686a103cf11418.jpg" alt="KnowledgeCollision 微信公众号"></p>
+<center><strong>Knowledge Collision 激发思维碰撞，IDEA 丛生</strong></center>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://blog.zzhpro.com">Zhihao Zhang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://blog.zzhpro.com/2021/01/24/ipad/">https://blog.zzhpro.com/2021/01/24/ipad/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.zzhpro.com" target="_blank">知识碰撞</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/iPad/">iPad</a></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/03/16/%E5%B0%8F-Z-%E7%9A%84%E7%BB%98%E5%9B%BE%E6%8C%87%E5%8D%97/" title="小 Z 的绘图指南"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">小 Z 的绘图指南</div></div></a></div><div class="next-post pull-right"><a href="/2020/12/29/macOS/" title="小 Z 的 MacBook Pro 系统之旅"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">小 Z 的 MacBook Pro 系统之旅</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Zhihao Zhang</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">34</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">24</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/zzh1991" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F"><span class="toc-number">1.</span> <span class="toc-text">应用程序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Microsoft-Edge"><span class="toc-number">1.1.</span> <span class="toc-text">Microsoft Edge</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E4%B9%A6%E9%98%85%E8%AF%BB"><span class="toc-number">2.</span> <span class="toc-text">图书阅读</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%AA%E5%9B%BE"><span class="toc-number">3.</span> <span class="toc-text">截图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-number">4.</span> <span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%8B%E5%86%99%E7%AC%94%E8%AE%B0"><span class="toc-number">5.</span> <span class="toc-text">手写笔记</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-number">6.</span> <span class="toc-text">其他</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E4%BB%B6"><span class="toc-number">7.</span> <span class="toc-text">配件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Apple-Pencil"><span class="toc-number">7.1.</span> <span class="toc-text">Apple Pencil</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%9D%E6%8A%A4%E5%A3%B3"><span class="toc-number">8.</span> <span class="toc-text">保护壳</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%96%E6%8E%A5%E9%94%AE%E7%9B%98"><span class="toc-number">8.1.</span> <span class="toc-text">外接键盘</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%94%AE%E7%9B%98%E6%8A%80%E5%B7%A7"><span class="toc-number">8.1.1.</span> <span class="toc-text">键盘技巧</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%BC%A0%E6%A0%87"><span class="toc-number">8.2.</span> <span class="toc-text">鼠标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AC%E6%8E%A5%E7%BA%BF"><span class="toc-number">8.3.</span> <span class="toc-text">转接线</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/16/%E5%B0%8F-Z-%E7%9A%84%E7%BB%98%E5%9B%BE%E6%8C%87%E5%8D%97/" title="小 Z 的绘图指南">小 Z 的绘图指南</a><time datetime="2024-03-16T00:58:41.000Z" title="发表于 2024-03-16 08:58:41">2024-03-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/01/24/ipad/" title="小 Z 的 iPad Pro 使用指南">小 Z 的 iPad Pro 使用指南</a><time datetime="2021-01-24T07:49:12.000Z" title="发表于 2021-01-24 15:49:12">2021-01-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2020/12/29/macOS/" title="小 Z 的 MacBook Pro 系统之旅">小 Z 的 MacBook Pro 系统之旅</a><time datetime="2020-12-29T14:50:04.000Z" title="发表于 2020-12-29 22:50:04">2020-12-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2020/11/12/note-2020/" title="2020 笔记详谈">2020 笔记详谈</a><time datetime="2020-11-12T12:08:53.000Z" title="发表于 2020-11-12 20:08:53">2020-11-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2020/11/10/macbook-pro-issues/" title="小 Z 的 MacBook Pro 奇妙之旅">小 Z 的 MacBook Pro 奇妙之旅</a><time datetime="2020-11-10T07:17:08.000Z" title="发表于 2020-11-10 15:17:08">2020-11-10</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Zhihao Zhang</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.14.0-b3"></script><script src="/js/main.js?v=4.14.0-b3"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.35/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const runMermaid = (ele) => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from(ele).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const codeToMermaid = () => {
+    const codeMermaidEle = document.querySelectorAll('pre > code.mermaid')
+    if (codeMermaidEle.length === 0) return
+    
+    codeMermaidEle.forEach(ele => {
+      const newEle = document.createElement('div')
+      newEle.className = 'mermaid-wrap'
+      newEle.innerHTML = `<pre class="mermaid-src" hidden>${ele.textContent}</pre>`
+      ele.parentNode.replaceWith(newEle)
+    })
+  }
+
+  const loadMermaid = () => {
+    if (false) codeToMermaid()
+    const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+    if ($mermaid.length === 0) return
+
+    const runMermaidFn = () => runMermaid($mermaid)
+    btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+    window.loadMermaid ? runMermaidFn() : btf.getScript('https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js').then(runMermaidFn)
+  }
+  
+  btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const initGitalk = () => {
+    const gitalk = new Gitalk(Object.assign({
+      clientID: '3c555ac6b77ab906dd3f',
+      clientSecret: '9b0536b61f9b7da7b4641662f5120a5d06862e2c',
+      repo: 'blog-comment',
+      owner: 'zzh1991',
+      admin: ['zzh1991'],
+      id: '59da0da5eed8200e6d84fdf26db6ee78',
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  const loadGitalk = async() => {
+    if (typeof Gitalk === 'function') initGitalk()
+    else {
+      await btf.getCSS('https://cdn.jsdelivr.net/npm/gitalk@1.8.0/dist/gitalk.min.css')
+      await btf.getScript('https://cdn.jsdelivr.net/npm/gitalk@1.8.0/dist/gitalk.min.js')
+      initGitalk()
+    }
+  }
+  
+  const commentCount = n => {
+    const isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+    if (isCommentCount) {
+      isCommentCount.textContent= n
+    }
+  }
+
+  if ('Gitalk' === 'Gitalk' || !false) {
+    if (false) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+    else loadGitalk()
+  } else {
+    window.loadOtherComment = loadGitalk
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

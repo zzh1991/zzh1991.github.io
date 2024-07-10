@@ -1,0 +1,450 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>完美 macOS，体验 💯 | 知识碰撞</title><meta name="author" content="Zhihao Zhang"><meta name="copyright" content="Zhihao Zhang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="当你拥有一台崭新的 mac 电脑时，内心应该是十分激动的。怎样让你❤️的 mac 电脑发挥💯，请仔细观看下面的内容哦。  常规设置  本人倾向将 Dock 栏放在左边。😄语言还是看个人喜好吧，我这台电脑选择了英语作为默认语言。    另外，外观的选择因人而异了，本人我一直使用的是暗黑模式, 因为屏幕舞台灯问题, 本人已经回归传统的白色模式了😂。  浏览器  不用多说，了解我的人都知道，我已">
+<meta property="og:type" content="article">
+<meta property="og:title" content="完美 macOS，体验 💯">
+<meta property="og:url" content="https://blog.zzhpro.com/2020/09/30/mac/index.html">
+<meta property="og:site_name" content="知识碰撞">
+<meta property="og:description" content="当你拥有一台崭新的 mac 电脑时，内心应该是十分激动的。怎样让你❤️的 mac 电脑发挥💯，请仔细观看下面的内容哦。  常规设置  本人倾向将 Dock 栏放在左边。😄语言还是看个人喜好吧，我这台电脑选择了英语作为默认语言。    另外，外观的选择因人而异了，本人我一直使用的是暗黑模式, 因为屏幕舞台灯问题, 本人已经回归传统的白色模式了😂。  浏览器  不用多说，了解我的人都知道，我已">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2020-09-30T14:07:34.000Z">
+<meta property="article:modified_time" content="2024-07-10T15:12:57.618Z">
+<meta property="article:author" content="Zhihao Zhang">
+<meta property="article:tag" content="mac">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://blog.zzhpro.com/2020/09/30/mac/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.14.0-b3"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.35/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>(()=>{
+      const saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+      
+      window.btf = {
+        saveToLocal: saveToLocal,
+        getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+          script.src = url
+          script.async = true
+          script.onerror = reject
+          script.onload = script.onreadystatechange = function() {
+            const loadState = this.readyState
+            if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+            script.onload = script.onreadystatechange = null
+            resolve()
+          }
+
+          Object.keys(attr).forEach(key => {
+            script.setAttribute(key, attr[key])
+          })
+
+          document.head.appendChild(script)
+        }),
+
+        getCSS: (url, id = false) => new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+          link.rel = 'stylesheet'
+          link.href = url
+          if (id) link.id = id
+          link.onerror = reject
+          link.onload = link.onreadystatechange = function() {
+            const loadState = this.readyState
+            if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+            link.onload = link.onreadystatechange = null
+            resolve()
+          }
+          document.head.appendChild(link)
+        }),
+
+        addGlobalFn: (key, fn, name = false, parent = window) => {
+          const pjaxEnable = false
+          if (!pjaxEnable && key.startsWith('pjax')) return
+
+          const globalFn = parent.globalFn || {}
+          const keyObj = globalFn[key] || {}
+    
+          if (name && keyObj[name]) return
+    
+          name = name || Object.keys(keyObj).length
+          keyObj[name] = fn
+          globalFn[key] = keyObj
+          parent.globalFn = globalFn
+        }
+      }
+    
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+      
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })()</script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?041e5d4c12342bb051fb77373c270c8f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+btf.addGlobalFn('pjaxComplete', () => {
+  _hmt.push(['_trackPageview',window.location.pathname])
+}, 'baidu_analytics')
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-126255692-2"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'UA-126255692-2')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'UA-126255692-2', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":true,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '完美 macOS，体验 💯',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-07-10 23:12:57'
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="知识碰撞" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">34</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">24</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="知识碰撞"><span class="site-name">知识碰撞</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">完美 macOS，体验 💯</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-09-30T14:07:34.000Z" title="发表于 2020-09-30 22:07:34">2020-09-30</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-07-10T15:12:57.618Z" title="更新于 2024-07-10 23:12:57">2024-07-10</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/mac/">mac</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>6分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="完美 macOS，体验 💯"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+<p>当你拥有一台崭新的 mac 电脑时，内心应该是十分激动的。怎样让你❤️的 mac 电脑发挥💯，请仔细观看下面的内容哦。</p>
+</blockquote>
+<h2 id="常规设置">常规设置</h2>
+<blockquote>
+<p>本人倾向将 Dock 栏放在左边。😄语言还是看个人喜好吧，我这台电脑选择了英语作为默认语言。</p>
+</blockquote>
+<p><img src="/2020/09/30/mac/image-20200922203334734.png" alt="Dock 设置"></p>
+<blockquote>
+<p>另外，外观的选择因人而异了，<s>本人我一直使用的是暗黑模式</s>, 因为屏幕舞台灯问题, 本人已经回归传统的白色模式了😂。</p>
+</blockquote>
+<h2 id="浏览器">浏览器</h2>
+<blockquote>
+<p>不用多说，了解我的人都知道，我已经从 Google Chrome 完全转移到了 Microsoft Edge 了。目前我的 iPad 也将 Edge 设置成了默认浏览器了。</p>
+</blockquote>
+<p><img src="/2020/09/30/mac/image-20200922203601720.png" alt="默认浏览器设置"></p>
+<h3 id="插件">插件</h3>
+<blockquote>
+<p>除了我在 Windows 10 文章中推荐过的去广告插件 uBlock Origin 和脚本大大 Tampermonkey 之外，其他都是一些提升体验和专业领域的插件。比如用键盘快捷键去操作网页浏览的 Vimium C 和翻译插件 Translate Man 等等。</p>
+<p>需要注意的是安装的插件越多，占用的内存也会越多，同时浏览器进程数也会增加。</p>
+</blockquote>
+<p><img src="/2020/09/30/mac/image-20200922204032102.png" alt="Microsoft Edge 插件"></p>
+<h2 id="解压">解压</h2>
+<blockquote>
+<p>不像 windows 10 使用的是 7zip，macOS 由于没有跨平台的解压软件（虽然自身已经有了一定的解压能力），选择的是<a target="_blank" rel="noopener" href="https://ezip.awehunt.com/" title="eZip">eZip - Designed for macOS!</a>。有了它，就可以解锁几乎所有的压缩包格式了，同时也可以预览压缩包的内容。</p>
+</blockquote>
+<p><img src="/2020/09/30/mac/image-20200922204551447.png" alt="eZip"></p>
+<h2 id="下载">下载</h2>
+<blockquote>
+<p>同 windows 10 中介绍的一样，使用 <a target="_blank" rel="noopener" href="https://motrix.app/" title="Motrix">Motrix</a> 和<a target="_blank" rel="noopener" href="https://www.xunlei.com/" title="迅雷">迅雷</a>。</p>
+</blockquote>
+<h2 id="视频">视频</h2>
+<blockquote>
+<p>macOS 下推荐免费好用的 <a target="_blank" rel="noopener" href="https://iina.io/" title="IINA">IINA - The modern media player for macOS</a>。</p>
+</blockquote>
+<p><img src="/2020/09/30/mac/image-20200922205117131.png" alt="IINA"></p>
+<p>除了视频播放器之外，还可以选择安装流媒体视频的电脑客户端，比如最新发布的<a target="_blank" rel="noopener" href="https://app.bilibili.com">哔哩哔哩 Mac 版本</a>😄。</p>
+<h2 id="通讯">通讯</h2>
+<blockquote>
+<p>目前国人还是最喜爱使用微信和 QQ 的，可以考虑在电脑上都安装。</p>
+</blockquote>
+<h2 id="截图">截图</h2>
+<blockquote>
+<p>截图软件我只认 <a target="_blank" rel="noopener" href="https://zh.snipaste.com/" title="Snipaste">Snipaste - 截图 + 贴图</a>，妈妈再也不用担心我截图了。</p>
+</blockquote>
+<p><img src="/2020/09/30/mac/image-20200922205435803.png" alt="Snipaste"></p>
+<h2 id="RSS">RSS</h2>
+<blockquote>
+<p>本人在 <a target="_blank" rel="noopener" href="https://www.reederapp.com/" title="Reeder">★ Reeder</a> 上次限免的时候入了，目前正在使用中。喜欢 RSS 订阅的观众可以考虑。除此之外，可以考虑使用</p>
+</blockquote>
+<p><img src="/2020/09/30/mac/image-20200922205558804.png" alt="Reeder"></p>
+<p>由于 Reeder 目前只能在非国区才能下载，所以在此推荐另外一款在苹果生态都可以使用的 RSS 软件：<a target="_blank" rel="noopener" href="https://netnewswire.com/">NetNewsWire</a>。</p>
+<p><img src="/2020/09/30/mac/image-20211030000243385.png" alt="NetNewsWire"></p>
+<h2 id="窗口管理">窗口管理</h2>
+<blockquote>
+<p>不曾想过，macOS 竟然有如此好用且免费的窗口管理软件：<a target="_blank" rel="noopener" href="https://rectangleapp.com/" title="Rectangle">Rectangle</a>。在一个屏幕快速显示多个窗口就不在是梦，不过个人觉得还是加个显示屏更加地爽。</p>
+</blockquote>
+<p><img src="/2020/09/30/mac/image-20200922210053947.png" alt="Rectangle"></p>
+<p>除了快捷调整窗口的大小外，快速切换窗口也是一个非常重要的功能。在这个领域，<a target="_blank" rel="noopener" href="https://alt-tab-macos.netlify.app">AltTab</a> 是一个非常不错的软件。对比系统原生的切换，可以显示出具体每个窗口的内容。</p>
+<h2 id="效率">效率</h2>
+<blockquote>
+<p>macOS 自带的 spotlight 功能还是可以的，但是跟 <a target="_blank" rel="noopener" href="https://www.alfredapp.com/" title="Alfred">Alfred - Productivity App for macOS</a> 相比还是逊色不少的。考虑其需要付费的特性，推荐有能力的人可以入手。想要白嫖的，可以考虑 <a target="_blank" rel="noopener" href="https://u.tools/" title="uTools">uTools - 你的生产力工具集</a>。</p>
+</blockquote>
+<p><img src="/2020/09/30/mac/image-20200922210450443.png" alt="Alfred"><br>
+<img src="/2020/09/30/mac/image-20200922210549342.png" alt="uTools"></p>
+<h2 id="快捷启动">快捷启动</h2>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/gbammc/Thor" title="Thor">Thor</a> 是一个比较方便的小应用，可以快速启动或切换应用。</p>
+</blockquote>
+<p><img src="/2020/09/30/mac/image-20200922212737328.png" alt="Thor"></p>
+<h2 id="键位设置">键位设置</h2>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://karabiner-elements.pqrs.org/index.html" title="Karabiner-Elements">Karabiner-Elements</a> 是一款免费的修改键位的软件。本人将右边的 option 键改成了 esc 键，来避免触摸 touchbar 上面的那个 esc 按钮😭。</p>
+</blockquote>
+<p><img src="/2020/09/30/mac/image-20200922211107288.png" alt="Karabiner-Elements"><br>
+<img src="/2020/09/30/mac/image-20200922211317692.png" alt="Karabiner-Elements 设置"></p>
+<blockquote>
+<p>想要实时显示按键输入情况的，可以考虑这款软件：<a target="_blank" rel="noopener" href="https://github.com/keycastr/keycastr" title="KeyCastr">KeyCastr, an open-source keystroke visualizer</a>。</p>
+</blockquote>
+<h3 id="自带截图快捷键">自带截图快捷键</h3>
+<ul>
+<li>Command + Shift + 5: 自定义截图</li>
+<li>Command + Shift + 4: 截取所选屏幕到桌面</li>
+<li>Command + Shift + 3: 截取整个屏幕到桌面</li>
+</ul>
+<h2 id="终端">终端</h2>
+<blockquote>
+<p>毫无疑问，<a target="_blank" rel="noopener" href="https://iterm2.com/" title="iTerm2">iTerm2 - macOS Terminal Replacement</a> 就是 macOS 最好的终端了。<br>
+目前我正在使用 <a target="_blank" rel="noopener" href="https://hyper.is/">Hyper</a></p>
+</blockquote>
+<h2 id="PDF">PDF</h2>
+<blockquote>
+<p>虽然有苹果三件套 Page，Keynote 和 Number，但是却缺少一个好的 PDF 软件。Preview，Edge 和 <a target="_blank" rel="noopener" href="https://www.wps.com/mac/" title="WPS">WPS Office for MAC</a> 作为阅读浏览其实是合格的，用来编辑等其他功能时会显得不太够用。</p>
+</blockquote>
+<p>有付费习惯的观众可以使用 <a target="_blank" rel="noopener" href="https://acrobat.adobe.com/cn/zh-Hans/acrobat.html" title="Adobe Acrobat DC">Adobe Acrobat DC</a> 和 <a target="_blank" rel="noopener" href="https://pdfexpert.com/" title="PDF Expert">PDF Expert</a>。</p>
+<p><a target="_blank" rel="noopener" href="https://sspai.com/post/73291">苹果电脑自带的预览</a> 功能也是非常的强大。</p>
+<h2 id="Markdown">Markdown</h2>
+<blockquote>
+<p>Markdown 编辑器的话，我推荐使用 <a target="_blank" rel="noopener" href="https://typora.io/" title="Typora">Typora — a markdown editor, markdown reader.</a>，本文都是通过该编辑器进行撰写的。<br>
+由于 typora 开始收费了，一种方式是继续使用 beta 的版本，该版本目前在 typora 官网一直下载不下来。<br>
+作为替代品，双链的 <a target="_blank" rel="noopener" href="https://obsidian.md">Obsidian</a> 是一个非常好的替代者。</p>
+</blockquote>
+<p><img src="/2020/09/30/mac/image-20200922213415910.png" alt="Typora"></p>
+<h2 id="笔记">笔记</h2>
+<blockquote>
+<p>笔记应用使用的比较多，在我的电脑里几乎有各种各样的笔记软件。除了付费使用的为知笔记外，还有飞书的云文档，语雀和 Notion。这块大家可以依据自身的使用喜好来选择。</p>
+</blockquote>
+<p>我在 2018 年的时候写过一篇文章 <a href="https://blog.zzhpro.com/2018/07/29/note-skills/">知识管理</a>。我在这里再总结一下近些年来的一个变化情况。</p>
+<p>首先说说语雀，阿里的这款产品目前已经有了 Windows 和 macOS 下的客户端的软件了，手机端目前还只有微信小程序，比起之前已经有了很大的进步了。但是比起为知笔记一开始的跨平台支持还是有一些差距的。还有一点是在查看 Markdown 格式时，会出现很多的 <code>&lt;a&gt;</code> 标签，但是导出然后下载的时候可以选择没有。</p>
+<p>另外一个值得一提的是飞书的云文档的出现，飞书的跨平台支持还不错，只是电脑端相对弱了一些，文档是跳转到浏览器进行访问的，这块有点可惜了。比起语雀丰富的导出功能，飞书的云文档只能导出为 PDF 和 Word 两种格式。这在一定程度上限制了一些应用场景，尤其是不能导出为 Markdown 格式。</p>
+<p>为知笔记在近些年增加了大纲的功能以及大纲转思维导图的功能。为知笔记的一大问题还是长期存在，编写 markdwon 的体验一直都不是特别好，没有相关的 Markdown 的快捷键限制了让它更加优秀。可以考虑用富文本编辑，然后通过 <a target="_blank" rel="noopener" href="http://euangoddard.github.io/clipboard2markdown/" title="Paste to Markdown">Paste to Markdown</a> 来转成 Markdown 格式。</p>
+<p>最后来说说 Notion 吧，它终于有了可以免费使用的体验的。怎么说，Notion 登录方式实在是太麻烦了，我多少次是因为需要登录，从而就放弃登录使用了。</p>
+<h2 id="思维导图">思维导图</h2>
+<blockquote>
+<p>思维导图虽然也有很多家可以选择，但是跨平台的 <a target="_blank" rel="noopener" href="https://xmind.cn/" title="XMind">XMind</a> 个人是比较推荐的。也可以考虑以下两款：<a target="_blank" rel="noopener" href="https://mindnode.com/" title="MindNode">MindNode</a> 和 <a target="_blank" rel="noopener" href="https://www.mindmaster.io/" title="MindMaster">MindMaster</a>。<br>
+目前 Xmind 必须登录才能使用😭</p>
+</blockquote>
+<h2 id="NTFS">NTFS</h2>
+<blockquote>
+<p>在使用电脑的过程，难免会碰到需要往 U 盘拷贝东西的情况，那这是就需要一款可以写入 NTFS 磁盘的读写应用了。<a target="_blank" rel="noopener" href="https://mounty.app/">Mounty</a> 就是这样一款免费的应用。</p>
+</blockquote>
+<h2 id="翻译">翻译</h2>
+<blockquote>
+<p>翻译软件如果付费的话，推荐选择 <a target="_blank" rel="noopener" href="https://gikken.co/mate-translate/">mate translate</a>，免费的推荐使用 <a target="_blank" rel="noopener" href="https://github.com/ripperhe/Bob">Bob</a>。</p>
+</blockquote>
+<h2 id="输入法">输入法</h2>
+<blockquote>
+<p>原生的输入法已经很不错了，为了追求极致的快速打字体验，可以使用<a target="_blank" rel="noopener" href="https://pinyin.sogou.com/mac/">搜狗输入法</a>。<br>
+搜狗输入法目前支持双拼的👍🏻</p>
+</blockquote>
+<h2 id="小插件">小插件</h2>
+<h3 id="AlDente"><a target="_blank" rel="noopener" href="https://github.com/davidwernhart/AlDente">AlDente</a></h3>
+<blockquote>
+<p>除了了解自己电脑电池的情况，如何减少电池的反复充电，也是保养电池的一大利器。<br>
+小 Z 自己设置的充电阈值是 80%，一旦充电 80%，就不再充电了，所以不会一直充电到 100%。</p>
+</blockquote>
+<h3 id="coconutBattery-3"><a target="_blank" rel="noopener" href="https://www.coconut-flavour.com/coconutbattery/">coconutBattery 3</a></h3>
+<blockquote>
+<p>到冬天了，电池出问题的可能性大幅提升，随时随地了解电池的状况变得开始重要起来了，而 coconutBattery 3 就是这样的小工具。</p>
+</blockquote>
+<h3 id="TouchSwitcher-app-switcher-for-Touch-Bar"><s><a target="_blank" rel="noopener" href="https://hazeover.com/touchswitcher.html" title="TouchSwitcher">TouchSwitcher app switcher for Touch Bar</a></s></h3>
+<blockquote>
+<p>为了使 Touch bar 能发挥一定的作用，可谓是费劲了心思😭。<br>
+随着最新的 MacBook Pro 机型已经取消掉了 Touch Bar，未来这块也不会有太大的发展空间了。</p>
+</blockquote>
+<p><img src="/2020/09/30/mac/image-20200930111956966.png" alt="TouchSwitcher"></p>
+<h3 id="Go2Shell"><s><a target="_blank" rel="noopener" href="https://zipzapmac.com/Go2Shell" title="Go2Shell">Go2Shell</a></s></h3>
+<blockquote>
+<p>这款小插件可以让你在文件系统中快速启动终端程序，十分便捷。</p>
+<p>😄，iterm2 目前也支持在文件夹目前直接打开终端了，这款小工具的历史使命也快完结了。</p>
+</blockquote>
+<p><img src="/2020/09/30/mac/image-20200930112158875.png" alt="Go2Shell"></p>
+<h2 id="小技巧">小技巧</h2>
+<h3 id="Finder-访达显示隐藏文件">Finder 访达显示隐藏文件</h3>
+<p>使用 <code>shift+command+.</code> 快捷键，你将能看到隐藏的文件夹或者文件了👍🏻</p>
+<h3 id="Hosts-文件修改">Hosts 文件修改</h3>
+<blockquote>
+<p>为了更加畅快地访问 GitHub 网站，可以从 <a target="_blank" rel="noopener" href="https://raw.hellogithub.com/hosts">https://raw.hellogithub.com/hosts</a> 这个链接获取最新的 hosts 地址，再结合 <a target="_blank" rel="noopener" href="https://swh.app/zh/">SwitchHosts</a> 应用修改即可。</p>
+<p>另外一个访问是否流畅，跟所使用的网络运营商也有很大的关系。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>更多精彩内容请<ruby>关注<rt>扫码</rt></ruby>：</p>
+</blockquote>
+<p><img src="https://i.loli.net/2019/05/18/5cdf686a103cf11418.jpg" alt="KnowledgeCollision 微信公众号"></p>
+<center><strong>Knowledge Collision 激发思维碰撞，IDEA 丛生</strong></center>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://blog.zzhpro.com">Zhihao Zhang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://blog.zzhpro.com/2020/09/30/mac/">https://blog.zzhpro.com/2020/09/30/mac/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.zzhpro.com" target="_blank">知识碰撞</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/mac/">mac</a></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/10/18/wiznote-lite/" title="为知笔记 Lite 使用指南"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">为知笔记 Lite 使用指南</div></div></a></div><div class="next-post pull-right"><a href="/2020/09/07/intellij-idea/" title="Intellij IDEA 完美配置，让你爱不释手"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Intellij IDEA 完美配置，让你爱不释手</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Zhihao Zhang</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">34</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">24</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/zzh1991" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E8%A7%84%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.</span> <span class="toc-text">常规设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8"><span class="toc-number">2.</span> <span class="toc-text">浏览器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E4%BB%B6"><span class="toc-number">2.1.</span> <span class="toc-text">插件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%8E%8B"><span class="toc-number">3.</span> <span class="toc-text">解压</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD"><span class="toc-number">4.</span> <span class="toc-text">下载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%86%E9%A2%91"><span class="toc-number">5.</span> <span class="toc-text">视频</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%9A%E8%AE%AF"><span class="toc-number">6.</span> <span class="toc-text">通讯</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%AA%E5%9B%BE"><span class="toc-number">7.</span> <span class="toc-text">截图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RSS"><span class="toc-number">8.</span> <span class="toc-text">RSS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AA%97%E5%8F%A3%E7%AE%A1%E7%90%86"><span class="toc-number">9.</span> <span class="toc-text">窗口管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%88%E7%8E%87"><span class="toc-number">10.</span> <span class="toc-text">效率</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%AB%E6%8D%B7%E5%90%AF%E5%8A%A8"><span class="toc-number">11.</span> <span class="toc-text">快捷启动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%94%AE%E4%BD%8D%E8%AE%BE%E7%BD%AE"><span class="toc-number">12.</span> <span class="toc-text">键位设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%B8%A6%E6%88%AA%E5%9B%BE%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">12.1.</span> <span class="toc-text">自带截图快捷键</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%88%E7%AB%AF"><span class="toc-number">13.</span> <span class="toc-text">终端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PDF"><span class="toc-number">14.</span> <span class="toc-text">PDF</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Markdown"><span class="toc-number">15.</span> <span class="toc-text">Markdown</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%94%E8%AE%B0"><span class="toc-number">16.</span> <span class="toc-text">笔记</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE"><span class="toc-number">17.</span> <span class="toc-text">思维导图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NTFS"><span class="toc-number">18.</span> <span class="toc-text">NTFS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BF%BB%E8%AF%91"><span class="toc-number">19.</span> <span class="toc-text">翻译</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%B3%95"><span class="toc-number">20.</span> <span class="toc-text">输入法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E6%8F%92%E4%BB%B6"><span class="toc-number">21.</span> <span class="toc-text">小插件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#AlDente"><span class="toc-number">21.1.</span> <span class="toc-text">AlDente</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#coconutBattery-3"><span class="toc-number">21.2.</span> <span class="toc-text">coconutBattery 3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TouchSwitcher-app-switcher-for-Touch-Bar"><span class="toc-number">21.3.</span> <span class="toc-text">TouchSwitcher app switcher for Touch Bar</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Go2Shell"><span class="toc-number">21.4.</span> <span class="toc-text">Go2Shell</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E6%8A%80%E5%B7%A7"><span class="toc-number">22.</span> <span class="toc-text">小技巧</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Finder-%E8%AE%BF%E8%BE%BE%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6"><span class="toc-number">22.1.</span> <span class="toc-text">Finder 访达显示隐藏文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hosts-%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9"><span class="toc-number">22.2.</span> <span class="toc-text">Hosts 文件修改</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/16/%E5%B0%8F-Z-%E7%9A%84%E7%BB%98%E5%9B%BE%E6%8C%87%E5%8D%97/" title="小 Z 的绘图指南">小 Z 的绘图指南</a><time datetime="2024-03-16T00:58:41.000Z" title="发表于 2024-03-16 08:58:41">2024-03-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/01/24/ipad/" title="小 Z 的 iPad Pro 使用指南">小 Z 的 iPad Pro 使用指南</a><time datetime="2021-01-24T07:49:12.000Z" title="发表于 2021-01-24 15:49:12">2021-01-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2020/12/29/macOS/" title="小 Z 的 MacBook Pro 系统之旅">小 Z 的 MacBook Pro 系统之旅</a><time datetime="2020-12-29T14:50:04.000Z" title="发表于 2020-12-29 22:50:04">2020-12-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2020/11/12/note-2020/" title="2020 笔记详谈">2020 笔记详谈</a><time datetime="2020-11-12T12:08:53.000Z" title="发表于 2020-11-12 20:08:53">2020-11-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2020/11/10/macbook-pro-issues/" title="小 Z 的 MacBook Pro 奇妙之旅">小 Z 的 MacBook Pro 奇妙之旅</a><time datetime="2020-11-10T07:17:08.000Z" title="发表于 2020-11-10 15:17:08">2020-11-10</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Zhihao Zhang</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.14.0-b3"></script><script src="/js/main.js?v=4.14.0-b3"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.35/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const runMermaid = (ele) => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from(ele).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const codeToMermaid = () => {
+    const codeMermaidEle = document.querySelectorAll('pre > code.mermaid')
+    if (codeMermaidEle.length === 0) return
+    
+    codeMermaidEle.forEach(ele => {
+      const newEle = document.createElement('div')
+      newEle.className = 'mermaid-wrap'
+      newEle.innerHTML = `<pre class="mermaid-src" hidden>${ele.textContent}</pre>`
+      ele.parentNode.replaceWith(newEle)
+    })
+  }
+
+  const loadMermaid = () => {
+    if (false) codeToMermaid()
+    const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+    if ($mermaid.length === 0) return
+
+    const runMermaidFn = () => runMermaid($mermaid)
+    btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+    window.loadMermaid ? runMermaidFn() : btf.getScript('https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js').then(runMermaidFn)
+  }
+  
+  btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const initGitalk = () => {
+    const gitalk = new Gitalk(Object.assign({
+      clientID: '3c555ac6b77ab906dd3f',
+      clientSecret: '9b0536b61f9b7da7b4641662f5120a5d06862e2c',
+      repo: 'blog-comment',
+      owner: 'zzh1991',
+      admin: ['zzh1991'],
+      id: '0cbed54e760e6fff93ef0c4ac99479d6',
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  const loadGitalk = async() => {
+    if (typeof Gitalk === 'function') initGitalk()
+    else {
+      await btf.getCSS('https://cdn.jsdelivr.net/npm/gitalk@1.8.0/dist/gitalk.min.css')
+      await btf.getScript('https://cdn.jsdelivr.net/npm/gitalk@1.8.0/dist/gitalk.min.js')
+      initGitalk()
+    }
+  }
+  
+  const commentCount = n => {
+    const isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+    if (isCommentCount) {
+      isCommentCount.textContent= n
+    }
+  }
+
+  if ('Gitalk' === 'Gitalk' || !false) {
+    if (false) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+    else loadGitalk()
+  } else {
+    window.loadOtherComment = loadGitalk
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

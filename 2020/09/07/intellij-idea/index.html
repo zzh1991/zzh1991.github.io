@@ -1,0 +1,496 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Intellij IDEA 完美配置，让你爱不释手 | 知识碰撞</title><meta name="author" content="Zhihao Zhang"><meta name="copyright" content="Zhihao Zhang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="作为每天写代码的工具，配置一个称心如意的 Intellij IDEA 就显得尤为重要了。  需要安装插件可以提升我们的工作效率，但是太多的插件也会拖慢 IDEA 的运行速度和流畅度，请酌情考虑安装插件的数量，以及关闭内置不常用到的一些插件以提升整体的运行速度。 目前很多知名的插件已经开通增值服务，大家量力而行。 外观篇  每天面对着自己的喜欢的风格编写代码是一件非常惬意的事情。  主题篇  内置">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Intellij IDEA 完美配置，让你爱不释手">
+<meta property="og:url" content="https://blog.zzhpro.com/2020/09/07/intellij-idea/index.html">
+<meta property="og:site_name" content="知识碰撞">
+<meta property="og:description" content="作为每天写代码的工具，配置一个称心如意的 Intellij IDEA 就显得尤为重要了。  需要安装插件可以提升我们的工作效率，但是太多的插件也会拖慢 IDEA 的运行速度和流畅度，请酌情考虑安装插件的数量，以及关闭内置不常用到的一些插件以提升整体的运行速度。 目前很多知名的插件已经开通增值服务，大家量力而行。 外观篇  每天面对着自己的喜欢的风格编写代码是一件非常惬意的事情。  主题篇  内置">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2020-09-07T13:16:32.000Z">
+<meta property="article:modified_time" content="2024-07-10T15:12:57.443Z">
+<meta property="article:author" content="Zhihao Zhang">
+<meta property="article:tag" content="Java">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://blog.zzhpro.com/2020/09/07/intellij-idea/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.14.0-b3"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.35/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>(()=>{
+      const saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+      
+      window.btf = {
+        saveToLocal: saveToLocal,
+        getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+          script.src = url
+          script.async = true
+          script.onerror = reject
+          script.onload = script.onreadystatechange = function() {
+            const loadState = this.readyState
+            if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+            script.onload = script.onreadystatechange = null
+            resolve()
+          }
+
+          Object.keys(attr).forEach(key => {
+            script.setAttribute(key, attr[key])
+          })
+
+          document.head.appendChild(script)
+        }),
+
+        getCSS: (url, id = false) => new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+          link.rel = 'stylesheet'
+          link.href = url
+          if (id) link.id = id
+          link.onerror = reject
+          link.onload = link.onreadystatechange = function() {
+            const loadState = this.readyState
+            if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+            link.onload = link.onreadystatechange = null
+            resolve()
+          }
+          document.head.appendChild(link)
+        }),
+
+        addGlobalFn: (key, fn, name = false, parent = window) => {
+          const pjaxEnable = false
+          if (!pjaxEnable && key.startsWith('pjax')) return
+
+          const globalFn = parent.globalFn || {}
+          const keyObj = globalFn[key] || {}
+    
+          if (name && keyObj[name]) return
+    
+          name = name || Object.keys(keyObj).length
+          keyObj[name] = fn
+          globalFn[key] = keyObj
+          parent.globalFn = globalFn
+        }
+      }
+    
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+      
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })()</script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?041e5d4c12342bb051fb77373c270c8f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+btf.addGlobalFn('pjaxComplete', () => {
+  _hmt.push(['_trackPageview',window.location.pathname])
+}, 'baidu_analytics')
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-126255692-2"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'UA-126255692-2')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'UA-126255692-2', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":true,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Intellij IDEA 完美配置，让你爱不释手',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-07-10 23:12:57'
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="知识碰撞" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">34</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">24</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="知识碰撞"><span class="site-name">知识碰撞</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Intellij IDEA 完美配置，让你爱不释手</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-09-07T13:16:32.000Z" title="发表于 2020-09-07 21:16:32">2020-09-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-07-10T15:12:57.443Z" title="更新于 2024-07-10 23:12:57">2024-07-10</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Java/">Java</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Intellij IDEA 完美配置，让你爱不释手"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+<p>作为每天写代码的工具，配置一个称心如意的 Intellij IDEA 就显得尤为重要了。</p>
+</blockquote>
+<p>需要安装插件可以提升我们的工作效率，但是太多的插件也会拖慢 IDEA 的运行速度和流畅度，请酌情考虑安装插件的数量，以及关闭内置不常用到的一些插件以提升整体的运行速度。<br>
+<strong>目前很多知名的插件已经开通增值服务，大家量力而行。</strong></p>
+<h2 id="外观篇">外观篇</h2>
+<blockquote>
+<p>每天面对着自己的喜欢的风格编写代码是一件非常惬意的事情。</p>
+</blockquote>
+<h3 id="主题篇">主题篇</h3>
+<blockquote>
+<p>内置暗黑和白色主题，个人比较喜欢暗黑的主题，对眼睛会比较友好。<s>另外可以安装 <a target="_blank" rel="noopener" href="https://plugins.jetbrains.com/plugin/8006-material-theme-ui" title="Material Theme UI">Material Theme UI</a> 主题插件，但是值得注意的是这款插件完整功能是需要付费的😭</s><br>
+目前本人正在使用的是 <code>Monokai</code> 主题。</p>
+</blockquote>
+<p><img src="/2020/09/07/intellij-idea/image-20200901231238207.png" alt="外观设置"></p>
+<h3 id="字体篇">字体篇</h3>
+<blockquote>
+<p>这里使用的是 Color Scheme Font，它覆盖了默认的 Font 字体，字体采用的是 <a target="_blank" rel="noopener" href="https://github.com/tonsky/FiraCode" title="Fira Code">Fira Code</a>。由于我喜欢较大的字号，我选择了 16 号，字号大小还是因人而异的。<br>
+可用的字体选择很多，感兴趣的可以去 <a target="_blank" rel="noopener" href="https://www.nerdfonts.com/">Nerd Fonts</a> 挑选喜欢的字体。</p>
+</blockquote>
+<p><img src="/2020/09/07/intellij-idea/image-20200901232851701.png" alt="字体"></p>
+<p><img src="/2020/09/07/intellij-idea/image-20200901233000009.png" alt="Color Schema Font"></p>
+<h3 id="颜色篇">颜色篇</h3>
+<ul>
+<li>Rainbow Brackets：让你拥有五颜六色的括号（每一对括号的颜色都是不一样的），有增值服务</li>
+<li>Rainbow variable：让变量也五颜六色</li>
+</ul>
+<h3 id="Markdown-篇">Markdown 篇</h3>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.jetbrains.com/help/idea/markdown.html#tips">https://www.jetbrains.com/help/idea/markdown.html#tips</a></p>
+</blockquote>
+<h3 id="日志篇">日志篇</h3>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://plugins.jetbrains.com/plugin/7125-grep-console">Grep Console</a>：清晰筛选出日记级别的日志</li>
+</ul>
+<h2 id="效率篇">效率篇</h2>
+<h3 id="效率第一人-Lombok">效率第一人 <a target="_blank" rel="noopener" href="https://projectlombok.org/features/all" title="Lombok">Lombok</a></h3>
+<blockquote>
+<p>目前在新版本的 Intellij IDEA 中已经自带该插件，不需要手动安装了😄<br>
+记得开启注解处理哦，不然在代码里会出现很多错误。</p>
+</blockquote>
+<p><img src="/2020/09/07/intellij-idea/image-20200902083742331.png" alt="注解处理器"></p>
+<h3 id="Postfix-Completion">Postfix Completion</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">java.util.List</span><br><span class="line">java.util.Set</span><br><span class="line"><span class="title function_">if</span> <span class="params">(org.apache.commons.collections4.CollectionUtils.isEmpty($EXPR$)</span>) &#123;</span><br><span class="line">    $END$        </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">java.lang.String</span><br><span class="line"><span class="title function_">if</span> <span class="params">(org.apache.commons.lang3.StringUtils.isBlank($EXPR$)</span>) &#123;</span><br><span class="line">    $END$        </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Live-Template">Live Template</h3>
+<blockquote>
+<p>快速生成代码模版，这块如果使用得当的话是会极大地提升代码编写的速度😯</p>
+</blockquote>
+<h4 id="Java-篇">Java 篇</h4>
+<p><img src="/2020/09/07/intellij-idea/image-20200901233824227.png" alt="Java 动态模版"></p>
+<h3 id="字符处理篇">字符处理篇</h3>
+<p>使用 String Manipulation 插件可以进行各种字符的变换。</p>
+<blockquote>
+<p>该插件的功能非常丰富，值得学习使用。</p>
+<p>其实 IDEA 也有一些快速大小写的快捷键，可以结合使用，效率更高😯</p>
+</blockquote>
+<p><img src="/2020/09/07/intellij-idea/image-20200901235112833.png" alt="String Manipulation"></p>
+<h3 id="输入法篇">输入法篇</h3>
+<p><a target="_blank" rel="noopener" href="https://plugins.jetbrains.com/plugin/20575-smart-input">Smart Input</a></p>
+<p>可以自动切换中英文输入法, 在中文的开发环境下比较方便</p>
+<h3 id="重构篇">重构篇</h3>
+<blockquote>
+<p>学习如何使用重构相关的快捷键，可以进行快速重构</p>
+</blockquote>
+<p><img src="/2020/09/07/intellij-idea/image-20200902081849176.png" alt="重构"></p>
+<h3 id="代码提示篇">代码提示篇</h3>
+<blockquote>
+<p>随着 ChatGPT 的横空出世，代码领域的 AI 智能化得到飞速地发展。目前第一梯度为 GitHub Copilot，国内的也有不少可选选项。</p>
+</blockquote>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/features/copilot">GitHub Copilot</a></li>
+<li><a target="_blank" rel="noopener" href="https://tongyi.aliyun.com/lingma">通义灵码</a></li>
+</ul>
+<h3 id="快捷键篇">快捷键篇</h3>
+<ul>
+<li>Key Promoter X：时刻提醒你可以用快捷键快速执行操作</li>
+<li>AceJump：快捷键为 <code>control + ;</code></li>
+</ul>
+<p><img src="/2020/09/07/intellij-idea/image-20200906174450536.png" alt="快捷键 PDF"><br>
+<img src="/2020/09/07/intellij-idea/image-20200906174532059.png" alt="快捷键设置"></p>
+<h4 id="Override">Override</h4>
+<blockquote>
+<p>macOS 的快捷键为 <code>Control + O</code></p>
+</blockquote>
+<p><img src="/2020/09/07/intellij-idea/image-20200906174204077.png" alt="Override"></p>
+<h4 id="Generate">Generate</h4>
+<blockquote>
+<p>macOS 的快捷键为 <code>Command + N</code></p>
+</blockquote>
+<p><img src="/2020/09/07/intellij-idea/image-20200906174632538.png" alt="Generate"></p>
+<h4 id="Implement">Implement</h4>
+<blockquote>
+<p>macOS 的快捷键为 <code>Control + I</code></p>
+</blockquote>
+<h3 id="翻译篇">翻译篇</h3>
+<blockquote>
+<p>在取名和阅读源码的过程中，不可避免会碰到不认识的单词，那这个时候快速的翻译工具可以大大提高我们的编程效率。</p>
+</blockquote>
+<p><img src="/2020/09/07/intellij-idea/image-20200906142004534.png" alt="翻译"></p>
+<h3 id="Vim-全键盘操作"><a target="_blank" rel="noopener" href="https://plugins.jetbrains.com/plugin/164-ideavim">Vim 全键盘操作</a></h3>
+<blockquote>
+<p>😄可以模拟在 IDEA 用 Vim 来写代码，效率杠杠的✌️</p>
+<p>在使用的过程中发现在 vim 下原先一些 IDEA 的快捷方式将不在适用，这是比较让人烦恼的点。<br>
+附上快捷键参考：<a target="_blank" rel="noopener" href="https://devhints.io/vim">https://devhints.io/vim</a></p>
+</blockquote>
+<h3 id="ORM">ORM</h3>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://plugins.jetbrains.com/plugin/15075-jpa-buddy">JPA Buddy</a></li>
+</ul>
+<h4 id="MyBatis">MyBatis</h4>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://plugins.jetbrains.com/plugin/10119-mybatisx">MyBatisX</a></li>
+</ul>
+<h2 id="代码规范篇">代码规范篇</h2>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://plugins.jetbrains.com/plugin/14109-alibaba-java-coding-guidelines-xenoamess-tpm-">Alibaba Java Coding Guidelines(XenoAmess TPM)</a>: 目前 IDEA 自带的代码问题扫描已经非常丰富, 可以不需要进行安装</li>
+<li><a target="_blank" rel="noopener" href="https://plugins.jetbrains.com/plugin/7499-gittoolbox">GitToolBox</a>：代码修改历史</li>
+<li><a target="_blank" rel="noopener" href="https://plugins.jetbrains.com/plugin/9861-git-commit-template/" title="Git Commit Template">Git Commit Template</a></li>
+</ul>
+<h2 id="字节码篇">字节码篇</h2>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://plugins.jetbrains.com/plugin/9248-jclasslib-bytecode-viewer" title="jclasslib Bytecode viewer">jclasslib Bytecode viewer</a></li>
+</ul>
+<blockquote>
+<p>针对 class 文件，选择 <code>View</code> tab，可以看到查看字节码的选项</p>
+</blockquote>
+<p><img src="/2020/09/07/intellij-idea/image-20200906175222869.png" alt="查看字节码"></p>
+<h2 id="依赖管理篇">依赖管理篇</h2>
+<blockquote>
+<p>推荐使用 Maven Helper</p>
+</blockquote>
+<p><img src="/2020/09/07/intellij-idea/image-20200902083358995.png" alt="Maven Helper"></p>
+<h3 id="生成序列化版本号">生成序列化版本号</h3>
+<ul>
+<li>GenerateSerialVersionUID（可以在 <a href="#generate">Generate</a> 中找到）</li>
+</ul>
+<h3 id="JSON-Object-互换">JSON/Object 互换</h3>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://plugins.jetbrains.com/plugin/12066-pojo-to-json">POJO to Json</a></li>
+<li><a target="_blank" rel="noopener" href="https://plugins.jetbrains.com/plugin/7654-gsonformat">GsonFormat</a></li>
+</ul>
+<h2 id="图像篇">图像篇</h2>
+<h3 id="PlantUML"><a target="_blank" rel="noopener" href="https://plugins.jetbrains.com/plugin/7017-plantuml-integration">PlantUML</a></h3>
+<blockquote>
+<p>可以直接在 IDEA 中绘制各种 UML 图，并与代码放在一起。</p>
+</blockquote>
+<h3 id="Diagrams-net-Integration"><a target="_blank" rel="noopener" href="https://plugins.jetbrains.com/plugin/15635-diagrams-net-integration">Diagrams.net Integration</a></h3>
+<blockquote>
+<p>可以直接在 IDEA 中绘制各种图，并与代码放在一起。</p>
+</blockquote>
+<h3 id="类-UML-图">类 UML 图</h3>
+<blockquote>
+<p>右键即可调出 Diagrams 功能</p>
+</blockquote>
+<p><img src="/2020/09/07/intellij-idea/image-20200902081537759.png" alt="UML"></p>
+<h3 id="方法调用时序图">方法调用时序图</h3>
+<blockquote>
+<p>安装 Sequence Diagram 后，选择一个方法名，右键即可</p>
+</blockquote>
+<p><img src="/2020/09/07/intellij-idea/image-20200906180056351.png" alt="方法调用时序图"></p>
+<h3 id="思维导图"><a target="_blank" rel="noopener" href="https://plugins.jetbrains.com/plugin/8045-idea-mind-map">思维导图</a></h3>
+<h2 id="配置篇">配置篇</h2>
+<h3 id="自动导入">自动导入</h3>
+<p><img src="/2020/09/07/intellij-idea/image-20200906181925596.png" alt="自动导入"></p>
+<h3 id="方法分割线">方法分割线</h3>
+<p><img src="/2020/09/07/intellij-idea/image-20200906184157557.png" alt="方法分割线"></p>
+<h3 id="自动提示不区分大小写">自动提示不区分大小写</h3>
+<p><img src="/2020/09/07/intellij-idea/image-20200906184329122.png" alt="自动提示不区分大小写"></p>
+<h3 id="演出模式">演出模式</h3>
+<blockquote>
+<p>使用 <code>Option + Shift + V</code> 进入演出模式可以拥有极佳的阅读代码的体验。可以使用 <code>command + e</code> 快速切换文件列表，查找已经打开的文件；使用 <code>shift + shift</code> 快速查找文件。</p>
+</blockquote>
+<p><img src="/2020/09/07/intellij-idea/image-20210124150533807.png" alt="配置演出模式快捷键"></p>
+<h2 id="文档篇">文档篇</h2>
+<h3 id="Easy-Javadoc"><a target="_blank" rel="noopener" href="https://plugins.jetbrains.com/plugin/12977-easy-javadoc">Easy Javadoc</a></h3>
+<blockquote>
+<p>在面向中文的开发环境下, 有中文的注释还是比较方便的</p>
+</blockquote>
+<h3 id="JavaDoc"><a target="_blank" rel="noopener" href="https://plugins.jetbrains.com/plugin/7157-javadoc">JavaDoc</a></h3>
+<h2 id="技巧篇">技巧篇</h2>
+<h3 id="行尾添加分号">行尾添加分号</h3>
+<blockquote>
+<p>使用 <code>shift + command + enter</code> 可以快速补全分号</p>
+</blockquote>
+<h2 id="测试篇">测试篇</h2>
+<blockquote>
+<p>本人一般直接使用自带的 HTTP 请求功能进行测试<br>
+👇🏻的两个插件本人使用不多</p>
+</blockquote>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://plugins.jetbrains.com/plugin/16988-restful-fast-request">Restful Fast Request</a></li>
+<li><a target="_blank" rel="noopener" href="https://plugins.jetbrains.com/plugin/14280-restfultool">RestfulTool</a></li>
+</ul>
+<h3 id="如何无阻塞-debug">如何无阻塞 debug</h3>
+<blockquote>
+<p>在我们平时打断点的地方，点击更多展开，里面会有不阻塞断点、条件断点等高级 debug 功能，可以通过这些高级能力提升在 debug 的同时不影响其他人的正常调用。</p>
+</blockquote>
+<h3 id="arthas">arthas</h3>
+<p>安装 arthas idea 插件可以方便生成 arthas 的命令语句, 从而可以查看很多运行时的信息, 方便排查问题</p>
+<h2 id="彩蛋">彩蛋</h2>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://confluence.jetbrains.com/display/IDEADEV/Latest+builds" title="最新的 IDEA 版本">最新的 IDEA 版本</a>可以在这里看到哦，同时也可以下载一些老的版本。<br>
+正式发布的版本都可以在👇🏻的这个链接找到<br>
+<a target="_blank" rel="noopener" href="https://www.jetbrains.com/zh-cn/idea/download/other.html">https://www.jetbrains.com/zh-cn/idea/download/other.html</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>更多精彩内容请<ruby>关注<rt>扫码</rt></ruby>：</p>
+</blockquote>
+<p><img src="https://i.loli.net/2019/05/18/5cdf686a103cf11418.jpg" alt="KnowledgeCollision 微信公众号"></p>
+<div style="text-align: center;"><strong>Knowledge Collision 激发思维碰撞，IDEA 丛生</strong></div>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://blog.zzhpro.com">Zhihao Zhang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://blog.zzhpro.com/2020/09/07/intellij-idea/">https://blog.zzhpro.com/2020/09/07/intellij-idea/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.zzhpro.com" target="_blank">知识碰撞</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Java/">Java</a></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/09/30/mac/" title="完美 macOS，体验 💯"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">完美 macOS，体验 💯</div></div></a></div><div class="next-post pull-right"><a href="/2020/08/29/2020-stackoverflow-survey/" title="2020 StackOverflow 开发者现状调研"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">2020 StackOverflow 开发者现状调研</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2017/09/05/java%20skill/" title="Java Skill"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2017-09-05</div><div class="title">Java Skill</div></div></a></div><div><a href="/2019/02/17/java-2018/" title="Java 2018 使用状况"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-02-17</div><div class="title">Java 2018 使用状况</div></div></a></div><div><a href="/2020/01/02/java-map/" title="深入理解 Java Map"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-01-02</div><div class="title">深入理解 Java Map</div></div></a></div><div><a href="/2019/01/01/java-util/" title="Java Util"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-01-01</div><div class="title">Java Util</div></div></a></div><div><a href="/2019/11/02/java-version-management/" title="轻松管理不同的 Java 版本"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-11-02</div><div class="title">轻松管理不同的 Java 版本</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Zhihao Zhang</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">34</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">24</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/zzh1991" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%96%E8%A7%82%E7%AF%87"><span class="toc-number">1.</span> <span class="toc-text">外观篇</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E7%AF%87"><span class="toc-number">1.1.</span> <span class="toc-text">主题篇</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E4%BD%93%E7%AF%87"><span class="toc-number">1.2.</span> <span class="toc-text">字体篇</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%9C%E8%89%B2%E7%AF%87"><span class="toc-number">1.3.</span> <span class="toc-text">颜色篇</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Markdown-%E7%AF%87"><span class="toc-number">1.4.</span> <span class="toc-text">Markdown 篇</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A5%E5%BF%97%E7%AF%87"><span class="toc-number">1.5.</span> <span class="toc-text">日志篇</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%88%E7%8E%87%E7%AF%87"><span class="toc-number">2.</span> <span class="toc-text">效率篇</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%88%E7%8E%87%E7%AC%AC%E4%B8%80%E4%BA%BA-Lombok"><span class="toc-number">2.1.</span> <span class="toc-text">效率第一人 Lombok</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Postfix-Completion"><span class="toc-number">2.2.</span> <span class="toc-text">Postfix Completion</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Live-Template"><span class="toc-number">2.3.</span> <span class="toc-text">Live Template</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Java-%E7%AF%87"><span class="toc-number">2.3.1.</span> <span class="toc-text">Java 篇</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E5%A4%84%E7%90%86%E7%AF%87"><span class="toc-number">2.4.</span> <span class="toc-text">字符处理篇</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%B3%95%E7%AF%87"><span class="toc-number">2.5.</span> <span class="toc-text">输入法篇</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E6%9E%84%E7%AF%87"><span class="toc-number">2.6.</span> <span class="toc-text">重构篇</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E6%8F%90%E7%A4%BA%E7%AF%87"><span class="toc-number">2.7.</span> <span class="toc-text">代码提示篇</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE%E7%AF%87"><span class="toc-number">2.8.</span> <span class="toc-text">快捷键篇</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Override"><span class="toc-number">2.8.1.</span> <span class="toc-text">Override</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Generate"><span class="toc-number">2.8.2.</span> <span class="toc-text">Generate</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Implement"><span class="toc-number">2.8.3.</span> <span class="toc-text">Implement</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BF%BB%E8%AF%91%E7%AF%87"><span class="toc-number">2.9.</span> <span class="toc-text">翻译篇</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Vim-%E5%85%A8%E9%94%AE%E7%9B%98%E6%93%8D%E4%BD%9C"><span class="toc-number">2.10.</span> <span class="toc-text">Vim 全键盘操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ORM"><span class="toc-number">2.11.</span> <span class="toc-text">ORM</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#MyBatis"><span class="toc-number">2.11.1.</span> <span class="toc-text">MyBatis</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83%E7%AF%87"><span class="toc-number">3.</span> <span class="toc-text">代码规范篇</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E8%8A%82%E7%A0%81%E7%AF%87"><span class="toc-number">4.</span> <span class="toc-text">字节码篇</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86%E7%AF%87"><span class="toc-number">5.</span> <span class="toc-text">依赖管理篇</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E5%BA%8F%E5%88%97%E5%8C%96%E7%89%88%E6%9C%AC%E5%8F%B7"><span class="toc-number">5.1.</span> <span class="toc-text">生成序列化版本号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JSON-Object-%E4%BA%92%E6%8D%A2"><span class="toc-number">5.2.</span> <span class="toc-text">JSON&#x2F;Object 互换</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E5%83%8F%E7%AF%87"><span class="toc-number">6.</span> <span class="toc-text">图像篇</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PlantUML"><span class="toc-number">6.1.</span> <span class="toc-text">PlantUML</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Diagrams-net-Integration"><span class="toc-number">6.2.</span> <span class="toc-text">Diagrams.net Integration</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB-UML-%E5%9B%BE"><span class="toc-number">6.3.</span> <span class="toc-text">类 UML 图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E8%B0%83%E7%94%A8%E6%97%B6%E5%BA%8F%E5%9B%BE"><span class="toc-number">6.4.</span> <span class="toc-text">方法调用时序图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE"><span class="toc-number">6.5.</span> <span class="toc-text">思维导图</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E7%AF%87"><span class="toc-number">7.</span> <span class="toc-text">配置篇</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E5%AF%BC%E5%85%A5"><span class="toc-number">7.1.</span> <span class="toc-text">自动导入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E5%88%86%E5%89%B2%E7%BA%BF"><span class="toc-number">7.2.</span> <span class="toc-text">方法分割线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E6%8F%90%E7%A4%BA%E4%B8%8D%E5%8C%BA%E5%88%86%E5%A4%A7%E5%B0%8F%E5%86%99"><span class="toc-number">7.3.</span> <span class="toc-text">自动提示不区分大小写</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BC%94%E5%87%BA%E6%A8%A1%E5%BC%8F"><span class="toc-number">7.4.</span> <span class="toc-text">演出模式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E6%A1%A3%E7%AF%87"><span class="toc-number">8.</span> <span class="toc-text">文档篇</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Easy-Javadoc"><span class="toc-number">8.1.</span> <span class="toc-text">Easy Javadoc</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaDoc"><span class="toc-number">8.2.</span> <span class="toc-text">JavaDoc</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%80%E5%B7%A7%E7%AF%87"><span class="toc-number">9.</span> <span class="toc-text">技巧篇</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%8C%E5%B0%BE%E6%B7%BB%E5%8A%A0%E5%88%86%E5%8F%B7"><span class="toc-number">9.1.</span> <span class="toc-text">行尾添加分号</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E7%AF%87"><span class="toc-number">10.</span> <span class="toc-text">测试篇</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E6%97%A0%E9%98%BB%E5%A1%9E-debug"><span class="toc-number">10.1.</span> <span class="toc-text">如何无阻塞 debug</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#arthas"><span class="toc-number">10.2.</span> <span class="toc-text">arthas</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BD%A9%E8%9B%8B"><span class="toc-number">11.</span> <span class="toc-text">彩蛋</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/16/%E5%B0%8F-Z-%E7%9A%84%E7%BB%98%E5%9B%BE%E6%8C%87%E5%8D%97/" title="小 Z 的绘图指南">小 Z 的绘图指南</a><time datetime="2024-03-16T00:58:41.000Z" title="发表于 2024-03-16 08:58:41">2024-03-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/01/24/ipad/" title="小 Z 的 iPad Pro 使用指南">小 Z 的 iPad Pro 使用指南</a><time datetime="2021-01-24T07:49:12.000Z" title="发表于 2021-01-24 15:49:12">2021-01-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2020/12/29/macOS/" title="小 Z 的 MacBook Pro 系统之旅">小 Z 的 MacBook Pro 系统之旅</a><time datetime="2020-12-29T14:50:04.000Z" title="发表于 2020-12-29 22:50:04">2020-12-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2020/11/12/note-2020/" title="2020 笔记详谈">2020 笔记详谈</a><time datetime="2020-11-12T12:08:53.000Z" title="发表于 2020-11-12 20:08:53">2020-11-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2020/11/10/macbook-pro-issues/" title="小 Z 的 MacBook Pro 奇妙之旅">小 Z 的 MacBook Pro 奇妙之旅</a><time datetime="2020-11-10T07:17:08.000Z" title="发表于 2020-11-10 15:17:08">2020-11-10</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Zhihao Zhang</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.14.0-b3"></script><script src="/js/main.js?v=4.14.0-b3"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.35/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const runMermaid = (ele) => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from(ele).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const codeToMermaid = () => {
+    const codeMermaidEle = document.querySelectorAll('pre > code.mermaid')
+    if (codeMermaidEle.length === 0) return
+    
+    codeMermaidEle.forEach(ele => {
+      const newEle = document.createElement('div')
+      newEle.className = 'mermaid-wrap'
+      newEle.innerHTML = `<pre class="mermaid-src" hidden>${ele.textContent}</pre>`
+      ele.parentNode.replaceWith(newEle)
+    })
+  }
+
+  const loadMermaid = () => {
+    if (false) codeToMermaid()
+    const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+    if ($mermaid.length === 0) return
+
+    const runMermaidFn = () => runMermaid($mermaid)
+    btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+    window.loadMermaid ? runMermaidFn() : btf.getScript('https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js').then(runMermaidFn)
+  }
+  
+  btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const initGitalk = () => {
+    const gitalk = new Gitalk(Object.assign({
+      clientID: '3c555ac6b77ab906dd3f',
+      clientSecret: '9b0536b61f9b7da7b4641662f5120a5d06862e2c',
+      repo: 'blog-comment',
+      owner: 'zzh1991',
+      admin: ['zzh1991'],
+      id: 'a92e43f69a1e42b33c6b23385b56f187',
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  const loadGitalk = async() => {
+    if (typeof Gitalk === 'function') initGitalk()
+    else {
+      await btf.getCSS('https://cdn.jsdelivr.net/npm/gitalk@1.8.0/dist/gitalk.min.css')
+      await btf.getScript('https://cdn.jsdelivr.net/npm/gitalk@1.8.0/dist/gitalk.min.js')
+      initGitalk()
+    }
+  }
+  
+  const commentCount = n => {
+    const isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+    if (isCommentCount) {
+      isCommentCount.textContent= n
+    }
+  }
+
+  if ('Gitalk' === 'Gitalk' || !false) {
+    if (false) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+    else loadGitalk()
+  } else {
+    window.loadOtherComment = loadGitalk
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
