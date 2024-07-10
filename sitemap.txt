@@ -10,9 +10,9 @@ https://blog.zzhpro.com/2017/03/03/ubuntu/
 https://blog.zzhpro.com/2019/02/23/python-2018/
 https://blog.zzhpro.com/2017/08/23/react-skill-md/
 https://blog.zzhpro.com/2017/12/06/shell-skills/
+https://blog.zzhpro.com/2018/10/14/optimize/
 https://blog.zzhpro.com/2019/03/10/photograph/
 https://blog.zzhpro.com/2020/07/19/postgres-internal-first/
-https://blog.zzhpro.com/2018/10/14/optimize/
 https://blog.zzhpro.com/2018/07/29/note-skills/
 https://blog.zzhpro.com/2020/11/12/note-2020/
 https://blog.zzhpro.com/2020/11/10/macbook-pro-issues/
@@ -40,8 +40,8 @@ https://blog.zzhpro.com/404.html
 https://blog.zzhpro.com/
 https://blog.zzhpro.com/tags/Development/
 https://blog.zzhpro.com/tags/technology/
-https://blog.zzhpro.com/tags/Software/
 https://blog.zzhpro.com/tags/Android/
+https://blog.zzhpro.com/tags/Software/
 https://blog.zzhpro.com/tags/go/
 https://blog.zzhpro.com/tags/Hexo/
 https://blog.zzhpro.com/tags/Java/
@@ -52,9 +52,9 @@ https://blog.zzhpro.com/tags/mac/
 https://blog.zzhpro.com/tags/macOS/
 https://blog.zzhpro.com/tags/life/
 https://blog.zzhpro.com/tags/note/
+https://blog.zzhpro.com/tags/Computer-System/
 https://blog.zzhpro.com/tags/%E6%8B%8D%E7%85%A7/
 https://blog.zzhpro.com/tags/Postgre/
-https://blog.zzhpro.com/tags/Computer-System/
 https://blog.zzhpro.com/tags/Python/
 https://blog.zzhpro.com/tags/React/
 https://blog.zzhpro.com/tags/Shell/
