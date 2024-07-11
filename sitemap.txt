@@ -2,8 +2,8 @@ https://blog.zzhpro.com/2020/01/02/java-map/
 https://blog.zzhpro.com/tags/index.html
 https://blog.zzhpro.com/2018/02/10/workflow/
 https://blog.zzhpro.com/2024/03/16/%E5%B0%8F-Z-%E7%9A%84%E7%BB%98%E5%9B%BE%E6%8C%87%E5%8D%97/
-https://blog.zzhpro.com/categories/index.html
 https://blog.zzhpro.com/link/index.html
+https://blog.zzhpro.com/categories/index.html
 https://blog.zzhpro.com/2020/10/18/wiznote-lite/
 https://blog.zzhpro.com/2020/07/27/win10/
 https://blog.zzhpro.com/2020/05/23/study-life-software/
@@ -26,8 +26,8 @@ https://blog.zzhpro.com/2019/11/02/java-version-management/
 https://blog.zzhpro.com/2019/02/17/java-2018/
 https://blog.zzhpro.com/2017/09/05/java%20skill/
 https://blog.zzhpro.com/2021/01/24/ipad/
-https://blog.zzhpro.com/2018/07/24/go-skills/
 https://blog.zzhpro.com/2020/03/12/daily-software/
+https://blog.zzhpro.com/2018/07/24/go-skills/
 https://blog.zzhpro.com/2017/01/26/hexo/
 https://blog.zzhpro.com/2020/09/07/intellij-idea/
 https://blog.zzhpro.com/2020/01/02/2020-tech-trend/
@@ -40,9 +40,9 @@ https://blog.zzhpro.com/404.html
 https://blog.zzhpro.com/
 https://blog.zzhpro.com/tags/Development/
 https://blog.zzhpro.com/tags/technology/
-https://blog.zzhpro.com/tags/go/
 https://blog.zzhpro.com/tags/Android/
 https://blog.zzhpro.com/tags/Software/
+https://blog.zzhpro.com/tags/go/
 https://blog.zzhpro.com/tags/Hexo/
 https://blog.zzhpro.com/tags/Java/
 https://blog.zzhpro.com/tags/iPad/
